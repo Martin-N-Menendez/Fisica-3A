@@ -1,0 +1,466 @@
+%Tipo de documento
+\documentclass[12pt,a4paper]{article}
+
+%PAQUETES
+
+%Parsear en .pdf
+\usepackage[pdftex]{color,graphicx}
+
+%Castellano
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+%Matematica
+\usepackage{amsmath, amssymb, amsfonts}
+
+\begin{document}
+
+\title{Transistor bipolar.}
+
+\author{$\Gamma$}
+
+\maketitle
+
+\section{Introducción.}
+
+El transistor es un dispositivo semiconductor, polifuncional, que, utilizado en un circuito, es capaz de producir ganancias de corriente y tensión. Con lo cual, un transistor es un elemento \emph{activo} de un circuito. La idea básica del transistor es controlar la corriente en una terminal mediante la tensión aplicada entre las otras dos terminales.
+
+El transistor bipolar tiene tres regiones dopadas separadamente y dos junturas pn, lo suficientemente cerca para que ambas junturas interactúen entre sí. Dado que, tanto el flujo de electrones como de huecos está involucrado en la operación de este transistor recibe el nombre de \emph{transistor bipolar}.
+
+Como existen dos junturas pn hay varias combinaciones posibles de polarización dando lugar a distintos modos de operación del transistor. Al igual que en la juntura pn, la distribución de los portadores minoritarios es muy importante en el estudio del transistor bipolar. Se determinarán las distribuciones de portadores minoritarios en cada región del transistor y, consecuentemente, se obtendrán las corrientes.
+
+El transistor bipolar puede funcionar como una fuente de corriente controlada por tensión. Se considerarán varios factores que determinarán la ganancia de corriente y se obtendrá una expresión matemática para dicha ganancia.
+
+\section{Operación del transistor bipolar.}
+
+El transistor bipolar tiene tres regiones dopadas separadamente y dos junturas pn. La figura 1 muestra la estructura básica de un transistor npn y un transistor pnp junto con su representación circuital. Los tres terminales del dispositivo se llaman \emph{colector}, \emph{emisor} y \emph{base}. El ancho de la región de la base es pequeño comparado con la longitud de difusión de los portadores minoritarios. Los símbolos $(+)$ y $(++)$ indican las concentraciones relativas de dopantes usadas habitualmente en un transistor bipolar, donde $(++)$ significa altamente dopado y $(+)$ significa moderadamente dopado. La región emisora tiene la mayor concentración de dopantes mientras que la región colectora tiene la menor. Las justificaciones a estas características se expondrán en las secciones siguientes
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{transistorbipolar.png}
+\caption{(a) Transistor npn. (b) Transistor pnp.}
+\end{center}
+\end{figure}
+
+\subsection{Principios básicos de operación.}
+
+Los transistores pnp y npn son complementarios. Se desarrollará la teoría del transistor bipolar usando el transistor npn, pero los mismos conceptos y ecuaciones se aplican al transistor pnp. La figura 2 muestra un esquema idealizado de las concentraciones en las distintas regiones del transistor. Típicamente, las concentraciones para el emisor, la base y el colector son del orden de $10^{19}$, $10^{17}$ y $10^{15}$ $\textrm{cm}^{-3}$ respectivamente.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{transistornpn.png}
+\caption{(a) Transistor npn. (b) Concentraciones.}
+\end{center}
+\end{figure}
+
+En el modo de operación activo-directo la juntura pn base-emisor (BE) está en polarización directa (tensión positiva en la base respecto del emisor) y la juntura base-colector (BC) está polarizada en inversa (tensión positiva en el colector respecto de la base) como se ilustra en la figura 3.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{modoactivodirecto.png}
+\caption{Modo activo-directo.}
+\end{center}
+\end{figure}
+
+La polarización directa de la juntura BE provoca que los electrones fluyan del emisor a la base, ocasionando un exceso de portadores minoritarios (en la base). La juntura BC está polarizada en inversa, con lo cual, idealmente, la concentración de portadores en exceso en el borde de la juntura es cero. Esperaremos que la concentración de electrones en la base sea como en la figura 4.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{concentracionmodoactivodirecto.png}
+\caption{Concentración de electrones en el modo activo-directo.}
+\end{center}
+\end{figure}
+
+Se puede observar en la figura 4 un importante gradiente en la concentración de electrones, lo que provocará que los electrones inyectados por el emisor se difundan a través de la base hacia la zona de carga espacial producida por la juntura BC, donde el campo eléctrico impulsará los electrones hacia el colector. Es deseable que la gran mayoría de los electrones que se difunden del emisor alcancen el colector sin recombinarse, es por esto que el ancho de la región de la base debe ser pequeña en comparación con la longitud de difusión de los portadores minoritarios. Si el ancho de la base es muy pequeño, entonces la concentración de portadores minoritarios es, tanto, una función de la tensión en la juntura BE como de la tensión en la juntura BC. Esto es, las dos junturas están lo suficientemente próximas para ser llamadas junturas interactuantes.
+
+\subsection{Relaciones de corriente simplificadas en un transistor.}
+
+La concentración de portadores minoritarios para un transistor npn en modo activo-directo se muestra, de vuelta, en la figura 5.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{concentracionmodoactivodirectoideal.png}
+\caption{Concentración de electrones en el modo activo-directo.}
+\end{center}
+\end{figure}
+
+Idealmente, la concentración de electrones en la base es una función lineal de la distancia, lo que implica que no hay recombinación. Los electrones se difunden a través de la base y son impulsados hacia el colector por el campo eléctrico de la zona de carga espacial de la juntura BC.
+
+\textbf{Corriente del colector.} Asumiendo la distribución ideal lineal de los electrones en la base, la corriente del colector puede escribirse como una corriente de difusión dada por
+\[ i_{C}=eD_{n}A_{BE}\frac{dn(x)}{dx}=eD_{n}A_{BE}\bigg( \frac{n_{B}(0)-0}{0-x_{B}} \bigg)= \frac{-eD_{n}A_{BE}}{x_{B}} n_{B_{0}} e^{\frac{V_{BE}}{V_{t}}}\]
+donde $A_{BE}$ es la sección de la juntura BE, $n_{B_{0}}$ es la concentración de electrones en equilibrio térmico en la base, y $V_{t}$ es la tensión térmica. Observar que, como la función es lineal, para obtener la pendiente (derivada) simplemente utiliza geometría.
+
+La difusión de electrones es en la dirección $+x$, por lo tanto, la dirección convencional de la corriente es en la dirección $-x$. Considerando únicamente magnitudes, la ecuación anterior se puede escribir como
+\[ i_{C}= I_{s} e^{\frac{V_{BE}}{V_{t}}} \]
+La corriente del colector está controlada por la tensión sobre la juntura BE. Esto es, la corriente en un terminal del dispositivo está controlada por la tensión aplicada a los otros dos terminales.
+
+\textbf{Corriente del emisor.} Un componente de la corriente del emisor, $i_{E_{1}}$, mostrado en la figura 5, se debe al flujo de electrones inyectados del emisor a la base (no olvidar que si los electrones van en dirección $+x$, la corriente va en dirección $-x$). Esta corriente, por lo tanto, es igual a la corriente del colector dada por la ecuación anterior (recordar que, en nuestro modelo idealizado, no hay recombinación en la base, por lo tanto \emph{todos} los electrones inyectados por el emisor en la base llegan, producto del gradiente, a la zona de carga espacial de la juntura BC y de allí son impulsados al colector por el campo eléctrico).
+
+Dado que la juntura BE está polarizada en directo, los portadores mayoritarios de la región p (huecos en la base) son inyectados en el emisor. Estos huecos producen una corriente de juntura, $i_{E_{2}}$, mostrada en la figura 5. Esta corriente es exclusiva de la juntura BE con lo cuál, esta componente, no forma parte de la corriente del colector. Como $i_{E_{2}}$ es producto de la polarización directa de una juntura pn, ya conocemos su expresión y es
+\[ i_{E_{2}}=I_{s_{2}}e^{\frac{V_{BE}}{V_{t}}} \]
+donde $I_{s_{2}}$ está determinada por los parámetros de los portadores minoritarios de carga en el emisor (huecos). La corriente total del emisor es la suma de las dos componentes
+\[ i_{E}=i_{E_{1}}+i_{E_{2}}=i_{C}+i_{E_{2}}=I_{s_{E}} e^{\frac{V_{BE}}{V_{t}}} \]
+
+Como todas las componentes de esta última ecuación son funciones de $e^{V_{BE}/V_{t}}$, la relación entre la corriente del emisor y la del colector es una constante,
+\[ \frac{i_{C}}{i_{E}}=\alpha \]
+donde $\alpha$ recibe el nombre de \emph{ganancia de corriente a base común}. Considerando la ecuación de $i_{E}$ podemos observar que $i_{C}<i_{E}$ (o $\alpha <1$) dado que la corriente $i_{E_{2}}$ no participa en $i_{C}$ (Si deseamos la mayor amplificación posible debemos lograr que $i_{E_{2}} \approx 0$, es decir, $\alpha \approx 1$).
+
+Podemos notar que la corriente del emisor es una función exponencial de la tensión sobre la juntura BE y la corriente del colector es $i_{C}=\alpha \cdot i_{E}$. En una primera aproximación, la corriente del colector es independiente de la tensión sobre la juntura BC siempre que ésta esté polarizada en inversa. El transistor bipolar actúa como una fuente de corriente constante.
+
+\textbf{Corriente de la base.} Como se ilustra en la figura 5, la componente $i_{E_{2}}$ de la corriente del emisor corresponde a la corriente de la juntura BE con lo cual, también es una componente de la corriente de la base, $i_{E_{2}}=i_{B_{a}}$. $i_{B_{a}}$ es proporcional a $e^{V_{BE}/V_{t}}$.
+
+También hay otra componente de la corriente de la base. Hasta ahora, vinimos considerando el caso ideal donde no había recombinación de los portadores minoritarios de la base (electrones inyectados por el emisor) con los portadores mayoritarios (huecos). Sin embargo, en la realidad, esto no sucede. Como los portadores mayoritarios de la base (huecos) están desapareciendo, debe haber un reabastecimiento de cargas positivas hacia la base. Este flujo de carga está indicado como $i_{B_{b}}$ en la figura 5. La cantidad de huecos que se recombinan, por unidad de tiempo en la base, está directamente relacionada con la cantidad de electrones (portadores minoritarios en la base)\footnote{$R'_{n}=R'_{p}=\dfrac{\delta n(t)}{ \tau _{n_{0}} }$ es la tasa de recombinación de portadores minoritarios en exceso en un semiconductor de tipo p.}. Por lo tanto, la corriente $i_{B_{b}}$ también es proporcional a $e^{V_{BE}/V_{t}}$.
+
+La corriente total $i_{B}$ es la suma de las dos corrientes, $i_{B_{a}}$ e $i_{B_{b}}$, y también es proporcional a $e^{V_{BE}/V_{t}}$.
+
+La relación entre la corriente de la base y la corriente del colector es constante, dado que ambas corrientes son proporcionales a $e^{V_{BE}/V_{t}}$. Podemos escribir
+\[ \frac{i_{C}}{i_{B}}=\beta \]
+donde $\beta$ es la \emph{ganancia de corriente a emisor común}. Normalmente, la corriente de base será relativamente pequeña (se intentará, por lo mencionado anteriormente, que $i_{E_{2}}=i_{B_{a}}$ sea lo más pequeña posible y que no haya recombinación, con lo cuál, $i_{B_{b}} \approx 0$ también), con lo cual, la ganancia de corriente a emisor común será mucho más grande que la unidad, típicamente de valor de 100 o más.
+
+\subsection{Modos de operación.}
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{transistorcircuito.png}
+\caption{Un transistor npn en la configuración de emisor común.}
+\end{center}
+\end{figure}
+
+En la figura 6 se muestra un transistor npn en un circuito de emisor común. En esta configuración, el transistor se puede polarizar en los tres modos de operación. Si la tensión BE es cero o la juntura está polarizada en inversa ($V_{BE} \leq 0$) no habrá electrones que se inyecten en la base y, como la juntura BC también está polarizada en inversa, no hay corrientes en esta situación. Esta condición se conoce como \emph{modo de corte}.
+
+Cuando la juntura BE se polariza en directo se genera una corriente en el emisor tal y como se discutió en las secciones precedentes, y la inyección de electrones en la base generará una corriente en el colector. Por la ley de tensiones de Kirchhoff (LKV) las ecuaciones por la malla de la derecha son
+\[ V_{CC}=I_{C}R_{C}+V_{CB}+V_{BE}=V_{R}+V_{CE} \]
+Si $V_{CC}$ es lo suficientemente grande y $V_{R}$ lo suficientemente chica, entonces $V_{CB}>0$ y la juntura BC estará polarizada en inversa para este transistor npn. Esta condición es en el \emph{modo activo directo}.
+
+A medida que la tensión $V_{BE}$ aumenta, la corriente del colector aumenta y, por lo tanto, $V_{R}$ también aumenta (recordar que $i_{C}$ depende exponencialmente de $V_{BE}$ y es independiente de $V_{BC}$ en nuestro modelo). Un aumento en $V_{R}$ implica que la tensión de polarización inversa, $V_{BC}$ disminuye. En algún punto, la corriente $I_{C}$ será lo suficientemente grande para que la combinación entre $V_{R}$ y $V_{CC}$ produzca una polarización nula sobre la juntura BC. Un pequeño aumento de $I_{C}$ provocará que la juntura BC quede polarizada en directo ($V_{CB}<0$). Esta condición se llama \emph{modo de saturación}. En el modo de saturación ambas junturas están en polarización directa y la corriente del colector deja de estar controlada por la tensión $V_{BE}$.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{transistorivsv.png}
+\caption{Gráfico de la corriente del colector en función de la tensión colector emisor.}
+\end{center}
+\end{figure}
+
+En la figura 7 se muestran las características tensión-corriente del transistor, $I_{C}$ vs. $V_{CE}$, para distintas corrientes de base constante. Cuando la tensión colector emisor, $V_{CE}$, es lo suficientemente grande para que la juntura BC esté polarizada en inversa, la corriente del colector es constante en nuestra primera aproximación. Para pequeños valores de $V_{CE}$, la juntura BC se polariza en directo y la corriente del colector decrece a cero para corrientes de base constantes.
+
+Escribiendo las ecuaciones de LKV alrededor de la malla de la derecha, encontramos
+\[ V_{CE}=V_{CC}-I_{C}R_{C} \]
+que es una ecuación que presenta una relación lineal entre la corriente del colector y la tensión colector emisor. Esta relación lineal se conoce como línea de carga (\emph{load line}) y se encuentra dibujada en el gráfico de la figura 7. La línea de carga, superpuesta a las características del transistor, puede usarse para visualizar la condición de polarización y el modo de operación del transistor.
+
+El modo de corte ocurre cuando $I_{C}=0$. El modo de saturación ocurre cuando no hay más cambios en la corriente del colector a pesar de variar la corriente de la base. El modo activo directo ocurre cuando la relación $i_{C}=\beta \cdot i_{B}$ es válida. Estos tres modos de operación se pueden ver en la figura 7.
+
+Un cuarto modo de operación es posible, pero no con el circuito presentado en la figura 6. Este cuarto modo se conoce como \emph{modo activo inverso} y ocurre cuando la juntura BE tiene polarización inversa y la juntura BC polarización directa. En este caso, el transistor opera ''al revés'' y los roles de colector y emisor se cambian. Se discutió que el transistor no es un dispositivo simétrico, con lo cual las características del modo activo inverso serán muy distintas al modo activo directo.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{transistormodosdeoperacion.png}
+\caption{Modos de operación de acuerdo a las distintas polarizaciones de las junturas.}
+\end{center}
+\end{figure}
+
+\subsection{Amplificación con transistores bipolares.}
+
+Las tensiones y las corrientes pueden ser amplificadas utilizando un transistor bipolar en combinación con otro elementos de circuito. La figura 9 muestra un transistor npn en una configuración de emisor común. Las fuentes de corriente continua, $V_{BB}$ y $V_{CC}$, son usadas para polarizar el transistor en el modo activo directo. La fuente de tensión $v_{i}$ representa una señal dependiente del tiempo que tiene que ser amplificada.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{transistorcircuito2.png}
+\caption{Un transistor npn en la configuración de emisor común.}
+\end{center}
+\end{figure}
+
+Si consideramos, por ejemplo, que la tensión $v_{i}$ es senoidal, ésta induce un componente senoidal en la corriente, superpuesto a la corriente de continua. Como $i_{C}=\beta \cdot i_{B}$, un valor relativamente grande de la corriente senoidal es superpuesto al valor de continua de la corriente del colector (recordar que $\beta \geq 100$ en los casos más habituales). La corriente del colector, dependiente del tiempo, induce una tensión, dependiente del tiempo, sobre $R_{C}$, lo que, por leyes de Kirchhoff, implica que existe una tensión senoidal superpuesta a un valor de continua entre el colector y el emisor. Las tensiones senoidales en la malla colector-emisor son más grandes que la tensión de entrada, $v_{i}$, de tal forma que el circuito provocó una ganancia de tensión para señales dependientes del tiempo. Por lo tanto, este circuito, se conoce como amplificador de tensión.
+
+\section{Distribución de los portadores minoritarios.}
+
+Estamos interesados en calcular las corrientes de un transistor bipolar lo que, al igual que en la juntura pn, viene determinado por la concentración de los portadores minoritarios. Dado que las corrientes de difusión son provocadas por gradientes en la concentración de los portadores minoritarios, calcularemos, en estado estacionario, la distribución de los mismos en cada una de las regiones del transistor. Primero, consideraremos el modo activo directo y luego los otros modos de operación. En la figura 10 se presenta una tabla que resume las notaciones a utilizar en las secciones.
+
+\begin{figure}[ht!]
+\begin{center}
+\begin{tabular}{|ll|} \hline
+\textbf{Notación} & \textbf{Definición} \\ \hline
+\underline{Para transistores npn y pnp.} & \\
+$N_{E}$, $N_{B}$, $N_{C}$ & Concentraciones de dopantes en emisor, \\ & base y colector.\\
+$x_{E}$, $x_{B}$, $x_{C}$ & Anchos de las zonas neutrales del emisor, \\ & base y colector.\\
+$D_{E}$, $D_{B}$, $D_{C}$ & Coeficientes de difusión de los portadores \\  & minoritarios en emisor, base y colector.\\
+$L_{E}$, $L_{B}$, $L_{C}$ & Longitudes de difusión de los portadores \\  & minoritarios en emisor, base y colector.\\
+$\tau _{E_{0}}$, $\tau _{B_{0}}$, $\tau _{C_{0}}$ & Tiempo de vida de los portadores \\ & minoritarios en emisor, base y colector.\\
+ & \\
+\underline{Para el transistor npn.} & \\
+$p_{E_{0}}$, $n_{B_{0}}$, $p_{C_{0}}$ & Concentraciones de los portadores \\ & minoritarios (huecos, electrones y huecos) \\ & en emisor, base y el colector, en equilibrio \\ & térmico. \\
+$p_{E}(x')$, $n_{B}(x)$, $p_{C}(x'')$ & Concentraciones total de los \\ & portadores minoritarios en emisor, base \\ & y colector. \\
+$\delta p_{E}(x')$, $\delta n_{B}(x)$, $\delta p_{C}(x'')$ & Concentraciones en exceso de \\ & los portadores minoritarios en emisor, \\ & base y colector. \\
+ & \\
+\underline{Para el transistor pnp.} & \\
+$n_{E_{0}}$, $p_{B_{0}}$, $n_{C_{0}}$ & Concentraciones de los portadores \\ & minoritarios (electrones, huecos y \\ & electrones) en emisor, base y el colector, \\ & en equilibrio térmico. \\
+$n_{E}(x')$, $p_{B}(x)$, $n_{C}(x'')$ & Concentraciones total de los \\ & portadores minoritarios en emisor, base \\ & y colector. \\
+$\delta n_{E}(x')$, $\delta p_{B}(x)$, $\delta n_{C}(x'')$ & Concentraciones en exceso de los \\ & portadores minoritarios en emisor, base\\ & y colector. \\ \hline
+\end{tabular}
+\caption{Notación a utilizar en las siguientes secciones.}
+\end{center}
+\end{figure}
+
+En la figura 11 se muestra la geometría a utilizar para el transistor.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{transistorgeometria.png}
+\caption{Geometría del transistor.}
+\end{center}
+\end{figure}
+
+\subsection{Modo activo directo.}
+
+Consideremos un transistor bipolar npn, dopado uniformemente, con la geometría de la figura 11. Cuando consideremos las regiones del emisor, la base y el colector separadamente, iremos cambiando el origen de coordenadas al borde de cada zona espacial de carga, considerando $x$, $x'$ o $x''$ tal y como se muestra en la figura 11.
+
+En el modo activo directo, la juntura BE está en polarización directa, mientras que la juntura BC está en polarización inversa. Se esperará que las distribuciones de los portadores minoritarios sean como los mostrados en la figura 12.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{distribucionmodoactivodirecto.png}
+\caption{Distribución de portadores minoritarios en el modo activo directo.}
+\end{center}
+\end{figure}
+
+Al haber dos regiones de tipo n, tendremos huecos como portadores minoritarios tanto en el emisor como en el colector. Para distinguir entre estas dos regiones, usaremos la notación que se muestra en la figura 12. Hay que tener en cuenta que sólo trabajaremos con portadores minoritarios. Los parámetros $p_{E_{0}}$, $n_{B_{0}}$ y $p_{C_{0}}$ denotan las concentraciones de los portadores minoritarios en el emisor, la base y el colector, respectivamente, en equilibrio térmico. Las funciones $p_{E}(x')$, $n_{B}(x)$ y $p_{C}(x'')$ denotan las concentraciones de los portadores minoritarios en el emisor, la base y el colector, respectivamente, en estado estacionarios, en función de la distancia. Asumiermos que la distancia de la región neutral del colector, $x_{C}$, es larga en comparación con la longitud de difusión, $L_{C}$, pero tomaremos en cuenta una dimensión finita para la región neutral del emisor, $x_{E}$. Si asumimos que la velocidad superficial de recombinación es infinita en $x'=x_{E}$, entonces la concentración de portadores minoritarios en exceso en $x'=x_{E}$ es cero, por lo tanto $p_{E}(x'=x_{E})=p_{E_{0}}$. Una velocidad de recombinación infinita es una buena aproximación cuando los contactos son óhmicos.
+
+\textbf{Región de la base.} La concentración de portadores minoritarios en exceso, en estado estacionario, se puede encontrar resolviendo la ecuación de transporte ambipolar. Suponiendo que no hay campo eléctrico aplicado en la zona neutral entonces, la ecuación de transporte ambipolar, en estado estacionario, se convierte en
+\[ D_{B} \frac{\partial^{2} (\delta n_{B}(x))}{\partial x^{2}} - \frac{\delta n_{B}(x)}{\tau _{B_{0}}}=0 \]
+donde $\delta n_{B}(x)$ es la concentración de los electrones, portadores minoritarios en exceso, y $D_{B}$ y $\tau _{B_{0}}$ son los coeficientes de difusión y tiempo de vida medio de los portadores minoritarios, respectivamente. La concentración en exceso se define como
+\[ \delta n_{B}(x)=n_{B}(x)-n_{B_{0}} \]
+
+La solución general a la ecuación de transporte ambipolar es
+\[ \delta n_{B}(x)=A \cdot e^{\frac{x}{L_{B}}}+B \cdot e^{\frac{-x}{L_{B}}} \]
+donde $L_{B}$ es la longitud de difusión de los portadores minoritarios en la base, $L_{B}=\sqrt{D_{B}\tau _{B_{0}}}$. La extensión de la base es finita, con lo cual, no podemos descartar ninguno de los dos términos.
+
+Las condiciones de contorno son
+\[ \delta n_{B}(x=0)=\delta n_{B}(0)=A+B \]
+y
+\[ \delta n_{B}(x=x_{B})=A \cdot e^{\frac{x_{B}}{L_{B}}} + B \cdot e^{\frac{-x_{B}}{L_{B}}} \]
+La juntura BE está polarizada en directo, por lo tanto, la condición de contorno en $x=0$ es
+\[ \delta n_{B}(0)=n_{B}(0)-n_{B_{0}}=n_{B_{0}}(e^{\frac{eV_{BE}}{kT}}-1) \]
+(revisar sección 5.3 del apunte de juntura y diodo pn para la justificación de esta condición de contorno). La juntura BC está polarizada en inversa, con lo cuál, la condición de contorno en $x=x_{B}$ es
+\[ \delta n_{B}(x_{B})=n_{B}(x=x_{B})-n_{B_{0}}=0-n_{B_{0}}=-n_{B_{0}} \]
+
+Utilizando todas estas condiciones, podemos despejar los coeficientes $A$ y $B$ obteniendo
+\[ A= \frac{-n_{B_{0}} (1 + e^{\frac{-x_{B}}{L_{B}}} \cdot (e^{\frac{eV_{BE}}{kT}} -1)) }{2 \sinh \bigg( \dfrac{x_{B}}{L_{B}} \bigg)} \]
+\[ B= \frac{n_{B_{0}} (1+ e^{\frac{x_{B}}{L_{B}}} \cdot ( e^{\frac{eV_{BE}}{kT}} -1 ))}{2 \sinh \bigg( \dfrac{x_{B}}{L_{B}} \bigg)} \]
+
+Finalmente, reemplazando estos coeficientes en la ecuación correspondiente, obtenemos
+\[ \delta n_{B}(x)= \frac{ n_{B_{0}} \bigg( ( e^{\frac{eV_{BE}}{kT}} - 1 ) \sinh \bigg( \dfrac{x_{B}-x}{L_{B}} \bigg) - \sinh \bigg( \dfrac{x}{L_{B}} \bigg) \bigg) }{ \sinh \bigg( \dfrac{x_{B}}{L_{B}} \bigg) } \]
+
+Esta última ecuación puede parecer sorprendente con los $\sinh$. Sin embargo, se dijo varias veces que la longitud de la base, $x_{B}$, es muy pequeña en comparación con la longitud de difusión de los portadores minoritarios, $L_{B}$. Como buscamos que $x_{B}<L_{B}$, los argumentos de las funciones $\sinh$ son siempre menores a la unidad. Si este argumento es menor a $0,4$ la función $\sinh$ difiere de su aproximación lineal en menos de un $3\%$. Todo esto nos lleva a concluir que el exceso en la concentración de electrones, $\delta n_{B}$, es, aproximadamente, una función lineal de la distancia, para todo $x$ en la región de la base. Usando la aproximación de que $\sinh(x)\approx x$ si $x \ll 1$, entonces la concentración de electrones en exceso viene dada por
+\[ \delta n_{B} (x) \approx \frac{n_{B_{0}}}{x'_{B}} ((e^{\frac{eV_{BE}}{kT}}-1) (x_{B}-x)-x) \]
+
+\textbf{Región del emisor.} Consideremos, ahora, la concentración de portadores minoritarios en la región del emisor (huecos). Esta concentración, en estado estacionario y sin campo eléctrico aplicado sobre la región neutral, viene dada por la ecuación
+\[ D_{E} \frac{\partial^{2} (\delta p_{E}(x'))}{\partial x^{2}} - \frac{\delta p_{E}(x')}{\tau _{E_{0}}}=0 \]
+donde $D_{E}$ y $\tau _{E_{0}}$ son el coeficiente de difusión y el tiempo de vida de los portadores minoritarios en exceso, respectivamente, en la región del emisor. La concentración de los portadores en exceso está dada por
+\[ \delta p_{E}(x')=p_{E}(x')- p_{E_{0}} \]
+La solución general es
+\[ \delta p_{E}(x')=C \cdot e^{\frac{x'}{L_{E}}}+D \cdot e^{\frac{-x'}{L_{E}}} \]
+donde $L_{E}$ es la longitud de difusión de los portadores minoritarios en el emisor, $L_{E}=\sqrt{D_{E}\tau _{E_{0}}}$. Asumiendo que la longitud del emisor, $x_{E}$ no es tan larga en comparación con $L_{E}$, entonces debemos retener ambos miembros de la ecuación. Las condiciones de contorno vienen dadas por
+\[ \delta p_{E}(0)=C+D \]
+\[ \delta p_{E}(x_{E})= C \cdot e^{\frac{x_{E}}{L_{E}}}+D \cdot e^{\frac{-x_{E}}{L_{E}}} \]
+
+La juntura BE está polarizada en directo, con lo cual,
+\[ \delta p_{E}(0)=p_{E}(x'=0)-p_{E_{0}}=p_{E_{0}} ( e^{\frac{eV_{BE}}{kT}} -1 ) \]
+Una velocidad de recombinación infinita en $x'=x_{E}$ nos lleva a
+\[ \delta p_{E}(x_{E})=0 \]
+
+Resolviendo para $C$ y $D$ y reemplazando, obtenemos
+\[ \delta p_{E}(x')=\frac{ p_{E_{0}} \cdot ( e^{\frac{eV_{BE}}{kT}} -1 ) \cdot \sinh \bigg( \dfrac{x_{E}-x'}{L_{E}} \bigg) }{ \sinh \bigg( \dfrac{x_{E}}{L_{E}} \bigg) } \]
+
+Si la distancia $x_{E}$ es pequeña, podemos usar la aproximación lineal, obteniendo
+\[ \delta p_{E}(x') \approx \frac{p_{E_{0}}}{x_{E}} \cdot ( e^{\frac{eV_{BE}}{kT}} -1 ) \cdot (x_{E} - x') \]
+
+\textbf{Región del colector.} La ecuación:
+\[ D_{C} \frac{\partial^{2} (\delta p_{C}(x'')}{\partial x''^{2}} - \frac{\delta p_{C}(x'')}{\tau _{C_{0}}}=0 \]
+
+La solución general:
+\[ \delta p_{C}(x'')=C \cdot e^{\frac{x''}{L_{C}}}+D \cdot e^{\frac{-x''}{L_{C}}} \]
+
+Las condiciones de contorno:
+\[ G=0 \qquad \textrm{Longitud muy larga (infinita)} \]
+\[ \delta p_{C}(x''=0)=\delta p_{C}(0)=p_{C}(x''=0)-p_{C_{0}}=0-p_{C_{0}}=-p_{C_{0}} \]
+
+La solución:
+\[ \delta p_{C}(x'')=-p_{C_{0}} e^{\frac{-x''}{L_{C}}} \]
+que es el resultado que esperábamos de una juntura pn en polarización inversa.
+
+\subsection{Otros modos de operación.}
+
+El transistor bipolar también puede operar en modo de corte, de saturación o activo inverso. Se discutirá la concentración de los portadores minoritarios de forma cualitativa (el desarrollo matemático se puede encontrar en las diapositivas de Ozols).
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=1\textwidth]{transistorconcentracionmodosvarios.png}
+\caption{(a) Modo de corte. (b) Modo de saturación.}
+\end{center}
+\end{figure}
+
+En la figura 13a se presentan las distribuciones de las concentraciones de los portadores minoritarios en cada región del transistor operando en modo de corte. En este modo, tanto la juntura BE como la juntura BC están polarizadas en inversa, por lo tanto, la concentración de portadores minoritarios es cero en los bordes de cada región de carga espacial. Las regiones del emisor y del colector se asumieron ''largas'' en esta figura, mientras que el ancho de la región de la base es mucho menor que la longitud de difusión de los portadores minoritarios. Como $x_{B} \ll L_{B}$, prácticamente todos los portadores minoritarios huyen de la región de la base.
+
+En la figura 13b se muestra la distribución de los portadores minoritarios en un transistor npn operando en modo de saturación. Tanto la juntura BE como la juntura BC están en polarización directa, por lo tanto, existen portadores minoritarios en exceso en cada borde de la zona espacial de carga. Sin embargo, como todavía hay corriente de colector en este modo, todavía debe existir un gradiente de concentraciones de electrones a lo largo de la base (esto puede deberse a la diferencia en los dopajes de cada zona del transistor).
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{transistormodoactivoinverso.png}
+\caption{Concentraciones en el modo activo inverso.}
+\end{center}
+\end{figure}
+
+En la figura 14 se puede observar la distribución de los portadores minoritarios del transistor npn en modo activo inverso. En este caso, la juntura BE está polarizada en inversa y la juntura BC tiene polarización directa. Los electrones del colector son inyectados en la base. El gradiente de portadores minoritarios en la base es en sentido contrario al modo activo directo, con lo cuál, las corrientes del emisor y el colector cambiarán de dirección. Dado que el área BC es, normalmente, mucho mayor que el área BE, no todos los electrones inyectado por el colector en la base, serán recogidos por el emisor. Las concentraciones relativas de dopantes también son distintas en el colector que en la base o el emisor, por lo tanto, podemos ver que el transistor no es simétrico. Podemos esperar que las características del mismo transistor, operando en modo activo inverso, sean muy distintas a si se lo opera en modo activo directo.
+
+\section{Ganancia de corriente de base común a baja frecuencia.}
+
+El principio básico de operación de un transistor bipolar es controlar la corriente del colector mediante la tensión BE. La corriente del colector es una función del número de portadores mayoritarios que alcanzan el colector luego de ser inyectados por el emisor en la base, a través de la juntura BE. La ganancia de corriente de base común se define como la relación entre la corriente del colector y la corriente del emisor. El flujo de portadores nos lleva a definiciones de corrientes particulares en el dispositivo. Podemos usar esas definciones para definir la ganancia de corriente de un transistor en función de varios factores.
+
+\subsection{Factores contribuyentes.}
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{transistorflujoparticulas.png}
+\caption{Densidades de corriente en un transistor operando en modo activo directo.}
+\end{center}
+\end{figure}
+
+En la figura 15 se presentan varios de los flujos de partículas que aparecen en un transistor bipolar npn. Definiremos los distintos componentes del flujo y luego consideraremos las corrientes resultantes. Se pueden correlacionar los flujos con las distribuciones de los portadores minoritarios de la figura 12.
+
+El factor $J^{-}_{n_{E}}$ es el flujo de electrones inyectados desde el emisor en la base. A medida que los electrones se difunden a través de la base, algunos de ellos se recombinarán con los huecos (portadores mayoritarios de la base). Los huecos que se pierden por recombinación serán respuestos por el terminal de la base. Este flujo de reposición de huecos se denota como $J^{+}_{R_{B}}$. El flujo de electrones que alcanza el colector es $J^{-}_{n_{C}}$. Los huecos (portadores mayoritarios) de la base que son inyectados en el emisor resultan en un flujo de huecos denotado por $J^{+}_{p_{E}}$. Algunos de los electrones y huecos que son inyectados a través de la zona de carga espacial de la juntura BE se recombinarán en esta región. Esta recombinación nos lleva a un flujo de electrones $J^{-}_{R}$. Generación de electrones y huecos ocurre en la juntura BC (como está polarizada en inversa, pueden ir liberándose más electrones por la tensión). Esta generación da lugar a un flujo de huecos $J_{G}^{+}$. Finalmente, la corriente de saturación en inversa, de la juntura BC está representada por el flujo $J^{+}_{p_{C}0}$.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=1\textwidth]{transistorcorrientes.png}
+\caption{Densidades de corriente y distribución de los portadores minoritarios en un transistor operando en modo activo directo.}
+\end{center}
+\end{figure}
+
+Las correspondientes densidades de corriente en el transistor npn, operando en modo activo directo, se presentan en la figura 16 junto con las distribuciones de portadores minoritarios. Como en la juntura pn, las corrientes en el transistor bipolar se definen en términos de las corrientes de difusión de los portadores minoritarios. Las densidades de corriente se definen como sigue:
+
+$J_{n_{E}}$: Debida a la difusión de los electrones (portadores minoritarios) en la base en $x=0$.
+
+$J_{n_{C}}$: Debida a la difusión de los electrones (portadores minoritarios) en la base en $x=x_{B}$.
+
+$J_{R_{B}}$: La diferencia entre $J_{n_{E}}$ y $J_{n_{C}}$, que se debe a la recombinación de los electrones portadores minoritarios en exceso con los huecos portadores mayoritarios en la base. La corriente $J_{R_{B}}$ es el flujo de huecos hacia la base para reponer los huecos perdidos por recombinación.
+
+$J_{p_{E}}$: Debida a la difusión de los huecos (portadores minoritarios) en el emisor en $x'=0$.
+
+$J_{R}$: Debida a la recombinación de portadores en la juntura BE, de polarización directa.
+
+$J_{p_{C}0}$: Debida a la difusión de los huecos (portadores minoritarios) en el colector en $x''=0$.
+
+$J_{G}$: Debida a la generación de portadores en la juntura BC, de polarización inversa.
+
+Las corrientes $J_{R_{B}}$, $J_{p_{E}}$ y $J_{R}$ son corrientes de la juntura BE únicamente y no contribuyen a la corriente del colector. Las corrientes $J_{p_{C}0}$ y $J_{G}$ corresponden a la juntura BC únicamente. Estas corrientes componentes no contribuyen a la acción del transistor o la ganancia de corriente.
+
+La ganancia de corriente de base común a corriente continua es definida como
+\[ \alpha _{0}=\frac{I_{C}}{I_{E}} \]
+Si asumimos que el área de la sección activa de ambas junturas es igual, podemos escribir la ganancia de corriente en término de las densidades de corriente
+\[ \alpha _{0}=\frac{J_{C}}{J_{E}}=\frac{J_{n_{C}}+J_{G}+J_{p_{C}0}}{J_{n_{E}}+J_{R}+J_{p_{E}}} \]
+
+En primer lugar, nos interesa ver cómo variará la corriente del colector con un cambio en la corriente del emisor. La ganancia de corriente de base común a pequeñas señales o senoidales, se define como
+\[ \alpha = \frac{\partial J_{C}}{\partial J_{E}}=\frac{J_{n_{C}}}{J_{n_{E}}+J_{R}+J_{p_{E}}} \]
+Las corrientes de polarización inversa en la juntura BC, $J_{G}$ y $J_{p_{C}0}$ no son funciones de la corriente del emisor.
+
+Podemos escribir esta última ecuación como
+\[ \alpha = \bigg( \frac{J_{n_{E}}}{J_{n_{E}}+J_{p_{E}}} \bigg) \bigg( \frac{J_{n_{C}}}{J_{n_{E}}} \bigg) \bigg( \frac{J_{n_{E}}+J_{p_{E}}}{J_{n_{E}}+J_{R}+J_{p_{E}}} \bigg) \]
+o
+\[ \alpha = \gamma \cdot  \alpha _{T} \cdot \delta \]
+Los factores de esta ecuación pueden ser definidos como
+\[ \gamma = \frac{J_{n_{E}}}{J_{n_{E}}+J_{p_{E}}} \equiv \textrm{Eficiencia de la inyección del emisor.} \]
+\[ \alpha _{T}=\frac{J_{n_{C}}}{J_{n_{E}}} \equiv \textrm{Factor de transporte de la base.} \]
+\[ \delta = \frac{J_{n_{E}}+J_{p_{E}}}{J_{n_{E}}+J_{R}+J_{p_{E}}} \equiv \textrm{Factor de recombinación.} \]
+
+Lo ideal sería que un cambio en la corriente del emisor produzca un cambio igual en la corriente del colector o, lo que es lo mismo, $\alpha=1$. Sin embargo, considerando las últimas ecuaciones, veremos que $\alpha$ será siempre menor a la unidad. El objetivo es lograr que $\alpha$ se acerca a uno lo más posible. Para conseguir este objetivo, debemos examinar cuidadosamente cada uno de los tres factores que componen $\alpha$.
+
+La eficiencia de la inyección del emisor, $\gamma$, tiene en cuenta la difusión de los huecos portadores minoritarios en el emisor. Esta corriente es parte de la corriente del emisor, pero no contribuye a la acción del transistor en que $J_{p_{E}}$ no es parte de la corriente del colector. El factor de transporte de la base, $\alpha _{T}$, tiene en cuenta cualquier recombinación de los electrones portadores minoritarios en exceso en la base. Idealmente, buscaremos que no haya recombinación en la juntura BE de polarización directa. La corriente $J_{R}$ contribuye a la corriente del emisor, pero no contribuye a la corriente del colector.
+
+\subsection{Obtención matemática de los factores de ganancia de corriente.}
+
+Buscaremos determinar, ahora, cada uno de los factores de ganancia en términos de los parámetros geométricos y eléctricos del transistor. Los resultados de estas derivaciones mostrarán cómo afectan los distintos parámetros a las propiedades del dipositivo y apuntarán a un diseño eficiente del transistor.
+
+\textbf{Eficiencia de la inyección del emisor.} Consideremos, inicialmente, la eficiencia de la inyección del emisor. Tenemos que
+\[ \gamma = \frac{J_{n_{E}}}{J_{n_{E}}+J_{p_{E}}}=\frac{1}{1+\dfrac{J_{p_{E}}}{J_{n_{E}}}} \]
+Obtuvimos, en secciones precedentes, las funciones de distribución de los portadores minoritarios para el modo activo directo. Observando que $J_{n_{E}}$ tal y como fue definido en la figura 16 es en la dirección $-x$, podemos escribir las densidades de corriente como
+\[ J_{p_{E}}=-eD_{E}\frac{d(\delta p_{E}(x'))}{dx'} |_{x'=0} \]
+y
+\[ J_{n_{E}}=-eD_{B} \frac{d (\delta n_{B}(x))}{dx} |_{x=0} \]
+donde $\delta p_{E}(x')$ y $\delta n_{B}(x)$ son las concentraciones en exceso determinadas en secciones anteriores.
+
+Derivando, obtenemos
+\[ J_{p_{E}}=\frac{eD_{E}p_{E_{0}}}{L_{E}} (e^{\frac{eV_{BE}}{kT}}-1) \frac{1}{\tanh \bigg( \dfrac{x_{E}}{L_{E}} \bigg)} \]
+y
+\[ J_{n_{E}}=\frac{eD_{B}n_{B_{0}}}{L_{B}} \bigg( \frac{1}{\sinh(x_{B}/L_{B})} + \frac{e^{\frac{eV_{BE}}{kT}}-1}{\tanh (x_{B}/L_{B})}\bigg) \]
+Valores positivos de $J_{p_{E}}$ y $J_{n_{E}}$ implican que las corrientes van en las direcciones que se muestran en la figura 16. Si asumimos que la juntura BE está lo suficientemente polarizada de tal forma que $V_{BE}\gg kT/e$, entonces
+\[ e^{\frac{eV_{BE}}{kT}} \gg 1 \]
+y, también
+\[ \frac{e^{\frac{eV_{BE}}{kT}}}{\tanh \bigg( \dfrac{x_{B}}{L_{B}} \bigg)} \gg \frac{1}{\sinh \bigg( \dfrac{x_{B}}{L_{B}} \bigg)} \]
+Por lo tanto, la eficiencia de la inyección del emisor se convierte en
+\[ \gamma = \frac{1}{1+\dfrac{p_{E_{0}}D_{E}L_{B}}{n_{B_{0}}D_{B}L_{E}} \cdot \dfrac{\tanh (x_{B}/L_{B})}{\tanh (x_{E}/L_{E})}} \]
+
+Si asumimos que los parámetros de esta última ecuación son fijos, a excepción de $p_{E_{0}}$ y $n_{B_{0}}$, entonces, para que $\gamma \approx 1$, debemos tener $p_{E_{0}} \ll n_{B_{0}}$. Podemos escribir
+\[ p_{E_{0}}=\frac{n_{i}^{2}}{N_{E}} \qquad \wedge \qquad n_{B_{0}}=\frac{n_{i}^{2}}{N_{B}} \]
+donde $N_{E}$ y $N_{B}$ son las concentraciones de impurezas en el emisor y la base, respectivamente. La condición de que $p_{E_{0}} \ll n_{B_{0}}$ implica que $N_{E} \gg N_{B}$. Para que la eficiencia de la inyección del emisor esté cercana a la unidad, el dopaje del emisor debe ser grande en comparación con el dopaje de la base. Esta condición significa que muchos más electrones del material tipo n del emisor que huecos del material tipo p de la base serán inyectados a través de la zona de carga espacial BE. Si tanto $x_{B} \ll L_{B}$ como $x_{E} \ll L_{E}$, entonces la eficiencia de la inyección del emisor se puede escribir como
+\[ \gamma \approx \frac{1}{1+\dfrac{N_{B}}{N_{E}} \cdot \dfrac{D_{E}}{D_{B}} \cdot \dfrac{x_{B}}{x_{E}}} \]
+
+\textbf{Factor de transporte de la base.} El siguiente término a considerar es el factor de transporte de la base dado por $\alpha _{T}=J_{n_{C}}/J_{n_{E}}$. Por las definiciones de las direcciones de la corriente mostradas en la figura 16, podemos escribir
+\[ J_{n_{C}}=-eD_{B}\frac{d(\delta n_{B}(x))}{dx} |_{x=x_{B}} \]
+y
+\[ J_{n_{E}}=-eD_{B} \frac{d(\delta n_{B}(x))}{dx} |_{x=0} \]
+Usando la ecuación de $\delta n_{B}(x)$ hallada en secciones precedentes, tenemos que
+\[ J_{n_{C}}=\frac{eD_{B}n_{B_{0}}}{L_{B}} \bigg( \frac{e^{\frac{eV_{BE}}{kT}}-1}{\sinh(x_{B}/L_{B})} + \frac{1}{\tanh(x_{B}/L_{B})} \bigg) \]
+La expresión para $J_{n_{E}}$ ya la obtuvimos.
+
+Si, otra vez, asumimos que la juntura BE está suficientemente polarizada en directa, tal que $V_{BE} \gg kT/e$, entonces $e^{eV_{BE}/kT} \gg 1$. Con todo esto se obtiene que
+\[ \alpha _{T}=\frac{J_{n_{C}}}{J_{n_{E}}} \approx \frac{e^{\frac{eV_{BE}}{kT}}+\cosh (x_{B}/L_{B})}{1+e^{\frac{eV_{BE}}{kT}}\cosh(x_{B}/L_{B})} \]
+Para que $\alpha _{T}$ se encuentre cerca de la unidad, el ancho de la zona neutral de la base, $x_{B}$, debe ser mucho más pequeño que la longitud de difusión de los portadores minoritarios, $L_{B}$. Si $x_{B} \ll L_{B}$, entonces $\cosh (x_{B}/L_{B})$ es bastante mayor que la unidad. Aún más, si $e^{eV_{BE}/kT} \gg 1$, entonces el factor de transporte de la base es, aproximadamente
+\[ \alpha _{T}\approx \frac{1}{\cosh(x_{B}/L_{B})} \]
+Para $x_{B} \ll L_{B}$, se puede expandir la función coseno hiperbólico en una serie de Taylor, de tal forma que
+\[ \alpha _{T} \approx \frac{1}{\cosh(x_{B}/L_{B})} \approx \frac{1}{1+\frac{1}{2}(x_{B}/L_{B})^{2}}\approx 1-\frac{1}{2} \bigg( \frac{x_{B}}{L_{B}} \bigg)^{2} \]
+El factor de transporte de la base, $\alpha _{T}$ será cercano a la unidad si $x_{B} \ll L_{B}$. Podemos entender, ahora, por qué indicamos anteriormente que el ancho de la zona neutral de la base, $x_{B}$, debía ser pequeño en comparación con la longitud de difusión de los portadores minoritarios, $L_{B}$.
+
+\textbf{Factor de recombinación.} El factor de recombinación viene dado por
+\[ \delta = \frac{J_{n_{E}}+J_{p_{E}}}{J_{n_{E}}+J_{R}+J_{p_{E}}} \approx \frac{J_{n_{E}}}{J_{n_{E}}+J_{R}} = \frac{1}{1+\dfrac{J_{R}}{J_{n_{E}}}} \]
+Asumimos, para simplificar la expresión que $J_{p_{E}} \ll J_{n_{E}}$. La densidad de corriente de recombinación, debido a la recombinación en una juntura pn en polarización directa puede ser escrita como (para la deducción recurrir al capítulo 8 del Neamen)
+\[ J_{R}=\frac{ex_{BE}n_{i}}{2 \tau _{0}} \cdot e^{\frac{eV_{BE}}{2kT}} \cdot J_{r_{0}}e^{\frac{eV_{BE}}{2kT}} \]
+donde $x_{BE}$ es el ancho de la zona de carga espacial de la juntura BE.
+
+La corriente $J_{n_{E}}$ puede ser aproximada como
+\[ J_{n_{E}}=J_{s_{0}}e^{\frac{eV_{BE}}{kT}} \]
+donde
+\[ J_{s_{0}}=\frac{eD_{B}n_{B_{0}}}{L_{B} \tanh(x_{B}/L_{B})} \]
+El factor de recombinación, por lo tanto, puede escribirse como
+\[ \delta = \frac{1}{1+\dfrac{J_{r_{0}}}{J_{s_{0}}}}e^{\frac{-eV_{BE}}{2kT}} \]
+El factor de recombinación es una función de la tensión sobre la juntura BE. A medida que $V_{BE}$ aumenta, la corriente de recombinación se vuelve menos dominante y el factor de recombinación se acerca a la unidad.
+
+En el factor de recombinación se deben considerar, también, los efectos de la superficie. (Recurrir a los capítulos 6 y 10 del Neamen para más información.)
+
+\subsection{Resumen.}
+
+A pesar que consideramos un transistor npn en todas las deducciones, exactamente el mismo análisis aplica a un transistor pnp; las mismas distribuciones de portadores de carga minoritarios se obtendrían a excepción de que las concentraciones de electrones serán de huecos y viceversa. Las direcciones de las corrientes y la tensión de las polarizaciones también cambiará.
+
+Estuvimos considerando la ganancia de corriente de base común, definida por $\alpha _{0}=I_{C}/I_{E}$. La ganancia de corriente a emisor común se define como $\beta _{0}=I_{C}/I_{B}$. De la figura 6 podemos observar que $I_{E}=I_{B}+I_{C}$. Podemos determinar la relación entre las ganancias de base común y de emisor común utilizando la ley de corrientes de Kirchhoff (LKC). Podemos escribir
+\[ \frac{I_{E}}{I_{C}}=\frac{I_{B}}{I_{C}}+1 \]
+Sustituyendo las definiciones de ganancia de corriente, obtenemos
+\[ \frac{1}{\alpha _{0}}=\frac{1}{\beta _{0}}+1 \]
+Dado que esta relación funciona tanto para corriente continua como para señales pequeñas, podemos dejar de utilizar el subíndice. La ganancia de corriente de emisor común, puede escribirse en términos de la ganancia de corriente de base común como
+\[ \beta = \frac{\alpha}{1-\alpha} \]
+La ganancia de corriente de base común, en función de la ganancia de corriente de emisor común es
+\[ \alpha = \frac{\beta}{1+\beta} \]
+
+Suponiendo $x_{B} \ll L_{B}$ y $x_{E} \ll L_{E}$ podemos resumir lo deducido en esta última sección en la tabla de la figura 17.
+
+\begin{figure}[ht!]
+\begin{center}
+\begin{tabular}{|l|} \hline
+\textbf{Eficiencia de la inyección del emisor} \\ \\ $\gamma \approx \dfrac{1}{1+\dfrac{N_{B}}{N_{E}} \dfrac{D_{E}}{D_{B}} \dfrac{x_{B}}{x_{E}}}$ \\ \\ \hline
+\textbf{Factor de transporte de la base} \\ \\ $\alpha _{T} \approx \dfrac{1}{1+\dfrac{1}{2} \bigg( \dfrac{x_{B}}{L_{B}} \bigg)^{2}} $ \\ \\ \hline
+\textbf{Factor de recombinación} \\ \\ $\delta = \dfrac{1}{1+\dfrac{J_{r_{0}}}{J_{s_{0}}} e^{\frac{-eV_{BE}}{2kT}}} $ \\ \\ \hline
+\textbf{Ganancia de corriente de base común} \\ \\ $\alpha=\gamma \alpha _{T} \delta \approx \dfrac{1}{1+\dfrac{N_{B}}{N_{E}} \dfrac{D_{E}}{D_{B}} \dfrac{x_{B}}{x_{E}} + \dfrac{1}{2} \bigg( \dfrac{x_{B}}{L_{B}} \bigg)^{2} + e^{\frac{-eV_{BE}}{2kT}}}$ \\ \\ \hline
+\textbf{Ganancia de corriente de emisor común} \\ \\ $\beta=\dfrac{\alpha}{1-\alpha} \approx \dfrac{1}{\dfrac{N_{B}}{N_{E}} \dfrac{D_{E}}{D_{B}} \dfrac{x_{B}}{x_{E}} + \dfrac{1}{2} \bigg( \dfrac{x_{B}}{L_{B}} \bigg)^{2} + \dfrac{J_{r_{0}}}{J_{s_{0}}} e^{\frac{-eV_{BE}}{2kT}}}$ \\ \\ \hline
+\end{tabular}
+\caption{Tabla de factores de ganancia de corriente suponiendo $x_{B} \ll L_{B}$ y $x_{E} \ll L_{E}$.}
+\end{center}
+\end{figure}
+
+\end{document}

@@ -1,0 +1,302 @@
+%Tipo de documento
+\documentclass[12pt,a4paper]{article}
+
+%PAQUETES
+
+%Impresion en pdf
+\usepackage[pdftex]{color,graphicx}
+
+%Idioma
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+%Matemática
+\usepackage{amsmath, amssymb, amsfonts}
+
+\begin{document}
+
+\title{Fenómenos de transporte en semiconductores.}
+
+\author{$\Gamma$}
+
+\maketitle
+
+\section{Introducción.}
+
+Hasta ahora consideramos al semiconductor en equilibrio y obtuvimos las concentraciones de los portadores en las bandas de conducción y valencia respectivamente. Estas concentraciones son importantes en el entendimiento de las propiedades eléctricas del semiconductor. El flujo neto de cargas en un semiconductor ocasionará corrientes. El proceso mediante el cuál estas partículas cargadas se mueven, se denomina \emph{transporte}. En este resumen se considerarán dos mecanismos de transporte básicos, el \emph{arrastre}, que se produce al aplicar campos eléctricos, y la \emph{difusión}, que se produce debido a gradientes de densidades. A veces, los gradientes de temperaturas, también pueden producir transporte de cargas, sin embargo, a medida que los dispositivos semiconductores se vuelven más pequeños, estos efectos son despreciables. Los fenómenos de transporte son la piedra angular para, finalmente, determinar las características tensión-corriente en los semiconductores. En este resumen se considerará que, si bien hay un transporte neto de electrones y/o huecos, la condición de equilibrio térmico no se verá sustancialmente alterada.
+
+\section{Arrastre de cargas.}
+
+Un campo eléctrico aplicado a un semiconductor producirá una fuerza en las cargas (electrones y huecos) que provocará una aceleración y un movimiento netos, suponiendo que hay estados cuánticos disponibles en la banda de conducción y valencia. Este movimiento neto de cargas (producto de un campo eléctrico) se conoce como \emph{arrastre}. El arrastre neto de las cargas da lugar a una \emph{corriente de arrastre}.
+
+\subsection{Densidad de la corriente de arrastre.}
+
+Si se tiene una densidad volumétrica de carga $\rho$ moviéndose a una velocidad promedio de arrastre $v_{a}$, la corriente de arrastre será
+\[ J_{a}= \rho v_{a} \]
+donde $J$ tiene unidades de A/cm$^{2}$. Si la densidad volumétrica de carga se debe a huecos, entonces
+\[ J_{p|a} = (ep)v_{ap} \]
+donde $J_{p|a}$ es la densidad de corriente de arrastre debida a los huecos y $v_{ap}$ es la velocidad de arrastre de los huecos.
+
+La ecuación de movimiento para un hueco, en presencia de un campo eléctrico, es
+\[ F=m_{p}^{\ast}a=eE \]
+donde $e$ es la carga electrónica, $a$ es la aceleración, $E$ es el campo eléctrico, y $m_{p}^{\ast}$ es la masa efectiva del hueco. Si el campo eléctrico es constante, esperaremos que la velocidad aumente linealmente con el tiempo. Sin embargo, las partículas cargadas en un semiconductor se ven involucradas en colisiones con átomos de impurezas ionizados y con átomos de la red en vibración térmica. Estas colisiones alteran las características de la velocidad de la partícula.
+
+A medida que el hueco acelera, debido al campo eléctrico, la velocidad aumenta. Cuando la partícula cargada colisiona, pierde la mayoría de su energía. La partícula volverá a verse acelerada (el campo eléctrico sigue aplicado) y ganará velocidad hasta que colisione de nuevo. Esto sucederá continuamente. Sin embargo, a través de este proceso, la partícula tendrá una velocidad promedio de arrastre que, si el campo eléctrico aplicado no es muy grande, es directamente proporcional al campo
+\[ v_{ap} = \mu _{p} E \]
+donde $\mu _{p}$ es el factor de proporcionalidad y se conoce como \emph{movilidad del hueco}. La movilidad de estos electrones es un parámetro importante del semiconductor, pues es un indicativo de qué facilidad tienen las cargas para transportarse dentro del material al encontrarse bajo los efectos de un campo eléctrico. La unidad de movilidad se expresa, usualmente, como cm$^{2}/$(Vs).
+
+Utilizando estas relaciones, podemos escribir la densidad de corriente de arrastre, debida a los huecos, como
+\[ J_{p|a}= (ep)v_{ap} = e \mu _{p} p E \]
+La corriente de arrastre, debido a los huecos, es en el mismo sentido del campo aplicado.
+
+La misma idea aplica para los electrones
+\[ J_{n|a} = \rho v_{dn} = (-en)v_{an} \]
+donde $J_{n|a}$ es la densidad de corriente de arrastre, debida a los electrones, y $v_{an}$ es la velocidad promedio de arrastre de los electrones. La densidad de carga neta de los electrones es negativa.
+
+La velocidad de arrastre de los electrones también es proporcional al campo eléctrico aplicado cuando éste no es muy grande. Sin embargo, como la carga de los electrones es negativa, su movimiento neto es en dirección opuesta al campo eléctrico. Podemos escribir, entonces
+\[ v_{an}=-\mu _{n} E \]
+donde $\mu _{n}$ es la \emph{movilidad del electrón} y es una cantidad positiva. Con esto podemos obtener la densidad de corriente de arrastre, debida a los electrones, como
+\[ J_{n|a}=(-en)(-\mu _{n}E) = en\mu _{n}E \]
+Se puede observar que la corriente de arrastre debida a los electrones también va en la misma dirección que el campo eléctrico aplicado, a pesar de que la carga de los electrones sea negativa. (Lo cual era esperable. Hay que pensar en las definiciones habituales de corriente. Uno define, habitualmente, que la corriente va del + al - y los electrones se mueven exactamente al revés y aún así, consideramos que la corriente va del + al -).
+
+La movilidad de los electrones y los huecos, como era de esperarse, es una función de la temperatura y de la concentración de dopantes (por un lado, cuanta más temperatura, más pares electrón-hueco se generan térmicamente y, por lo tanto, mayor disponibilidad para la corriente; cuanta mayor sea la concentración de dopantes, más electrones o huecos habrá y se moverán con mayor facilidad). La tabla de la figura 1 tiene los valores de las movilidades para $T=300$K.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{tablamovilidades.png}
+\caption{Tabla para los valores de las movilidades para algunos materiales a $T=300$K.}
+\end{center}
+\end{figure}
+
+Dado que tanto los electrones como los huecos contribuyen a la densidad de corriente de arrastre, ésta se puede escribir como
+\[ J_{a} = e(\mu _{n}n + \mu _{p}p) E \]
+
+\subsection{Efectos de la movilidad.}
+
+Se sabe que, para un hueco bajo los efectos de un campo eléctrico,
+\[ F = m_{p}^{\ast} \frac{dv}{dt} = eE \]
+donde $v$ es la velocidad de la partícula debida al campo eléctrico y donde \emph{no} se considera el efecto de la velocidad térmica. Si suponemos que el campo eléctrico y la masa efectiva son constantes en el tiempo, podemos obtener
+\[ v=\frac{eEt}{m_{p}^{\ast}}\]
+donde se asumió que la velocidad inicial de arrastre es cero.
+
+Existe un tiempo medio entre colisiones que llamaremos $\tau _{cp}$. Si se aplica un pequeño campo eléctrico, habrá un pequeño arrastre del hueco en la dirección del campo y la velocidad neta de arrastre será una pequeña perturbación a la velocidad térmica aleatoria, de tal forma que el tiempo entre colisiones no se afectará apreciablemente. Si usamos el tiempo medio entre colisiones, $\tau _{cp}$, en lugar del tiempo $t$ en la ecuación anterior, obtenemos la velocidad media máxima justo antes de una colisión
+\[ v_{a|max}=\bigg( \frac{e \tau _{cp}}{m_{p}^{\ast}} \bigg) E \]
+dado que si evaluamos la velocidad en el instante final antes de una colisión ($\tau _{cp}$ mide el tiempo medio entre una colisión y otra, al hacer $v(\tau _{cp})$ estamos obteniendo la velocidad media \emph{justo antes} de una colisión), tendremos la velocidad media máxima que puede alcanzar la partícula. La velocidad promedio de arrastre es la mitad de la velocidad media máxima. Por lo tanto
+\[ \langle v_{ap} \rangle = \frac{1}{2} \bigg( \frac{e \tau _{cp}}{m_{p}^{\ast}} \bigg) E \]
+En realidad, el proceso de colisión es bastante más complejo que el modelo utilizado en este caso, pero es naturalmente estadístico. En análisis más rigurosos, el $\frac{1}{2}$ de la ecuación anterior no aparece.
+
+La movilidad de los huecos, entonces, es
+\[ \mu _{p} = \frac{v_{ap}}{E} = \frac{e \tau _{cp}}{m_{p}^{\ast}} \]
+Usando el mismo análisis para los electrones
+\[ \mu _{n} = \frac{e \tau _{cn}}{m_{n}^{\ast}} \]
+donde $\tau _{cn}$ es el tiempo medio entre colisiones para un electrón.
+
+Existen dos tipos de colisiones en los semiconductores que afectan a la movilidad de los portadores. La dispersión por fonones y la dispersión por impurezas ionizadas.
+
+Los átomos de un semiconductor tienen una cierta cantidad de energía térmica que los hace vibrar aleatoriamente alrededor de su posición de equilibrio. Las vibraciones de la red ocasionan imperfecciones en la, supuestamente perfecta, periodicidad de la función potencial (periodicidad de la red). Un potencial perfectamente periódico permite a los portadores moverse sin dispersiones a lo largo de todo el cristal. Pero las vibraciones térmicas de los átomos rompen la periodicidad perfecta de la red, interactuando con los electrones o los huecos. Esta dispersión de la red se conoce también como dispersión por fonones.
+
+Dado que la dispersión por fonones está relacionada con el movimiento térmico de los átomos, la tasa a la que ocurren las colisiones será una función de la temperatura. Si denominamos $\mu _{L}$ a la movilidad que se observaría si sólo existiera dispersión por fonones, entonces, la teoría de las dispersiones, nos dice que
+\[ \mu _{L} \propto T^{-\frac{3}{2}} \]
+Como se puede observar, la movilidad debida a las dispersiones de la red, crece cuando disminuye la temperatura. Intuitivamente, se espera que las vibraciones térmicas disminuyan al disminuir la temperatura, lo que implica que la probabilidad de que una partícula sufra una colisión, también disminuye. Esto aumentará la movilidad.
+
+El segundo mecanismo de interacción que afecta la movilidad de los portadores es la dispersión por impurezas ionizadas. Las impurezas insertadas en el material se ionizan a temperatura ambiente, con lo cuál, la movilidad de los electrones y los huecos se ve afectada por interacciones de Coulomb con estos iones. Si denominamos $\mu _{I}$ como la movilidad que se observaría si las dispersiones fueran producto únicamente de las impurezas ionizadas, en primer orden, tenemos
+\[ \mu _{I} \propto \frac{T^{\frac{3}{2}}}{N_{I}} \]
+donde $N_{I}=N_{d}^{+}+N_{a}^{-}$ es la concentración total de impurezas ionizadas en el semiconductor. Si la temperatura aumenta, la velocidad térmica aleatoria de los portadores aumenta, reduciendo el tiempo que un portador se ve expuesto a una interacción de Coulomb con los iones. Cuanto menor es el tiempo que un portador se ve afectado por las fuerzas de Coulomb, menor es el efecto causado por esta dispersión, y mayor será el valor esperado de $\mu _{I}$. Si la concentración de impurezas aumenta, la probabilidad de que un portador sufra interacciones de Coulomb aumenta y, por lo tanto, $\mu _{I}$ se ve reducida.
+
+Si $\tau _{L}$ es el tiempo medio entre colisiones debidas a dispersiones de la red, entonces $\frac{dt}{\tau _{L}}$ es la probabilidad de que ocurra una colisión con la red en un diferencial de tiempo. De la misma forma, si $\tau _{I}$ es el tiempo medio entre colisiones debidas a dispersiones por impurezas ionizadas, $\frac{dt}{\tau _{I}}$ es la probabilidad de que ocurra una colisión por interacciones de Coulomb en un tiempo $dt$. Si estos dos procesos de dispersión son independientes, entonces la probabilidad de que ocurra una colisión en un tiempo $dt$ es la suma de las probabilidades de que ocurra una colisión en cada caso, es decir,
+\[ \frac{dt}{\tau} = \frac{dt}{\tau _{L}} + \frac{dt}{\tau _{I}} \]
+donde $\tau$ es el tiempo medio entre cualquier evento de dispersión.
+
+Utilizando las distintas ecuaciones deducidas hasta ahora, obtenemos que
+\[ \frac{1}{\mu} = \frac{1}{\mu _{L}} + \frac{1}{\mu _{I}} \]
+donde $\mu$ es la movilidad neta. Si se agregan dos o más mecanismos de dispersión, la movilidad neta disminuye.
+
+\subsection{Conductividad.}
+
+La densidad de corriente de arrastre se puede escribir como
+\[ J_{a}=e(\mu _{n}n+\mu _{p} p)E=\sigma E \]
+donde $\sigma$ es la \emph{conductividad} del material. La conductividad está en unidades de $(\Omega \textrm{cm})^{-1}$ y es una función de la concentración de electrones y huecos y de sus respectivas movilidades.
+
+La inversa de la conductividad es la \emph{resistividad}, $\rho$, y tiene unidades de $\Omega \textrm{cm}$. La fórmula para la resistividad es
+\[ \rho = \frac{1}{\sigma} = \frac{1}{e(\mu _{n}n+\mu _{p} p)} \]
+
+Si tenemos una porción de semiconductor con una tensión aplicada, que produce una corriente $I$, podemos escribir
+\[ J = \frac{I}{A} \qquad \wedge \qquad E= \frac{V}{L} \]
+y utilizando estas relaciones, podemos insertarlas en la ecuación de la densidad de corriente, obteniendo
+\[ \frac{I}{A} = \sigma \frac{V}{L} \]
+y, despejando
+\[ V = \bigg( \frac{L}{\sigma A} \bigg) I = \bigg( \frac{\rho L}{A} \bigg) I = RI \]
+obtenemos la Ley de Ohm para un semiconductor. La resistencia, $R$, es función de la resistividad (o la conductividad) y la geometría del dispositivo.
+
+Si consideramos, por ejemplo, un semiconductor de tipo p fuertemente extrínseco ($N_{a}\gg n_{i}$) y tal que la concentración de donores sea nula ($N_{d}=0$), podemos asumir que la movilidad del electrón y del hueco tienen el mismo orden de magnitud y la conductividad queda como
+\[ \sigma = e(\mu _{n}n+\mu _{p} p) \approx e \mu _{p} p \]
+Más aún, si asumimos ionización completa,
+\[ \sigma \approx e \mu _{p} N_{a} \approx \frac{1}{\rho} \]
+con lo cual, la conductividad y la resistividad de un semiconductor extrínseco son funciones, primordialmente, del portador de carga mayoritario.
+
+Para un semiconductor intrínseco, la conductividad se puede escribir como
+\[ \sigma _{i} = e  (\mu _{n} + \mu _{p}) n_{i} \]
+
+\section{Difusión de cargas.}
+
+\emph{Difusión} es el proceso mediante el cual las partículas fluyen de una región de mayor concentración a una de menor concentración. (Como una caja partida en dos por una membrana, con la mitad vacía y la mitad llena de gas, cuando se rompe la membrana).
+
+\subsection{Densidad de corriente de difusión.}
+
+Supongamos que la concentración de electrones varía linealmente en una dimensión. Supongamos también, que la temperatura es uniforme de tal forma que la velocidad térmica promedio de los electrones sea independiente de $x$. Para calcular la corriente, tendremos que determinar el flujo neto de electrones por unidad de área y por unidad de tiempo a través del plano $x=0$. Si tomamos que $l$ es el camino libre de un electrón ($l=v_{th}\tau _{cn}$). En promedio, la mitad de los electrones situados en $x=-l$ se moverán hacia $x=0$ y la mitad de los electrones en $x=l$ se moverán hacia $x=0$. Esto es
+\[ F_{n} = \frac{1}{2} n(-l)v_{th} - \frac{1}{2} n(+l)v_{th} = \frac{1}{2}v_{th}(n(-l)-n(+l)) \]
+donde $n(x)$ es la concentración de electrones en función de la distancia. Si desarrollamos la concentración de electrones en una serie de Taylor, alrededor de $x=0$, tenemos
+\[ F_{n} = \frac{1}{2} v_{th} \bigg( \bigg( n(0) - l \frac{dn}{dx}\bigg) - \bigg( n(0)+l\frac{dn}{dx} \bigg) \bigg) \]
+que se convierte en
+\[ F_{n} = -v_{th}l \frac{dn}{dx} \]
+Cada electrón tiene carga $-e$, por lo tanto, la densidad de corriente de difusión es
+\[ J=-eF_{n}=ev_{th}l\frac{dn}{dx} \]
+y, como se ve, es proporcional a la derivada respecto del espacio, o gradiente de densidad, de la concentración electrónica.
+
+Para este caso unidimensional, podemos escribir la densidad de corriente de difusión como
+\[ J_{nx|dif}=eD_{n} \frac{dn}{dx} \]
+donde $D_{n}$ es el \emph{coeficiente de difusión de electrones} y tiene unidades de cm$^{2}/$s y es una cantidad positiva.
+
+La difusión de huecos, desde una región de alta concentración a una de baja concentración, produce un flujo de huecos en el sentido negativo de $x$. La densidad de corriente de difusión por huecos es proporcional al gradiente de densidades de huecos y a la carga electrónica, con lo cual
+\[ J_{px|dif}=-eD_{p} \frac{dp}{dx} \]
+para el caso unidimensional. El parámetro $D_{p}$ se conoce como \emph{coeficiente de difusión de huecos} y tiene unidades de cm$^{2}/$s y es positivo.
+
+\subsection{Densidad total de corriente.}
+
+Dado que ahora tenemos cuatro mecanismos independientes de transporte de cargas, podemos obtener la carga total sumando
+\[ J=en\mu _{n}E+ep\mu _{p}E+eD_{n} \nabla n - eD_{p} \nabla p \]
+o, en el caso unidimensional,
+\[ J=en\mu _{n}E_{x}+ep\mu _{p}E_{x}+eD_{n} \frac{dn}{dx} - eD_{p} \frac{dp}{dx} \]
+
+La movilidad del electrón nos da una idea de qué tan bien se mueve el electrón al aplicarle un campo eléctrico externo. El coeficiente de difusión del electrón nos da una idea de qué tan bien se mueve el electrón como resultado de un gradiente de densidad. La movilidad del electrón y el coeficiente de difusión \emph{no} son parámetros independientes. Lo mismo sucede con los huecos.
+
+\section{Distribución graduada de impurezas.}
+
+Hasta ahora, en la mayoría de los casos, asumimos que el semiconductor estaba dopado uniformemente. En muchos dispositivos semiconductores, sin embargo, puede no suceder esto. En lo que sigue, estudiaremos cómo un semiconductor dopado no uniformemente alcanza el equilibrio térmico y, de este análisis, derivaremos la relación de Einstein que relaciona la movilidad con el coeficiente de difusión.
+
+\subsection{Campo eléctrico inducido.}
+
+Considere un semiconductor que está dopado no uniformemente con átomos de impureza donores. Cuando el semiconductor alcanza el equilibrio térmico, la energía de Fermi es constante a través del cristal, con lo cual, el esquema de bandas de energía puede ser parecido al que se presenta en la figura 2. La concentración de dopantes disminuye cuando aumenta $x$. Habrá una difusión de los portadores mayoritarios (electrones) desde la región de mayor concentración a la región de menor concentración, que es la dirección de $x$ positiva. El flujo de electrones negativos, deja iones donores positivos. La separación de esta carga, provoca un campo eléctrico inducido que tiende a oponerse al proceso de difusión. (El campo eléctrico tendrá la misma dirección que la difusión pero, al ser electrones, se sentirán atraídos por los iones donores que quedaron positivos). Cuando se alcanza el equilibrio, la concentración de portadores móviles no es exactamente igual a la concentración de impurezas fijas (porque puede ser que existieran impurezas que no se movieron en la zona donde quedaron los electrones, por lo tanto, no será exactamente igual dado que todos los electrones sí se movieron) y el campo eléctrico inducido se opondrá a cualquier otro desplazamiento de cargas. En la mayoría de los casos de interés, la carga inducida por este proceso de difusión es una pequeña porción de la concentración de impurezas, por lo tanto la concentración de portadores no es muy diferente a la densidad de impurezas dopantes.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{efnouniforme.png}
+\caption{Esquema de bandas para una concentración no uniforme de dopantes.}
+\end{center}
+\end{figure}
+
+El potencial eléctrico $\phi$ está relacionado con la energía potencial del electrón, de tal forma que podemos escribir
+\[ \phi = \frac{1}{e}(\epsilon _{F} - \epsilon _{Fi}) \]
+dado que el potencial eléctrico se expresa en V$=\frac{\textrm{J}}{\textrm{C}}$ y $\epsilon _{F} - \epsilon _{Fi}$ es la energía que tiene el electrón (se puede observar en la figura 2) y $e$ la carga del mismo. Usando esta relación, podemos escribir el campo eléctrico, para este caso unidimensional, como
+\[ E_{x}=-\frac{d\phi}{dx}=\frac{1}{e} \frac{d\epsilon _{Fi}}{dx} \]
+Por lo tanto, si la energía intrínseca de Fermi varía a lo largo de la posición, en equilibrio térmico, se crea un campo eléctrico inducido dentro del semiconductor.
+
+Si asumimos una condición de \emph{cuasi-neutralidad}, en donde la concentración de electrones es casi igual a la concentración de impurezas donores, entonces podemos escribir
+\[ n_{0}=n_{i} e^{\frac{\epsilon _{F} - \epsilon _{Fi}}{kT}} \approx N_{d}(x) \]
+Resolviendo para $\epsilon _{F} - \epsilon _{Fi}$
+\[ \epsilon _{F} - \epsilon _{Fi} = kT \ln \bigg( \frac{N_{d}(x)}{n_{i}} \bigg) \]
+La energía de Fermi es constante para el equilibrio térmico, con lo cual, al obtener la primer derivada respecto de $x$
+\[ -\frac{d\epsilon _{Fi}}{dx} = \frac{kT}{N_{d}(x)} \frac{dN_{d}}{dx} \]
+Finalmente, usando estas ecuaciones, podemos escribir el campo eléctrico como
+\[ E_{x} = -\bigg( \frac{kT}{e} \bigg) \frac{1}{N_{d}(x)} \frac{dN_{d}}{dx} \]
+Dado que existe un campo eléctrico, existirá una diferencia de potencial a lo largo del semiconductor, debida a una distribución de dopantes no uniforme.
+
+\subsection{La relación de Einstein.}
+
+Si consideramos un semiconductor dopado no uniformemente, representado por el diagrama de bandas de la figura 2, que no tiene conexiones eléctricas y que está en equilibrio térmico entonces, la corriente \emph{individual} de electrones y huecos, debe ser nula, por lo tanto
+\[ J_{n}=0=en\mu _{n}E_{x}+eD_{n} \frac{dn}{dx} \]
+Si asumimos un estado de cuasi-neutralidad, tal que $n\approx N_{d}(x)$, podemos escribir la ecuación anterior como
+\[ J_{n}=0= e\mu _{n} N_{d}(x)E_{x}+eD_{n}\frac{dN_{d}}{dx} \]
+Y utilizando la expresión del campo eléctrico obtenido en el apartado anterior
+\[ 0=-e\mu _{n}N_{d}(x) \bigg( \frac{kT}{e} \bigg) \frac{1}{N_{d}(x)} \frac{dN_{d}}{dx} + D_{n}\frac{dN_{d}}{dx} \]
+Y, como se puede observar, la ecuación anterior es válida, únicamente, para
+\[ \frac{D_{n}}{\mu _{n}} = \frac{kT}{e} \]
+
+Dado que la corriente debida a los huecos también debe ser cero, y siguiendo un procedimiento análogo, se puede obtener
+\[ \frac{D_{p}}{\mu _{p}} = \frac{kT}{e} \]
+
+Combiando estas dos ecuaciones, obtenemos
+\[ \frac{D_{n}}{\mu _{n}} = \frac{D_{p}}{\mu _{p}} = \frac{kT}{e} \]
+Y, como se puede observar, el coeficiente de difusión y la movilidad no son parámetros independientes. Esta relación se conoce como \emph{relación de Einstein}. (Observar las relaciones con la temperatura tal y como fueron discutidas en las secciones anteriores).
+
+En la tabla de la figura 3 se pueden observar distintos valores de movilidades y coeficientes de difusión para $T=300$K de varios semiconductores.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{tablamovilidaddifusion.png}
+\caption{Tabla con valores de movilidad y coeficientes de difusión para distintos semiconductores a $T=300$K.}
+\end{center}
+\end{figure}
+
+\section{El efecto Hall.}
+
+El efecto Hall es una consecuencia de las fuerzas eléctricas y magnéticas que sufren las cargas en movimiento. El efecto Hall puede usarse para determinar cuando un semiconductor es de tipo p o de tipo n\footnote{Se asumirá un semiconductor extrínseco donde la concentración de los portadores mayoritarios es mucho mayor que la de los portadores minoritarios.} y para medir la concentración y la movilidad de los portadores de carga mayoritarios. El dispositivo del efecto Hall, como se analizará a continuación, se usa para medir experimentalmente muchos parámetros de un semiconductor. Sin embargo, también se lo utiliza extensivamente en la ingeniería, en aplicaciones circuitales.
+
+La fuerza aplicada a una partícula con carga $q$ y que se mueve en un campo magnético está dada por
+\[ \vec{F} = q \vec{v} \times \vec{B} \]
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{efectohall.png}
+\caption{Efecto Hall.}
+\end{center}
+\end{figure}
+
+La figura 4 ilustra el efecto Hall. Un semiconductor con una corriente $I_{x}$ se encuentra en un campo magnético, en dirección $z$, perpendicular a la corriente. Los electrones y los huecos que fluyen en el semiconductor, experimentarán una fuerza en dirección $-y$ como se indica en la figura. Consecuentemente, en un semiconductor de tipo p ($p_{0}>n_{0}$) habrá una acumulación de carga positiva en la superficie $y=0$ y en el caso de un semiconductor de tipo n, esta carga será negativa. Esta carga neta induce un campo eléctrico en la dirección $y$ como se indica en la figura. En estado de equilibrio, la fuerza magnética será exactamente balanceada por la fuerza que ejerce el campo eléctrico inducido. De esto último surge la ecuación
+\[ \vec{F} =  q(\vec{E}+\vec{v} \times \vec{B}) = 0 \]
+que se transforma en
+\[ qE_{y}=qv_{x}B_{z} \]
+
+El campo eléctrico inducido en la dirección $y$ se conoce como el \emph{campo Hall}. El campo Hall produce una tensión a lo largo del semiconductor que se conoce como \emph{tensión de Hall}. Podemos escribir
+\[ V_{H}=E_{H}W \]
+Por lo cual, la movilidad del hueco, en un semiconductor tipo p, está dada por
+\[ \mu _{p} = \frac{I_{x}L}{epV_{x}Wd} \]
+Análogamente para un electrón en un semiconductor de tipo n y con un campo eléctrico no muy grande
+\[ \mu _{n} = \frac{I_{x}L}{enV_{x}Wd} \]
+
+\section{Anexo.}
+
+\subsection*{Algunas consideraciones para la resolución de la guía 9.}
+
+Intuitivamente, podemos entender que, si existe una diferencia de potencial entre dos puntos, esto podría deberse a que existe una acumulación de carga en uno de los extremos. Más aún, sabemos que la cantidad de carga que haya estará estrictamente relacionada con el potencial generado. Por lo tanto, podríamos suponer que debe existir algún tipo de ecuación que relacione la cantidad de partículas cargadas con el potencial.
+
+Ahora bien, si consideramos la condición de equilibrio de fuerzas en el efecto Hall, $qE_{y}=qv_{x}B_{z}$, tenemos
+\[ E_{y} = v_{x} B_{z} \qquad \wedge \qquad J_{n|a}=nev_{a} \]
+\[ E_{H} = \frac{J}{ne} B_{z} \qquad \wedge \qquad J=\frac{I}{A}\]
+\[ E_{H} = \frac{I}{Ane} B_{z} \qquad \wedge \qquad A = Wd \]
+\[ E_{H} = \frac{I}{Wdne} B_{z} \qquad \wedge \qquad V_{H}=E_{H}W \]
+\[ \frac{V_{H}}{W} = \frac{I_{x}}{Wdne} B_{z} \]
+\[ V_{H} = \frac{I_{x}}{dne} B_{z} \]
+\[ n = \frac{I_{x} B_{z}}{edV_{H}} \]
+con $V_{H}<0$ por ser de tipo n. El razonamiento es análogo para partículas de tipo $p$.
+
+Las ecuaciones utilizadas son
+\begin{equation}
+n_{0}p_{0}=n_{i}^{2}
+\end{equation}
+\begin{equation}
+J_{n|a}=en \mu _{n} E
+\end{equation}
+\begin{equation}
+J_{n|a}=nev_{a}
+\end{equation}
+\begin{equation}
+v_{a}=\mu _{n} E
+\end{equation}
+\begin{equation}
+\sigma = \frac{1}{\rho} = e \mu _{n} n_{0}
+\end{equation}
+\begin{equation}
+J_{p|dif}=-eD_{p}\frac{dp}{dx}
+\end{equation}
+\begin{equation}
+V_{H}=E_{H}W
+\end{equation}
+\begin{equation}
+n=-\frac{I_{x}B_{z}}{edV_{H}}
+\end{equation}
+\begin{equation}
+\mu _{n}=\frac{I_{x}L}{enV_{x}Wd}
+\end{equation}
+
+\end{document}

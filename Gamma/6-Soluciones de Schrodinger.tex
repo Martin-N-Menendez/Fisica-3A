@@ -1,0 +1,636 @@
+%Tipo de documento
+\documentclass[12pt,a4paper]{article}
+
+%PAQUETES
+
+%Parsear en .pdf
+\usepackage[pdftex]{color,graphicx}
+
+%Castellano
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+%Matematica
+\usepackage{amsmath, amssymb, amsfonts}
+
+%Definiciones útiles
+\def\e{{\epsilon}} %Definir \e como símbolo de la energía.
+
+\begin{document}
+
+\title{Soluciones a la ecuación de Schrödinger.}
+
+\author{$\Gamma$}
+
+\maketitle
+
+\section{La partícula libre.}
+
+En este apunte demostraremos algunas de las características de la teoría mecánica cuántica y, en particular, algunos de los fenómenos más interesantes predichos por esta teoría, mediante la resolución de la ecuación de Schrödinger para varias formas específicas de energía potencial, $V(x,t)$ y encontrando las autofunciones y los autovalores.
+
+Empecemos por considerar el caso más simple: $V(x,t)=\textrm{constante}$. Para una partícula bajo la influencia de un potencial semejante, la fuerza $F(x,t)=-\frac{\partial V(x,t)}{\partial x}$ desaparecerá; es una partícula libre. Dado que esto se cumple sin importar el valor de la constante, no perderemos generalidad si elegimos la función potencial $V(x,t)=0$. Sabemos que, en mecánica clásica, una partícula libre puede estar en reposo o moviéndose con una cantidad de movimiento constante $p$. En cualquiera de los casos, la energía $\e$ es constante.
+
+Para encontrar el comportamiento predicho por la mecánica cuántica para una partícula libre, resolveremos la ecuación de Schrödinger para $V(x,t)=0$. Dado que esta energía potencial no es una función de $t$, el problema se resudce a resolver la ecuación de Schrödinger independiente del tiempo. Para $V(x)=0$, esta ecuación es
+\[ - \frac{\hbar^{2}}{2m} \frac{d^{2} \psi (x)}{dx^{2}}=\e \psi (x) \]
+Las soluciones a esta ecuación son las autofunciones $\psi (x)$. Las funciones de onda son
+\[ \Psi (x,t)=e^{-\frac{j\e t}{\hbar}}\psi (x) \]
+donde $\e$ es la energía total de la partícula. Sabemos que una solución aceptable de la ecuación de Schrödinger independiente del tiempo para este potencial existe para cualquier valor de $\e \geq 0$.
+
+Una solución a la ecuación diferencial puede ser
+\[ \psi (x)=Ae^{jKx}+Be^{-jKx} \]
+donde $A$ y $B$ son constantes arbitrarias y donde $K=\sqrt{2m\e}/\hbar$.
+
+Dado que hay dos constantes arbitrarias, esta ecuación es la forma general de la solución a la ecuación diferencial ordinaria de segundo orden. Por lo tanto, la función de onda para una partícula libre puede ser escrita como
+\[ \Psi (x,t)=e^{-\frac{j \e t}{\hbar}} \psi (x) \qquad ; \qquad \psi (x)=Ae^{jKx}+Be^{-jxK} \qquad ; \qquad K=\frac{\sqrt{2m\e}}{\hbar} \]
+
+Consideraremos, primero, el caso en que una de las constantes, supongamos $B$, es cero. En este caso, la función de onda es
+\[ \Psi (x,t)=Ae^{-\frac{j\e t}{\hbar}} e^{j K x}=Ae^{j(Kx-\frac{\e t}{\hbar})} \]
+que también puede ser escrita como
+\[ \Psi (x,t)=A \cos \bigg( Kx-\frac{\e t}{\hbar} \bigg) + j A \sin \bigg( Kx-\frac{\e t}{\hbar} \bigg)\]
+Esta es una \emph{onda viajera} que oscila a una frecuencia $\omega=\e/\hbar$. Los nodos se mueven hacia la derecha con velocidad $w=\nu/k\equiv \omega/K = \e / (\hbar K)$. Evaluemos ahora la densidad de probabilidades, $P(x,t)$, y su flujo de probabilidades, $S(x,t)$. Estos son
+\[ P(x,t)=\Psi^{\ast}\Psi=A^{\ast}e^{-j(Kx-\frac{\e}{\hbar}t)}Ae^{j(Kx-\frac{\e}{\hbar}t)} \]
+\[ P(x,t)=A^{\ast}A \]
+y
+\[ S(x,t)=-\frac{j \hbar}{2m} \bigg( \Psi^{\ast} \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^{\ast}}{\partial x} \bigg) \]
+\[ S(x,t)=-\frac{j \hbar}{2m} (A^{\ast}e^{-j(Kx-\frac{\e}{\hbar}t)}A j K e ^{j(Kx - \frac{\e}{\hbar}t)}-A e ^{j(Kx - \frac{\e}{\hbar}t)}A^{\ast}(-jK)e^{-j(Kx-\frac{\e}{\hbar}t)}) \]
+\[ S(x,t)=-\frac{j \hbar}{2m} A^{\ast}A2jK=\frac{\hbar K}{m}A^{\ast}A \]
+De acuerdo con el postulado de de Broglie
+\[ \hbar K = p = mv \]
+donde $v$ es la velocidad de la partícula. Por lo tanto, el flujo de probabilidades es
+\[ S(x,t)=vA^{\ast}A=vP(x,t) \]
+que es igual a la relación clásica entre flujo, velocidad y densidad. Para la función de onda, tanto la densidad de probabilidades como el flujo de probabilidades son constantes en el tiempo e independientes de la posición. Aún más, la función de onda incluye únicamente una sola cantidad de movimiento $p=\hbar K$ y una sola energía $\e$. Consecuentemente, nos damos cuenta que esta función de onda está asociada a una partícula que está viajando a lo largo del eje $x$ con una cantidad de movimiento constante y perfectamente conocida, $p$, pero con una coordenada $x$ completamente desconocida. Esta es la situación física para una partícula cuya cantidad de movimiento se conoce exactamente y es $p$, moviéndose en algún lugar de un rayo infinito de partículas.
+
+La función de onda obtenida cuando la constante $A$ se iguala a cero, es
+\[ \Psi (x,t)=Be^{-j(Kx+\frac{\e}{\hbar}t)} \]
+y encontramos que
+\[ P(x,t)=B^{\ast}B \qquad ; \qquad S(x,t)=-\frac{\hbar K}{m} B^{\ast}B \]
+El signo del flujo de probabilidades $S(x,t)$ indica, claramente, la dirección del movimiento de la partícula. (En tres dimensiones el flujo de probabilidad es una cantidad vectorial). La partícula asociada con la función de onda cuando $B=0$ se mueve en un rayo en la dirección de $x$ creciente, mientras que la partícula asociada a la función de onda cuando $A=0$ se mueve en un rayo en dirección de $x$ decreciente.
+
+Evaluemos, ahora, la integral de la densidad de probabilidad para la función de onda obtenida cuando $B=0$. Esto es
+\[ \int _{-\infty}^{\infty} \Psi ^{\ast}\Psi \, dx=\int _{-\infty}^{\infty}A^{\ast}A \, dx =A^{\ast}A \int _{-\infty}^{\infty} dx \]
+Podemos observar que la integral diverge a menos que $A=0$. Esta es la dificultad que se encuentra al intentar normalizar la función de onda de una partícula libre. Pero la dificultad no es fundamental. Esta función de onda representa la situación altamente idealizada de la partícula moviéndose en un rayo infinitamente largo y cuya coordenada $x$ es, consecuentemente, completamente desconocida. Pero en una situación física real, esto no puede sucede; en cambio, se conoce que la partícula ciertamente no se encontrará fuera de alguna región del eje $x$ de longitud finita. En un experimento, el rayo es siempre de longitud finita. Una función de onda realista que describiera la situación sería, esencialmente, de amplitud constante en toda la longitud del rayo pero desaparecería para valores muy grandes y muy pequeños de $x$. Sería en la forma de un grupo de longitud $\Delta x$ que es largo, pero finito. Más aún, sabemos del principio de incertidumbre que una función de onda realista debe comprender, no solo el valor de la cantidad de movimiento $p=\hbar K$, pero también un desvío de esta cantidad en el rango $\Delta p=\hbar \Delta K \sim \hbar/\Delta x$ centrado en el valor $p=\hbar K$. La función de onda cuando $B=0$ se puede pensar como representando el comportamiento de una función de onda realista en el límite cuando $\Delta x \rightarrow \infty$. Nunca hay problemas en normalizar una función de onda siempre que $\Delta x$ permanezca finita. En el límite aparece una dificultad en el sentido de que la función de onda puede ser normalizada si la constante $A$ desaparece. Incluso en este caso, la forma límite de la función de onda puede ser utilizada para calcular cantidades que no dependen del valor de la constante. En secciones siguientes haremos algunos de estos cálculos, usando la función en la forma límite; pero siempre será usada de tal forma que su significado físico sea respecto de la relación de las constantes multiplicativas de distintas funciones de onda. Este proceso evita la dificultad de normalización.
+
+En algunas situaciones es necesario usar una función de onda en la forma de un grupo de longitud finita. Una función de onda de este tipo puede ser construida sumando un número de funciones de onda del tipo solución cuando $B=0$ si se mueve en dirección $x$, o del tipo cuando $A=0$ si se mueve en dirección de $-x$; cada una con un distinto valor de $K$ y $\e$. Entonces
+\[ \Psi(x,t)=\sum _{n=1}^{\infty} A_{n} \Psi _{n}(x,t) \]
+donde
+\[ \Psi _{n}(x,t)=e^{-j\frac{\e _{n}}{\hbar}t}e^{jK_{n}x} \]
+y donde
+\[ K_{n}=\frac{\sqrt{2m\e_{n}}}{\hbar} \]
+Dado que cada uno de los $\Psi _{n}(x,t)$ es una solución de la ecuación de Schrödiginer. Los valores de las constantes $A_{n}$ se pueden calcular en términos de la forma de la función de onda en algún instante particular, digamos, $t=0$. Como un ejemplo, consideraremos la partícula libre moviéndose en un potencial $V(x)=0$, en la dirección de las $x$ crecientes, donde a $t=0$ la partícula se sabe que tiene una coordenada $x$ dentro del rango $\Delta x$ centrada en el valor esperado $\langle x \rangle$ y una cantidad de movimiento de rango $\Delta p$ centrada en el valor esperado $\langle p \rangle$. Más aún, el producto de $\Delta x$ y $\Delta p$ debe ser igual a $\hbar$, el mínimo permitido por el principio de incertidumbre. Luego la función de onda normalizada para esta partícula en cualquier tiempo $t$ puede demostrarse que es
+\[ \Psi (x,t)=\sum _{n=1}^{\infty} \bigg( \int _{-\infty}^{\infty} \psi _{n}(x')\Psi (x',0)\, dx' \bigg)e^{-j\frac{\e _{n}}{\hbar}t}\psi _{n}(x) \]
+donde
+\[ \Psi (x',0)=(2 \pi (\Delta x)^{2})^{-\frac{1}{4}}e^{-(\frac{(x'-\langle x \rangle)^{2}}{4(\Delta x)^{2}}-\frac{j \langle p \rangle x'}{\hbar})} \qquad ; \qquad \psi _{n}(x)=e^{jK_{n}x} \]
+(Para una partícula moviéndose con las mismas condiciones iniciales en un potencial más general $V(x)$, la expresión para $\Psi (x,t)$ es esencialmente la misma, excepto porque las autofunciones $\psi _{n}(x)$ para ese potencial deben ser usadas). Esta última representación de las funciones de onda como un grupo de ondas es meramente una curiosidad. Por lo general, la solución siempre puede ser representada por una función moviéndose en dirección $x$ ($B=0$) o en dirección $-x$ ($A=0$), o por una combinación simple de las dos soluciones, en lugar de algo más complicado como esta última ecuación.
+
+Consideremos ahora dos funciones de onda
+\[ \Psi (x,t)=Ae^{-j\frac{\e}{\hbar}t}e^{jKx} \]
+y
+\[ \Psi (x,t)=Be^{-j\frac{\e}{\hbar}t}e^{-jKx} \]
+que son soluciones de la ecuación de Schrödinger para una partícula libre. Elegimos la relación entre las constantes de forma completamente arbitraria, por ejemplo, $A=-B$, y sumamos ambas funciones. El resultado es una nueva función de onda,
+\[ \Psi (x,t)=Ae^{-j\frac{\e}{\hbar}t}(e^{jKx}-e^{-jKx}) \]
+que se puede escribir como
+\[ \Psi (x,t)=Ae^{-j\frac{\e}{\hbar}t}(\cos(Kx)+j\sin(Kx)-\cos(-Kx)-j\sin(-Kx)) \]
+\[ \Psi (x,t)=2Aje^{-j\frac{\e}{\hbar}t}\sin (Kx) \]
+\[ \Psi (x,t)=A'e^{-j\frac{\e}{\hbar}t}\sin (Kx) \]
+donde $A'$ es una constante arbitraria que vale $2j$ veces la constante arbitraria A.
+
+Ahora elegimos las constantes de tal forma que $A=B$ y sumamos las funciones de vuelta. Esta vez obtenemos otra función de onda,
+\[ \Psi (x,t)=Be^{-j\frac{\e}{\hbar}t}(e^{jKx}+e^{-jKx}) \]
+que se puede escribir como
+\[ \Psi (x,t)=Be^{-j\frac{\e}{\hbar}t}(\cos (Kx)+j\sin(Kx)+\cos(-Kx)+j\sin(-Kx) \]
+\[ \Psi (x,t)=2Be^{-j\frac{\e}{\hbar}t}\cos(Kx) \]
+\[ \Psi (x,t)=B'e^{-j\frac{\e}{\hbar}t}\cos(Kx) \]
+donde $B'$ es una constante arbitraria que vale 2 veces $B$ y que es independiente de $A'$. Dado que la ecuación de Schrödinger es una ecuación diferencial lineal, estas últimas dos funciones de ondas obtenidas son soluciones y, por lo tanto, también su suma
+\[ \Psi (x,t)=e^{-j\frac{\e}{\hbar}t}(A' \sin (Kx)+B'\cos(Kx)) \]
+que se puede escribir como
+\[ \Psi (x,t)=e^{-j\frac{\e}{\hbar}t}\psi (x) \]
+donde
+\[ \psi (x)=A' \sin(Kx)+B' \cos(Kx) \qquad ; \qquad K=\frac{\sqrt{2m\e}}{\hbar} \]
+Podemos reconocer que estas últimas ecuaciones también son solución de la ecuación de Schrödinger independiente del tiempo para una partícula libre. Dado que contiene dos constantes artbirarias, es la forma general de la solución, tan general como la obtenida para ondas viajeras al principio de la sección. La relación entre estas dos soluciones se puede observar mediante la deducción seguida para obtener la última ecuación.
+
+Más aún, nos ayuda a interpretar el significado de esta última función de onda. Primero de todo, notemos que la función de onda se obtuvo sumando y restando dos ondas viajeras de amplitudes iguales y, debe ser, por lo tanto, una \emph{onda estacionaria}. Esto, por supuesto, puede verse directamente de la ecuación dado que los nodos de $\Psi (x,t)$ se encuentran fijos en el espacio a valores de $x$ para los cuales $A' \sin (Kx)+B' \cos(Kx)=0$. A continuación, recordemos que cada una de las ondas viajeras estaba asociada a una partícula cuya cantidad de movimiento se conocía con precisión y que se movía en un rayo infinitamente largo, cada una con cantidades de movimiento iguales en magnitud y opuestas en sentido. Consecuentemente, debemos asociar la onda estacionaria a una partícula que se mueve en un rayo infinitvamente largo de tal forma que la magnitud de la cantidad de movimiento $p$ es conocida con precisión, pero en un sentido que no es conocido. Esto es, la función de onda debe asociarse a una partícula que se puede mover en cualquier sentido de la dirección $x$, con una cantidad de movimiento de magnitud precisamente $p$ y con una coordenada $x$ completamente desconocida.
+
+Corroboremos nuestra interpretación de la ecuación de la onda estacionaria evaluando la densidad de probabilides $P(x,t)$ y el flujo de probabilidades $S(x,t)$. Para simplicidad, estableceremos una de las constantes, digamos $B'$, igual a cero. Entonces
+\[ \Psi (x,t)=A'e^{-j\frac{\e}{\hbar}t}\sin(Kx) \]
+y
+\[ P(x,t)=\Psi^{\ast}\Psi=A'^{\ast}A' \sin^{2}(Kx) \]
+y también
+\[ S(x,t)=-\frac{j \hbar}{2m} \bigg( \Psi^{\ast} \frac{\partial \Psi}{\partial x} - \Psi \frac{\partial \Psi^{\ast}}{\partial x} \bigg)=0 \]
+El hecho de que el flujo de probabilidades desaparezca es ciertamente de acuerdo con nuestra intepretación anterior de $\Psi (x,t)$. De acuerdo con esa interpretación, la probabilidad por unidad de tiempo de que la partícula asociada a esta función de onda cruce el punto $x$ en la dirección de $x$ crecientes debe ser igual a la probabilidad por unidad de tiempo que de curce el mismo punto pero en dirección de $x$ decreciente. Esto las balancea y el flujo total de probabilidades $S(x,t)$ es igual a cero. Ahora consideremos la densidad de probabilidades $P(x,t)$ que se presenta en la figura 1.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{densidaddeprobabilidadesparticulalibre.png}
+\caption{La densidad de probabilidades para una partícula libre asociada a una función de onda estacionaria.}
+\end{center}
+\end{figure}
+
+También se encuentra graficado en la misma figura, la densidad deprobabilidades constante que se esperaría en mecánica clásica para una partícula en la situación que acabamos de describir asociado a la función de onda estacionaria para $B'=0$. El hecho de que la probabilidad de mecánica cuántica, $P(x,t)$, se extienda infinitamente larga y a valores pequeños de $x$ está de acuerdo con nuestra interpretación de la función de onda y con el comportamiento clásico de la partícula, pero la presencia de puntos a lo largo del eje $x$ a los cuáles la partícula nunca puede ser encontrada (los mínimos de la función $P(x,t)$ donde $P=0$) es en contraste con lo que se esperaría clásicamente. Esta es una manifestación de los aspectos de onda de las partículas en una situación descrita por su función de onda. Ese comportamiento no es observado clásicamente porque la distancia $d=\pi/K=h/2p$ es la mitad de la longitud de onda de de Broglie. En el límite clásico, la distancia se vuelve extremadamente pequeña, y el patrón de $P(x,t)$ se vuelve tan comprimido en la dirección $x$ que sólo el comportamiento promedio (constante) de $P(x,t)$ puede ser resuelto experimentalmente.
+
+Para la función de onda estacionaria, $\Psi (x,t)=$ $e^{-j\frac{\e}{\hbar}t}$ $(A'$ $\sin(Kx)$ $+B'$ $\cos(Kx))$, existirá el mismo problema de normalización que había para la solución en funciones de onda viajeras. Para la onda estacionaria existe una forma particularmente fácil de remover esta dificultad. El problema de normalización surge por el modo irreal de que la función de onda se extienda infinitamente larga y para valores pequeños de la coordenada $x$. Consecuentemente, el problema se puede remover completamente suprimiendo la función de onda fuera de una larga, pero finita, región $-\frac{L}{2} \leq x \leq \frac{L}{2}$. Podemos hacer esto mediante la construcción de una onda función de onda más realista que sería la función de onda estacionaria en esta región y cero fuera de ella. Para esto, tomamos
+\[ \Psi (x,t)=e^{-j\frac{\e}{\hbar}t}\psi (x) \]
+donde
+\[ \psi(x)=
+\left\{
+\begin{array}{ll}
+A' \sin (Kx)+B' \cos(Kx) & -\dfrac{L}{2} \leq x \leq \dfrac{L}{2} \\
+ & \\
+0 & x \leq -\dfrac{L}{2} \, ; \, x \geq \dfrac{L}{2} \\
+\end{array}
+\right. \]
+Es claro que no habrá dificultad en normalizar una función de onda de este tipo. Más aún, las autofunciones ahora desaparecen a medida que $x\rightarrow \pm \infty$, y es aparente que no habrá problemas en demostrar que estas autofunciones son ortogonales. Este proceso se conoce como \emph{normalización de pozo}. Siempre que las paredes del pozo (en nuestro caso situado en $x=-L/2$ y $x=L/2$) se encuentren sumamente alejadas de nuestra región de interés, su presencia no tendrá efectos físicos de importancia, pero removerá el problema matemático asociado a la normalización y ortogonalización de la partícula libre. Los valores de las constantes $A'$ y $B'$ requeridos para normalizar la función de onda no dependen de la longitud del pozo, $L$; sin embargo, estas constantes no entran en los resultados del cálculo de cualquier cantidad de interés físico. La normalización de pozo también cambiará los autovalores $\e$ de continuo a discreto. Pero debemos ver que la separación entre autovalores de energía es proporcional a $L^{-2}$. Con un gran valor de $L$, las autofunciones permanecerán, a fines prácticos, continuas.
+
+La normalización de la función de onda viajera en una caja de paredes impenetrables no es posible porque la función de onda siempre debe desaparecer en las paredes de la caja. Esta condición de contorno puede ser satisfecha por ondas estacionarias con nodos fijos, pero no puede ser satisfecha por ondas viajeras de nodos en movimiento. Sin embargo, existe una forma de normalización de pozo para las ondas viajeras si se asume que las paredes son penetrables de tal forma que estas ondas estacionarias no deben desaparecer en las paredes. Ambas formas de normalización producen la discretización de los autovalores.
+
+Haciendo un breve resumen de esta primera sección, lo que se hizo fue considerar tres soluciones distintas al problema de la partícula libre. Primero se resolvió la ecuación de Schrödinger para una partícula libre en forma de ondas viajeras. Se analizaron los resultados y las implicancias de eso. Luego se trató la solución en forma de grupo de ondas (una serie -en sentido matemático- de ondas viajeras). Finalmente se dedujo una solución en forma de ondas estacionarias.
+
+\section{Escalón de potencial.}
+
+En las próximas secciones calcularemos el movimiento según la mecánica cuántica de una partícula cuya energía potencial puede ser representada por una función $V(x)$ que tiene diferentes valores constantes para distintos rangos adyacentes del eje $x$ y que cambia discontinuamente al pasar de un rango al siguiente. Por supuesto, las situaciones representadas por funciones discontinuas de $x$, no existen realmente en la naturaleza. Sin embargo, estos potenciales se utilizan habitualmente en mecánica cuántica para aproximar situaciones reales debido a que, siendo constantes en cada rango, son fáciles de tratar matemáticamente. Con estos potenciales podremos ilustrar una serie de características del fenómeno de la mecánica cuántica.
+
+Consideremos el primer ejemplo fácil, el \emph{escalón de potencial}, como se muestra en la figura 2.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{escalonpotencial.png}
+\caption{Función del escalón de potencial.}
+\end{center}
+\end{figure}
+
+Elegimos el origen del eje $x$ en el escalón. Por lo tanto, $V(x)$, puede ser escrita como
+\[
+V(x)=
+\left\{
+\begin{array}{ll}
+V_{0} & x>0 \\
+0 & x<0 \\
+\end{array}
+\right.
+\]
+donde $V_{0}$ es una constante. Podemos pensar a $V(x)$ como la representación límite de la función de energía potencial para una partícula cargada moviéndose a lo largo del eje de un sistema de dos electrodos que se mantienen a tensiones distintas.
+
+Asumimos que una partícula de masa $m$ y energía total $\e$ está en la región $x<0$ y moviéndose hacia el punto en que $V(x)$ cambia. De acuerdo a la mecánica clásica, la partícula se moverá libremente en esa región hasta que alcance $x=0$, donde estará sujeta a una fuerza impulsiva $F(x)=-\partial V(x)/\partial x$ actuando en la dirección de las $x$ decrecientes. El movimiento de la partícula depende, clásicamente, de la relación entre $\e$ y $V_{0}$; esto también sucede en la mécanica cuántica. Tomamos el primer caso:
+
+\subsection{$\e < V_{0}$}
+
+Esto se ilustra en la figura 3.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{escalonemenorv.png}
+\caption{Valor de la energía, $\e<V_{0}$.}
+\end{center}
+\end{figure}
+
+Dado que la energía total $\e$ es constante, la mecánica clásica dice que la partícula no puede entrar en la región $x>0$ dado que, en esa región,
+\[ \e=\frac{p^{2}}{2m}+V(x) < V(x) \]
+o
+\[ \frac{p^{2}}{2m} < 0 \]
+La fuerza impulsiva cambiará la cantidad de movimiento de la partícula de tal forma que invertirá exactamente su movimiento, viajando fuera del escalón, en el sentido de $x$ decrecientes, con cantidad de movimiento de igual magnitud (para que la energía total permanezca constante) pero en el sentido contrario que su cantidad de movimiento inicial.
+
+Para determinar el movimiento de la partícula en mecánica cuántica, debemos encontrar la función de onda que es una solución de la ecuación de Schrödinger para el escalón de potencial, para la energía total $\e < V_{0}$. Sabemos que las soluciones aceptables de la ecuaciónd e Schrödinger para este $V(x)$ existen para cualquier valor de $\e \geq 0$. Dado que estamos trabajando con un potencial independiente del tiempo, el problema se reduce a resolver la ecuación de Schrödinger independiente del tiempo y a encontrar las autofunciones. Con este potencial, el eje $x$ se divide en dos regiones. Para una región, las autofunciones son simplemente soluciones de la ecuación
+\[ -\frac{\hbar^{2}}{2m} \frac{d^{2} \psi (x)}{dx^{2}}=\e \psi (x) \qquad ; \qquad x<0 \]
+En la otra región es una solución a la ecuación
+\[ -\frac{\hbar^{2}}{2m} \frac{d^{2} \psi (x)}{dx^{2}}+V_{0} \psi (x)=\e \psi (x) \qquad ; \qquad x>0 \]
+Las dos ecuaciones se resuelven separadamente. Entonces la autofunción válida para todo el rango de las $x$ se construye uniendo las dos soluciones en $x=0$ de tal forma de satisfacer la condición de que $\psi (x)$ y $d\psi(x)/dx$ sea finita y continua en todo el espacio.
+
+Consideremos la primera de las ecuaciones, para $x<0$. Esta es, precisamente, la ecuación de Schrödinger independiente del tiempo para una partícula libre. La solución general a esta ecuación puede ser escrita en la forma de la onda viajera o en forma de la onda estacionaria. Dado que las dos son matemáticamente equivalente, cualquiera de las dos se puede usar. Sin embargo, utilizando la forma más conveniente para cada problema dado, es posible simplificar el cálculo o la interpretación de los resultados. Cuando se discute el movimiento de una partícula libre, usualmente, conviene usar la forma de las ondas viajeras. Si la partícula está sujeta, la onda estacionaria suele ser más conveniente. Para este problema, tomaremos
+\[ \psi (x)=Ae^{jK_{1}x}+Be^{-jK_{1}x} \qquad ; \qquad x < 0 \]
+donde
+\[ K_{1}=\frac{\sqrt{2m\e}}{\hbar} \]
+
+Ahora consideremos la ecuación para $x>0$. La solución general es
+\[ \psi (x)=Ce^{K_{2}x}+De^{-K_{2}x} \qquad ; \qquad x > 0 \]
+donde
+\[ K_{2}=\frac{\sqrt{2m(V_{0}-\e)}}{\hbar} \qquad ; \qquad \e<V_{0} \]
+
+Las constantes arbitrarias $A$, $B$, $C$ y $D$ deben ser elegidas para que las autofunciones satisfagan las condiciones de continuidad y finitud. Consideremos primero el comportamiento de la autofunción en el límite de $x\rightarrow +\infty$. En esta región del eje $x$ la solución de la ecuación de Schrödinger independiente del tiempo viene dada por $\psi (x)=Ce^{K_{2}x}+De^{-K_{2}x}$. Debido al primer término, por lo general, divergirá cuando $x\rightarrow +\infty$. Para prevenir esto, debemos determinar el coeficiente del primer término cero, es decir
+\[ C=0 \]
+Consideremos ahora la autofunción en el punto $x=0$. En este punto la solución de las ecuaciones deben unirse de tal forma que $\psi(x)$ y $d\psi(x)/dx$ sean continuas. La continuidad de $\psi(x)$ se obtiene de la relación
+\[ D=A+B \]
+La continuidad de la derivada implica que se satisfaga la relación
+\[ \frac{jK_{2}}{K_{1}}D=A-B \]
+Sumando estas dos condiciones obtenemos
+\[ A=\frac{D}{2} \bigg( 1+\frac{jK_{2}}{K_{1}} \bigg) \]
+Restando,
+\[ B=\frac{D}{2} \bigg( 1-\frac{jK_{2}}{K_{1}} \bigg) \]
+Por lo tanto, la autofunción para este potencial y para la energía dada $\e$, es
+\[
+\psi(x)=
+\left\{
+\begin{array}{ll}
+\dfrac{D}{2}\bigg( 1+j\dfrac{K_{2}}{K_{1}} \bigg)e^{jK_{1}x}+\dfrac{D}{2}\bigg( 1-j\dfrac{K_{2}}{K_{1}} \bigg)e^{-jK_{1}x} & x \leq 0 \\
+ & \\
+De^{-K_{2}x} & x \geq 0 \\
+\end{array}
+\right.
+\]
+La constante arbitraria $D$ no se determinó porque no hemos normalizado la autofunción. Esto puede hacerse por las técnicas descritas anteriormente, pero no es necesario.
+
+La función de onda es
+\[
+\Psi(x,t)=
+\left\{
+\begin{array}{ll}
+Ae^{-j\frac{\e}{\hbar}t}e^{jK_{1}x}+Be^{-j\frac{\e}{\hbar}t}e^{-jK_{1}x} & x \leq 0 \\
+ & \\
+De^{-j\frac{\e}{\hbar}t}e^{-K_{2}x} & x \geq 0 \\
+\end{array}
+\right.
+\]
+En la región $x<0$ consiste en una onda viajera en la dirección de $x$ crecientes y una onda viajera en la dirección de $x$ decrecientes; en la región de $x>0$ consiste de una onda sestacionaria. En la interpretación de la función de onda, es útil calcular el flujo de probabilidades $S(x,t)$ en la región $x<0$. Utilizando los resultados obtenidos en la sección anterior, es aparente que en el presente caso
+\[ S(x,t)=vA^{\ast}A-vB^{\ast}B \qquad ; \qquad x <0\]
+donde
+\[ v=\frac{\hbar K_{1}}{m} \]
+la magnitud de la velocidad de la partícula. El primer término, que deviene del primer término de la función de onda, es el flujo de probabilidades fluyendo en la dirección de $x$ crecientes. El segundo término, que deviene del segundo término de la función de onda, es el flujo de probabilidades fluyendo en la dirección opuesta. Consecuentemente, asociamos el primer término de $\Psi(x,t)$ o $S(x,t)$, en la región $x<0$, con la incidencia de las partículas sobre el punto en que la energía potencial cambia, y el segundo término con la reflexión de la partícula debido al cambio en el potencial. Calculemos la relación entre la intensidad del flujo de probabilidades de las partículas reflejadas y la intensidad del flujo de probabilidad de las partículas incidentes. Obtenemos
+\[ R=\frac{vB^{\ast}B}{vA^{\ast}A}=\frac{B^{\ast}B}{A^{\ast}A}=\frac{\bigg( 1-j\dfrac{K_{2}}{K_{1}} \bigg)^{\ast} \bigg( 1-j\dfrac{K_{2}}{K_{1}} \bigg)}{\bigg( 1 + j \dfrac{K_{2}}{K_{1}} \bigg)^{\ast} \bigg( 1+j\dfrac{K_{2}}{K_{1}} \bigg)}=1 \]
+La cantidad $B^{\ast}B/A^{\ast}A$ es también la relación entre la intensidad de la onda viajera reflejada y la intensidad de la onda viajera incidente en la región $x<0$. Que estas relaciones den uno significa que la partícula que incide en el cambio de potencial, con energía total $\e < V_{0}$, tiene probabilidad unitaria de ser reflejada. Esto está completamente de acuerdo con las predicciones de la mecánica clásica.
+
+Considerando la autofunción
+\[
+\psi(x)=
+\left\{
+\begin{array}{ll}
+\dfrac{D}{2}\bigg( 1+j\dfrac{K_{2}}{K_{1}} \bigg)e^{jK_{1}x}+\dfrac{D}{2}\bigg( 1-j\dfrac{K_{2}}{K_{1}} \bigg)e^{-jK_{1}x} & x \leq 0 \\
+ & \\
+De^{-K_{2}x} & x \geq 0 \\
+\end{array}
+\right.
+\]
+Escribiendo $e^{jK_{1}x}=\cos(K_{1}x)+j\sin(K_{1}x)$, etc., es fácil demostrar que la autofunción se puede expresar como
+\[
+\left\{
+\begin{array}{ll}
+D \cos (K_{1}x)-D\dfrac{K_{2}}{K_{1}} \sin (K_{1}x) & x \leq 0 \\
+De^{-K_{2}x} & x \geq 0 \\
+\end{array}
+\right.
+\]
+La función de onda correspondiente a estas autofunciones es una onda estacionaria para todo x. En este problema las ondas reflejadas e incidentes se combinan para formar una onda estacionaria debido a que son de igual intensidad. Se puede graficar esta solución, que es una función real de $x$ si tomamos $D$ real. El gráfico se presenta en la figura 4.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{escalonpenetracion.png}
+\caption{Función de onda en la penetración de la región prohibida del escalón.}
+\end{center}
+\end{figure}
+
+Acá podemos encontrar una característica de agudo contraste con las predicciones clásicas. A pesar de que en la región $x>0$ la densidad de probabilidades
+\[ P(x,t)=\Psi^{\ast}(x,t)\Psi(x,t)=D^{\ast}De^{-2K_{2}x} \]
+decrece rápidamente al incrementarse $x$, existe una probabilidad finita de encontrar a la partícula en esta región. En la mecánica clásica sería absolutamente imposible encontrar una partícula en la región $x>0$ porque allí la energía total es menor que la energía potencial. La penetración de la región clásicamente excluida es una de las más sorprendentes predicciones de la mecánica cuántica.
+
+Esta característica se debe, principalmente, al principio de incertidumbre que demuestran que los aspectos de onda de las partículas no se contradicen con los aspectos de partícula de las partículas.
+
+\subsection{$\e>V_{0}$}
+
+Se presenta en la figura 5.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{escalonemayorv.png}
+\caption{Valor de la energía, $\e>V_{0}$.}
+\end{center}
+\end{figure}
+
+Clásicamente, la partícula de energía total $\e$ viajando en la región $x<0$, en la dirección de $x$ crecientes, sufrirá una fuerza impulsiva retrasante, $F(x)=-\partial V(x)/\partial x$, en el punto $x=0$. Pero el impulso sólo enlentecerá la partícula y entrará en la región $x>0$, continuando con su movimiento en la dirección de $x$ creciente. La energía total $\e$ permanece constante; su cantidad de movimiento en la región $x<0$ es $p_{1}$, donde $\e=p_{1}^{2}/2m$; su cantidad de movimiento en la región $x>0$ es $p_{2}$, donde $\e=p_{2}^{2}/2m+V_{0}$.
+
+En mecánica cuántica, el movimiento de la partícula viene descrito por la función de onda $\Psi (x,t)=e^{-j\frac{\e}{\hbar}t}\psi(x)$, donde la autofunción $\psi (x)$ es una solución de
+\[ -\frac{\hbar^{2}}{2m}\frac{d^{2}\psi(x)}{dx^{2}}=\e \psi(x) \qquad ; \qquad x< 0 \]
+y
+\[ -\frac{\hbar^{2}}{2m}\frac{d^{2}\psi(x)}{dx^{2}}=(\e-V_{0})\psi(x) \qquad ; \qquad x>0 \]
+y donde las autofunciones deben satisfacer la condición de continuidad y finitud en el punto $x=0$. La primera ecuación describe el movimiento de la partícula libre de cantidad de movimiento $p_{1}$. La onda viajera que conforma la solución general es
+\[ \psi (x)=Ae^{jK_{1}x}+Be^{-jK_{1}x} \qquad ; \qquad x<0 \]
+donde
+\[ K_{1}=\frac{\sqrt{2mE}}{\hbar}=\frac{p_{1}}{\hbar} \]
+
+La segunda ecuación describe el movimiento de una partícula libre de cantidad de movimiento $p_{2}$. La onda viajera que es solución general es
+\[ \psi(x)=Ce^{jK_{2}x}+De^{-jK_{2}x} \qquad ; \qquad x>0 \]
+donde
+\[ K_{2}=\frac{\sqrt{2m(\e-V_{0})}}{\hbar}=\frac{p_{2}}{\hbar} \qquad ; \qquad \e > V_{0} \]
+La función de onda especifica por estas ecuaciones consiste de ondas viajeras de longitud de onda de de Broglie $\lambda _{1}=h/p_{1}=2\pi/K_{1}$ en la región $x<0$, y de una longitud de onda de de Broglie más larga, $\lambda _{2}=h/p_{2}=2\pi/K_{2}$ en la región $x>0$.
+
+Clásicamente, la partícula tiene probabilidad unitaria de atravesar el punto $x=0$ y entrar en la región $x>0$. Esto no es cierto en mecánica cuántica. Debido al aspecto ondulatorio de la partícula, existe una cierta probabilidad de que la partícula sea reflejada en el punto $x=0$, donde hay un cambio discontinuo en la longitud de onda de de Broglie. Por lo tanto, debemos considerar ambos términos de la solución general de $x<0$. Sin embargo, no debemos tener en cuenta el segundo término de la solución general para $x>0$. Este término describe una onda viajera en la dirección $x$ negativo en la región $x>0$. Dado que la partícula es incidente desde la dirección de $x$ creciente, una onda semejante sólo podría ser producida por una reflexión, en algún punto posterior del eje $x$. Pero como no existe nada que cause dicha reflexión, sabemos que sólo existirá una onda viajera transmitida en la región $x>0$, por lo tanto, la constante arbitraria $D$ puede ser elegida como
+\[ D=0 \]
+Las constantes arbitrarias $A$, $B$ y $C$ se deben elegir para que la función y su derivada sean continuas en $x=0$. Esto arroja
+\[ A+B=C \]
+\[ K_{1}(A-B)=K_{2}C \]
+Utilizando estas ecuaciones obtenemos
+\[ B=\frac{K_{1}-K_{2}}{K_{1}+K_{2}} A \]
+y
+\[ C=\frac{2K_{1}}{K_{1}+K_{2}}A \]
+Consecuentemente la autofunción es
+\[
+\psi(x)=
+\left\{
+\begin{array}{ll}
+Ae^{jK_{1}x}+A\dfrac{K_{1}-K_{2}}{K_{1}+K_{2}}e^{-jK_{1}x} & x \leq 0 \\
+ & \\
+A \dfrac{2K_{1}}{K_{1}+K_{2}} e^{jK_{2}x} & x \geq 0 \\
+\end{array}
+\right.
+\]
+La constante arbitraria $A$ puede ser elegida para satisfacer la condición de normalización, pero no nos preocuparemos por eso. Es claro que una autofunción que satisfaga dos condiciones de continuidad y la condición de normalización no hubiese podido ser encontrada si hubiésemos impuesto que el coeficiente de la reflexión, $B$, fuese distinto de cero, dado que tendríamos sólo dos constantes para satisfacer tres condiciones.
+
+Escribiendo la función de onda y evaluando el flujo de probabilidades para algún punto $x<0$, encontramos
+\[ S(x,t)=v_{1}A^{\ast}A-v_{1}B^{\ast}B \]
+donde
+\[ v_{1} =\frac{\hbar K_{1}}{m}=\frac{p_{1}}{m}\]
+El primer término es el flujo incidente y el segundo término es el flujo reflejado.
+
+El flujo de probabilidades transmitido puede ser evaluado calculando $S(x,t)$ para algún punto $x>0$. Esto nos da
+\[ S(x,t)=v_{2}C^{\ast}C \]
+donde
+\[ v_{2}\frac{\hbar K_{2}}{m}=\frac{p_{2}}{m} \]
+La relación entre la intensidad del flujo reflejado y la intensidad del flujo incidente es la probabilidad de que una partícula se refleje en la región $x<0$. Esto es
+\[ R=\frac{v_{1}B^{\ast}B}{v_{1}A^{\ast}A}=\frac{(K_{1}-K_{2})^{2}}{(K_{1}+K_{2})^{2}} \]
+La relación entre la intensidad del flujo transmitido y el flujo incidente es la probabilidad de que una partícula se transmita en la región $x>0$. Esto es
+\[ T=\frac{v_{2}C^{\ast}C}{v_{1}A^{\ast}A}=\frac{K_{2}}{K_{1}} \frac{(2K_{1})^{2}}{(K_{1}+K_{2})^{2}}=\frac{4K_{1}K_{2}}{(K_{1}+K_{2})^{2}} \]
+
+Es fácil mostrar que
+\[ R+T=1 \]
+
+El flujo de probabilidades incidente en la discontinuidad del potencial se separa en un flujo transmitido y un flujo reflejado, pero de esta última ecuación podemos ver que el flujo total de probabilidades se conserva. Esta afirmación nos dice que la partícula o se refleja o se transmite, pero no desaparece. Por supuesto que la partícula nunca se separará en la discontinuidad. En un intento en particular, la partícula irá de un lado o del otro. En un largo número de intentos, el promedio de la probabilidad de que se refleje es $R$ y el promedio de la probabilidad de que se transmita es $T$. Notar que $R$ y $T$ permanecen constantes si $K_{1}$ y $K_{2}$ se intercambian. Un momento de consideración mostrara que esto significa que los mismos valores de $R$ y $T$ se obtendrían si la partícula fuera incidente en la discontinuidad de potencial desde la dirección de $x$ decrecientes en la región $x>0$. La función de onda que describe el movimiento de la partícula y, consecuentemente, el flujo de probabilidades, es parcialmente reflejada simplemente porque hay una discontinuidad en $V(x)$, y no porque $V(x)$ se vuelve más grande en la dirección en que la partícula está moviéndose.
+
+En el caso en que $\e \approx V_{0}$, $K_{2} \approx 0$, $K_{1} \approx \sqrt{2mV_{0}}/\hbar$ y, por lo tanto, $R \approx 1$. En el caso en que $\e \gg V_{0}$, $K_{2} \approx \sqrt{2m\e}/\hbar=K_{1}$ y, entonces, $R \approx 0$ y la probabilidad de que la partícula se refleje es despreciable. Sin embargo, el caso para el que $\e \gg V_{0}$ no es necesariamente el límite clásico en el que no hay reflexión. Esto se vuelve aparente cuando evaluamos el coeficiente $R$ en función de $\e$ y $V_{0}$, obteniendo
+\[ R= \bigg( \frac{1-\sqrt{1-\frac{V_{0}}{\e}}}{1+\sqrt{1-\frac{V_{0}}{\e}}} \bigg)^{2} \]
+La constante de Planck no aparece en la ecuación; el valor de $R$ depende únicamente de la relación entre $V_{0}$ y $\e$. Manteniendo esta relación constante, la ecuación predice que habrá reflexión incluso cuando $V_{0}$ y $\e$ son tan grandes que las predicciones de la mecánica clásica debieran ser válidas. Esto parece paradójico hasta que nos damos cuenta que, en el límite de grandes energías, la suposición de que un cambio en $V(x)$ es sumamente abrupto no es válido como una aproximación de una situación física real. El punto es que la reflexión es una resultado de un cambio abrupto en la longitud de onda de de Broglie; ''abrupto'' se refiere a que la longitud de onda cambia en una cantidad apreciable en una distancia de \emph{una} longitud de onda. Si el cambio en una longitud de onda es muy pequeño, porque el cambio del potencial en esa distancia es muy pequeño, entonces la reflexión es despreciable. En el límite clásico la longitud de onda de de Broglie es tan pequeña que cualquier cambio físicamente posible y realizable en un potencial $V(x)$ es despreciable en una longitud de onda y por lo tanto, no hay reflexión. Sin embargo, para partículas en sistemas atómicos o nuclears, la longitud de onda de de Broglie puede ser grande en comparación con la distancia en que un potencial cambia significativamente y, por lo tanto, el fenómeno de reflexión se vuelve considerable.
+
+\section{Barrera de potencial.}
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{barrerapotencial.png}
+\caption{Gráfico de la energía en función de la distancia para una barrera de potencial.}
+\end{center}
+\end{figure}
+
+En esta sección se considerará una barrera de potencial como la que se muestra en la figura 6. Esta función potencial es
+\[
+V(x)=
+\left\{
+\begin{array}{ll}
+V_{0} & 0<x<a \\
+0 & x<0;x>a \\
+\end{array}
+\right.
+\]
+
+Clásicamente, una partícula de energía total $\e$ en la región $x<0$, que sea incidente en la barrera en la dirección de $x$ creciente, tendrá probablidad unitaria de ser reflejada si $\e<V_{0}$, y probabilidad unitaria de ser transmitida si $\e>V_{0}$. Ninguna de estas conclusiones se obtienen en mecánica cuántica.
+
+Para este potencial, las soluciones aceptables de la ecuación de Schrödinger independiente del tiempo existen para todo $\e \geq 0$. Además, la ecuación debe dividirse en tres ecuaciones separadas, una para cada región: $x<0$, $0<x<a$ y $x>a$. En la primer y la tercer región la ecuación es la de una partícula libre de energía total $\e$. Las soluciones en forma de ondas viajeras son
+\[ \psi (x)=Ae^{jK_{1}x}+Be^{-jK_{1}x} \qquad ; \qquad x<0 \]
+\[ \psi (x)=Ce^{jK_{1}x}+De^{-jK_{1}x} \qquad ; \qquad x>a \]
+donde
+\[ K_{1}=\frac{\sqrt{2m\e}}{\hbar} \]
+En la segunda región, la forma de la ecuación y de la solución depende de si $\e <V_{0}$ o si $\e>V_{0}$. Ambos casos se discutieron en la sección anterior. Para el primer caso, es decir, $\e<V_{0}$, tenemos
+\[ \psi (x)=Fe^{-K_{2}x}+Ge^{K_{2}x} \qquad ; \qquad 0<x<a \]
+donde
+\[ K_{2}=\frac{\sqrt{2m(V_{0}-\e)}}{\hbar} \qquad ; \qquad \e <V_{0} \]
+
+Para el segundo caso, donde $\e >V_{0}$,
+\[ \psi (x)=Fe^{jK_{3}x}+Ge^{-jK_{3}x} \qquad ; \qquad 0<x<a \]
+donde
+\[ K_{3}=\frac{\sqrt{2m(\e -V_{0})}}{\hbar} \qquad ; \qquad \e > V_{0} \]
+
+Al estudiar el movimiento de una partícula incidente en la dirección de $x$ crecientes, podemos poner
+\[ D=0 \]
+dado que sabemos que la partícula puede ser únicamente transmitida a la región $x>a$ (no hay otra variación de potencial que provoque una reflexión posterior y ocasione que existe alguna partícula en la región $x>a$ viajando en dirección de $x$ decrecientes). Sin embargo, en esta situación, no podemos decir que $G=0$, en la situación $\e<V_{0}$, dado que $x$ es finita en la región $0<x<a$. Tampoco podemos decirlo en la situación $\e>V_{0}$ dado que puede existir una reflexión en $x=a$.
+
+\subsection{$\e<V_{0}$}
+
+Al imponer las condiciones de continuidad de la autofunción y de su derivada en los puntos $x=0$ y $x=a$ se obtienen cuatro ecuaciones para las constantes $A$, $B$, $C$, $F$ y $G$. La determinación de estas constantes no se hará en este apunte, pero serán obtenidas $B$, $C$, $F$ y $G$ en función de $A$. El valor de $A$ se puede determinar por la condición de normalización. La forma de las autofunciones obtenidas se indican en la figura 7.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{barreraemenorv.png}
+\caption{La parte real de la autofunción en la barrera de potencial para $\e < V_{0}$.}
+\end{center}
+\end{figure}
+
+Esta figura es una ilustración orientadora, dado que la forma exacta de $\psi(x)$ en la región $0<x<a$, así como la relación entre su amplitud en la región $x>a$ y su amplitud en la región $x<0$ dependen de los valores de $\e$, $V_{0}$, $a$ y $m$. Más aún, $\psi(x)$ es una función compleja. En la figura 7 se graficó la parte real de $\psi(x)$.
+
+El resultado más interesante surge del cálculo de la relación $T$ entre la intensidad del flujo de probabilidades transmitida en la región $x>a$ y la intensidad del flujo de probabilidades incidente. El valor de $T$ es
+\[ T=\frac{v_{1}C^{\ast}C}{v_{1}A^{\ast}A}=\bigg( 1+\frac{\sinh^{2}(K_{2}a)}{(4\e/V_{0})(1-\e/V_{0})} \bigg)^{-1} \qquad ; \qquad \e<V_{0} \]
+que es lo mismo que
+\[ T=
+\left(
+\begin{array}{l}
+1+\dfrac{\sinh^{2} \bigg( \sqrt{\dfrac{2mV_{0}a^{2}}{\hbar^{2}}\bigg( 1-\dfrac{\e}{V_{0}} \bigg)} \bigg)}{\bigg( 4\dfrac{\e}{V_{0}} \bigg) \bigg( 1- \dfrac{\e}{V_{0}} \bigg)} \\
+\end{array}
+\right)
+^{-1} \qquad ; \qquad \e < V_{0}
+\]
+Si el argumento del seno hiperbólico es grande comparado con 1, $T$ tendrá un valor muy pequeño que viene dado, aproximadamente, por
+\[ T \approx 16 \frac{\e}{V_{0}} \bigg( 1-\frac{\e}{V_{0}} \bigg)e^{-2K_{2}a} \]
+Estas ecuaciones hacen la notoria predicción de que una partícula de masa $m$ y energía total $\e$, que es incidente en una barrera de potencial de altura $V_{0}>\e$ y grosor finito $a$, tiene cierta probabilidad $T$ de penetrar la barrera y aparecer en el otro lado. Este fenómeno se conoce como \emph{penetración de la barrera}. Por supuesto, $T$ es despreciablemente pequeña en el límite clásico porque en ese límite, la cantidad $2mV_{0}a^{2}/\hbar^{2}$, que es una medida de la ''opacidad'' de la barrera es extremadamente grande.
+
+\subsection{$\e>V_{0}$}
+
+En este caso la función de ondas es una onda viajera en las tres regiones, pero de longitud de onda más larga en la región $0<x<a$. Obteniendo las constantes $B$, $C$, $F$ y $G$ por la condición de continuidad de la función y se derivada en $x=0$ y $x=a$ nos lleva al valor
+\[ T=\frac{v_{1}C^{\ast}C}{v_{1}A^{\ast}A}=\bigg( 1+\frac{\sin^{2}(K_{3}a)}{(4\e/V_{0})(\e/V_{0}-1)} \bigg)^{-1} \qquad ; \qquad \e > V_{0}\]
+que es
+\[
+T=
+\left(
+\begin{array}{l}
+1+\dfrac{ \sin^{2} \bigg( \sqrt{ \dfrac{2mV_{0}a^{2}}{\hbar^{2}} \bigg( \dfrac{\e}{V_{0}} -1 \bigg) } \bigg) }{ \bigg( 4 \dfrac{\e}{V_{0}} \bigg) \bigg( \dfrac{\e}{V_{0}} - 1 \bigg) }
+\end{array}
+\right)^{-1} \qquad ; \qquad \e>V_{0}
+\]
+
+Las formas de ambas funciones de transmisión (esta última y la obtenida en para $\e<V_{0}$) dependen del valor de $2mV_{0}a^{2}/\hbar^{2}$. La figura 8 muestra un gráfico de $T$ en función de $\e/V_{0}$ para un electrón incidente en una barrera de potencial de altura $V_{0}=10\textrm{eV}$ y grosor $a=1,85 \cdot 10^{-8} \textrm{cm}$; ($2mV_{0}a^{2}/\hbar^{2}=9$).
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{barreratransmision.png}
+\caption{Coeficiente de transmisión para una barrera de potencial.}
+\end{center}
+\end{figure}
+
+Estos son valores típicos para potenciales encontrados, por ejemplo, por un electrón moviéndose a través de los átomos de un cristal. Para $\e/V_{0} \ll 1$, $T$ es muy pequeño. Pero, cuando $\e/V_{0}$ está cercano a la unidad, $T$ no es despreciable en lo absoluto. Es aparente que la penetración de la barrera puede ser muy importante en sistemas atómicos.
+
+Para $\e>V_{0}$, $T$ es, en general, menor que la unidad, debido a una reflexión en las discontinuidades del potencial. Sin embargo, del último coeficiente de transmisión se puede ver que $T=1$ cuando $K_{3}a=\pi,2\pi,3\pi,\ldots$. Esto es simplemente por la condición de que la longitud $a$ de la región de la barrera sea igual a un número entero o medio número entero de la longitud de onda $\lambda _{3}=2\pi/K_{3}$ en esa región. Para esta barrera en particulas, electrones de energías $\e \approx 21 \textrm{eV}$, $53\textrm{eV}$, etc., satisfacen la condición $K_{3}a=\pi,2\pi$,etc., y por lo tanto pasan a la región $x>a$ sin relexión.
+
+La penetración de la barrera es una manifestación del comportamiento en ondas del movimiento de una partícula.
+
+\section{Pozo finito.}
+
+En esta sección discutiremos el potencial más simple capaz de atar una partícula a una región limitada del espacio, el pozo finito, que se muestra en la figura 9.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{pozofinito.png}
+\caption{Un potencial de pozo finito.}
+\end{center}
+\end{figure}
+
+Este potencial es
+\[
+V(x)=
+\left\{
+\begin{array}{ll}
+V_{0} & x<-\dfrac{a}{2}; x>\dfrac{a}{2} \\
+0 & -\dfrac{a}{2}<x<\dfrac{a}{2} \\
+\end{array}
+\right.
+\]
+
+\subsection{$\e > V_{0}$ (ondas viajeras)}
+
+Clásicamente, una partícula bajo la influencia de este potencial y con energía total $\e>V_{0}$ será capaz de moverse en todo el rango del eje $x$. Cuando entre en la región $-a/2<x<a/2$, recibirá un impulso acelerador y viajará por el espacio con una cantidad de movimiento mayor que la inicial. Cuando deje esta región, recibirá un impulso compensador decreciente. Su cantidad de movimiento final será igual a su cantidad de movimiento inicial. No desarrollaremos las soluciones de ondas viajeras del problema en mecánica cuántica, que existe para \emph{todo} valor de $\e>V_{0}$, dado que es esencialmente igual que la solución de la barrera de potencial con $\e>V_{0}$. De hecho, el coeficieinte de transmisión se puede obtener directamente del último obtenido si los términos se redefinen correctamente. Este factor es, como antes, menor a la unidad excepto para energías en que $a$ es igual a un número entero o medio entero de la longitud de onda de de Broglie en la región $-a/2<x<a/2$. Más adelante se discutirá la solución de ondas estacionarias para el pozo finito en el caso en que $\e>V_{0}$.
+
+\subsection{$\e < V_{0}$ (ondas estacionarias)}
+
+Si la partícula tiene energía total $\e<V_{0}$, entonces, clásicamente, sólo puede estar en la región $-a/2<x<a/2$. La partícula se verá atada a esa región y rebotará de un lado a otro en el límite de cada región con cantidad de movimiento de magnitud constante pero alternando direcciones. Clásicamente, cualquier valor de la energía $\e$ es posible para el estado de unión al pozo. Sin embargo, en mecánica cuántica, sólo algunos valores de $\e$ son posibles. En esta sección encontraremos cuantitativamente los autovalores discretos de la energía, correspondientes a las autofunciones, para un potencial de pozo finito.
+
+Este potencial se usa comúnmente en mecánica cuántica para representar la situación en que una partícula se mueve en una zona restringida del espacio bajo influencias de fuerzas que la mantienen unida a esa región. Aunque en este potencial simplificado se pierden detalles de movimiento, se retiene la característica esencial de unir la partícula por fuerzas de un cierto valor a una región de un cierto tamaño.
+
+La descripción del movimiento clásico de la partícula unida en el pozo finito sugiere que lo mejor será buscar soluciones a la ecuación de Schrödinger en forma de ondas estacionarias. Por lo tanto tomaremos, como solución a la ecuación de Schrödinger independiente del tiempo en la región $-a/2<x<a/2$, en que $V(x)=0$, la autofunción para la partícula libre en forma de onda estacionaria. Esto es
+\[ \psi (x)=A \sin(K_{1}x)+B\cos(K_{1}x) \qquad ; \qquad -\frac{a}{2}<x<\frac{a}{2} \]
+donde
+\[ K_{1}= \frac{\sqrt{2m\e}}{\hbar} \]
+En las regiones $x<-a/2$ y $x>a/2$ la ecuación de Schrödinger independiente del tiempo es igual que la utilizada en el escalón de potencial para $x>0$. Vimos que las soluciones son
+\[ \psi(x)=Ce^{K_{2}x}+De^{-K_{2}x} \qquad ; \qquad x<-\frac{a}{2} \]
+y
+\[ \psi(x)=Fe^{K_{2}x}+Ge^{-K_{2}x} \qquad ; \qquad x>\frac{a}{2} \]
+donde
+\[ K_{2}=\frac{\sqrt{2m(V_{0}-\e)}}{\hbar} \qquad ; \qquad \e<V_{0} \]
+
+Para determinar las constantes arbitrarias, primero impondremos los requerimientos de que las autofunciones sean finitas para todo $x$. Consideremos la ecuación de constantes $C$ y $D$ para cuando $x \rightarrow -\infty$. Es aparente que este requerimiento exige que
+\[ D=0 \]
+Análogamente, es necesario que
+\[ F=0 \]
+para que la ecuación se mantenga finita en el límite $x\rightarrow +\infty$. Ahora impondremos los requerimientos de que la función y su derivada sean continuas en $x=-a/2$ y $x=a/2$. Se obtienen cuatro ecuaciones
+\[ -A \sin \bigg( \frac{K_{1}a}{2} \bigg) + B \cos \bigg( \frac{K_{1}a}{2} \bigg)=Ce^{-K_{2}\frac{a}{2}} \]
+\[ AK_{1} \cos \bigg( \frac{K_{1}a}{2} \bigg) + B K_{1} \sin \bigg( \frac{K_{1}a}{2} \bigg)=CK_{2}e^{-K_{2}\frac{a}{2}} \]
+\[ A \sin \bigg( \frac{K_{1}a}{2} \bigg) + B \cos \bigg( \frac{K_{1}a}{2} \bigg)=Ge^{-K_{2}\frac{a}{2}} \]
+\[ AK_{1} \cos \bigg( \frac{K_{1}a}{2} \bigg) - BK_{1} \sin \bigg( \frac{K_{1}a}{2} \bigg)=-GK_{2}e^{-K_{2}\frac{a}{2}} \]
+Restando la primera y la tercera obtenemos
+\[ 2A \sin \bigg( \frac{K_{1}a}{2} \bigg) =(G-C)e^{-K_{2}\frac{a}{2}} \]
+Sumando la primera y  la tercera
+\[ 2B \cos \bigg( \frac{K_{1}a}{2} \bigg)=(G+C)e^{-K_{2}\frac{a}{2}} \]
+Restando la segunda y la cuarta
+\[ 2BK_{1} \sin \bigg( \frac{K_{1}a}{2} \bigg) =(G+C)K_{2}e^{-K_{2}\frac{a}{2}} \]
+Sumando la segunda y la cuarta
+\[ 2AK_{1} \cos \bigg( \frac{K_{1}a}{2} \bigg) =-(G-C)k_{2}e^{-K_{2}\frac{a}{2}} \]
+Asumiendo que $B\neq 0$ y que $G+C \neq 0$, podremos dividir la segunda y la tercera de estas nuevas cuatro ecuaciones, para obtener
+\[ K_{1} \tan  \bigg( K_{1} \frac{a}{2} \bigg) =-(G-C)K_{2}e^{-K_{2}\frac{a}{2}} \qquad ; \qquad B\neq0;G+C \neq 0\]
+Suponiendo que $A\neq 0$ y que $G-C \neq 0$, podremos dividir la primera y la cuarta para obtener
+\[ K_{1} \cot \bigg( K_{1} \frac{a}{2} \bigg) = -K_{2} \qquad ; \qquad A \neq 0; G-C \neq 0 \]
+Es fácil ver que estas últimas dos ecuaciones no pueden ser staisfechas simultáneamente. Si se puediese, la ecuación obtenida de sumar ambas sería
+\[ K_{1} \tan  \bigg( K_{1} \frac{a}{2} \bigg)+ K_{1} \cot \bigg( K_{1} \frac{a}{2} \bigg)=0 \]
+sería válida y, multiplicando por $\tan (K_{1}a/2)$ obtendríamos
+\[ K_{1} \tan^{2} \bigg( K_{1} \frac{a}{2} \bigg)+K_{1}=0 \]
+\[ \tan^{2} \bigg( K_{1} \frac{a}{2} \bigg)=-1 \]
+Pero esto no puede ser válido porque tanto $K_{1}$ como $a/2$ son reales. Con lo cual sólo podemos satisfacer una de las condiciones. Al igual que las autofunciones para las ondas vibrantes en una cuerda, las autofunciones de un pozo finito forman dos clases. Para la primer clase
+\[ K_{1} \tan \bigg( K_{1} \frac{a}{2} \bigg)=K_{2} \qquad ; \qquad A=0;G-C=0 \]
+con lo cual, la ecuación
+\[ A \sin \bigg( \frac{K_{1}a}{2} \bigg) + B \cos \bigg( \frac{K_{1}a}{2} \bigg)=Ge^{-K_{2}\frac{a}{2}} \]
+(tercera de las primeras cuatro obtenidas por continuidad), quedaría como
+\[ B \cos \bigg( K_{1}\frac{a}{2} \bigg)=Ge^{-K_{2}\frac{a}{2}} \]
+\[ G= B \cos \bigg( K_{1}\frac{a}{2} \bigg)e^{K_{2}\frac{a}{2}}=C \]
+y las autofunciones son
+\[
+\psi (x)=
+\left\{
+\begin{array}{ll}
+\bigg( B \cos \bigg( K_{1}\dfrac{a}{2} \bigg)e^{K_{2}\frac{a}{2}} \bigg) e^{K_{2}x} & x<-\dfrac{a}{2} \\
+ & \\
+(B) \cos (K_{1}x) & -\dfrac{a}{2}<x<\dfrac{a}{2} \\
+ & \\
+\bigg( B \cos \bigg( K_{1}\dfrac{a}{2} \bigg)e^{K_{2}\frac{a}{2}} \bigg) e^{-K_{2}x} & x>\dfrac{a}{2} \\
+\end{array}
+\right.
+\]
+
+Para la segunda clase,
+\[ K_{1} \cot \bigg( K_{1} \frac{a}{2} \bigg)=-K_{2} \qquad ; \qquad B=0;G+C=0 \]
+La ecuación
+\[ A \sin \bigg( \frac{K_{1}a}{2} \bigg) + B \cos \bigg( \frac{K_{1}a}{2} \bigg)=Ge^{-K_{2}\frac{a}{2}} \]
+queda como
+\[ A \sin \bigg( K_{1} \frac{a}{2} \bigg) = Ge^{-K_{2}\frac{a}{2}} \]
+\[ G=A \sin \bigg( K_{1} \frac{a}{2} \bigg)e^{K_{2}\frac{a}{2}}=-C \]
+Y las autofunciones quedan
+\[
+\psi (x)=
+\left\{
+\begin{array}{ll}
+\bigg( -A \sin \bigg( K_{1}\dfrac{a}{2} \bigg)e^{K_{2}\frac{a}{2}} \bigg) e^{K_{2}x} & x<-\dfrac{a}{2} \\
+ & \\
+(A) \sin (K_{1}x) & -\dfrac{a}{2}<x<\dfrac{a}{2} \\
+ & \\
+\bigg( A \cos \bigg( K_{1}\dfrac{a}{2} \bigg)e^{K_{2}\frac{a}{2}} \bigg) e^{-K_{2}x} & x>\dfrac{a}{2} \\
+\end{array}
+\right.
+\]
+
+Consideremos las ecuaciones de primera clase. Evaluando $K_{1}$ y $K_{2}$ y multiplicando por $a/2$, la ecuación se convierte en
+\[ \sqrt{\frac{m\e a^{2}}{2\hbar^{2}}} \tan \bigg( \sqrt{\frac{m \e a^{2}}{2\hbar^{2}}} \bigg)=\sqrt{\frac{m(V_{0}-\e)a^{2}}{2\hbar^{2}}} \]
+Para una determinada partícula de masa $m$, y un pozo potencial finito de profundida $V_{0}$ y ancho $a$, esta es una ecuación de una sola incógnita, $\e$. Las soluciones son los valores permitidos de la energía total de la partícula: los autovalores para las autofunciones de primera clase. Las soluciones de esta ecuación trascendental pueden ser obtenidas únicamente mediante métodos numéricos o gráficos. Presentaremos una solución gráfica simple que ilustra las importantes características de esta ecuación. Hagamos el cambio de variable
+\[ u=\sqrt{\frac{m \e a^{2}}{2\hbar^{2}}} \]
+y la ecuación se convierte en
+\[ u \tan (u)= \sqrt{\frac{mV_{0}a^{2}}{2\hbar^{2}}-u^{2}} \]
+Si graficamos la función
+\[ p(u)=u \tan(u) \]
+y la función
+\[ q(u)=\sqrt{\frac{mV_{0}a^{2}}{2\hbar^{2}}-u^{2}} \]
+las intersecciones especificarán los valores de $u$ para los cuales existe una solución de la ecuación. Este gráfico se presenta en la figura 10
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{pozofinitosolucion.png}
+\caption{Solución gráfica del pozo finito. En este gráfico $\varepsilon=u$.}
+\end{center}
+\end{figure}
+
+La función $p(u)$ tiene ceros en $u=0, \pi, 2\pi, \ldots$ y tiene asíntotas en $u=\frac{\pi}{2}, 3\frac{\pi}{2}, 5\frac{\pi}{2},\ldots$. La función $q(u)$ es un cuarto de círculo de radio $\sqrt{mV_{0}a^{2}/2\hbar^{2}}$. Es claro de esta figura que la cantidad de soluciones que existen depende del radio del cuarto de círculo. Cada solución da un valor para $\e<V_{0}$ correspondiente a una autofunción de primera clase.
+
+Existe sólo uno de estos autovalores si $\sqrt{mV_{0}a^{2}/2\hbar^{2}}<\pi$; dos si $\pi \leq \sqrt{mV_{0}a^{2}/2\hbar^{2}}<2\pi$; tres si $2\pi \leq \sqrt{mV_{0}a^{2}/2\hbar^{2}} < 3\pi$; etc. El caso en que $\sqrt{mV_{0}a^{2}/2\hbar^{2}}=4$ es el que se presenta en la figura 10. Para este caso hay dos soluciones, $u \approx 1,25$ y $u \approx 3,60$. Del cambio de variables, los autovalores resultan
+\[ \e=u^{2}\frac{2\hbar^{2}}{ma^{2}}=u^{2} \underbrace{ \frac{2h^{2}}{mV_{0}a^{2}}}_{\textrm{agrega el }V_{0}\textrm{ para obtener el }4 \textrm{ que es dato}} V_{0}\approx \bigg( \frac{1,25}{4} \bigg)^{2}V_{0} \approx 0,098 V_{0} \]
+y
+\[ \e=u^{2} \underbrace{ \frac{2h^{2}}{mV_{0}a^{2}}}_{4} V_{0} \approx \bigg( \frac{3,6}{4} \bigg)^{2} V_{0} \approx 0,81V_{0} \]
+
+Los autovalores correspondientes a las autofunciones de la segunda clase se encuentran de forma análoga, buscando las solucioens a la ecuación
+\[ -u \cot (u)=\sqrt{\frac{mV_{0}a^{2}}{2\hbar^{2}}-u^{2}} \]
+Para esta ecuación se encuentra una solución gráfica compuesta por una cotangente y un cuarto de un círculo. Es evidente que no habrá autovalores para $\e<V_{0}$ correspondientes a las autofunciones de segunda clase si $\sqrt{mV_{0}a^{2}/2\hbar^{2}}<\frac{\pi}{2}$; habrá uno si $\frac{\pi}{2} \leq \sqrt{mV_{0}a^{2}/2\hbar^{2}}<3\frac{\pi}{2}$; dos si $3\frac{\pi}{2} \leq \sqrt{mV_{0}a^{2}/2\hbar^{2}}<5\frac{\pi}{2}$; etc.
+
+Podemos ver que para un dado pozo finito existen únicamente una cantidad restringida de valores permitidos de energía $\e$ para $\e<V_{0}$. Estos son los autovalores discretos para los estados ligados de la partícula. Por otro lado, sabemos que cualquier valor de $\e$ es permitido para $\e>V_{0}$; los autovalores para los estados libres de la partícula forman un continuo. Para pozos finitos que son poco profundos y muy angostos, o ambos, un sólo autoestado de la primer clase estará ligado. Con valores crecientes de $\sqrt{mV_{0}a^{2}/2\hbar^{2}}$ un autoestado de segunda clase se volverá ligado. Para valores incluso más grandes de este parámetro, se ligará un autoestado adicional de la primer clase. A continuación, otro autoestado de la segunda clase se ligará, etc. Como ejemplo consideremos el caso en que $\sqrt{mV_{0}a^{2}/2\hbar^{2}}=4$. Las energías discretas y continuas se ilustran en la figura 11.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{pozofinitoautoestados.png}
+\caption{Los autovalores de un pozo finito particular.}
+\end{center}
+\end{figure}
+
+Los números cuánticos $n=1,2,3,4,5,\ldots$ se usan para etiquetar los autovalores en orden creciente de energía. Para este potencial, sólo los tres primeros autoestados están ligados.
+
+De las soluciones de $u$, para un valor determinado de $\sqrt{mV_{0}a^{2}/2\hbar^{2}}$, se pueden evaluar las formas explícitas de las autofunciones. Las relaciones requeridas son
+\[ K_{1} \frac{a}{2}=u \qquad ; \qquad K_{2} \frac{a}{2}=\sqrt{\frac{mV_{0}a^{2}}{2\hbar^{2}}-u^{2}} \]
+Ajustando los valores de $A$ y $B$ para cumplir la condición de normalización, obtenemos las funciones de onda de la figura 12.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{pozofinitoautofunciones.png}
+\caption{Las autofunciones de los autoestados ligados para un pozo finito en particular.}
+\end{center}
+\end{figure}
+
+Esta figura hace evidente la diferencia esencial entre las dos clases de autofunciones. Las autofunciones de la primera clase ($\psi _{1}(x)$ y $\psi _{3}(x)$) son \emph{funciones pares}, esto es
+\[ \psi (-x)=\psi (x) \]
+En mecánica cuántica estas funciones se dice que tienen \emph{paridad par}. Las autofunciones de la segunda clase ($\psi _{2}(x)$) es una \emph{función impar}, esto es
+\[ \psi (-x)=-\psi (x) \]
+y se dice que tiene \emph{paridad impar}. Para cualquier valor de $\sqrt{mV_{0}a^{2}/2\hbar^{2}}$, las funciones de la primer clase serán todas pares mientras que las funciones de segunda clase serán impares. Más aún, las autofunciones de la zona continua, en forma de ondas estacionarias, son también de dos clases, unas pares y las otras impares. Que todas las autofunciones en forma de ondas estacionarias tiene una paridad definida, es una consecuencia directa del hecho de que elegimos el origen del eje $x$ de tal forma que el potencial $V(x)$ es una función par de $x$. Para esta elección es intuitivo que cualquier cantidad mensurable que describa el movimiento de la partícula en un autoestado ligado (o en una onda estacionaria de los autoestados continuos) será una función par de $x$. Notemos que esto es verdad para la función densidad de probabilidades $P(x,t)$ tanto para los autoestados pares o impares
+\[ P(-x,t)=\psi^{\ast}(-x)\psi (-x)=(\pm \psi^{\ast}(x))(\pm \psi(x))=\psi^{\ast}(x)\psi(x)=P(x,t) \]
+Esto no es cierto para la función de onda en si misma en el caso de una paridad impar en el autoestado; una función de onda así será función impar de $x$. Por supuesto, esto no es una contradicción dado que las funciones de onda no son mensurables. Las autofunciones en forma de ondas viajeras no tienen una paridad definida dado que son combinación lineales de autofunciones en forma de ondas estacionarias que tienen paridades opuestas. Para un problema unidimensional, el hecho de que las autofunciones en forma de ondas estacionarias tengan una paridad diferente, $V(-x)=V(x)$, es de una gran importancia debido a que simplifica considerablemente la matemática utilizada en algunos cálculos.
+
+En la figura 13 se presentan las densidades de probabilidad para los tres estados ligados de los casos anteriores como funciones de $x/(a/2)$ y también se grafica la probabilidad de densidad normalizada que sería fruto de la predicción clásica.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{pozofinitoprobabilidades.png}
+\caption{Las densidades de probabilidad para los estados ligados de un pozo finito en particular.}
+\end{center}
+\end{figure}
+
+\end{document}

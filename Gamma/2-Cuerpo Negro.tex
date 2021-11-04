@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[pdftex]{color,graphicx}
+
+\begin{document}
+
+\[ \textrm{Cuerpo } \wedge T>0 \Longrightarrow \textrm{emite radiación} \]
+
+\textbf{Teoría clásica:} las cargas eléctricas superficiales se aceleran por la agitación térmica.
+
+La aceleración de una sola partícula produce una onda de frecuencia $\nu$ y longitud de onda $\lambda = c/\nu$
+
+Al haber  mucha cantidad de partículas, muchos procesos distintos de aceleración ocurren, emitiendo todo un espectro de longitudes de onda. (Es esperable que la agitación térmica resulte aleatoria y, por lo tanto, las aceleraciones no sean iguales para todas las partículas).
+
+Con estas suposiciones se puede esperar que la la tasa de emisión de energía (energía por unidad de longitud, integrada en todas las longitudes del espectro) aumente si aumenta la temperatura, debido al incremento de la agitación térmica. También se esperará que la tasa de emisión de energía sea proporcional al área de la superficie que emite la radiación. (A mayor superficie, más cantidad de partículas, mayor radiación).
+
+Empíricamente, Stefan (1879) descubrió que $R_{T} = \sigma e T^{4}$ siendo $R_{T}$ la cantidad total de potencia emitida en todas las frecuencias por unidad de superficie, $e$ una constante llamada emisividad que varía entre 0 y 1 y $\sigma$ la constante de Stefan-Boltzmann que vale $5,67 \cdot 10^{-8} \frac{\textrm{W}}{\textrm{m}^{2}\textrm{K}^{4}}$. La energía emitida como radiación es la que entrega la fuente de temperatura mediante la agitación térmica.
+
+La radiación también puede ser absorbida por una superficie y convertida en agitación térmica. Por un teorema de Kirchhoff (1895) la emisividad es igual a la absorbancia de una superficie: $e=a$.
+
+Un cuerpo negro es una superficie capaz de absorber toda la radiación incidente ($a=1$). Por el teorema de Kirchhoff, la superficie que mejor absorbe es la que mejor emite. Siguiendo la ecuación de Stefan, se puede ver que la potencia irradiada por unidad de superficie es la misma para cualquier cuerpo negro a una misma temperatura.
+
+La distribución del espectro de radiación, $R_{T}(\lambda)$ se define de tal forma que $R_{T}(\lambda) d\lambda$ sea igual a la potencia emitida por unidad de superficie para un intervalo de longitud de onda $[ \lambda ;\lambda + d\lambda ]$.
+
+Si consideramos una cavidad con un pequeño agujero e incide radiación desde el exterior, la radiación que pase por el agujero entrará en la cavidad y será reflejada hasta que, eventualmente, sea absorbida por las paredes de la cavidad. Si el área del agujero es pequeña respecto de la superficie de la cavidad, una cantidad despreciable de radiación será reflejada hacia el agujero y absorbida completamente por el mismo. De esta forma, podemos considerar que el agujero tiene $a=1$ y se comporta como un cuerpo negro.
+
+Si ahora calentamos la cavidad y despreciamos la radiación externa, existirá una radiación térmica interna que llenará la cavidad. La pequeña porción de esta radiación que incida sobre el agujero saldrá al exterior en su totalidad, de esta forma, el agujero actuará como emisor de radiación. Como se explicó que el agujero se comporta como un cuerpo negro, la radiación que emita tendrá el espectro de un cuerpo negro. Ahora bien, como la radiación del agujero es una muestra de la radiación interior de la cavidad, podemos suponer que toda la cavidad se comporta como un cuerpo negro.
+
+Si bien el espectro emitido por el agujero de la cavidad se puede considerar en términos de $R_{T}(\lambda)$, el espectro de la radiación dentro de la cavidad se puede especificar en términos de la densidad de energía $E_{T}(\lambda)$ (definida de tal forma que $E_{T}(\lambda) d\lambda$ sea la energía contenida en una unidad de volumen de la cavidad, en el intervalo de longitud de onda $ [ \lambda;d\lambda ]$). Debido a que el agujero emite el espectro de la cavidad, podemos suponer que $E_{T}(\lambda)$ será proporcional a $R_{T}(\lambda)$.
+
+En 1893, utilizando argumentos termodinámicos (ver Eisberg Ch. 2, pag. 50), Wien obtuvo que la distribución del espectro de la radiación de un cuerpo negro sigue la ley: $E_{T}(\lambda) = f(\lambda T)/\lambda^{5}$ para alguna función del producto de $\lambda$ por la temperatura.
+
+\ldots
+
+Para intentar encontrar $E_{T}$ caen Rayleigh y Jean. Suponiendo un cuerpo negro metálico y cúbico de lado $a$, tenemos que la radiación electromagnética rebotará entre las paredes generando una onda estacionaria. Como el campo eléctrico es perpendicular a la dirección de propagación, es paralelo a la pared. Pero como el campo eléctrico no puede ser paralelo a una superficie metálica, tenemos que, entonces, en las paredes la condición de contorno es $\vec{E}=0$ para ambas paredes. Estas condiciones de contorno generan limitaciones en cuanto a la cantidad posible de longitudes de onda contenidas en la cavidad.
+
+(\ldots) Es algo así como que hay superficies determinadas y espaciadas en distancias de nodos donde están los distintos intervalos de radiación. Es como que, en el cuerpo negro, no tengo todas las longitudes de ondas, sino algunas determinadas por superficies que Ozols llama $k$, limitadas por $k_{x}$, $k_{y}$, $k_{z}$ siendo estos valores los posibles valores de los números enteros que pueden tomar los nodos.
+
+(\ldots) Después de delirar durante las secciones 6 y 7 Rayleigh y Jean llegan a una fórmula más concreta para la densidad de energía por unidad de volumen que es resultado de: 1) la energía media de las ondas estacionarias, multiplicado por 2) la cantidad de ondas estacionarias que hay en la cavidad, dividido por, el volumen de la misma.
+
+Resulta que los supuestos clásicos de Rayleigh-Jeans explotan por todos lados. Cuando quieren calcular la energía media de una onda estacionaria, utilizando la distribución de proabilidades de Stefan-Boltzmann, suponen continua la distribución de energía e integran. Esta integral les devuelve algo que no condice con los resultados. Entonces cae Planck con su postulados sobre la cuantización de la energía.
+
+Planck dijo que la energía absorbida o emitida por un oscilador armónico es de la forma $E=nh\nu$
+
+Para el postulado de Planck, el cálculo sobre la cantidad de nodos en la cavidad sigue funcionando. El problema está que cuando se calculó la energía media se integró sobre la energía, suponiéndola continua. Como Planck dice que no, resuelve usando sumatorias en lugar de ingrales y chau, problema resuelto:
+
+\[ E_{\nu} = \frac{8 \pi h \nu^{3}}{c^{3}} \frac{1}{e^{h \nu / KT}-1} \qquad ; \qquad E_{\lambda} = \frac{8 \pi h c}{\lambda^{5}} \frac{1}{e^{h c / \lambda KT}-1} \qquad ; \qquad R_{x} = \frac{c}{4} E_{x} \]
+
+Desplazamiento de Wien: $\lambda_{\textrm{max}}T=b$ donde $b=2,9 \cdot 10^{-3}\textrm{mK}$ es la constante de Wien.
+
+\end{document}

@@ -1,0 +1,78 @@
+%Tipo de documento
+\documentclass[12pt]{article}
+
+%PAQUETES
+
+%Salida en .pdf
+\usepackage[pdftex]{color,graphicx}
+
+%Idioma
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+%Matematica
+\usepackage{amsmath, amssymb, amsfonts}
+
+\begin{document}
+
+\title{Cristalografía.}
+
+\author{$\Gamma$}
+
+\maketitle
+
+\section{Introducción.}
+
+Las propiedades eléctricas de los semiconductores están determinadas por la composición química de los sólidos y por la disposición de los átomos en él.
+
+Los semiconductores son aquellos materiales que tienen conductividades entre las de un metal y las de un aislante. Los semiconductores elementales son aquellos formados por los elementos del grupo IV de la tabla periódica; mientras que los semiconductores compuestos son aquellos hechos mediante combinaciones especiales entre los elementos del grupo III y el grupo V. (Existen otras combinaciones posibles pero el Neamen no las va a tratar.). El silicio es el semiconductor elemental más utilizado para la construcción de circuitos integrados y es sobre el que más se va a trabajar en el libro.
+
+Los sólidos se clasifican, en general, en amorfos, policristales y monocristales. Esta clasificación depende de la extensión, en volumen, que tengan las regiones ordenadas. Una región ordenada es una porción espacial del sólido en el que los átomos o las moléculas que lo componen se distribuyen periódicamente. Los sólidos amorfos suelen tener regiones ordenadas despreciables respecto del volumen total, mientras que, en los cristales, prevalecen las regiones ordenadas. Estas regiones ordenadas pueden variar su tamaño y orientación respecto de las otras. Cada región ordenada en particular se denomina \emph{grain} y la separación, \emph{grain boundaries}. Los monocristales suelen ser superiores en sus propiedades eléctricas puesto que las mismas no se ven afectadas por los \emph{grain boundaries} que se encuentran presentes en los policristales.
+
+\section{Redes cristalinas.}
+
+En los cristales simples, existe una unidad representativa que se repite periódicamente en intervalos regulares a lo largo de todo el cristal. El arreglo periódico de átomos en un cristal se llama \emph{red cristalina} (lattice).
+
+Las redes cristalinas se representan mediante puntos llamados \emph{puntos de la red}. La traslación es la manera más simple de representar un arreglo de puntos de la red. Cada punto de la red se puede trasladar una distancia $a_{1}$ en una dirección y una distancia $b_{1}$ en otra dirección (linealmente independiente). Una \emph{celda unitaria} es una porción del volumen que puede ser utilizada para recrear el cristal entero. La celda unitaria \emph{no} es única. La celda unitaria de menor volumen es conocida como la \emph{celda primitiva}. (\textbf{Obs.} Para describir una red cristalina, no necesariamente hay que utilizar la celda primitiva. Muchas veces, ésta, ni siquiera tiene coordenadas ortogonales y, por lo tanto, es preferible usar cualquier otra celda unitaria que permita describir la red de forma más cómoda.).
+
+Cualquier punto de una red cristalina tridimensional se puede describir mediante
+\[ \vec{r}=p\vec{a}+q\vec{b}+s\vec{c} \]
+donde $p$, $q$ y $s$ son números enteros y $\vec{a}$, $\vec{b}$ y $\vec{c}$ son vectores que recorren el espacio que, no necesariamente, deben ser ortogonales ni tener la misma longitud.
+
+Los cristales reales no son infinitamente grandes y, por lo tanto, terminan en alguna superficie. Más aún, los dispositivos semiconductores se suelen construir sobre la superficie. Es por esto que las características de las superficies revisten mucha importancia en el estudio de los semiconductores. Sería deseable, por lo tanto, describir estas superficies utilizando la red cristalina. Estos planos pueden describirse utilizando las intersecciones que tengan con los vectores $\vec{a}$, $\vec{b}$ y $\vec{c}$ que describen la red.
+
+Si utilizamos los recíprocos de los puntos en los cuales el plano a describir intercepta las direcciones principales, y los multiplicamos por el menor denominador común para obtener números enteros, estaremos usando los \emph{índices de Miller} para describir un plano. (\textbf{Ejemplo.} Un plano que corta los ejes en $p=3$, $q=2$ y $s=1$ tiene por recíprocos $(\frac{1}{3}\frac{1}{2}\frac{1}{1})$ y multiplicados por el menor común denominador (seis), dan los índices de Miller $(236)$.). Los planos que tienen los mismo índices de Miller son paralelos entre sí.
+
+Algunas de las características que se pueden determinar utilizando los planos de los índices de Miller son la distancia entre planos equivalentes y paralelos, la cantidad de átomos por unidad de superficie, etc. La cantidad de átomos por unidad de superficie sirve para determinar en qué grado se podrá insertar otro material (como un aislante) en la red.
+
+También se pueden describir vectores en el espacio utilizando la descomposición de dicho vector en las coordenadas de los vectores que describen la red. En este caso, el vector, se anota entre corchetes, en lugar de entre paréntesis. Un vector con los mismos números enteros que un plano $(hkl)$ y $[hkl]$, por ejemplo, son perpendiculares. Es decir, el vector es normal al plano.
+
+Existen tres estructuras típicas, que son el cubo simple (un átomo), el cubo de cuerpo centrado (dos átomos) y el cubo de cara centrada (cuatro átomos). El silicio y el germanio, sin embargo, tienen estructuras de diamante. Estas estructuras se componen de una celda unitaria tetrahédrica que es similar al cubo de cuerpo centrado pero que sólo tiene cuatro átomos en las puntas, en lugar de ocho. Si la estructura de diamante está compuesta por más de un elemento se denomina \emph{zincblenda}.
+
+\section{Uniones atómicas.}
+
+Dadas las distintas estructuras, la siguiente pregunta es ¿Por qué los átomos de los cristales se acomodan de una determinada forma o de otra? Una de las leyes fundamentales de la naturaleza es que, en equilibrio térmico, la energía total del sistema tenderá a ser mínima. La forma en que los átomos se unen entre sí para formar un sólido y alcanzar la energía mínima del equilibrio térmico depende del tipo de átomo que se una. Algunos átomos tienen uniones tan débiles que nunca lograran formar un sólido. (\textbf{Obs.} La unión de los átomos depende de la mecánica cuántica. Sin embargo, se hará una buena aproximación cualitativa en términos de la valencia o electrones en el último nivel.)
+
+Las \emph{uniones iónicas} se producen, generalmente, cuando los átomos del grupo I pierden un electrón para quedar más estables. Quedan cargados positivamente y se ven atraídos por fuerzas de Coulomb por átomos del grupo VII que ganaron un electrón y quedaron cargados negativamente. Dado que si se acercaran demasiado existirían fuerzas repulsivas por los electrones mismos de cada nivel, se alcanza un equilibrio donde cada átomo positivo se ve rodeado por átomos negativos que, a su vez, están rodeados por átomos positivos, etc. Es así como se forma la red cristalina de iones.
+
+Las \emph{uniones covalentes} se producen al compartir electrones con el fin de llenar los niveles exteriores de energía. En el caso del Silicio, se puede ver que cada Si se junta con cuatro átomos más cercanos, compartiendo un electrón con cada uno de ellos, logrando llenar su propio nivel. A su vez, cada átomo que lo rodea, tiene electrones libres que se unirán con otros átomos de silicio y así hasta el infinito. Se puede observar que, al compartirse cuatro electrones, la tendencia del Silicio es claramente a formar un diamante en su estructura cristalina.
+
+Las \emph{uniones metálicas} se producen cuando muchos átomos del grupo I, por ejemplo, son acercados y, entonces, se producen uniones debidas a las fuerzas eléctricas entre los electrones que empiezan a recorrer todos los átomos uniéndolos entre sí. Es decir, cuando se juntan, por ejemplo, ocho átomos de sodio, se tendrán ocho electrones que recorrerán el espacio constantemente uniendo a los átomos de sodio con ocho electrones. Estas uniones forman, típicamente, estructuras de cuerpo centrado.
+
+Las \emph{uniones de Van de Waals} se producen cuando la unión iónica de dos componentes desplaza levemente el centro de la carga, generando un pequeño dipolito que tenderá a unirse eléctricamente con otros dipolos circundantes. Son interacciones sumamente débiles que caracterizan a la mayoría de los gases a temperatura ambiente.
+
+\section{Imperfecciones.}
+
+En los cristales reales, las redes no son perfectas, sino que presentan imperfecciones que pueden alterar seriamente el comportamiento eléctrico de los materiales y, muchas veces, estas imperfecciones dominan el comportamiento global.
+
+La \emph{vibración térmica de la red} es una imperfección común a todos los sólidos. A una temperatura mayor a las del cero absoluto, los cuerpos vibran aleatoriamente, alrededor de su punto de equilibrio creando fluctuaciones aleatorias de las distancias entre los distintos puntos de la red.
+
+Los \emph{huecos} son \emph{defectos de punto} donde, en una red cristalina (que si fuera perfecta tendría un átomo ocupando cada punto de la red), resulta que uno de esos átomos está faltando y no se encuentra en ese lugar. Los \emph{intersticios} también son defectos de punto, y son átomos que quedaron localizados \emph{entre} dos puntos de la red, donde se suponía que no debía haber nada. Estas dos imperfecciones, no sólo alteran la periodicidad perfecta de la red, sino que, además, alteran las uniones atómicas modificando notablemente las propiedades eléctricas de la red. En algunos casos, estos huecos e intersticios pueden estar próximos provocando interacciones entre ellos. A esto último se lo conoce como \emph{defecto de Frenkel} y sus resultados son distintos de aquellos que se producen mediante la sola presencia de huecos o intersticios que no interactúan entre sí.
+
+La \emph{dislocación de línea} ocurre cuando una línea de átomos está faltando de la red cristalina. Esta dislocación de línea, al igual que los huecos y los intersticios, no sólo afecta la periodicidad perfecta, sino también las uniones atómicas. Las dislocaciones de línea modifican las propiedades eléctricas en formas aún más impredecibles que en el caso de huecos o intersticios.
+
+En algunos sólidos se encuentran impurezas (átomos de otro elemento). Cuando estas impurezas ocupan el lugar de otro átomo en la red cristalina, se denominan \emph{sustituciones}. En el caso en que estos átomos de otro elemento se encuentren \emph{entre} dos átomos del elemento del cristal se denomina \emph{impureza intersticial}. Este tipo de impurezas puede resultar inerte a los efectos eléctricos del material, o puede alterar drásticamente sus propiedades.
+
+En muchos casos se ponen, voluntariamente, cantidades controladas de alguna impureza para obtener o mejorar ciertas propiedades eléctricas deseadas (por lo general, la conductividad). Existen dos técnicas mediante las cuales se realiza este agregado. La \emph{difusión} consiste en llevar al cristal semiconductor a un ambiente a altas temperaturas ($\approx 1000$ºC) que contenga el gas con las impurezas que se desean insertar. Ante la vibración térmica, muchos átomos del semiconductor se mueven dejando huecos que son posteriormente ocupados por los átomos del gas, desde la superficie, hacia adentro. Cuando se enfría el semiconductor a temperatura ambiente, estas impurezas quedan permanentemente insertadas en el semiconductor. En el caso de la \emph{implantación de iones} se aceleran iones de la impureza contra el semiconductor (a energías altas de 50keV o más) y estos iones son forzados a penetrar el semiconductor hasta cierta profundidad. El problema con este último método es que, muchas veces, la colisión entre átomos del ion y del cristal daña la periodicidad del cristal. Sin embargo, con un calentamiento por corto tiempo del semiconductor, se pueden reordenar estos átomos.
+
+\end{document}

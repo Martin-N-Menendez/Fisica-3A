@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[pdftex]{color,graphicx}
+
+\begin{document}
+
+En 1913 Bohr formuló una teoría sobre el átomo capaz de predecir los espectros de ciertos elementos.
+
+Para medir espectros, se utiliza una fuente, una ranura para encauzar la radiación, una red de difracción y algo para grabar la difracción. La fuente consiste en una descarga eléctrica a través de un gas monoatómico. Debido a colisiones internas  y con los electrones de los electrodos, algunos átomos en la descarga, aumentan su nivel de energía. Cuando regresan a los niveles de energía habituales, emiten radiaciones electromagnéticas. Estás radiaciones conforman el espectro.
+
+A diferencia de el espectro emitido por sólidos que han sido calentados, la radiación electromagnética de un átomo libre está concentrada en un número discreto de longitudes de onda. Cada átomo tiene su espectro característico.
+
+Investigando el átomo de hidrógeno, se postularon varias series numéricas para intentar condecir con las longitudes de onda observadas. La idea era encontrar una serie que convergiese al valor límite, $364,56\textrm{nm}$ y que, para cada $n$ de la serie, se obtuviese por resultado la longitud de onda correcta observada. Cada serie responde a un distinto nivel final en el que se encuentre el electrón, cada $n$ de la serie responde al estado inicial del que cae.
+
+Para cada longitud de onda absorbida por un átomo, hay una correspondiente longitud de onda emitida. Sin embargo, la recíproca, no es cierta.
+
+Bohr desarrolló una teoría que predecía con gran precisión los espectros de algunos elementos, incluídos el de hidrógeno. La teoría era matemáticamente sencilla, pero recaía sobre cuatro postulados de dudosa aceptación:
+\begin{enumerate}
+\item Un electrón se mueve circularmente alrededor del núcleo atraído por fuerzas de Coulomb y bajo las reglas de la mecánica clásica.
+\item Sin embargo, en lugar de moverse en todas las órbitas posibles de le mecánica clásica, el electrón habita en órbitas para las cuales su momento cinético $L$ es igual a un múltiplo entero del número de Planck, $h$, divido por $2\pi$. $L=nh/2\pi$
+\item A pesar del hecho de que el electrón esté constantemente acelerando, el electrón se mueve de tal forma que no irradie energía. Por lo tanto, su energía total permanece constante.
+\item Radiación electromagnética es emitida únicamente cuando, un electrón moviéndose en una órbita de energía total $E_{i}$ cambia, discontinuamente, su movimiento para pasar a otra órbita de energía total $E_{j}$. La frecuencia de la radiación será: $\nu=(E_{i}-E_{j})/h$.
+\end{enumerate}
+
+Como se puede observar, hay una gran mezcla entre la mecánica clásica y la cuántica. Por un lado los electrones se mueven circularmente clásicos, pero tienen niveles cuantizados de energía. El electrón es atraído por fuerzas de Coulomb, pero no emite radiación electromagnética a pesar de estar acelerado. También se asume que la masa del electrón es despreciable respecto de la del núcleo y que, por lo tanto, el núcleo está fijo. La energía total, por tanto será $E = E_{c} + E_{V}$ donde $E_{c}$ es la energía cinética y $E_{V}$ es la energía potencial eléctrica con referencia en el infinito.
+
+De acuerdo a Bohr, para átomos de un sólo electrón, las posibles órbitas son aquellas de radio $r$ y velocidad $v$ 
+
+\[ r=\frac{\hbar^{2}4\pi \epsilon_{0}}{m_{0}e^{2}Z} n^{2} \qquad ; \qquad v=\frac{e^{2}}{4 \pi \epsilon_{0} \hbar} \cdot \frac{1}{n}\]
+
+Para $n=1$ la velocidad es del orden del $1\%$ de la velocidad de la luz y, por lo tanto, se justifica el postulado sobre mecánica clásica de Bohr. Para átomos con gran número atómico ($Z$) la velocidad se acerca a la de la luz y la teoría de Bohr no aplica.
+
+La energía total de cada órbita es 
+\[ E = - \frac{m_{0}}{2} \bigg( \frac{e^{2}Z}{4 \pi \epsilon_{0} \hbar^{2}} \bigg)^{2} \cdot \frac{1}{n^{2}}\]
+
+La cuantización del momento cinético lleva a la cuantización de la energía. La energía es negativa porque el cero del potencial electrostático se define en el punto en que el electrón está suelto del átomo.
+
+La frecuencia de las radiaciones electromagnéticas será 
+
+\[ \nu = \frac{m_{0}}{2} \frac{e^{4}Z^{2}}{8 \pi^{2} \epsilon_{0} \hbar^{3}} \bigg( \frac{1}{n_{f}^{2}} - \frac{1}{n_{i}^{2}} \bigg) \]
+
+o, según el número de onda, $k=R_{y}(1/n_{f}^{2}-1/n_{i}^{2})$ con $R_{y}=10^{6}\textrm{m}^{-1}$.
+
+\textbf{Nota Bene.} La energía de retroceso del átomo es $\frac{(E_{i}-E_{f})^{2}}{2Mc^{2}}$. (Alonso-Finn). La energía de retroceso sería la energía que recibe el átomo al impactar el fotón con él, suponiendo que no esté fijo. Es decir, viene el fotón, impacta contra el átomo, y no es que todo va a cambiar el nivel de energía, sino que una parte se pierde en desplazar (retroceso) al átomo.
+
+Con la teoría de Bohr, las longitudes de onda descubiertas en cada serie numérica, condecían a la perfección con lo predicho por Bohr para distintos $n_{f}$ (Cada $n_{f}$ daba origen a una serie numérica descubierta). Es decir, antes de Bohr, las series numéricas daban por resultado la longitud de onda emitida para distintas transiciones. Cuando llegó Bohr mostró que lo que cada serie predecía eran las distintas transiciones hasta un estado final determinado (1 para Lyman, 2 para Balmer, etc.) viniendo desde un estado superior (las $n$ de las series). En otras palabras, la serie de Balmer, por ejemplo, predecía las longitudes de onda para todas las transiciones cuyo estado final sería el 2 (i.e. Del 3 al 2, del 4 al 2, del 5 al 2, etc.).
+
+Para la absorción, la teoría de Bohr también funciona puesto que consideramos que los electrones absorben la energía y aumentan un nivel de órbita.
+
+(DUDA: Las ecuaciones anteriores, suponen al átomo con núcleo fijo o móvil?) Suponiendo que la masa del núcleo sea tenida en cuenta, tenemos que $L= \mu r^{2} \omega$, siendo $\mu = mM/(m+M)$ la \emph{reduced mass} (¿masa reducida?). El resto de las ecuaciones, para el número de onda y demás, salen de reemplazar la masa del electrón $m$, por la masa $\mu$.
+
+Wilson y Sommerfeld expandieron la definición de cuantización para determinar una fórmula con la cuál cuantizar cualquier tipo de sistema de tal forma que los casos de Planck para los osciladores armónicos y de Bohr para el momento cinético sea un caso particular. El postulado es
+
+\emph{Para cualquier sistema cuyas coordenadas sean funciones periódicas del tiempo, existe una condición cuántica para esas coordenadas dada por $\oint p_{q}dq = n_{q}h$ donde $q$ es la coordenada, $p_{q}$ es el momento asociado a esa coordenada, $n_{q}$ es un número cuántico $\in \mathbb{N}$ y la integral indica que debe ser tomada para un período completo de $q$.}
+
+Sommerfeld quizo explicar la estructura fina del especto. La estructura fina es que para una determinada línea, había varias sublíneas muy unidas entre sí (similar a la difracción por colores). Sommerfeld propuso órbitas elípticas. Suponiendo estas órbitas elípticas, Sommerfeld planteó también la ecuación de cuantización de la cantidad de movimiento, no sólo en función de la coordenada $\hat{\theta}$ sino también para la coordenada $\hat{r}$, que en el caso de las órbitas circulares no aplicaría.
+
+(\ldots)
+
+En la última sección del capítulo hay una muy interesante crítica de la \textsl{Vieja Teoría Cuántica}.
+
+\end{document}

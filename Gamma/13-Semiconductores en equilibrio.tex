@@ -1,0 +1,439 @@
+%Tipo de documento
+\documentclass[12pt,a4paper]{article}
+
+%PAQUETES
+
+%Parsear en .pdf
+\usepackage[pdftex]{color,graphicx}
+
+%Castellano
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+%Matematica
+\usepackage{amsmath, amssymb, amsfonts}
+
+\begin{document}
+
+\title{Semiconductores en equilibrio.}
+
+\author{$\Gamma$}
+
+\maketitle
+
+\section{Introducción.}
+
+Hasta ahora vinimos trabajando con cristales, aplicando mecánica cuántica y obteniendo resultados sobre el comportamiento de electrones en cristales en general. En este resumen, aplicaremos estos conceptos a un semiconductor específicamente. En particular, utilizaremos la densidad de estados y la distribución de Fermi-Dirac para determinar la concentración de electrones y huecos en las bandas de conducción y valencia del material.
+
+Que el semiconductor esté en equilibrio implica que no hay fuerzas externas (como tensiones, campos eléctricos o magnéticos) aplicadas, las partículas se encuentran en equilibrio térmico. En este resumen no se considerarán los efectos del tiempo. El objetivo de este análisis será sentar una base para que, luego, podamos comprender qué sucede cuando ocurren desviaciones del punto de equilbrio.
+
+Primero, se considerarán las propiedades de los semiconductores intrínsecos, es decir, un cristal que no contiene impurezas o defectos de red. Las propiedades eléctricas del semiconductor se pueden alterar a gusto, agregando cantidades controladas de impurezas, conocidas como \emph{átomos dopantes}. Dependiendo del tipo de átomos de impurezas que se agreguen, los portadores principales serán electrones en la banda de conducción, o huecos en la banda de valencia. Agregar impurezas cambia la distribución de los electrones en los estados cuánticos disponibles, con lo cual, la $\epsilon _{F}$ será una función del tipo y la cantidad de impurezas agregadas.
+
+\section{Portadores de carga en semiconductores.}
+
+La corriente es el ritmo al cuál la carga fluye. En un semiconductor, tenemos dos tipos de portadores de carga, los huecos y los electrones. Como la corriente estará determinada por la cantidad de electrones en la banda de conducción o de huecos en la banda de valencia, una característica importante de los semiconductores es la densidad de estos portadores de carga. La densidad de electrones y huecos depende de la densidad de estados cuánticos en un semiconductor y de la distribución de Fermi-Dirac. La idea va a ser encontrar la concentración de electrones y huecos en equilibrio térmico.
+
+\subsection{Distribución en equilibrio de los huecos y los electrones.}
+
+La distribución, respecto de la energía, para los electrones en la banda de conducción, $n(\epsilon)$, está dada por
+\[ n(\epsilon) = g_{c}(\epsilon) \cdot f_{F} (\epsilon) \]
+donde $f_{F}$ es la función de distribución de Fermi-Dirac y $g_{c}$ es la densidad de estados cuánticos en la banda de conducción. La concentración total de electrones por unidad de volumen se encuentra, consecuentemente, integrando la ecuación anterior para todos los valores posibles de la energía en la banda de conducción.
+
+Para los huecos, la distribución es
+\[ p(\epsilon) = g_{v}(\epsilon) \cdot (1-f_{F} (\epsilon)) \]
+donde $p(\epsilon)$ es la concentración de huecos en la banda de valencia, por unidad de volumen y energía, $g_{v}$ es la densidad de estados cuánticos en la banda de valencia, y $(1-f_{F})$ es la probabilidad de que un estado \emph{no} esté ocupado. Para obtener la cantidad total de huecos por unidad de volumen, hay que integrar $p(\epsilon)$ para todos los valores de energía posibles en la banda de valencia.
+
+Para encontrar la concentración de portadores en equilibrio térmico, debemos hallar el valor de $\epsilon _{F}$ respecto de $\epsilon _{c}$ (fondo de la banda de conducción) y $\epsilon _{v}$ (techo de la banda de valencia). Como primer \emph{approach} al problema, consideraremos un semiconductor intrínseco. Un semiconductor intrínseco ideal, es un semiconductor que no contiene átomos de impurezas y que su periodicidad cristalina es perfecta. Para un semiconductor a $T=0$K, todos los estados de la banda de conducción están vacíos y los de la banda de valencia están llenos. Por lo tanto, $\epsilon _{F}$ debe quedar en algún valor a medio camino entre $\epsilon _{c}$ y $\epsilon _{v}$ (Recordar que le energía de Fermi está entre el último nivel de energía ocupado y el primero vacío -es la energía máxima para $T=0$K-).
+
+Cuando la temperatura empieza a aumentar, los electrones de valencia comienzan a ganar energía y, eventualmente, saltarán a la banda de conducción dejando un hueco en la banda de valencia. En un semiconductor intrínseco, los portadores de carga se generan de a pares por agitación térmica (siempre que se genera un electrón, se genera un hueco). Con lo cual, la cantidad de electrones en la banda de conducción será igual a la cantidad de huecos en la banda de valencia.
+
+En la figura 1a se puede observar el gráfico de la función de Fermi-Dirac, $f_{F}$, y la densidad de estados de cada banda, $g_{c}$ y $g_{v}$, en función de la energía, $\epsilon$. En la parte derecha de la figura a, tenemos una gráfica de $n(\epsilon)=f_{F}(\epsilon) \cdot g_{c}(\epsilon)$ para electrones y huecos (con $p$ y $g_{v}$). Podemos observar que, para la banda de valencia, $\epsilon \leq \epsilon _{v}$, la probabilidad de que un estado cuántico esté ocupado por un electrón, $f_{F}$, es muy alta, con lo cuál, la probabilidad de que se encuentre un estado vacío (hueco) es baja, $(1-f_{F})$. A su vez, para $\epsilon \geq \epsilon _{c}$, la probabilidad de que un estado cuántico esté ocupado, es baja. Para la zona prohibida, $f_{F}\neq 0$, pero $g(\epsilon)=0$ con lo cual, la concentración de huecos o electrones en esa región es nula. (Si las masas efectivas de electrones y huecos son iguales, $g_{v}$ y $g_{c}$ serán simétricas respecto del punto de energía media, de la zona prohibida).
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{gvsf.png}
+\caption{(a) Gráficos de $f_{F}$, $g_{c}$, $g_{v}$, $n$ y $p$ en función de $\epsilon$. (b) $g_{c}$ y $f_{F}$. (c) $g_{v}$ y $(1-f_{F})$.}
+\end{center}
+\end{figure}
+
+En la figura 1b y 1c podemos encontrar un \emph{zoom} del producto que da por resultado la concentración de portadores por unidad de energía y volumen. Consecuentemente, al tratarse de un gráfico en función de $\epsilon$, el área bajo la curva de este producto (integral del producto para toda la energía) da la densidad de portadores (cantidad de portadores por unidad de volumen). Si $g_{c}$ y $g_{v}$ son simétricas respecto del centro (iguales masas efectivas), entonces la energía de Fermi, $\epsilon _{F}$, debe ser igual al valor del punto medio de la zona prohibida, dado que, de otra forma, no se cumpliría que $n(\epsilon)=p(\epsilon)$ sabiendo que $g_{c}(\epsilon)$ es simétrica respecto de $g_{v}(\epsilon)$. Si las masas efectivas son distintas, entonces $g_{c}$ y $g_{v}$ no serán simétricas del punto medio y, por lo tanto, $\epsilon _{F}$ se desplazará un poco más arriba o un poco más abajo para lograr que $n(\epsilon)=p(\epsilon)$ (característica típica de un semiconductor intrínseco).
+
+\subsection{Las ecuaciones de $n_{0}$ y $p_{0}$}
+
+La ecuación para la concentración de electrones (cantidad de electrones por unidad de volumen) en equilibrio térmico sale de integrar la ecuación $n(\epsilon)=f_{F}(\epsilon) \cdot g_{c}(\epsilon)$ para todos los valores posibles de energía en la banda de conducción
+\[ n_{0} = \int_{\epsilon _{c}}^{\infty} g_{c}(\epsilon) f_{F}(\epsilon) d\epsilon \]
+Los límites de integración deberían ser, desde $\epsilon _{c}$, hasta el último valor de energía permitido en la banda de conducción. Sin embargo, como $f_{F}$ tiende rápidamente a cero conforme $\epsilon$ aumenta alejándose de $\epsilon _{c}$ (figura 1a) se puede aproximar suponiendo que la integral es hasta infinito.
+
+Si consideramos que la $\epsilon _{F}$ se encuentra en la zona prohibida (típicamente por el medio de esta zona) y, dado que $\epsilon > \epsilon _{c}$, sabemos que $\epsilon _{c} - \epsilon _{F} \gg kT$ entonces $\epsilon - \epsilon _{F} \gg kT$ (el factor $kT \approx 25\textrm{meV}$ cuando, por lo general, el ancho de banda de la zona prohibida es del orden de 1eV, con lo cual, la aproximación es generalmente válida) y podemos usar la aproximación de Boltzmann,
+\[ f_{F} =\underbrace{ \frac{1}{1+e^{\frac{\epsilon - \epsilon _{F}}{kT}}} }_{ \rightarrow 1/e^{(\epsilon - \epsilon _{F})/kT} } \approx e^{-\frac{\epsilon - \epsilon _{F}}{kT}} \]
+
+Utilizando esta aproximación, la ecuación queda de la forma
+\[ n_{0} = \int _{\epsilon _{c}}^{\infty} \frac{4 \pi (2m_{n}^{\ast})^{\frac{3}{2}}}{h^{3}} \sqrt{\epsilon - \epsilon _{c}} \cdot e^{-\frac{\epsilon - \epsilon _{F}}{kT}} d\epsilon \]
+que se resuelve mediante un cambio de variables, obteniendo una función Gamma, y cuyo resultado final es
+\[ n_{0} = 2 \bigg( \frac{2 \pi m_{n}^{\ast}kT}{h^{2}} \bigg)^{\frac{3}{2}} e^{-\frac{\epsilon _{c} - \epsilon _{F}}{kT}} \]
+Si definimos
+\[ N_{c} = 2 \bigg( \frac{2 \pi m_{n}^{\ast}kT}{h^{2}} \bigg)^{\frac{3}{2}} \]
+la concentración electrónica en la banda de conducción, en equilibrio térmico, queda de la forma
+\[ n_{0} = N_{c} e^{-\frac{\epsilon _{c} - \epsilon _{F}}{kT}} \]
+El parámetro $N_{c}$ se llama \emph{función densidad efectiva de estados en la banda de conducción}. Para $m_{n}^{\ast}=m_{0}$ y $T=300$K, $N_{c}=2,5 \cdot 10^{19} \textrm{cm}^{-3}$ y resulta que la mayoría de los semiconductores tienen un $N_{c}$ de este orden de magnitud. ($m_{0}$ es la masa del electrón).
+
+Para encontrar la concentración de huecos, tenemos la ecuación
+\[ p_{0} = \int _{- \infty}^{\epsilon _{v}} g_{v}(\epsilon) (1-f_{F}(\epsilon)) d\epsilon \]
+donde se toma $-\infty$ como límite inferior puesto que $1-f_{F}$ decae con rapidez cuando la energía decrece. Si notamos que
+\[ 1-f_{F}(\epsilon) = 1- \frac{1}{1+e^{\frac{\epsilon - \epsilon _{F}}{kT}}} = \frac{1}{1+e^{\frac{\epsilon _{F} - \epsilon}{kT}}} \]
+y, para energías en la banda de valencia, $\epsilon \leq \epsilon _{v}$, donde suponemos que se puede aproximar $\epsilon _{F} - \epsilon _{v} \gg kT$ ($\epsilon _{F}$ situado próximo a la mitad de la banda prohibida), tenemos $\epsilon _{F} - \epsilon \gg kT$ y, consecuentemente, aplicamos la aproximación de Boltzmann
+\[ 1 - f_{F}(\epsilon) \approx e^{-\frac{\epsilon _{F} - \epsilon}{kT}} \]
+Aplicando este resultado a la ecuación para obtener $p_{0}$, tenemos
+\[ p_{0} = \int _{-\infty}^{\epsilon _{v}} \frac{4 \pi (2m_{p}^{\ast})^{\frac{3}{2}}}{h^{3}} \sqrt{\epsilon _{v} - \epsilon} \cdot e^{-\frac{\epsilon _{F} - \epsilon}{kT}} d\epsilon \]
+Una vez más, utilizando un cambio de variables apropiado, y los resultados de la función Gamma, tenemos que
+\[ p_{0} = 2 \bigg( \frac{2 \pi m_{p}^{\ast}kT}{h^{2}} \bigg)^{\frac{3}{2}} e^{-\frac{\epsilon _{F} - \epsilon _{v}}{kT}} \]
+Podemos definir
+\[ N_{v} = 2 \bigg( \frac{2 \pi m_{p}^{\ast}kT}{h^{2}} \bigg)^{\frac{3}{2}} \]
+que recibe el nombre de \emph{función densidad efectiva de estados en la banda de valencia}. Finalmente, la concentración de huecos en la banda de valencia, en equilibrio térmico, se puede obtener con la ecuación
+\[ p_{0} = N_{v} e^{-\frac{\epsilon _{F} - \epsilon _{v}}{kT}} \]
+$N_{v}$ es del orden de $10^{19} \textrm{cm}^{-3}$ a $T=300$K para la mayoría de los semiconductores.
+
+Las concentraciones en equilibrio térmico de los huecos en la banda de valencia y de los electrones en la banda de conducción, están directamente relacionadas con la constante de densidad de estados efectiva y la energía de Fermi. La función densidad de estados efectiva, $N_{v}$ y $N_{c}$, es constante para un semiconductor dado a una temperatura fija. La tabla de la figura 2 da estos valores y los de la masa efectiva para el silicio (\emph{silicon}), germanio (\emph{germanium}) y arseniuro de galio (\emph{gallium arsenide}).
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{tablasemiconductores.png}
+\caption{Tabla con los valores de $N_{v}$, $N_{c}$ y las relaciones $m_{n}^{\ast}$ y $m_{p}^{\ast}$ para varios semiconductores.}
+\end{center}
+\end{figure}
+
+\subsection{Concentración intrínseca de portadores.}
+
+Para un semiconductor intrínseco, la concentración de electrones en la banda de conducción, $n_{i}$ (la $i$ por intrínseco), es igual a la concentración de huecos en la banda de valencia, $p_{i}$. Dado que $n_{i}=p_{i}$ comúnmente se utiliza el parámetro $n_{i}$ como concentración intrínseca de portadores de carga en general. La energía de Fermi en un semiconductor intrínseco, $\epsilon _{F}$, es comúnmente conocida como la energía de Fermi intrínseca, $\epsilon _{Fi} = \epsilon _{F}$.
+
+Si se aplican las ecuaciones de las concentraciones de huecos y electrones a un semiconductor intrínseco, se obtiene
+\[ n_{0}=n_{i}= N_{c} e^{-\frac{\epsilon _{c} - \epsilon _{Fi}}{kT}} \qquad ; \qquad p_{0}=p_{i}= N_{v} e^{-\frac{\epsilon _{Fi} - \epsilon _{v}}{kT}} \]
+Si multiplicamos ambas expresiones, obtenemos
+\[ n_{i}^{2} = N_{c} N_{v} e^{-\frac{\epsilon _{g}}{kT}} \]
+donde $\epsilon _{g} = \epsilon _{c} - \epsilon _{v}$ es el ancho de energía de la banda prohibida. Como se puede observar, para un material semiconductor a una temperatura dada, la concentración de portadores es \emph{independiente} de la $\epsilon _{F}$.
+
+En la tabla de la figura 3 tenemos los valores experimentales de las concentraciones de portadores para algunos semiconductores a $T=300$K. La concentración intrínseca de portadores es una función con una gran dependencia de la temperatura.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{tablasemiconductores2.png}
+\caption{Tabla con los valores experimentales aceptados de $n_{i}$ para $T=300$K.}
+\end{center}
+\end{figure}
+
+\subsection{Posición intrínseca del nivel de Fermi.}
+
+En general, se estuvo considerando que el nivel de la energía de Fermi rondaba la mitad de la banda prohibida en un semiconductor intrínseco. Se puede calcular la posición intrínseca del nivel de energía de Fermi utilizando el concepto de que las concentraciones de electrones y huecos son iguales
+\[  N_{c} e^{-\frac{\epsilon _{c} - \epsilon _{Fi}}{kT}} = N_{v} e^{-\frac{\epsilon _{Fi} - \epsilon _{v}}{kT}} \]
+Si tomamos el logaritmo natural de ambos miembros y aplicamos la definición de $N_{c}$ y $N_{v}$, resolviendo para $\epsilon _{Fi}$, obtenemos
+\[ \epsilon _{Fi} = \frac{1}{2} (\epsilon _{c} + \epsilon _{v}) + \frac{3}{4} kT \ln \bigg( \frac{m_{p}^{\ast}}{m_{n}^{\ast}} \bigg) \]
+El primer término de la suma es, exactamente, la energía del punto medio de la zona prohibida. Con lo cual, despejando el segundo término, tenemos que éste mide la distancia de la energía de Fermi al punto medio de la zona prohibida. Si las masas efectivas son iguales, el logaritmo natural desaparece, y la energía de Fermi es exactamente la del punto medio. Si $m_{p}^{\ast} > m_{n}^{\ast}$, la energía estará un poquito por encima, y en caso contrario, un poquito por debajo. La función densidad de estados, $g$, está directamente relacionada con la masa efectiva. Consecuentemente, la energía de Fermi debe moverse en sentido contrario para equilibrar el aumento de $g$ y que las concentraciones sigan siendo iguales.
+
+\section{Átomos dopantes y niveles de energía.}
+
+Hasta ahora estuvimos estudiando los semiconductores intrínsecos, sin embargo, el verdadero poder de los semiconductores se visualiza cuando se le agregan pequeñas cantidades controladas de átomos de impurezas. El proceso de dopaje puede alterar seriamente las características eléctricas de un semiconductor. Cuando el semiconductor ha sido dopado, se lo denomina semiconductor \emph{extrínseco} y es la principal razón que nos permite construir los dispositivos electrónicos.
+
+\subsection{Descripción cualitativa.}
+
+Si insertarmos un átomo de fósforo como impureza de sustitución en un cristal de silicio, tendremos que cuatro de los electrones del fósforo formarán una unión covalente con cuatro átomos de silicio de alrededor, completando el cristal, y el quinto electrón quedará débilmente unido al núcleo. Este quinto electrón de valencia se conoce como electrón \emph{donor}.
+
+El átomo de fósforo, sin este donor, quedará cargado positivamente. A temperaturas muy bajas, el electrón donor quedará sujeto al átomo. Sin embargo, es esperable que la energía necesaria para romper este enlace y trasladar al electrón a la banda de conducción sea mucho menor que la necesaria para romper los enlaces covalentes habituales. Esta idea se esquematiza en la figura 4, donde $\epsilon _{d}$ es el nivel de energía de los electrones donores.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{electrondonor.png}
+\caption{Esquematización de las bandas al existir un electrón donor.}
+\end{center}
+\end{figure}
+
+Si una pequeña cantidad de energía, como puede ser térmica, es añadida al electrón donor, este pasará a la banda de conducción dejando atrás un ión positivo (el átomo de fósforo). Una vez en la banda de conducción, el electrón donor es libre de moverse y generar una corriente eléctrica, sin embargo, el ión positivo está fijo a la red cristalina y no puede moverse. De esta forma se obtiene un electrón en la banda de conducción que \emph{no} dejó atrás un hueco, rompiendo con la igualdad de concentraciones de los semiconductores intrínsecos. El átomo de impureza que dona un electrón a la banda de conducción se llama \emph{átomo de impureza donor}. Estos átomos de impureza donor ceden electrones a la banda de conducción \emph{sin} crear huecos en la banda de valencia. El material resultante es un material de \emph{tipo n} porque cede una carga libre \emph{n}egativa.
+
+Supongamos ahora que se agrega un átomo del grupo III, como el boro, como impureza de sustitución a la red cristalina. Los tres electrones de este átomo se encargarán de formar una unión covalente con los átomos de silicio, sin embargo, sucede que hay un enlace que está \emph{faltando}. Si un electrón fuera a ocupar esta posición vacía, su energía debería ser mayor que la de los electrones de valencia, cargando negativamente al átomo de boro. Pero resulta que estos electrones no tienen suficiente energía para saltar a la banda de conducción, con lo cual su energía es mayor que $\epsilon _{v}$ pero menor que $\epsilon _{c}$. Los electrones pueden ganar suficiente energía, posiblemente térmica, para ocupar la posición vacía creada por el boro, sin embargo, estarían dejando atrás otra posición vacía, en lo que era su lugar original. Estos lugares vacíos pueden ser pensados como huecos en el semiconductor. (Figura 5).
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{electronaceptor.png}
+\caption{Esquematización de las bandas al existir un átomo aceptor.}
+\end{center}
+\end{figure}
+
+Se puede observar en la figura 5 que, al insertarle un átomo de tres electrones, se crea un nuevo nivel de energía $\epsilon _{a}$ (debido a que los electrones deben tener energía adicional para romper sus uniones covalentes originales y posicionarse en la posición vacía creada por el boro) apenas superior a $\epsilon _{v}$, que los electrones tenderán a ocupar, dejando un hueco en su posición original, dado que la energía no es la suficiente para llegar a la banda de conducción.
+
+Análogamente al caso anterior, estos nuevos huecos generados son libres de moverse dentro de la banda de valencia, generando corrientes, mientras que el átomo de boro con una carga negativa, está fijo a la red. De esta forma, ya no se generan huecos junto con sus pares electrones y se rompe la igualdad de concentraciones característica del semiconductor intrínseco. El átomo del grupo III que acepta un electrón se denomina comunmente \emph{átomo de impureza aceptor}. Este átomo de impureza aceptor puede generar huecos en la banda de valencia sin necesariamente generar electrones en la banda de conducción. Un material semiconductor de este estilo es referido como de \emph{tipo p} porque cede una carga \emph{p}ositiva.
+
+\subsection{Energía de ionización.}
+
+Podemos calcular la distancia aproximada del electrón donor al átomo de impureza donor y también aproximar la energía necesaria para elevar al electrón donor a la banda de conducción. Esta energía es conocida como \emph{energía de ionización}. Usaremos el modelo de Bohr puesto que, en lo referente al átomo de hidrógeno, funciona correctamente y sus diferencias con la mecánica cuántica son despreciables.
+
+Sabemos que el electrón donor orbita alrededor del ión donor, que está sujeto al semiconductor. Necesitaremos considerar la permitividad del material ($\varepsilon = \varepsilon _{r} \varepsilon _{0}$), en lugar de la del vacío, y utilizaremos la masa efectiva del electrón.
+
+Por empezar, podemos calcular la órbita del electrón igualando la fuerza de Coulomb a la aceleración centrípeta
+\[ \frac{e^{2}}{4 \pi \varepsilon r_{n}^{2}} = \frac{m^{\ast}v^{2}}{r_{n}} \]
+donde $v$ es la velocidad y $r_{n}$ el radio de la órbita. Por la teoría de Bohr, asumimos que el momento angular está cuantizado
+\[ m^{\ast} r_{n} v= n\hbar \]
+donde $n \in \mathbb{N}$. Si despejamos este sistema de ecuaciones para el radio $r_{n}$ obtenemos
+\[ r_{n} = \frac{n^{2}\hbar^{2}4\pi \varepsilon}{m^{\ast}e^{2}} \]
+y, como se puede observar, la cuantización del momento angular deriva en una cuantización de los posibles radios.
+
+El radio de Bohr se define como
+\[ a_{0} = \frac{4 \pi \varepsilon _{0} \hbar^{2}}{m_{0}e^{2}} = 0,53 \cdot 10^{-10} \textrm{m} \]
+y, consecuentemente, se puede normalizar el radio del orbital donor con el radio de Bohr, obteniendo
+\[ \frac{r_{n}}{a_{0}} = n^{2} \varepsilon _{r} \bigg( \frac{m_{0}}{m^{\ast}} \bigg)\]
+donde $\varepsilon _{r}$ es la permitividad dieléctrica del semiconductor, $m_{0}$ es la masa en reposo del electrón y $m^{\ast}$ es la masa efectiva del electrón en el semiconductor.
+
+Si consideramos el nivel más bajo de energía, $n=1$, y tomamos, por ejemplo, el silicio, cuya $\varepsilon _{r}=11,7$ y la relación $m^{\ast}/m_{0}=0,26$ tenemos que
+\[ \frac{r_{1}}{a_{0}} = 45 \Longrightarrow r_{1}= 23,9 \cdot 10^{-10} \textrm{m} \]
+Este radio corresponde a casi cuatro constantes de red del silicio y, si cada celda unitaria contiene aproximadamente ocho átomos, podemos ver que el electrón donor orbita alrededor de muchos átomos de silicio, ocasionando que su enlace con el átomo sea sumamente débil.
+
+La energía total del electrón viene dada por
+\[ \epsilon = \epsilon _{k} + V \]
+donde $\epsilon _{k}$ es la energía cinética y $V$ es la energía potencial. La energía cinética viene dada por
+\[ \epsilon _{k} = \frac{1}{2} m^{\ast} v^{2} \]
+y, utilizando la velocidad y el radio obtenidos anteriormente, nos queda
+\[ \epsilon _{k} = \frac{m^{\ast} e^{4}}{2(n\hbar)^{2}(4 \pi \varepsilon)^{2}} \]
+Por otro lado, la energía potencial responde a la fórmula
+\[ V = \frac{-e^{2}}{4 \pi \varepsilon r_{n}} = -\frac{m^{\ast}e^{4}}{(n\hbar)^{2}(4\pi \varepsilon)^{2}} \]
+Finalmente, la energía total $\epsilon$ del electrón donor será
+\[ \epsilon = -\frac{m^{\ast}e^{4}}{2(n\hbar)^{2}(4\pi \varepsilon)^{2}} \]
+
+Como podemos recordar, la energía de ionización de un átomo de hidrogeno para un electrón en el nivel más bajo es de $-13,6$eV. Si consideramos un átomo de silicio, la energía de ionización es de $-25,8$meV que es mucho menor al ancho de la banda prohibida ($\approx 1,12\textrm{eV}$). Esta energía es, aproximadamente, la energía de ionización del átomo de impureza donor o, lo que es lo mismo, la energía necesaria para elevar el electrón donor a la banda de conducción.
+
+Para los átomos de impureza donores comúnmente usados (como el fósforo o el arsenio en silicio o germanio) el modelo del átomo de hidrógeno se aplica considerablemente bien y da una buena idea de las energías de ionización requeridas. En la tabla de la figura 6 (derecha) se observan los valores de energías de ionización medidas experimentalmente para distintos elementos en silicio y germanio.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{energiaionizacion.png}
+\caption{A la izquierda las energías de ionización en el arseniuro de galio. A la derecha las energías de ionización en el silicio y el germanio.}
+\end{center}
+\end{figure}
+
+\section{El semiconductor extrínseco.}
+
+El semiconductor intrínseco fue definido como el material que no presentaba átomos de impurezas en el cristal. Un \emph{semiconductor extrínseco} se define como el semiconductor en el que cantidades controladas de un átomo de impureza son insertadas de tal forma que, en equilibrio térmico, las concentraciones de electrones y huecos son diferentes de la concentración intrínseca de portadores, $n_{i}$. Existirá un tipo de portador predominante.
+
+\subsection{Distribución en equilibrio de los electrones y los huecos.}
+
+Al agregar átomos de impureza donores o aceptores se alterará la distribución de electrones y huecos en el material. Dado que la energía de Fermi está relacionada con la función de distribución, la energía de Fermi cambiará a medida que se agreguen átomos dopantes. Si la energía de Fermi se mueve del centro de la banda prohibida se alterará la densidad de electrones en la banda de conducción y de huecos en la banda de valencia. Estos efectos se pueden observar en la figura 7. (Observar que $g_{v}$ y $g_{c}$ son simétricas respecto del medio, con lo cual $m_{p}^{\ast}=m_{n}^{\ast}$ y, en este caso, la energía de Fermi se desplaza rompiendo la igualdad de concentraciones).
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{concentracionextrinseco.png}
+\caption{Variación de la energía de Fermi al insertar impurezas donores (izquierda) o aceptores (derecha).}
+\end{center}
+\end{figure}
+
+Las ecuaciones deducidas en la sección 2.2. siguen siendo válidas para este caso (siempre dentro de los límites de validez de la aproximación de Boltzmann, cuando $\epsilon _{F}$ no se aleje demasiado del centro), con lo cual
+\[ n_{0} = N_{c} e^{-\frac{\epsilon _{c} - \epsilon _{F}}{kT}} \]
+\[ p_{0} = N_{v} e^{-\frac{\epsilon _{F} - \epsilon _{v}}{kT}} \]
+y de esta forma, obtenemos las concentraciones en equilibrio, en función de la $\epsilon _{F}$.
+
+Si $n_{0}>p_{0}$ los portadores de carga predominantes son los electrones y se trata de un semiconductor de tipo n. Análogamente si $p_{0}>n_{0}$ nos encontramos frente a un semiconductor de tipo p.
+
+Se pude obtener otra expresión para la concentración de electrones y huecos, en función de la energía de Fermi, $\epsilon _{F}$, la energía de Fermi intrínseca, $\epsilon _{Fi}$, y la concentración intrínseca de portadores, $n_{i}$. Esta expresión se obtiene de sumar y restar la energía intrínseca de Fermi en el numerador del exponente y de aplicar la definición de $n_{i}$. El resultado obtenido es
+\[ n_{0} = n_{i} e^{\frac{\epsilon _{F} - \epsilon _{Fi}}{kT}} \]
+\[ p_{0} = n_{i} e^{-\frac{\epsilon _{F} - \epsilon _{Fi}}{kT}} \]
+Estas ecuaciones sirven para ilustrar las variaciones de concentración y de $\epsilon _{F}$ de un semiconductor extrínseco respecto de uno intrínseco.
+
+\subsection{El producto $n_{0}p_{0}$.}
+
+Calculando el producto $n_{0}p_{0}$ obtenemos
+\[ n_{0}p_{0} = N_{c}N_{v} e^{-\frac{\epsilon _{g}}{kT}} \]
+Dado que este producto se obtuvo de las ecuaciones generales indica que, no necesariamente, las concentraciones de $p_{0}$ y $n_{0}$ deben ser iguales. Sin embargo, podemos observar que esta ecuación es exactamente la misma que la obtenida para un semiconductor intrínseco, con lo cual
+\[ n_{0}p_{0} = n_{i}^{2} \]
+en equilibrio térmico, para cualquier semiconductor.
+
+Esta ecuación indica que el producto de las concentraciones es constante para un dado material semiconductor a una dada temperatura. A pesar de que pueda parecer una ecuación bastante simple, es uno de los principios fundamentales de los semiconductores en equilibrio térmico. (La validez de esta ecuación depende de la validez de la aproximación de Boltzmann puesto que fue obtenida utilizándola).
+
+Un semiconductor extrínseco no tiene, estrictamente hablando, una concentración intrínseca de portadores. Si bien hay electrones y huecos generados térmicamente, sus concentraciones principales se ven afectadas por las impurezas donores o aceptores. Sin embargo, podemos pensar a $n_{i}$ como un parámetro del material.
+
+\textbf{Obs.} Si la aproximación de Boltzmann perdiera validez, habría que resolver la integral de la sección 2.2. a mano. Para esto existe una integral tabulada que se conoce como la integral de Fermi-Dirac.
+
+\subsection{Semiconductores degenerados y no-degenerados.}
+
+Cuando se habló de agregar átomos dopantes a un semiconductor, siempre se mencionó hacerlo en pequeñas cantidades comparado con la cantidad total de átomos del cristal. También supusimos que los átomos eran insertados bien lejos cosa de que no haya interacción entre sus electrones. Consecuentemente, estas impurezas introducían niveles discretos de energía que no interactuaran entre sí (no se solaparan). Este tipo de semiconductores son llamados semiconductores \emph{no-degenerados}.
+
+Si se siguen agregando átomos de impurezas, la distancia entre estos átomos se reducirá y se alcanzará un punto donde, por ejemplo los electrones donores, interactuarán entre sí. Cuando esto ocurra, el nivel discreto de energía donor, $\epsilon _{d}$, se convertirá en una banda de energía (como ocurría en la formación del cristal). Si se continúa este proceso, la banda donor comenzará a ensancharse e, incluso, podrá llegar al punto de solapar a la banda de conducción. Esta superposición ocurre cuando la concentración de electrones donores es comparable con la densidad efectiva de estados, $N_{c}$. Cuando la concentración de donores excede a $N_{c}$, la energía de Fermi yace sobre la banda de conducción y el semiconductor se conoce como un semiconductor \emph{degenerado} de tipo n. Sucede análogamente con los átomos de impurezas aceptores, generando un semiconductor \emph{degenerado} de tipo p.
+
+\section{Estadística de donores y aceptores.}
+
+Teniendo en cuenta la función de distribución de Fermi-Dirac, \emph{que indica la probabilidad de que un estado cuántico en particular esté ocupado por un electrón}, necesitaremos reconsiderar esta distribución y aplicarla a la estadística a los niveles de energía donores y aceptores.
+
+\subsection{Función de probabilidad.}
+
+El principio de exclusión de Pauli, fundamental en la obtención de la distribución de Fermi-Dirac, sigue aplicando a los donores y aceptores. La función de probabilidad para los electrones que ocupan el nivel donor es algo diferente que la distribución de Fermi-Dirac
+\[ n_{d}=\frac{N_{d}}{1+\frac{1}{2}e^{\frac{\epsilon _{d} - \epsilon _{F}}{kT}}} \]
+donde $n_{d}$ es la concentración de electrones (cantidad de electrones por unidad de volumen) ocupando el nivel donor, $N_{d}$ es la concentración de átomos de impureza donores y $\epsilon _{d}$ es la energía del nivel donor. El factor $\frac{1}{2}$ es consecuencia directa del spin. A veces se lo escribe como $\frac{1}{g}$ donde $g$ es el factor de degeneración. Esta ecuación también se pude escribir como
+\[ n_{d} = N_{d} - N_{d}^{+} \]
+donde $N_{d}^{+}$ es la concentración de iones donores. Si a $N_{d}$, que es la concentración total de átomos de impureza donores (cada uno de los cuáles entrega un electrón al nivel donor), le resto aquellos que perdieron un electrón que pasó a la banda de conducción, $N_{d}^{+}$ (los iones donores) entonces obtengo la concentración de electrones que todavía quedan en el nivel donor.
+
+Para los huecos tenemos
+\[ p_{a} = \frac{N_{a}}{1+\frac{1}{g}e^{\frac{\epsilon _{F} - \epsilon _{a}}{kT}}} = N_{a} - N_{a}^{-} \]
+donde $p_{a}$ es la concentración de huecos en el nivel aceptor, $N_{a}$ es la concentración de átomos de impureza aceptor, $\epsilon _{a}$ es la energía del nivel aceptor y $N_{a}^{-}$ la concentración de iones aceptores (que ya han recibido el electrón). Un hueco en el nivel aceptor corresponde a un átomo con carga neutra (sin carga) y que tiene una unión vacía. $g$ es un factor de degeneración que, para el silicio y el germanio en su estado base, suele ser 4.
+
+La idea, para los huecos, es, básicamente, la siguiente. Cuando insertás el átomo de tres electrones estás ocasionando un hueco extra que necesita una energía apenas mayor que $\epsilon _{v}$ para llenarse. Cuando el electrón gana suficiente energía para llegar a $\epsilon _{a}$ (sin necesariamente llegar a $\epsilon _{c}$) llena el hueco ocasionado por el átomo insertado, pero deja un hueco permanente (a esa $T$) en la banda de valencia que contribuye a la conducción. $p_{a}$ que es la concentración de huecos en el nivel aceptor, mide la cantidad de huecos por unidad de volumen que \emph{todavía} no han sido llenado por un electrón. Cuando el electrón se instala en $\epsilon _{a}$, se une al átomo de tres electrones, dejándolo cargado negativamente. (De ahí sale la resta).
+
+\subsection{Ionización completa y Freeze-out.}
+
+Si $\epsilon _{d} - \epsilon _{F} \gg kT$ entonces vale la aproximación de Boltzmann (tanto para los electrones en el nivel donor como para los electrones en la banda de conducción, puesto que, generalmente, $\epsilon _{c} > \epsilon _{d}$)
+\[ n_{d} = 2N_{d} e^{-\frac{\epsilon _{d} - \epsilon _{F}}{kT}} \]
+\[ n_{0} = N_{c} e^{- \frac{\epsilon _{c} - \epsilon _{F}}{kT}} \]
+
+Podemos encontrar la cantidad relativa de electrones que todavía permanecen el nivel donor, respecto de la cantidad total de electrones, obteniendo
+\[ \frac{n_{d}}{n_{0}+n_{d}} = \frac{1}{1+\frac{N_{c}}{2N_{d}}e^{-\frac{\epsilon _{c} - \epsilon _{d}}{kT}}} \]
+donde $\epsilon _{c} - \epsilon _{d}$ es la energía de ionización de los átomos de impureza donores.
+
+Por lo general, a temperatura ambiente, para concentraciones de dopaje habituales (del orden de $10^{16}\textrm{cm}^{-3}$) se puede considerar que los semiconductores están \emph{completamente ionizados} (sólo falta ionizar aproximadamente un $0,4\%$ de los átomos). Esto se da tanto para semiconductores tipo p como tipo n.
+
+Lo opuesto a esta \emph{ionización completa} ocurre para $T=0$K. Para el cero absoluto, todos los electrones se encontrarán en su estado de mínima energía, para el caso de un semiconductor de tipo n, todos los estados donores contienen un electrón. En ese caso $n_{d}=N_{d}$ y eso se da, únicamente, cuando la exponencial del denominador es cero. Si estamos a $T=0$K, entonces debe darse que $\epsilon _{F} > \epsilon _{d}$ para que quede $e^{-\infty}=0$ y se cumpla que $n_{d}=N_{d}$. Para el caso de un semiconductor de tipo p, se puede hacer un razonamiento análogo, llegando a la conclusión de que $\epsilon _{F} < \epsilon _{a}$ para $T=0$K.
+
+Más aún, un análisis más detallado muestra que la energía de Fermi queda a medio camino entre $\epsilon _{c}$ y $\epsilon _{d}$ para un semiconductor tipo n, y entre $\epsilon _{a}$ y $\epsilon _{v}$ para un semiconductor tipo p. Cuando no hay electrones del nivel donor elevados a la banda de conducción por agitación térmica, y no hay electrones de la banda de valencia elevados al nivel aceptor por agitación térmica, se dice que estamos en una condición de \emph{freeze-out}.
+
+\section{Neutralidad de carga.}
+
+En equilibrio térmico un cristal semiconductor es eléctricamente neutro. Los electrones están distribuidos a lo largo de distintos estados de energía, creando cargas positivas y negativas, pero la carga neta será cero. (Y es lógico. Porque los átomos componentes del cristal son neutros y los átomos de impurezas también son neutros. Por más de que después ganen o pierdan un electrón, ese electrón de más no se creó de la nada, sino que lo perdió o lo ganó otro átomo de la red). Esta condición de neutralidad de carga se utilizará para determinar las concentraciones de huecos y electrones en función de la concentración de los átomos dopantes.
+
+\subsection{Semiconductor compensado.}
+
+Un semiconductor compensado es el que tiene impurezas donores y aceptores en la misma región. Este semiconductor compensando puede hacerse insertando por difusión impurezas aceptores en un material de tipo n, o impurezas donores en un material de tipo p. Un semiconductor compensado de tipo n ocurre cuando $N_{d}>N_{a}$, un semiconductor compensando de tipo p ocurre cuando $N_{d}<N_{a}$ y un semiconductor completamente compensado es cuando $N_{d}=N_{a}$ y trabaja de la misma forma que un semiconductor intrínseco. Los semiconductores compensados se crean bastante naturalmente mediante los procesos de fabricación.
+
+\subsection{Concentraciones de electrones y huecos en el equilibrio.}
+
+En la figura 8 podemos observar un esquema de bandas para un semiconductor cuando tanto átomos donores como aceptores han sido insertados para formar un semiconductor compensado.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{semiconductorcompensado.png}
+\caption{Esquema de bandas para un semiconductor compensado.}
+\end{center}
+\end{figure}
+
+La neutralidad de carga se obtiene igualando la densidad de cargas negativas con la densidad de cargas positivas
+\[ n_{0}+N_{a}^{-}=p_{0}+N_{d}^{+} \Rightarrow n_{0} + (N_{a} - p_{a}) = p_{0} + (N_{d} - n_{d}) \]
+donde $n_{0}$ y $p_{0}$ son las concentraciones en equilibrio térmico de los electrones y los huecos en las bandas de conducción y valencia respectivamente. $n_{0}$, $p_{0}$, $n_{d}$ y $p_{a}$ tienen ecuaciones conocidas en función de $\epsilon _{F}$.
+
+Si suponemos ionización completa, $n_{d}$ y $p_{a}$ son cero y la ecuación se convierte en
+\[ n_{0} + N_{a} = p_{0} + N_{d} \]
+Si reemplazamos utilizando la relación $p_{0}=n_{i}^{2}/n_{0}$ obtenemos
+\[ n_{0} + N_{a} = \frac{n_{i}^{2}}{n_{0}} + N_{d} \Rightarrow n_{0}^{2} - (N_{d} - N_{a}) n_{0} - n_{i}^{2} = 0  \]
+Con lo cual, la concentración de electrones $n_{0}$ se puede escribir como (ecuación cuadrática)
+\[ n_{0} = \frac{N_{d} - N_{a}}{2} + \sqrt{ \bigg( \frac{N_{d} - N_{a}}{2} \bigg)^{2} + n_{i}^{2}} \]
+donde se usó el signo positivo puesto que, en el límite de un semiconductor intrínseco, $N_{a}=N_{d}=0$ y la concentración electrónica debe ser una cantidad positiva, $n_{0}=n_{i}$. Esta ecuación sirve para calcular la concentración de electrones en un semiconductor de tipo n o cuando $N_{d}>N_{a}$. Esta ecuación también es válida cuando $N_{a}=0$.
+
+Se puede observar que la concentración de electrones en la banda de conducción, $n_{0}$, aumenta por encima de la concentración intrínseca de portadores, $n_{i}$, cuando se le agregan átomos de impureza donor, $N_{d}$. A su vez, la concentración de huecos en la banda de valencia, $p_{0}$, disminuirá por debajo de la concentración intrínseca de portadores, $n_{i}$, cuando se agregan átomos de impureza donor. No debemos olvidar que, al agregar átomos de impureza donor, estamos agregando sus correspondientes electrones que, al ser insertados en el cristal, se reacomodarán para ocupar los niveles cuánticos disponibles (Figura 9). Dada esta reacomodación de electrones, \emph{no se puede} suponer que la concentración de electrones en la banda de conducción es la suma de la concentración de donores más la concentración intrínseca de portadores. (Algunos electrones donores aniquilarán algunos huecos de la banda de valencia, creados térmicamente o no).
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{flujoelectrones.png}
+\caption{Reacomodamiento de los electrones en las distintas bandas.}
+\end{center}
+\end{figure}
+
+Como se vio, la concentración intrínseca de portadores tiene una fuerte dependencia con la temperatura. A medida que aumente, mayor cantidad de pares electrón-hueco se generarán térmicamente, y el término $n_{i}^{2}$ de la ecuación comenzará a dominar. Eventualmente, a alguna temperatura, el semiconductor perderá sus características extrínsecas. Se puede observar esta dependencia en el gráfico de la figura 10.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{comportamientoconT.png}
+\caption{Concentración electrónica, $n_{0}$, en función de la temperatura.}
+\end{center}
+\end{figure}
+
+Por otro lado, la concentración para huecos viene dada por
+\[ p_{0}= \frac{N_{a} - N_{d}}{2} + \sqrt{ \bigg( \frac{N_{a} - N_{d}}{2} \bigg)^{2} + n_{i}^{2}} \]
+Análogamente al caso anterior, esta ecuación sirve cuando se trata de un semiconductor de tipo p o cuando $N_{a}>N_{d}$. También sirve para $N_{d}=0$. Para un semiconductor compensado de tipo p, los portadores de carga minoritarios, vienen dados por
+\[ n_{0}=\frac{n_{i}^{2}}{p_{0}} = \frac{n_{i}^{2}}{N_{a} - N_{d}} \]
+
+En general, se calculará primero la concentración mayoritaria de electrones (en un tipo n) o de huecos (en un tipo p) con las ecuaciones descritas recientemente y, luego, la concentración minoritaria se obtendrá a través de la relación $n_{i}^{2}=n_{0}p_{0}$.
+
+\section{Posición de la energía de Fermi.}
+
+En esta sección buscaremos obtener la energía de Fermi en función de la temperatura y de la concentración de impurezas, utilizando la relación entre las concentraciones de electrones y huecos en función de $\epsilon _{F}$ y en función de las impurezas.
+
+\subsection{Obtención matemática.}
+
+La posición de la energía de Fermi, cuando está en la zona prohibida, puede ser determinada utilizando las ecuaciones para las concentraciones de electrones y huecos en equilibrio térmico. Si asumimos que la aproximación de Boltzmann es válida, podemos usar $n_{0} = N_{c} e^{-\frac{\epsilon _{c} - \epsilon _{F}}{kT}}$ para despejar $\epsilon _{c} - \epsilon _{F}$ obteniendo
+\[ \epsilon _{c} - \epsilon _{F} = kT \ln \bigg( \frac{N_{c}}{n_{0}} \bigg) \]
+donde $n_{0}$ está determinada por la ecuación cuadrática. Si suponemos un semiconductor de tipo n en el que $N_{d} \gg n_{i}$, entonces $n_{0} \approx N_{d}$ y podemos aproximar la ecuación a
+\[ \epsilon _{c} - \epsilon _{F} = kT \ln \bigg( \frac{N_{c}}{N_{d}} \bigg) \]
+La distancia entre el suelo de la banda de conducción y la energía de Fermi, como se puede observar, es una función logarítmica de la concentración de donores. Cuando la concentración de donores aumenta, la energía de Fermi se acerca a la banda de conducción. A la inversa, si la energía de Fermi aumenta, la concentración de electrones en la banda de conducción, también. Si se trata de un semiconductor compensado, el término $N_{d}$ debe ser reemplazado por $N_{d} - N_{a}$.
+
+Otra expresión puede obtenerse usando $n_{0} = n_{i} e^{\frac{\epsilon _{F} - \epsilon _{Fi}}{kT}}$ y despejando $\epsilon _{F} - \epsilon _{Fi}$ se obtiene
+\[ \epsilon _{F} - \epsilon _{Fi} = kT \ln \bigg( \frac{n_{0}}{n_{i}} \bigg) \]
+Esta ecuación es para un tipo n, donde $n_{0}$ viene dado por la ecuación cuadrática, para encontrar la distancia de la energía de Fermi a la energía de Fermi intrínseca, en función de la concentración de donores. Si la concentración efectiva donor es cero, $N_{d} - N_{a}=0$, entonces $n_{0}=n_{i}$ y $\epsilon _{F} = \epsilon _{Fi}$. De esta forma se observa que, un semiconductor completamente compensado, se comporta como un semiconductor intrínseco en lo que se refiere a la concentración de portadores y la energía de Fermi.
+
+Podemos obtener expresiones equivalentes para un semiconductor de tipo p.
+\[ \epsilon _{F} - \epsilon _{v} = kT \ln \bigg( \frac{N_{v}}{p_{0}} \bigg) \]
+y si consideramos que $N_{a} \gg n_{i}$, entonces $p_{0} \approx N_{a}$ y se obtiene
+\[ \epsilon _{F} - \epsilon _{v} = kT \ln \bigg( \frac{N_{v}}{N_{a}} \bigg) \]
+La distancia entre el techo de la banda de valencia y la energía de Fermi, como se puede observar, es una función logarítmica de la concentración de aceptores. Cuando la concentración de aceptores aumenta, la energía de Fermi se acerca a la banda de valencia. Si se trata de un semiconductor compensado, el término $N_{a}$ debe ser reemplazado por $N_{a} - N_{d}$.
+
+Se puede obtener una relación entre la energía de Fermi y la energía intrínseca de Fermi en función de la concentración de huecos
+\[ \epsilon _{Fi} - \epsilon _{F} = kT \ln \bigg( \frac{p_{0}}{n_{i}} \bigg)  \]
+
+\subsection{Variación de $\epsilon _{F}$ con la concentración de dopantes y la temperatura.}
+
+Se puede graficar la energía de Fermi como función de la concentración de donores (tipo n) o de la concentración de aceptores (tipo p) para el silicio a $T=300$K (Figura 11). A medida que aumenta la concentración de dopantes, la energía de Fermi se acerca a cada extremo. Recordar que las expresiones derivadas para $\epsilon _{F}$ en función de las concentraciones de dopantes utilizan la aproximación de Boltzmann.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{efvsconcentracion.png}
+\caption{Energía de Fermi en función de la concentración.}
+\end{center}
+\end{figure}
+
+La concentración intrínseca, $n_{i}$, tiene una gran dependencia con la temperatura, consecuentemente $\epsilon _{F}$ también. El gráfico de la figura 12 muestra la variación de la energía de Fermi para distintas temperaturas con distintas concentraciones de dopantes. A medida que la temperatura aumenta, más pares electrón-hueco son generados por agitación térmica, $n_{i}$ se incrementa y $\epsilon _{F}$ se asemeja a $\epsilon _{Fi}$. A temperaturas mayores, el semiconductor comienza a perder sus características extrínsecas y comienza a comportarse como un semiconductor intrínseco. A temperaturas cercanas al cero absoluto, el material \emph{freezes out} y la aproximación de Boltzmann pierde validez así como las ecuaciones recientemente obtenidas.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{efvsT.png}
+\caption{Energía de Fermi en función de la temperatura.}
+\end{center}
+\end{figure}
+
+\subsection{Importancia de la energía de Fermi.}
+
+Estuvimos discutiendo la energía de Fermi en función de la temperatura y las concentraciones de dopantes. Estas relaciones son de gran importancia cuando se estudien las junturas pn y otros dispositivos semiconductores. Otro punto importante es que, en equilibrio térmico, la energía de Fermi es constante a lo largo de todo el sistema.
+
+\section{Anexo.}
+
+\subsection*{Algunas consideraciones para la resolución de la guía 8.}
+
+Como primera consideración importante, dentro de los semiconductores extrínsecos, existen semiconductores para los cuales $N_{d} - N_{a} \gg n_{i}$ en el caso de un semiconductor tipo n, o $N_{a} - N_{d} \gg n_{i}$ para un semiconductor tipo p, de tal forma que
+\[ n_{0} = \frac{N_{d} - N_{a}}{2} + \sqrt{ \underbrace { \bigg( \frac{N_{d} - N_{a}}{2} \bigg)^{2} + n_{i}^{2} }_{ \frac{ (N_{d} - N_{a})^{2} }{4} } } \]
+\[ n_{0} = \frac{N_{d} - N_{a}}{2} +\frac{N_{d} - N_{a}}{2} \]
+\[ n_{0} = N_{d} - N_{a} \]
+Cuando sucede esto, el semiconductor se dice de tipo \emph{fuertemente extrínseco} y se puede despreciar la $n_{i}$. Sucede lo mismo para semiconductores de tipo p. \textbf{Obs.} Se considera $N_{d}-N_{a} \gg n_{i}$ cuando la diferencia supera en tres o más órdenes de magnitud, aproximadamente, a la concentración intrínseca.
+
+Como segunda consideración, no tan importante, resulta que existe una fórmula que relaciona la dependencia de la $\epsilon _{g}$ con la temperatura. Dicha fórmula es la siguiente
+\[ \epsilon _{g} (T) = \epsilon _{g} (0) - \frac{\alpha T^{2}}{T+\beta} \]
+donde $\epsilon _{g} (0)$ es el ancho de banda a $T=0$K, $\alpha$ y $\beta$ son parámetros del material que se pueden encontrar en internet.
+
+Las eucaciones utilizadas fueron
+\begin{equation}
+\epsilon _{Fi} - \epsilon _{h} = \frac{3}{4} kT \ln \bigg( \frac{m_{p}^{\ast}}{m_{n}^{\ast}} \bigg)
+\end{equation}
+\begin{equation}
+n_{0}p_{0}=n_{i}^{2}
+\end{equation}
+\begin{equation}
+n_{0}=n_{i}e^{-\frac{\epsilon _{F} - \epsilon _{Fi}}{kT}}
+\end{equation}
+\begin{equation}
+p_{0}=n_{i}e^{-\frac{\epsilon _{Fi} - \epsilon _{F}}{kT}}
+\end{equation}
+\begin{equation}
+n_{0}=N_{c}e^{-\frac{\epsilon _{c} - \epsilon _{F}}{kT}}
+\end{equation}
+\begin{equation}
+n_{0}= \frac{N_{d} - N_{a}}{2} + \sqrt{ \bigg( \frac{N_{d} - N_{a}}{2} \bigg)^{2} + n_{i}^{2}}
+\end{equation}
+\begin{equation}
+p_{0}= \frac{N_{a} - N_{d}}{2} + \sqrt{ \bigg( \frac{N_{a} - N_{d}}{2} \bigg)^{2} + n_{i}^{2}}
+\end{equation}
+\begin{equation}
+n_{0}= N_{d} - N_{a}
+\end{equation}
+\begin{equation}
+p_{0}= N_{a} - N_{d}
+\end{equation}
+
+\end{document}

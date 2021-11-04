@@ -1,0 +1,359 @@
+%Tipo de documento
+\documentclass[12pt,a4paper]{article}
+
+%PAQUETES
+
+%Parsear en .pdf
+\usepackage[pdftex]{color,graphicx}
+
+%Castellano
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+%Matematica
+\usepackage{amsmath, amssymb, amsfonts}
+
+\begin{document}
+
+\title{Juntura pn.\\Diodo.}
+
+\author{$\Gamma$}
+
+\maketitle
+
+\section{Introducción.}
+
+Hasta ahora se vinieron considerando las propiedades de un material semiconductor, las concentraciones de huecos y electrones en equilibrio, la posición de la energía de Fermi y el comportamiento de un semiconductor fuera del equilibrio, con portadores en exceso. Ahora se considerará que sucede cuando un semiconductor de tipo p y un semiconductor de tipo n se unen para formar una juntura pn.
+
+La mayoría de los dispositivos semiconductores contienen, al menos, una juntura entre una región de tipo p y una región de tipo n en semiconductores. Las características y la operación de los dispositivos semiconductores está íntimamente relacionada con las junturas pn.
+
+\section{Estructura básica de la juntura pn.}
+
+La figura 1a (izquierda) muestra, esquemáticamente, la juntura pn. Es importante darse cuenta que todo el semiconductor es un único cristal donde una región fue dopada con átomos de impureza aceptores, para formar la región de tipo p, y la otra región adyacente fue dopada con átomos de impureza donores para formar la región de tipo n. La interfaz que separa las regiones n y p suele denominarse unión metalúrgica.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.95\textwidth]{junturapn.png}
+\caption{(izq.) a) Esquema de la juntura pn. b) Diagrama de concentraciones. (der.) Esquema de campos eléctricos.}
+\end{center}
+\end{figure}
+
+La concentración de impurezas en la región p y la región n se ilustra en la figura 1b (izquierda). Por simplicidad, consideraremos una juntura abrupta. Inicialmente, en la unión metalúrgica, existe un gradiente de densidades, tanto en la concentración de electrones como de huecos. Los electrones (portadores mayoritarios en la región n) comenzarán a difundirse en la región p, mientras que los huecos (portadores mayoritarios) de la región p, comenzarán a difundirse hacia la región n. (Esto sucede porque, al unirse ambas regiones, la concentración de electrones en la parte p es muy pequeña y lo mismos con los huecos en la parte n. De esta forma, existe un gradiente de densidades, y los portadores se difundirán).
+
+Si suponemos que no existen conexiones externas al semiconductor, entonces este proceso de difusión \emph{no} puede continuar indefinidamente. A medida que los electrones se difunden desde la región n, iones donores cargados positivamente quedan fijos. Análogamente, cuando los huecos se difunden hacia la región n, revelan iones aceptores cargados negativamente. Las cargas netas, positivas y negativas, en las regiones n y p, respectivamente, inducen un campo eléctrico en la región cercana a la unión metalúrgica, en la dirección que va desde las cargas positivas a las negativas o, lo que es lo mismo, desde la región n a la región p. Todo esto se ilustra en la figura 1 (derecha).
+
+Estas dos regiones se conocen como \emph{zona de carga espacial}. Básicamente, todos los electrones y huecos son borrados de la región de carga espacial por el campo eléctrico. Dado que la región de carga espacial es vaciada de cargas móviles, esta región se conoce también como \emph{zona de vaciamiento}. Todavía existen gradientes de densidad de portadores mayoritarios a cada extremo de la región de carga espacial. Podemos pensar a este gradiente de densidad como ejerciendo una ''fuerza de difusión'' que actúa sobre los portadores mayoritarios. El campo eléctrico en la zona espacial de carga produce otra fuerza sobre los electrones y los huecos, al extremo de esta región, que es opuesta a las ''fuerzas de difusión'' de cada tipo de partícula. En equilibrio térmico, la difusión y las fuerzas generadas por el campo eléctrico se balancean exactamente.
+
+\section{Sin polarización.}
+
+Hasta ahora se consideró la juntura pn básica y se presentó la formación de la zona de carga espacial. A continuación se examinarán las propiedades de una juntura pn en equilibrio térmico, donde no hay corrientes ni fuerzas externas aplicadas. Se determinará el ancho de banda de la región de carga espacial, el campo eléctrico y la barrera de potencial en la zona de vaciamiento.
+
+\subsection{Barrera de potencial interna.}
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{diagramadebandaspn.png}
+\caption{Diagrama de bandas para una juntura pn en equilibrio térmico.}
+\end{center}
+\end{figure}
+
+Si suponemos que no hay tensiones aplicadas a través de la juntura pn, entonces ésta se encuentra en equilibrio térmico: la energía de Fermi es constante a lo largo de todo el sistema. En la figura 2 se presenta un diagrama de bandas para la juntura en equilibrio térmico. La banda de conducción y la banda de valencia deben curvarse al entrar en la zona de carga espacial, dado que la posición relativa de cada una a la energía de Fermi, debe cambiar de la región p a la región n.
+
+\textbf{Obs.} Recordemos que $n_{0}=N_{c}e^{-\frac{\epsilon _{c} - \epsilon _{F}}{kT}}$ y que $p_{0}=N_{v}e^{-\frac{\epsilon _{F} - \epsilon _{v}}{kT}}$. Sabemos que, de un lado al otro de la zona de cargas espacial, la concentración de $n$ y $p$ cambia. Sabemos que $N_{c}$ y $N_{v}$ dependen únicamente del material y no de su carga (no dependen de si es tipo n o tipo p). Sabemos que las junturas suelen ser del mismo material, con lo cual $N_{c}$ y $N_{v}$ serán las mismas para la región p que para la región n de la juntura. Finalmente, como $\epsilon _{F}$ es constante, si varían las concentraciones, deben variar los valores de $\epsilon _{c}$ y $\epsilon _{v}$.
+
+Los electrones en la banda de conducción de la región n verán una barrera de potencial al intentar llegar a la banda de conducción de la región p. Esta barrera de potencial se conoce como \emph{barrera de potencial interna} y se denota $V_{bi}$. La barrera de potencial interna mantiene el equilibrio entre los electrones (portadores mayoritarios) de la región n y los electrones (portadores minoritarios) de la región p, y también entre los huecos de una región y otra. El potencial $V_{bi}$ mantiene el equilibrio, de tal forma que no hay corriente producida por esta tensión.
+
+La energía intrínseca de Fermi es equidistante del fondo de la banda de conducción a través de toda la juntura, por lo tanto, la barrera de potencial interna puede ser determinada como la diferencia entre las energías intrínsecas de Fermi en cada región.
+
+\textbf{Obs.} La energía intrínseca de Fermi está dada por $\epsilon _{Fi}=\frac{1}{2}(\epsilon _{c}+\epsilon _{v})+\frac{3}{4}kT \ln ( \frac{m_{p}^{\ast}}{m_{n}^{\ast}} )$. $k$, $T$, $m_{p}^{\ast}$ y $m_{n}^{\ast}$ son constantes para el material. Como se explicó algunos párrafos más arriba, $\epsilon _{c}$ y $\epsilon _{v}$ varían de una región del semiconductor a otra. Ahora bien, $\epsilon _{Fi}$ variará de la misma forma que $\epsilon _{c}$ y $\epsilon _{v}$ siempre manteniéndose a la misma distancia de $\epsilon _{c}$ y $\epsilon _{v}$ (recordar que el ancho de la banda prohibida es propiedad del material). De esta forma, la variación de $\epsilon _{Fi}$ a lo largo de la juntura nos permitirá obtener el valor de la barrera de potencial interna.
+
+Se pueden definir los potencial $\phi _{Fn}$ y $\phi _{Fp}$ tal como se ilustra en la figura 2, de tal forma que
+\[ V_{bi}=|\phi _{Fn}| + |\phi _{Fp}| \]
+
+En la región n, la concentración de electrones en la banda de conducción viene dada por $n_{0}=N_{c}e^{-\frac{\epsilon _{c} - \epsilon _{F}}{kT}}$, que también se puede escribir como
+\[ n_{0}=n_{i}e^{-\frac{\epsilon _{F} - \epsilon _{Fi}}{kT}} \]
+donde $n_{i}$ y $\epsilon _{Fi}$ son la concentración intrínseca y la energía intrínseca de Fermi, respectivamente. Podemos definir el potencial $\phi _{Fn}$ en la región n de la siguiente forma
+\[ e\phi _{Fn} = \epsilon _{Fi} - \epsilon _{F} \]
+de tal forma que la concentración de electrones en la banda de conducción, en la región n, se puede escribir como
+\[ n_{0}=n_{i}e^{-\frac{e\phi _{n}}{kT}} \]
+Tomando logaritmo natural de ambos lados, reemplazando $n_{0}=N_{d}$ (semiconductor fuertemente extrínseco de tipo n) y despejando el potencial, tenemos
+\[ \phi _{Fn} = -\frac{kT}{e} \ln \bigg( \frac{N_{d}}{n_{i}} \bigg) \]
+
+Análogamente, para la región p, $p_{0}=N_{a}=n_{i}e^{-\frac{\epsilon _{F} - \epsilon _{Fi}}{kT}}$ (semiconductor fuertemente extrínseco de tipo p), definiendo $e\phi _{Fp}=\epsilon _{Fi} - \epsilon _{F}$, para obtener
+\[ \phi _{Fp} = \frac{kT}{e} \ln \bigg( \frac{N_{a}}{n_{i}} \bigg) \]
+
+Finalmente, reemplazando en $V_{bi}=|\phi _{Fn}| + |\phi _{Fp}|$, obtenemos
+\[ V_{bi} = \frac{kT}{e} \ln \bigg( \frac{N_{a}N_{d}}{n_{i}^{2}} \bigg) = V_{t} \ln \bigg( \frac{N_{a}N_{d}}{n_{i}^{2}} \bigg) \]
+donde $V_{t}=\frac{kT}{e}$ se conoce como la tensión térmica.
+
+\textbf{Nota sobre notación (sic).} En este caso, y de ahora en más, $N_{a}$ representará la concentración \emph{neta} de aceptores en la región p (previamente conocida como $N_{a} - N_{d}$ en un semiconductor compensado), y $N_{d}$ denota la concentración \emph{neta} de donores en la región n (previamente conocida como $N_{d} - N_{a}$ en un semiconductor compensado).
+
+\subsection{Campo eléctrico.}
+
+Un campo eléctrico es creado en la zona de vaciamiento debido a la separación de las densidades de carga espaciales positiva y negativa. Al separarse los huecos y electrones debido al proceso de difusión, dejan iones cargados en cada región, de carga contraria. Estos iones son fijos y crean un campo eléctrico que impide que la difusión continue. La distribución de cargas que crea este campo eléctrico puede ser ilustrada en el gráfico de la figura 3. En este caso se asume una distribución uniforme de dopantes y una juntura abrupta. Consideramos, además, que la zona de carga espacial termina abruptamente en $x=x_{n}$ para la región n y en $x=-x_{p}$ para la región p ($x_{p}>0$).
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{densidadcargapn.png}
+\caption{Densidad de cargas en la zona de carga espacial de una juntura pn.}
+\end{center}
+\end{figure}
+
+El campo eléctrico está determinado por la ecuación de Poisson
+\[ \frac{d^{2} \phi (x)}{dx^{2}} = \frac{- \rho}{\varepsilon _{s}} = -\frac{dE(x)}{dx} \]
+donde $\phi (x)$ es la función potencial, $E(x)$ es el campo eléctrico, $\rho (x)$ es la densidad de carga volumétrica y $\varepsilon _{s}$ es la permitividad del semiconductor. De la figura tres, tenemos que la densidad de carga es
+\[ \rho (x)=\left\{ \begin{array}{ll}
+-eN_{a} & \textrm{si } -x_{p}<x<0 \\
+eN_{d} & \textrm{si } 0<x<x_{n} \\
+\end{array} \right. \]
+
+El campo eléctrico en la región p lo encontramos mediante integración
+\[ E= \int \frac{\rho (x)}{\varepsilon _{s}} dx=-\int \frac{eN_{a}}{\varepsilon _{s}} dx=-\frac{eN_{a}}{\varepsilon _{s}}x+C_{1} \]
+donde $C_{1}$ es la constante de integración. El campo eléctrico se asume que es cero en la región neutral de p, $x<-x_{p}$, dado que las corrientes son nulas en equilibrio térmico. Dado que no hay densidades de carga superficiales, podemos asumir que el campo eléctrico es continuo a través de la juntura pn. La constante de integración sale de la condición $E(-x_{p})=0$. Consecuentemente, el campo eléctrico en la región p está dado por
+\[ E=-\frac{eN_{a}}{\varepsilon _{s}} (x+x_{p}) \qquad , \qquad -x_{p} \leq x \leq 0 \]
+
+Con un razonamiento análogo para la región n, se obtiene
+\[ E=-\frac{eN_{d}}{\varepsilon _{s}} (x_{n}-x) \qquad , \qquad 0 \leq x \leq x_{n} \]
+
+El campo eléctrico es continuo, incluso en la unión metalúrgica, con lo cuál, para $x=0$, debe darse que
+\[ N_{a}x_{p}=N_{d}x_{n} \]
+Esta ecuación nos dice que el número de partículas negativas por unidad de área en la región p es igual al número de partículas positivas por unidad de área en la región n.
+
+Para una juntura pn, dopada uniformemente, el campo eléctrico de la distancia a través de la juntura, y su magnitud máxima se da en la unión metalúrgica. Existe un campo eléctrico en la zona de vaciamiento, aún cuando no hay tensión aplicada entre las regiones p y n.
+
+La función potencial en la juntura se puede encontrar integrando el campo eléctrico. En la región p tenemos
+\[ \phi _{x}=\frac{eN_{a}}{\varepsilon _{s}} \bigg( \frac{x^{2}}{2}+x_{p} \cdot x \bigg) + C_{1}' \]
+Como lo importante es la diferencia de potencial a través de la juntura, podemos disponer de la constante $C_{1}'$ a nuestro gusto y haremos que el potencial valga cero para $x=-x_{p}$, con lo cual, la función potencial queda
+\[ \phi _{x} = \frac{eN_{a}}{2\varepsilon _{s}} (x+x_{p})^{2} \qquad , \qquad -x_{p} \leq x \leq 0 \]
+
+Análogamente para la región n
+\[ \phi _{x}=\frac{eN_{d}}{\varepsilon _{s}} \bigg( x_{n} \cdot x -\frac{x^{2}}{2} \bigg) + C_{2}' \]
+Dado que la función potencial es continua, dispondremos $C_{2}'$ de tal forma que sea igual al potencial en la unión metalúrgica, $x=0$, con la condición anterior de que el cero esté en $x=-x_{p}$
+\[ C_{2}'=\frac{eN_{a}}{2 \varepsilon _{s}} x_{p}^{2} \]
+Por lo tanto, la función potencial en la región n, puede ser escrita como
+\[ \phi _{x}=\frac{eN_{d}}{\varepsilon _{s}} \bigg( x_{n} \cdot x -\frac{x^{2}}{2} \bigg) + \frac{eN_{a}}{2 \varepsilon _{s}} x_{p}^{2} \qquad , \qquad 0 \leq x \leq x_{n} \]
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{funcionpotencialpn.png}
+\caption{Función potencial en función de la distancia.}
+\end{center}
+\end{figure}
+
+En la figura 4 se presenta un gráfico de la función potencial para la zona de carga espacial. El valor de la función en $x=x_{n}$ es $V_{bi}$ (valor de la barrera de potencial interna). Por lo tanto, se puede obtener
+\[ V_{bi}=|\phi(x=x_{n})|=\frac{e}{2 \varepsilon _{s}}(N_{d}x_{n}^{2}+N_{a}x_{p}^{2}) \]
+
+\subsection{Ancho de la zona de carga espacial.}
+
+Se puede determinar cuánto se extiende la zona de carga espacial dentro de las regiones n y p. De la condición de continuidad en la unión metalúrgica para el campo eléctrico, $N_{a}x_{p}=N_{d}x_{n}$, podemos despejar
+\[ x_{p} = \frac{N_{d}x_{n}}{N_{a}} \]
+
+Reemplazando en la última ecuación de $V_ {bi}$ obtenida
+\[ x_{n}= \bigg( \frac{2 \varepsilon _{s}V_{bi}}{e} \frac{N_{a}}{N_{d}} \frac{1}{N_{a}+N_{d}} \bigg)^{\frac{1}{2}} \]
+Esta ecuación nos da la extensión de la zona de carga espacial dentro de la región n para el caso en que no hay tensión aplicada.
+
+Parecido, si obtenemos $x_{n}$ de la ecuación de continuidad del campo eléctrico en la unión metalúrgica, y reemplazamos, despejando para $x_{p}$, tenemos
+\[ x_{p}= \bigg( \frac{2 \varepsilon _{s}V_{bi}}{e} \frac{N_{d}}{N_{a}} \frac{1}{N_{a}+N_{d}} \bigg)^{\frac{1}{2}} \]
+donde $x_{p}$ es el ancho de banda de la zona de vaciamiento que se extiende en la región p, cuando no hay tensión aplicada.
+
+La extensión total de la zona de carga espacial queda determinada, entonces, por
+\[ W = x_{n}+x_{p} = \bigg( \frac{2 \varepsilon _{s}V_{bi}}{e} \frac{N_{a}+N_{d}}{N_{a}N_{d}} \bigg)^{\frac{1}{2}} \]
+
+\section{Polarización inversa.}
+
+Si aplicamos una tensión entre las regiones n y p, no estaremos más en equlibrio: La energía de Fermi no será constante. La figura 5 muestra un diagrama de bandas para el caso en que se aplica una tensión positiva a la región n, respecto de p. Esto se denomina, \emph{polarización inversa}. Como el potencial positivo está definido hacia abajo la energía de Fermi en la región n estará más abajo que la energía de Fermi de la región p. La diferencia entre ambas energías de Fermi, dará la tensión aplicada ($eV_{R}$, en realidad).
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{polarizacioninversa.png}
+\caption{Esquema circuital y diagrama de bandas en el caso de una polarización inversa.}
+\end{center}
+\end{figure}
+
+La barrera de potencial se ha incrementado, su valor, ahora, es
+\[ V_{total}=|\phi _{Fn}| + |\phi _{Fp}| + V_{R} \]
+donde $V_{R}$ es la magnitud de la tensión de polarización inversa. Esta ecuación, también, puede ser escrita como
+\[ V_{total}=V_{bi} + V_{R} \]
+donde $V_{bi}$ es la barrera de potencial interna, definida para equilibrio térmico.
+
+\subsection{Ancho de la zona de carga espacial\\ y campo eléctrico.}
+
+En la figura 5, se presenta un esquema de una juntura pn con una polarización inversa, $V_{R}$. También se indica el campo inducido por esta tensión, $E_{app}$. Los campos eléctricos en las regiones neutrales n y p (fuerza de la zona de vaciamiento), son esencialmente cero, con lo cual, la magnitud del campo eléctrico en la zona de cargas espacial, debe aumentar por sobre su valor en equilibrio térmico, como consecuencia de la tensión aplicada. El campo eléctrico se origina en carga positiva y termina en carga negativa, esto significa que la cantidad de cargas positivas y negativas debe aumentar si se incrementa el campo eléctrico. Para una dada concentración de dopantes, la cantidad de cargas positivas y negativas en la zona de carga espacial puede aumentar, únicamente, si aumenta el ancho $W$ de la misma (más electrones y huecos huyen por difusión y se descubren nuevos iones que quedan fijos en la zona de vaciamiento). Por lo tanto, el ancho de la zona de carga espacial, aumenta al aplicarse una polarización inversa $V_{R}$.
+
+En todas las ecuaciones anteriores, la barrera de potencial interna puede ser reemplazada por esta nueva barrera de potencial total. De esta forma, el ancho de la zona es
+\[ W = \bigg( \frac{2 \varepsilon _{s}}{e} (V_{bi}+V_{R}) \frac{N_{a}+N_{d}}{N_{a}N_{d}} \bigg)^{\frac{1}{2}} \]
+que muestra como el ancho de la zona de carga espacial aumenta cuando aplicamos polarización inversa.
+
+La magnitud del campo eléctrico en la zona de vaciamiento aumenta con una polarización inversa aplicada. El campo eléctrico todavía está dado por
+\[ E (x)=\left\{ \begin{array}{ll}
+-\dfrac{eN_{a}}{\varepsilon _{s}} (x+x_{p}) & \textrm{si } -x_{p}<x<0 \\
+ & \\
+-\dfrac{eN_{d}}{\varepsilon _{s}} (x_{n}-x) & \textrm{si } 0<x<x_{n} \\
+\end{array} \right.\]
+Pero como $x_{n}$ y $x_{p}$ aumentan debido a la polarización inversa, la magnitud del campo eléctrico también aumenta, y su magnitud máxima sigue dándose en la unión metalúrgica. Con lo cual,
+\[ E_{max} = \frac{-2(V_{bi}+V_{R})}{W} \]
+
+\subsection{Capacitancia de juntura.}
+
+Dado que tenemos una separación de cargas positivas y negativas en la zona de vaciamiento, existe una capacitancia asociada a la juntura pn. Un incremento en la tensión de polarización inversa, $dV_{R}$, descubrirá nuevas cargas positivas en la región n y nuevas cargas negativas en la región p. La capacitancia de la juntura viene definida como
+\[ C'=\frac{dQ'}{dV_{R}} \]
+donde
+\[ dQ'=eN_{d}dx_{n}=eN_{a}dx_{p} \]
+El diferencial de carga, $dQ'$, es en unidades de $\frac{\textrm{C}}{\textrm{cm}^{2}}$ de modo que la capacitancia $C'$ es en unidades de farads por centímetro cuadrado, o capacidad por unidad de área.
+
+Para la barrera de potencial total, tenemos la ecuación
+\[ x_{n}= \bigg( \frac{2 \varepsilon _{s} (V_{bi}+V_{R})}{e} \frac{N_{a}}{N_{d}} \frac{1}{N_{a}+N_{d}} \bigg)^{\frac{1}{2}} \]
+La capacitancia de la juntura puede ser escrita como
+\[ C'=\frac{dQ'}{dV_{R}}=eN_{d} \frac{dx_{n}}{dV_{R}} \]
+de modo tal que
+\[ C'=\bigg( \frac{e \varepsilon _{s} N_{a}N_{d}}{2(V_{bi}+V_{R})(N_{a}+N_{d})} \bigg)^{\frac{1}{2}} \]
+La misma capacitancia se obtiene si se considera la zona de carga espacial que se extiende en la región p, usando $x_{p}$. La capacitancia de la juntura se conoce también como \emph{capacitancia de la capa de la zona de vaciamiento}.
+
+Se puede ver, comparando la ecuación para el ancho de la zona de carga espacial en polarización inversa, $W$, y la ecuación de la capacitancia que
+\[ C'=\frac{\varepsilon _{s}}{W} \]
+Esta última ecuación es igual a la capacitancia por unidad de área para un capacitor de placas paralelas. Recordar que el ancho de la zona de carga espacial es una función de la tensión de polarización inversa, de tal forma que la capacitancia de la juntura también es una función de la tensión de polarización inversa aplicada a la juntura.
+
+\scriptsize No incluye junturas de un sólo lado, ni junturas dopadas no uniformemente.
+\normalsize
+
+\section{Polarización directa.}
+
+Cuando se aplica polarización directa, la barrera de potencial de la juntura pn decrece, permitiendo a los electrones y los huecos fluir a través de la región de carga espacial, generando corrientes. Cuando esto sucede, los huecos y los electrones se transforman en portadores de carga minoritarios en exceso y están sujetos a las ecuaciones de transporte ambipolar tratadas anteriormente.
+
+\subsection{Descripción cualitativa del flujo de cargas.}
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{polarizaciones.png}
+\caption{(a) Sin polarización. (b) Polarización inversa. (c) Polarización directa.}
+\end{center}
+\end{figure}
+
+Se puede entender cualitativamente el mecanismo de la corriente en una juntura pn si consideramos los diagramas de energía. La figura 6a muestra el diagrama de bandas para la condición de equilibrio térmico. Se vio, en secciones precedentes, que la barrera de potencial interna contiene la gran concentración de electrones en la región n y les impide difundirse a la región p. Lo mismo sucede para los huecos.
+
+En la figura 6b se presenta el diagrama de bandas para una juntura pn con polarización inversa aplicada. El potencial en la región n es positivo respecto de la región p de tal forma que la energía de Fermi en la región n es menor que en la región p. La barrera de potencial aumenta para este caso, respecto de cuando no hay polarización. Se vio que este incremento en la barrera de potencial sigue conteniendo a los electrones, impidiendo que fluyan por difusión hacia la región de menor concentración (región p), lo mismo que para los huecos, de tal forma que, todavía, no existen corrientes.
+
+La figura 6c muestra el diagrama de bandas para el caso en que es aplicada una polarización directa, es decir, una tensión positiva en la región p, respecto de la región n. Ahora, la energía de Fermi es inferior en la región p que en la región n y, consecuentemente, se redujo la barrera de potencial. Esta reducción en el campo eléctrico implica que, ahora, los electrones y los huecos no son contenidos en cada región y habrá una difusión de partículas cargadas, de una región a otra. (Habrá una difusión de huecos, a través de la zona de carga espacial, de la región p a la región n; y habrá una difusión de electrones, a través de la zona de carga espacial, de la región n a la región p.) Este flujo de cargas origina una corriente a través de la juntura.
+
+Esta inyección de huecos en la región n, implica que, ahora, los huecos son portadores minoritarios, lo mismo que los electrones en la región p. El comportamiento de estos portadores minoritarios en exceso está descripto por la ecuación de transporte ambipolar. Habrá tanto difusión como recombinación de estos portadores en exceso, generando corrientes de difusión.
+
+\subsection{Relación tensión-corriente ideal.}
+
+La relación ideal de tensión-corriente se obtiene usando cuatro suposiciones.
+
+\begin{enumerate}
+\item La aproximación de que la zona de carga espacial termina abruptamente es válida y el semiconductor es neutral fuera de esta zona.
+\item La aproximación de Maxwell-Boltzmann es válida para la estadística de los portadores.
+\item El concepto de inyección de bajo nivel es aplicable.
+\item La corriente total es constante a través de la estructura pn. Las corrientes individuales de electrones y huecos son constantes a través de la estructura. Las corrientes individuales son constantes a través de la zona de carga espacial.
+\end{enumerate}
+
+\subsection{Condiciones de contorno.}
+
+La expresión para la barrera de potencial interna viene dada por
+\[ V_{bi} = \frac{kT}{e} \ln \bigg( \frac{N_{a}N_{d}}{n_{i}^{2}} \bigg) \]
+Si dividimos por $kT/e$, tomamos la exponencial de ambos lados y obtenemos la inversa, nos queda
+\[ \frac{n_{i}^{2}}{N_{a}N_{d}}=e^{-\frac{eV_{bi}}{kT}} \]
+Si asumimos ionización completa, $n_{n_{0}} \approx N_{d}$, donde $n_{n_{0}}$ es la concentración de los electrones (portadores mayoritarios) en la región n. En la región p, podemos escribir $n_{p_{0}} \approx \frac{n_{i}^{2}}{N_{a}}$, donde $n_{p_{0}}$ es la concentración en equilibrio térmico de los electrones (portadores minoritarios). Sustituyendo estas relaciones en la ecuación anterior, obtenemos
+\[ n_{p_{0}}=n_{n_{0}} e^{-\frac{eV_{bi}}{kT}} \]
+Esta ecuación relaciona la concentración de los portadores de carga minoritarios en la región p (electrones) con la concentración de los portadores de carga mayoritarios en la región n (electrones) en equilibrio térmico.
+
+Si se aplica una tensión positiva sobre la región p, respecto de la región n, la barrera de potencial se reduce. En la figura 7a se ilustra una juntura pn con una tensión $V_{a}$ aplicada. El campo eléctrico en las regiones fuera de la zona de carga espacial es despreciable. Esencialmente, toda la diferencia de potencial queda aplicada sobre la juntura. El campo eléctrico inducido por la polarización directa es en sentido contrario al campo eléctrico producido por el equilibrio térmico en la zona de carga espacial, con lo cual, el campo eléctrico neto es menor que aquel en el equilibrio. El delicado balance entre el campo eléctrico y la difusión se rompe. La fuerza eléctrica que impedía la difusión de electrones y huecos es menor y, por lo tanto las cargas comienzan a fluir por difusión de un lado a otro. Mientras la polarización directa, $V_{a}$, se mantenga, la inyección de portadores a través de la región de carga espacial continúa y se crea una corriente en la juntura pn. El diagrama de bandas se presenta en la figura 7b.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{polarizaciondirecta.png}
+\caption{(a) Tensiones y campos. (b) Diagrama de bandas.}
+\end{center}
+\end{figure}
+
+Si reemplazamos, en la última ecuación, $V_{bi}$ por $V_{bi}-V_{a}$, nos queda
+\[ n_{p}=n_{n_{0}} e^{-\frac{e(V_{bi}-V_{a})}{kT}} =\underbrace{ n_{n_{0}} e^{-\frac{eV_{bi}}{kT}} }_{n_{p_{0}}}e^{\frac{eV_{a}}{kT}} \]
+Por la condición de inyección de bajo nivel, la concentración $n_{n_{0}}$ no se modifica significativamente, sin embargo, $n_{p}$ puede desviarse de su concentración de equilibrio, $n_{p_{0}}$ en varios órdenes de magnitud
+\[ n_{p}=n_{p_{0}}e^{\frac{eV_{a}}{kT}} \]
+
+Cuando se aplica una polarización directa a una juntura pn, la juntura pierde su condición de equilibrio térmico. $n_{p}$ es la concentración de portadores minoritarios en la región p (electrones), que ahora es mayor que en el equilibrio térmico. La tensión de polarización directa disminuye la barrera de potencial de tal forma que los electrones de la región n son inyectados a través de la juntura, en la región p, incrementando la concentración de portadores minoritarios. Tenemos un exceso de portadores minoritarios en la región p.
+
+Procediendo análogamente para los huecos en la región n, obtenemos
+\[ p_{n}=p_{n_{0}} e^{\frac{eV_{a}}{kT}} \]
+
+En la figura 8 se pueden apreciar estos comportamientos, donde se puede observar que $p_{n}$ y $n_{p}$ son las concentraciones en la frontera de la región de carga espacial.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{polarizaciondirecta2.png}
+\caption{Concentraciones en polarización directa.}
+\end{center}
+\end{figure}
+
+\subsection{Distribución de los portadores minoritarios.}
+
+La ecuación para los portadores minoritarios en exceso en la región n (huecos) es
+\[ D_{p} \frac{\partial^{2} (\delta p_{n})}{\partial x^{2}} - \mu _{p}E \frac{\partial (\delta p_{n})}{\partial x} + g' - \frac{\delta p_{n}}{\tau _{p_{0}}} = \frac{\partial (\delta p_{n})}{\partial t} \]
+donde $\delta p_{n}=p_{n}-p_{n_{0}}$ es el exceso de los portadores minoritarios (huecos) y es la diferencia entre la cantidad total de huecos y la cantidad de huecos en equilibrio térmico. Esta ecuación describe el comportamiento de los portadores en exceso en función del espacio y el tiempo.
+
+Si asumimos que en la zona neutral de la región n, $x>x_{n}$, $E=0$ y $g'=0$. Si también asumimos estado estacionario, la ecuación queda como
+\[ \frac{\partial^{2} (\delta p_{n})}{\partial x^{2}} - \frac{\delta p_{n}}{L_{p}^{2}} = 0 \qquad , \qquad x>x_{n} \]
+donde $L_{p}^{2}=D_{p}\tau _{p_{0}}$. Análogamente, para la región p, tenemos que los portadores minoritarios en exceso (electrones) responden a la ecuación
+\[ \frac{\partial^{2} (\delta n_{p})}{\partial x^{2}} - \frac{\delta n_{p}}{L_{n}^{2}} = 0 \qquad , \qquad x<-x_{p} \]
+
+Las condiciones de contorno son
+\[ p_{n}(x_{n})=p_{n_{0}} e^{\frac{eV_{a}}{kT}} \qquad , \qquad \textrm{figura 8} \]
+\[ n_{p}(-x_{p})=n_{p_{0}} e^{\frac{eV_{a}}{kT}} \qquad , \qquad \textrm{figura 8} \]
+\[ p_{n}(x \rightarrow +\infty)=p_{n_{0}} \]
+\[ n_{p}(x \rightarrow -\infty)=n_{p_{0}} \]
+A medida que los portadores de carga minoritarios se difunden más lejos del borde de la zona de carga espacial, se recombinarán con los portadores mayoritarios. Asumimos que las longitudes $W_{n}$ y $W_{p}$, de la figura 7, son muy largas, suponiendo $W_{n} \gg L_{p}$ y $W_{p} \gg L_{n}$. Las concentraciones de los portadores de carga minoritarios en exceso deben tender a cero para distancias alejadas de la zona de carga espacial. Esta estructura se conoce como \emph{juntura pn larga}.
+
+Las soluciones a las ecuaciones de transporte ambipolar son
+\[ \delta p_{n}(x)=p_{n}(x)-p_{n_{0}}= Ae^{\frac{x}{L_{p}}}+Be^{-\frac{x}{L_{p}}} \qquad , \qquad x \geq x_{n} \]
+\[ \delta n_{p}(x)=n_{p}(x)-n_{p_{0}}= Ce^{\frac{x}{L_{n}}}+De^{-\frac{x}{L_{n}}} \qquad , \qquad x \leq -x_{p} \]
+Aplicando las condiciones de contorno, $A=D=0$. Los coeficientes $B$ y $C$ resultan de las otras condiciones. Las soluciones son
+\[ \delta p_{n}(x)=p_{n}(x)-p_{n_{0}}=p_{n_{0}} \big( e^{\frac{eV_{a}}{kT}} -1 \big) e^{\frac{x_{n}-x}{L_{p}}} \]
+\[ \delta n_{p}(x)=n_{p}(x)-n_{p_{0}}=n_{p_{0}} \big( e^{\frac{eV_{a}}{kT}} -1 \big) e^{\frac{x_{p}+x}{L_{n}}} \]
+
+Las concentraciones de portadores minoritarios decaen exponencialmente con la distancia, alejándose de la juntura, acercándose a sus valores de equilibrio térmico. En la figura 9 (arriba) se muestran estos resultados.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{concentracionydensidad.png}
+\caption{(arriba) Concentración de portadores en exceso. (abajo) Densidades de corriente.}
+\end{center}
+\end{figure}
+
+\subsection{Corriente en una juntura pn ideal.}
+
+La corriente total en una juntura es la suma de las corrientes individuales de huecos y electrones, que son constantes a través de la zona de carga espacial. Dado que la corriente es una función continua a través de la juntura, la corriente total va a ser la suma de la corriente de huecos (portadores minoritarios) en $x=x_{n}$ y la corriente de electrones (portadores minoritarios) en $x=-x_{p}$. Los gradientes en las concentraciones, que se muestran en la figura 9 (arriba) generan corrientes de difusión. Esta idea se ilustra en la figura 9 (abajo).
+
+La densidad de corriente de portadores minoritarios en $x=x_{n}$ es
+\[ J_{p}(x_{n})=-eD_{p} \frac{dp_{n}(x)}{dx}_{x=x_{n}} \]
+Dado que estamos asumiendo regiones uniformemente dopadas, concentración de portadores en equilibrio constante, la densidad de corriente es
+\[ J_{p}(x_{n})=\frac{eD_{p}p_{n_{0}}}{L_{p}} \big( e^{\frac{eV_{a}}{kT}} - 1 \big) \]
+La densidad de corriente para la polarización directa es en la dirección $+x$, que es la que va de la región p a la región n.
+
+Análogamente, podemos obtener la densidad de corriente en $x=-x_{p}$,
+\[ J_{n}(-x_{p})=\frac{eD_{n}n_{p_{0}}}{L_{n}} \big( e^{\frac{eV_{a}}{kT}} - 1 \big) \]
+La densidad de corriente para los electrones va en la misma dirección.
+
+Finalmente, la corriente total es
+\[ J=J_{s} \big( e^{\frac{eV_{a}}{kT}} - 1 \big) \]
+donde $J_{s}$ es el parámetro referido a la corriente de saturación en polarización indirecta y es
+\[ J_{s}= e \bigg( \frac{D_{n}}{L_{n}} n_{p_{0}}+\frac{D_{p}}{L_{p}} p_{n_{0}} \bigg) \]
+
+El gráfico de la densidad de corriente en función de la tensión aplicada es el que se presenta en la figura 10.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{ivsvdiodo.png}
+\caption{Característica tensión-corriente del diodo.}
+\end{center}
+\end{figure}
+
+Si multiplicamos por el área de la sección de la juntura, tenemos la corriente del diodo, dada por
+\[ i_{D}= A e \bigg( \frac{D_{n}}{L_{n}} n_{p_{0}}+\frac{D_{p}}{L_{p}} p_{n_{0}} \bigg) \big( e^{\frac{V_{a}}{V_{t}}} - 1 \big) \]
+donde
+\[ i_{s} = A e \bigg( \frac{D_{n}}{L_{n}} n_{p_{0}}+\frac{D_{p}}{L_{p}} p_{n_{0}} \bigg) \]
+es la corriente de saturación; y
+\[ V_{t} = \frac{kT}{e} \]
+es la tensión térmica.
+
+\end{document}

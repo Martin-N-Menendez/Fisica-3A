@@ -1,0 +1,325 @@
+%Tipo de documento
+\documentclass[12pt,a4paper]{article}
+
+%PAQUETES
+
+%Parsear en .pdf
+\usepackage[pdftex]{color,graphicx}
+
+%Castellano
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+%Matematica
+\usepackage{amsmath, amssymb, amsfonts}
+
+%Definiciones útiles
+\def\e{{\epsilon}} %Definir \e como símbolo de la energía.
+
+\begin{document}
+
+\title{Mecánica estadística.}
+
+\author{$\Gamma$}
+
+\maketitle
+
+\section{Introducción.}
+
+El objetivo de la mecánica estadística es tratar el comportamiento de una gran cantidad de partículas o sistemas idénticos de una manera estadística o probabilística, obteniendo los valores más probables del conjunto sin entrar en detalle acerca de los valores de estas propiedades para los componentes en particular.
+
+Restringiremos este análisis a un conjunto de sistemas idénticos que suponemos independientes entre sí, a excepción de que pueden interactuar entre ellos o con el medio exterior, pero siempre mediante procesos instantáneos en que se conserva la energía y la cantidad de movimiento. Tales sistemas pueden, por ejemplo, representar las partículas de un gas ideal monoatómico. Fuerzas externas (eléctricas, magnéticas o grativatorias) pueden ejercer influencias sobre los sistemas. Bajo circunstancias como estas, podemos tratar cada sistema independientemente de los demás y podemos describir su comportamiento en términos de un sistema de coordenadas hexadimensional fase-espacio, $(x,y,z,p_{x},p_{y},p_{z})$. Estas coordenadas se suponen independientes y ortogonales y proporcionan una especificación completa del estado de una partícula perteneciente al conjunto mediante la asignación de valores a estas seis coordenadas fase-espacio. Consecuentemente el comportamiento puede, en principio, describirse utilizando estas nociones.
+
+El postulado básico de la mecánica estadística es que, \emph{a priori}, la probabilidad de que el sistema esté en un determinado estado cuántico es la misma para todos los estados cuánticos del sistema. Debe enfatizarse que este postulado se refiere a las probabilidades \emph{a priori}, esto es, las probabilidades que existen en ausencia de restricciones dinámicas. La probabilidades \emph{a priori} en un determinado conjunto de sistemas serán modificadas por condiciones externas impuestas sobre el sistema, como requerimientos de que la cantidad total de partículas o la cantidad total de energía de todo el conjunto sean constantes.
+
+\section{La función de distribución y la densidad de estados.}
+
+Para obtener las propiedades promedio de un conjunto de partículas se necesita saber, generalmente, cómo se distribuyen esas partículas en los distintos niveles de energía. Si llamamos $f(\e)$ a la cantidad promedio de partículas del sistema que ocupan un estado cuántico de energía $\e$, y si llamamos $g(\e)d\e$ la cantidad de estados cuánticos del sistema cuya energía está en un intervalo $[\e;\e+d\e]$, entonces, el número total de partículas del sistema con energía en el intervalo $[\e;\e+d\e]$ viene dada por
+\[ N(\e)d\e=f(\e)g(\e)d\e \]
+$f(\e)$ representa la cantidad promedio de partículas que tienen energía $\e$ (la variable de la función). $g(\e)d\e$ representa la cantidad de estados cuánticos que existen con energía en el intervalo $[\e;\e+d\e]$. Con lo cual, si multiplico la cantidad promedio de partículas con energía $\e$ por la cantidad de estados cuánticos en un intervalo $[\e;\e+d\e]$ voy a obtener la cantidad total de partículas en el intervalo $[\e;\e+d\e]$, es decir, $N(\e)d\e$.
+
+La cantidad $f(\e)$ es conocida como la \emph{función de distribución} del sistema y depende de las probabilidades asociadas con la distribución de las partículas del sistema entre los distintos estados cuánticos. La cantidad $g(\e)$, que depende de cómo se distribuyen los estados cuánticos en la energía, se llama \emph{densidad de estados}.
+
+Si se conocen estas cantidades entonces el valor promedio de una cantidad $\alpha$ que pueda ser expresada en función de la energía $\e$, $\alpha (\e)$, puede ser obtenido mediante
+\[ \langle \, \alpha \, \rangle=\dfrac{\int \alpha (\e) N(\e) d\e}{\int N(\e)d\e}= \frac{1}{N} \int \alpha (\e) f(\e) g(\e) d\e \]
+La integral de $N(\e)d\e$ sobre todos los posibles valores de $\e$ nos da, simplemente, $N$, la cantidad total de partículas en el sistema. Se puede observar que la ecuación anterior lo que hace es obtener la cantidad de partículas que existen con energía $\e$ y multiplicarlas por la propiedad $\alpha (\e)$, para todos los $\e$, para luego dividirlo por la cantidad total de partículas, obteniendo el promedio.
+
+Como la densidad de estados $g(\e)$ depende únicamente de la distribución de los estados cuánticos del sistema en energía, debería ser posible calcular $g(\e)$ como una solución de la ecuación de Schrödinger (las soluciones de la ecuación de Schrödinger dan las funciones de onda de las partículas en una determinada situación -condiciones de contorno- y, por lo tanto, al tener las funciones de onda, sabemos qué cantidad de estados de energía hay disponibles -tantos como funciones de onda nos de la solución- y cómo se distribuyen). Podemos obtener la solución para partículas libres asumiendo que nuestro sistema está confinado a un contenedor rígido cuyas dimensiones son $x_{0}$, $y_{0}$, $z_{0}$ en las direcciones $x$, $y$, $z$, respectivamente. Este contenedor es, en efecto, un pozo infinito, donde el potencial es cero para cada partícula en el contenedor, suponiendo que las interacciones entre partículas se deben únicamente a colisiones instantáneas. En esta instancia, dentro del contenedor, la ecuación de Schrödinger se puede escribir como
+\[ \nabla^{2} \psi + k^{2} \psi (x,y,z)=0 \]
+donde
+\[ k^{2}=\frac{2m\e}{\hbar^{2}} \]
+Fuera del contenedor sabemos que se puede concluir que $\psi=0$. Sabemos que la solución será una onda plana de la forma
+\[ \psi (x,y,z)=Ae^{jk_{x}x}e^{jk_{y}y}e^{jk_{z}z}=Ae^{j(k_{x}x+k_{y}y+k_{z}z)}=Ae^{j(<\vec{k};\vec{r}>)} \]
+Esta solución verifica la ecuación de Schrödigner y se puede obtener mediante el método de separación de variables. Una de las condiciones que se tienen que cumplir para que sea solución es que
+\[ k_{x}^{2}+k_{y}^{2}+k_{z}^{2}=|| \vec{k} ||^{2}=\textrm{const.} \]
+y estas cantidades forman parte de un vector $\vec{k}$ que se conoce como vector de propagación. Si consideramos las características físicas de la función de onda dependiente del tiempo tenemos
+\[ \Psi (x,y,z,t)=Ae^{j(<\vec{k};\vec{r}>-\omega t)} \qquad ; \qquad \omega = \frac{\e}{\hbar} \]
+donde queda claro que la dirección del vector $\vec{k}$ es la dirección en que avanza el frente de onda. Se puede demostrar que el valor pormedio del vector cantidad de movimiento $\vec{p}$ viene dado por
+\[ \langle \, \vec{p} \, \rangle=\hbar \vec{k} \]
+y que $\vec{p}$ (y por lo tanto $\vec{k}$) es una constante de movimiento.
+
+Para condiciones de contorno, debemos exigir que la función de onda en cualquiera de los lados del contenedor sea igual a la función de onda en el lado opuesto: %(¿por qué?)
+\[ \psi (0,y,z) = \psi (x_{0},y,z) \]
+\[ \psi (x,0,z) = \psi (x,y_{0},z) \]
+\[ \psi (x,y,0) = \psi (x,y,z_{0}) \]
+que nos llevan a que las componentes del vector $\vec{k}$ sean
+\[ k_{x}=\frac{2\pi n_{x}}{x_{0}} \qquad (n_{x}=0, \pm 1, \pm 2, \ldots) \]
+\[ k_{y}=\frac{2\pi n_{y}}{y_{0}} \qquad (n_{y}=0, \pm 1, \pm 2, \ldots) \]
+\[ k_{z}=\frac{2\pi n_{z}}{z_{0}} \qquad (n_{z}=0, \pm 1, \pm 2, \ldots) \]
+Por lo cual, la solución a la ecuación de Schrödinger se reduce a
+\[ \psi (x,y,z)=Ae^{2 \pi j (\frac{n_{x}x}{x_{0}}+\frac{n_{y}y}{y_{0}}+\frac{n_{z}z}{z_{0}})} \]
+Recordando que $k^{2}=2m\e/\hbar^{2}$ podemos ver que sólo ciertos valores discretos de energía son permitidos
+\[ \e_{n_{x}n_{y}n_{z}}=\frac{2 \pi ^{2} \hbar^{2}}{m} \bigg( \frac{n_{x}^{2}}{x_{0}^{2}} + \frac{n_{y}^{2}}{y_{0}^{2}} + \frac{n_{z}^{2}}{z_{0}^{2}} \bigg) \]
+Utilizando la relación $\vec{p}=\hbar \vec{k}$ podemos obtener los valores permitidos de la cantidad de movimiento
+\[ p_{x}=\frac{hn_{x}}{x_{0}} \]
+\[ p_{y}=\frac{hn_{y}}{y_{0}} \]
+\[ p_{z}=\frac{hn_{z}}{z_{0}} \]
+
+Si quisiéramos dibujar todos los posibles valores de la cantidad de movimiento, correspondientes a todos los posibles valores de los números enteros $(n_{x},n_{y},n_{z})$, como puntos en un sistema ortogonal de cantidad de movimiento de coordenadas $(p_{x},p_{y},p_{z})$, obtendríamos una red de puntos representando los valores permitidos de la cantidad de movimiento, cuya celda unitaria sería de dimensiones $(h/x_{0},h/y_{0},h/z_{0})$ correspondientes a los cambios unitarios en $(n_{x},n_{y},n_{z})$. El volumen del espacio cantidad de movimiento que corresponde a un sólo estado cuántico del sistema es, simplemente, el volumen de la celda unitaria
+\[ V_{p}=\frac{h^{3}}{x_{0}y_{0}z_{0}}=\frac{h^{3}}{V} \]
+donde $V$ es el volumen físico del contenedor. Utilizando esto (y el gráfico de los puntos permitidos de la cantidad de movimiento) podemos observar que la densidad con la que los estados cuánticos están distribuidos en el espacio de la cantidad de movimiento es uniforme sobre todo este espacio. En la última ecuación no tuvimos en cuenta el \emph{spin} del electrón. Para partículas con spin $\frac{1}{2}$ como los electrones, existen dos estados de cantidad de movimiento permitidos para cada punto de la red, correspondiente a las dos posibles orientaciones del spin de la partícula. Teniendo esto en cuenta, deberíamos reescribir el valor de $V_{p}$ como
+\[ V_{p}=\frac{1}{2} \frac{h^{3}}{V} \]
+Para grandes valores de $x_{0}$, $y_{0}$ y $z_{0}$, como los que están asociados con un contenedor de dimensiones macroscópicas, el volumen $v_{p}$ se vuelve muy pequeño y, consecuentemente, los estados de la cantidad de movimiento ($p_{x}=\frac{hn_{x}}{x_{0}}$, $p_{y}=\frac{hn_{y}}{y_{0}}$, $p_{z}=\frac{hn_{z}}{z_{0}}$) y los estados de energía ($\e_{n_{x}n_{y}n_{z}}=\frac{2 \pi ^{2} \hbar^{2}}{m} ( \frac{n_{x}^{2}}{x_{0}^{2}} + \frac{n_{y}^{2}}{y_{0}^{2}} + \frac{n_{z}^{2}}{z_{0}^{2}})$) se vuelven muy juntos comparados con los intervalos de energía y cantidad de movimiento que son apreciables macroscópicamente. Entonces, para un sistema de dimensiones razonables, podremos justificar que los valores permitidos de energía y cantidad de movimiento son esencialmente continuos en el espacio de la cantidad de movimiento.
+
+Consideremos, ahora, una superficie en el espacio de la cantidad de movimiento $(p_{x},p_{y},p_{z})$, en la que todos los puntos estan a una energía constante $\e$. Recordando que $k^{2}=2m\e/\hbar^{2}$; $k_{x}^{2}+k_{y}^{2}+k_{z}^{2}=\textrm{const.}$ y $\langle \, \vec{p} \, \rangle=\hbar \vec{k}$, la ecuación de esta superficie debe ser una esfera de radio $p=\sqrt{2m\e}$ o, lo que es lo mismo
+\[ p^{2}=p_{x}^{2}+p_{y}^{2}+p_{z}^{2}=2m\e \]
+Se puede armar una esfera similar cuya superficie represente todos los puntos con energía $\e+d\e$. Este cascarón esférico, entre ambas superficies, representa todos los puntos de la región del espacio de la cantidad de movimiento que corresponden a energías en el rango $[\e;\e+d\e]$. El volumen del espacio de la cantidad de movimiento contenido en este cascarón es
+\[ dV_{p}=4\pi p^{2} dp \]
+Sin embargo, sabiendo que $p^{2}=2m\e$, tenemos
+\[ p \, dp=m \, d\e \]
+Por lo tanto
+\[ dV_{p}=4\pi p \cdot m \, d\e=4 \pi m \sqrt{2m\e} \, d\e \]
+
+La cantidad de estados cuánticos que encontraremos en esta porción del volumen del espacio de la cantidad de movimiento viene determinada, simplemente, por la división del resultado anterior (cantidad de estados cuánticos en un intervalo $[\e;\e+d\e]$) por el volumen en el espacio de la cantidad de movimiento que ocupa un sólo estado cuántico ($\frac{1}{2} \frac{h^{3}}{V}$).
+\[ g(\e)d\e=\frac{8\sqrt{2} \pi V}{h^{3}}m^{\frac{3}{2}} \sqrt{\e} \, d\e \]
+Este resultado se atiene a partículas libres sujetas a interacciones por colisiones instantáneas únicamente. Para otros sistemas, sobre todo aquellos donde hay una gran variedad de interacciones entre partículas, la densidad de estados es bastante más compleja. Además, estrictamente hablando, la última ecuación corresponde a la densidad de estados de un contenedor rectangular. Sin embargo, dado que el volumen es lo que aparece en la ecuación final, podemos asumir intuitivamente que la misma densidad de estados aplica para un contenedor del mismo volumen sin importar su forma. Esto es cierto bajo demostraciones pertinentes.
+
+\section{Distribución de Maxwell-Boltzmann.}
+
+Si no hay restricciones en la energía o la cantidad de movimiento que puede tener una partícula en un sistema, entonces la probabilidad asociada a cada estado cuántico es la misma y la cantidad de partículas por estado cuántico será independiente de la energía. Esto significa que la función de distribución $f(\e)$ será constante. Esta situación simple no es muy importante físicamente, dado que un sistema que está térmicamente aislado del exterior debe obedecer la restricción de que la cantidad total de energía sea constante; y son estos sistemas los que se estudiarán. En este caso más realista, la proporción de partículas ocupando los estados de alta energía se reduce y la función de distribución deja de ser constante con la energía (esto es así porque, para un determinado número de partículas, muchas de ellas no pueden ocupar estados de alta energía porque sino debe haber muchas más en estados de baja energía para que se mantenga constante).
+
+Para encontrar cómo es la función de distribución en estas condiciones debemos proceder, inicialmente, imaginando a las partículas del sistema como objetos distinguibles, como bolas de pool numeradas. Vamos a sostener el marco de los estados cuánticos y los niveles de energía, aunque ignoraremos el principio de exclusión de Pauli. Permitiremos cualquier número de partículas ocupar un determinado estado cuántico del sistema. Supondremos que trataremos con un sistema aislado donde la cantidad $N$ de partículas distinguibles permanece constante, al igual que la energía total $U$, que puede estar distribuida en cualquiera de los $n$ niveles de energía, $\e_{1}$, $\e_{2}$, $\ldots$, $\e_{i}$, $\ldots$, $\e_{n}$. Estadísticamente, el conjunto tendrá la distribución de energía que corresponda a alguna probabilidad de las partículas distribuidas en los distintos niveles, siendo $N_{1}$, $N_{2}$, $\ldots$, $N_{i}$, $\ldots$, $N_{n}$ la cantidad de partículas en cada nivel. De todas las distribuciones probables de las $N$ partículas en los $n$ niveles de energía, algunas ocurrirán con más probabilidad que otras. La distribución que tiene la probabilidad más alta de ocurrir es la distribución que puede generarse en la mayor cantidad de formas distintas e independientes. El estado de equilibrio del sistema será el que se corresponda estadísticamente con la distribución \emph{más probable} de partículas en los niveles de energía, dadas las condiciones del problema.
+
+El cálculo del número de formas en que objetos distinguibles pueden distribuirse en niveles de energía de un sistema es equivalente al cálculo del número de formas en que se pueden poner objetos numerados en contenedores numerados (urnas y bolas). El resultado es
+\[ Q(N_{1},N_{2},\ldots,N_{n})=\dfrac{N!}{\prod _{i=1}^{n}N_{i}!} \prod _{i=1}^{n} g_{i}^{N_{i}} \]
+donde $Q(N_{1},N_{2},\ldots,N_{n})$ es la cantidad de formas distintas e independientes de ordenar $N$ bolas en $n$ cajas de degeneración $g_{i}$ (la obtención de esta fórmula se encuentra en libros como el McKelvey, cap. 5, Alonso Finn, tomo III, cap. 10. Para expander en temas de combinatoria, se puede recurrir a los apuntes de S. Grynberg). La degeneración $g_{i}$ es porque cada nivel de energía $n_{i}$ tiene más de un estado cuántico posible y la cantidad de estos estados cuánticos varía de nivel a nivel. Es decir, hay distintas formas en que las partículas pueden ordenarse para obtener la misma energía.
+
+Para obtener la partición más probable, se debe maximizar $Q$ sujeto a las condiciones
+\[ \sum _{i=1}^{n} N_{i}=N=\textrm{const.} \]
+\[ \sum _{i=1}^{n} \e _{i}N_{i}=U=\textrm{const.} \]
+que son las condiciones de energía constante y cantidad de partículas constante debido a la aislación del sistema respecto del medio. Para realizar esta operación se recurre a los multiplicadores de Lagrange y a la derivación del logaritmo. El resultado es
+\[ \frac{N_{j}}{g_{j}}=e^{\alpha}e^{\beta \e_{j}}=f(\e_{j}) \]
+donde $N_{j}/g_{j}$ es el promedio de la cantidad de partículas en el estado cuántico $j$ del sistema lo que, por definición, es la función de distribución de energía $f(\e)$. Los parámetros $\alpha$ y $\beta$ corresponden a los multiplicadores de Lagrange y serán develados en breve. Esta función de distribución de energías, que se obtuvo bajo la presunción clásica de que las partículas eran distinguibles y sin el uso del principio de exclusión de Pauli, se conoce como \emph{Función de Distribución de Maxwell-Boltzmann}.
+
+Ahora debemos obtener las constantes $\alpha$ y $\beta$ y cómo se encuentran relacionadas con las propiedades físicas del sistema. Para empezar, la constante $\beta$ tendrá el valor
+\[ \beta=-\frac{1}{kT} \]
+donde $T$ es la temperatura absoluta del sistema y $k$ es la constante de Boltzmann. Usando esta ecuación se puede definir a la temperatura. Veremos que esta definición lleva a todas las características usuales de la temperatura, relacionadas con un gas ideal. La identificación de $\beta$ con el valor dado por la última ecuación pudo haber sido asignado mediante una comparación de los resultados obtenidos y de la ecuación termodinámica de estados para un gas ideal. Veremos que la constante $k$ se puede relacionar con la constante medible de los gases, $R$, y con el número de Avogadro.
+
+Hasta acá, la ecuación de la cantidad más probable de partículas en la partición $j$ resulta
+\[ N_{j}=g_{j} e^{\alpha}e^{-\frac{\e_{j}}{kT}}\]
+El valor de la constante $\alpha$ puede ser expresado en términos de la cantidad total de partículas N, dado que $\sum _{i=1}^{n} N_{i}=N=\textrm{const.}$,
+\[ N=\sum _{j}N_{j}=e^{\alpha}\sum _{j} g_{j} e^{-\frac{\e_{j}}{kT}} \]
+de donde
+\[ e^{\alpha}=\frac{N}{\sum _{j} g_{j}e^{-\frac{\e_{j}}{kT}}} \]
+y, por lo tanto,
+\[ N_{j}=g_{j}e^{\alpha}e^{-\frac{\e_{j}}{kT}}=\frac{Ng_{j}e^{-\frac{\e_{j}}{kT}}}{\sum _{j} g_{j}e^{-\frac{\e_{j}}{kT}}} \]
+
+Si los niveles de energía del sistema están muy juntos, como lo son los niveles de energía de un gas de partículas libres que discutimos en la sección anterior, entonces la cantidad $g_{j}$ puede ser vista como $g(\e) \, d\e$ y la cantidad $N_{j}$ como $N(\e) \, d\e$. La cantidad de partículas en un intervalo de energía $[\e;\e+d\e]$ será, entonces,
+\[ N(\e) \, d\e=e^{\alpha} e^{-\frac{\e}{kT}} g(\e) \, d\e = f(\e)g(\e) \, d\e \]
+Para un gas ideal de partículas libres, la densidad de estados $g(\e)$ viene dada por
+\[ g(\e)d\e=\frac{8\sqrt{2} \pi V}{h^{3}}m^{\frac{3}{2}} \sqrt{\e} \, d\e \]
+
+Una vez más, podemos obtener el parámetro $\alpha$ en relación con la cantidad total de partículas $N$, que debe ser constante. Es decir
+\[ N=\int N(\e) \, d\e=e^{\alpha} \int g(\e) e^{-\frac{\e}{kT}} \, d\e \]
+y
+\[ e^{\alpha}=\dfrac{N}{\int g(\e) e^{-\frac{\e}{kT}} \, d\e} \]
+Las integrales son sobre todos los posibles valores de energías del sistema.
+
+Es interesante destacar que la energía promedio de un sistema, $\langle \, \e \, \rangle$, se puede calcular como
+\[ \langle \, \e \, \rangle = -\frac{d}{d\beta} \ln (Z) = kT^{2} \frac{d}{dT} \ln (Z) \]
+siendo
+\[ Z=\dfrac{N}{e^{\alpha}}=\int g(\e)e^{-\frac{\e}{kT}} \, d\e \]
+
+\section{Estadística de Maxwell-Boltzmann de un gas ideal.}
+
+Utilizando la densidad de estados $g(\e) \, d\e$ obtenida en la sección 2 podemos encontrar $\alpha$ en función de la cantidad total de partículas. Para ello se hace uso de la función $\Gamma (3/2)$ que da por resultado, $\sqrt{\pi}/2$. Con lo cual, obtenemos
+\[ e^{\alpha}=\frac{N}{2V} \bigg( \frac{h^{2}}{2 \pi m k T} \bigg)^{\frac{3}{2}}\]
+lo que hace que la función de distribución de Maxwell-Boltzmann \emph{para un gas ideal} sea
+\[ f(\e)=e^{\alpha}e^{-\frac{\e}{kT}}=\frac{N}{2V} \bigg( \frac{h^{2}}{2 \pi m k T} \bigg)^{\frac{3}{2}} e^{-\frac{\e}{kT}} \]
+Es notable que el valor de $e^{\alpha}$ obtenido es independiente de la temperatura. Es de remarcar, además, que este valor del parámetro $\alpha$ sirve únicamente para densidades de partículas libres como la obtenida en la sección 2 y que no funcionará para otras funciones densidad de estados. Finalmente, la cantidad de partículas más probable en un intervalo de energía $[\e;\e+d\e]$ viene dada por
+\[ N(\e) \, d\e=f(\e)g(\e) \, d\e=\frac{2 \pi N}{(\pi k T)^{\frac{3}{2}}} \, \sqrt{\e} \, e^{-\frac{\e}{kT}} \, d\e \]
+
+La energía interna total y el calor específico del gas se pueden obtener fácilmente utilizando estos resultados. Dado que la energía de las partículas en el intervalo $[\e;\e+d\e]$ es, simplemente, $\e N(\e) \, d\e$, la energía interna total del gas es
+\[ U=\int _{0}^{\infty} \e N(\e) d\e \]
+que, para el gas ideal es
+\[ U=\frac{2 \pi N}{(\pi k T)^{\frac{3}{2}}} \int _{0}^{\infty} \e^{\frac{3}{2}} e^{-\frac{\e}{kT}} \, d\e \]
+Esta integral se puede resolver como una función Gamma mediante una sustitución adecuada. Notando que $\Gamma (\frac{5}{2})=\frac{3}{2} \Gamma (\frac{3}{2})=3\frac{\sqrt{\pi}}{4}$ obtenemos
+\[ U=\frac{3}{2}NkT \]
+de donde la energía interna promedio de cada partícula es $U/N=\frac{3}{2}kT$, un resultado importante y conocido. La capacidad calorífica del gas a volumen constante es el ritmo de crecimiento de la energía interna al aumentar la temperatura, con lo cual
+\[ C_{V}= \frac{\partial U}{\partial T} \rfloor_{V} =  \frac{3}{2}Nk \]
+independientemente de la temperatura. El calor específico $c_{V}$ es, simplemente, la capacidad calorífica por unidad de volumen.
+
+Nuestro objetivo, eventualmente, es utilizar las propiedades dinámicas de las partículas y la función de distribución para obtener la ecuación de estados para un gas ideal. Antes, debemos convertir las distribuciones de energía en distribuciones de velocidad.
+
+En un gas de partículas libres que no tienen grados internos de libertad, toda la energía es cinética. Debemos relacionar la energía con la velocidad escribiendo
+\[ \e = \frac{1}{2} m v^{2}=\frac{1}{2}m(v_{x}^{2}+v_{y}^{2}+v_{z}^{2}) \]
+de donde
+\[ d\e=mv \, dv \]
+y las distribuciones de energía se pueden escribir directamente como distribuciones de velocidad de la forma
+\[ N(v) \, dv=4 \pi N \bigg( \frac{m}{2 \pi k T} \bigg)^{\frac{3}{2}} v^{2} e^{-\frac{mv^{2}}{2kT}} \, dv \]
+Esta función expresa la cantidad de partículas del sistema cuya velocidad se encuentra en el invervalo $[v;v+dv]$, o lo que es lo mismo, la cantidad de partículas que yacen en una cáscara esférica de espesor $dv$ y radio $v$ en el espacio de las velocidades.
+
+Supongamos ahora que deseamos conocer cuántas partículas del sistema tienen velocidades tal que la componente $x$ del vector $\vec{v}$ se encuentra a una distancia $dv_{x}$ de $v_{x}$. Análogamente para las componentes $y$ y $z$; es decir, la cantidad de partículas en un elemento rectangular de volumen ($dv_{x}dv_{y}dv_{z}$) centrado en $(v_{x},v_{y},v_{z})$ en el espacio de las velocidades. Podemos llamar a esta cantidad $N(v_{x},v_{y},v_{z})dv_{x}dv_{y}dv_{z}$. Ahora tenemos
+\[ f(v_{x},v_{y},v_{z})=\frac{N}{2V} \bigg( \frac{h^{2}}{2 \pi m k T} \bigg)^{\frac{3}{2}} e^{-\frac{m(v_{x}^{2}+v_{y}^{2}+v_{z}^{2})}{2kT}} \]
+De esta forma
+\[ N(v_{x},v_{y},v_{z})dv_{x}dv_{y}dv_{z}=f(v_{x},v_{y},v_{z})g(v_{x},v_{y},v_{z})dv_{x}dv_{y}dv_{z} \]
+donde $g(v_{x},v_{y},v_{z})dv_{x}dv_{y}dv_{z}$ es la cantidad de estados cuánticos en el elemento de volumen $dv_{x}dv_{y}dv_{z}$ del espacio de velocidades. Recordando que $V_{p}=\frac{1}{2} \frac{h^{3}}{V}$, la cantidad de estados en un elemento de volumen $dp_{x}dp_{y}dp_{z}$ en el espacio de la cantidad de movimiento es
+\[ \frac{2V}{h^{3}}dp_{x}dp_{y}dp_{z}=\frac{2m^{3}V}{h^{3}}dv_{x}dv_{y}dv_{z}=g(v_{x},v_{y},v_{z})dv_{x}dv_{y}dv_{z} \]
+Dado que la densidad de estados en el espacio de la cantidad de movimiento es constante, también lo será la densidad de estados en el espacio de la velocidad. Finalmente, se obtiene
+\[ N(v_{x},v_{y},v_{z})dv_{x}dv_{y}dv_{z}=N \bigg( \frac{m}{2\pi k T} \bigg)^{\frac{3}{2}} e^{-\frac{m(v_{x}^{2}+v_{y}^{2}+v_{z}^{2})}{2kT}} dv_{x}dv_{y}dv_{z} \]
+
+Existen también distribuciones de velocidad para cada componente, sin importar cómo son las demás componentes de tal forma que, por ejemplo,
+\[ N_{x}(v_{x})= \int _{-\infty}^{\infty} \int _{-\infty}^{\infty} N(v_{x},v_{y},v_{z})dv_{y}dv_{z} \]
+es la cantidad de partículas con velocidad en el intervalo $[v_{x};v_{x}+dv_{x}]$ sin importar cómo sean sus velocidades en $y$ o en $z$.
+
+Utilizando todo esto, podemos encontrar que
+\[ \langle v \rangle = \frac{\int _{0}^{\infty} v N(v) dv}{\int _{0}^{\infty} N(v)dv} = \sqrt{\frac{8kT}{\pi m}} \]
+
+Ahora nos encontramos en posición de discutir la ecuación de estado de un gas ideal. Consideremos el golpe de las partículas por unidad de área contra las paredes del contenedor. Si la pared es un plano orientado perpendicular al eje $x$, las componentes $p_{y}$ y $p_{z}$ de la cantidad de movimiento de las partículas golpeando contra la pared se conservan si las colisiones son elásticas (que asumimos, es este caso). En cada colisión la componente de velocidad $v_{x}$ dirigida contra la pared cambia a $-v_{x}$, dirigida hacia \emph{afuera} de la pared. La transferencia de cantidad de movimiento de la partícula a la pared, por colisión, es $2mv_{x}$. La transferencia de cantidad de movimiento con la pared en un tiempo $dt$ es la cantidad de veces que las partículas colisionan con la pared durante ese tiempo; para partículas cuya componente de velocidad en dirección $x$ es $v_{x}$, esto es, simplemente, la cantidad de partículas en un volumen que se extiende en una distancia $d=v_{x}dt$ detrás de la pared o, también, la cantidad de partículas por unidad de volumen multiplicado por $v_{x}dt$, es decir, $v_{x}dt \cdot N(v_{x}d_{x}/V)$. La cantidad de movimiento transferida en un tiempo $dt$ para partículas con velocidades en el intervalo $[v_{x};v_{x}+dv_{x}]$ es
+\[ dp_{x} \rfloor_{v_{x}}=2mv_{x} \frac{v_{x} dt \cdot N_{x}(v_{x})dv_{x}}{V}\]
+o
+\[ \frac{dp_{x}}{dt} \rfloor_{v_{x}}=\frac{2m}{V} v_{x}^{2}N_{x}(v_{x})dv_{x} \]
+
+La tasa total de cantidad de movimiento transferida a las paredes por colisiones que involucran partículas con todos los posibles valor de $v_{x}$ se obtiene integrando sobre $v_{x}$
+\[ \frac{dp_{x}}{dt}=\frac{NkT}{V} \]
+La tasa del tiempo de transferencia de cantidad de movimiento a cada unidad de área del contenedor es, de acuerdo con la ley de Newton, igual a la fuerza experimentada por unidad de área por la pared, lo que, por definición, es la presión $P$. De esta forma obtenemos
+\[ PV=NkT \]
+que es la ecuación de estado para un gas ideal de partículas independientes.
+
+Esta ecuación tiene una forma similar a la ley de los gases ideales que se conoce comúnmente como
+\[ PV=nRT \]
+donde $n$ es la cantidad de moles del gas en el sistema y $R$ es una constante medida experimentalmente que es la misma para todos los gases ideales. Si hay $n$ moles de gas presentes, la cantidad de partículas debe venir dada por $N=nN_{A}$ donde $N_{A}=6,02 \cdot 10^{23}$ es el número de Avogadro. Bajo estas condiciones
+\[ PV=nN_{A}kT \]
+donde es claro que, por comparación, la constante de Boltzmann viene dada por
+\[ k=\frac{R}{N_{A}} \]
+La constante de Boltzmann es, entonces, simplemente, la constante de los gases por partícula del sistema.
+
+Es claro ahora que el valor dado al multiplicador de Lagrange $\beta$ es correcto. Suponiendo que hubiésemos arrastrado $\beta$ a lo largo de todo el desarrollo, en este punto, hubiésemos obtenido la ecuación
+\[ PV=-\frac{N}{\beta} \]
+y, para que nuestros resultados respondan a las mediciones experimentales de un gas, nos hubiésemos visto obligados a elegir
+\[ -\frac{N}{\beta}=nRT=\frac{N}{N_{A}}RT \]
+o
+\[ \beta = -\frac{N_{A}}{RT}=-\frac{1}{kT} \]
+
+\section{Estadística de Fermi-Dirac.}
+
+En el desarrollo de la función de distribución de Maxwell-Boltzmann, las partículas fueron consideradas como distinguibles, cuando, es un hecho que, en realidad, es imposible distinguir entre electrones o cualesquiera otras partículas elementales. Más aún, se permitió cualquier número de partículas ocupar el mismo estado cuántico del sistema, a pesar del hecho de que muchas partículas, como los electrones, obedecen el principio de exclusión de Pauli, que establece que cada estado cuántico puede aceptar no más de una partícula. Si estas condiciones adicionales se imponen sobre el sistema, los cálculos de las secciones anteriores deben modificarse, resultando en otra función de distribución que se conoce como \emph{función de distribución de Fermi-Dirac}. Esta distribución de energía es de suma importancia dado que describe el comportamiento estadístico de los electrones libres en los metales y los semiconductores y, desde entonces muchas de las propiedades eléctricas y térmicas que no podían ser entendidas desde la base de la estadística clásica fueron consecuencias directas de la estadística de Fermi-Dirac.
+
+Si las partículas del sistema son indistinguibles, no pueden ser identificadas de la forma que se adoptó cuando se discutieron las posiblidades de la sección 3. La nueva ecuación para la cantidad de formas distintas e independientes de ordenar $N$ bolas en $n$ urnas de degeneración $g_{i}$ con las condiciones impuestas, descritas en el párrafo anterior, es
+\[ Q_{F}(N_{1},N_{2}, \ldots, N_{n})=\prod _{i=1}^{n} \frac{g_{i}!}{N_{i}!(g_{i}-N_{i})!} \]
+(Para proceder su desarollo recurrir al capítulo 13 del Alonso-Finn o el capítulo 5 del McKelvey; para expander en temas de combinatoria, recurrir a los apuntes de S. Grynberg).
+
+Luego se debe maximizar la función sujeta a las condiciones de cantidad de partículas constante y energía total del sistema constante. Usando la derivada del logaritmo y los multiplicadores de Lagrange obtenemos
+\[ f(\e_{j})=\frac{N_{j}}{g_{j}}=\frac{1}{1+e^{-\alpha-\beta \e_{j}}} \]
+que es la función de distribución de Fermi-Dirac.
+
+Como en la sección 4, el valor de $\beta$ será $\beta=-1/kT$ posponiendo para más adelante la justificación de la elección. Es costumbre escribir $\alpha$ como
+\[ \alpha=\frac{\e_{F}}{kT} \]
+donde $\e_{F}$ es un parámetro con dimensiones de energía que se conoce como \emph{energía de Fermi} o nivel de Fermi del sistema. La cantidad de partículas en el estado $j$ es, entonces
+\[ N_{j}=\frac{g_{j}}{1+e^{\frac{\e_{j}-\e_{F}}{kT}}} \]
+o, si los niveles de energía están sumamente juntos y se puede tomar un espectro continuo, entonces
+\[ N(\e) \, d\e=g(\e)f(\e)\,d\e=\frac{g(\e) \, d\e}{1+e^{\frac{\e-\e_{F}}{kT}}} \]
+Para un gas de partículas independientes como electrones libres, $g(\e)\,d\e$ es representado por la densidad de estados deducida en la sección 2, igual que para el gas de Maxwell-Boltzmann.
+
+La energía de Fermi, $\e_{F}$, es, en general, una función de la temperatura, cuya forma y dependencia dependen críticamente de la función densidad de estados del sistema, tal y como el parámetro $e^{\alpha}$ en la distribución de Maxwell-Boltzmann. Su valor se determina por la condición de cantidad de partículas constantes que sería
+\[ N=\textrm{const.}=\int \frac{g(\e)\,d\e}{1+e^{\frac{\e-\e_{F}}{kT}}}=\int g(\e)f(\e) \, d\e \]
+La integral es sobre todas las energías posibles para las partículas del sistema. Para un gas de Fermi de partículas independientes, $g(\e)$ viene dado por
+\[ g(\e)d\e=\frac{8\sqrt{2} \pi V}{h^{3}}m^{\frac{3}{2}} \sqrt{\e} \, d\e \]
+y la energía de Fermi se determina
+\[ N=\frac{8 \sqrt{2}\pi V m^{\frac{3}{2}}}{h^{3}} \int _{0}^{\infty} \frac{\sqrt{\e} \, d\e}{1+e^{\frac{\e-\e_{F}}{kT}}} \]
+Desafortunadamente, esta integral no se puede evaluar de una forma analítica, por lo tanto $\e_{F}$ no se puede determinar como una función simple de la temperatura. Para un gas bidimensional de partículas independientes, sin embargo, la función densidad de estados se puede demostrar que es
+\[ g(\e) \, d\e=\frac{4 \pi m A}{h^{2}}d\e \]
+independiente de la energía. En esta fórmula, $A$ representa el área de un contenedor bidimensional. Para este sistema, la ecuación de la cantidad de partículas queda como
+\[ N=\frac{4\pi m A}{h^{2}} \int _{0}^{\infty} \frac{d\e}{1+e^{\frac{\e-\e_{F}}{kT}}} \]
+que sí puede resolverse analíticamente y obteniendo, para $\e_{F}$,
+\[ \e_{F}(T)=kT \ln (e^{\frac{e_{F}(0)}{kT}}-1) \]
+donde
+\[ \e_{F}(0)=\frac{Nh^{2}}{4 \pi m A} \]
+es el valor que toma $\e_{F}(T)$ cuando la temperatura $T$ se acerca a cero.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{evstbidimensional.png}
+\caption{Gráfico de la energía de Fermi en función de la temperatura para un gas en un contendor bidimensional.}
+\end{center}
+\end{figure}
+
+La variación de la energía de Fermi para un gas bidimensional de partículas independientes se presenta en la figura 1. Se puede notar que, para este caso, la energía de Fermi es una función monótona decreciente de la temperatura. La energía de Fermi para un gas tridimensional, cuya función densidad de estados viene dada por la deducida en la sección 2, muestra el mismo comportamiento general, excepto que, para bajas temperaturas, la variación de la energía de Fermi con la temperatura es \emph{lineal}. Para muchos sistemas, incluyendo estos dos, la variación de la energía de Fermi con la temperatura es bastante pequeña en el rango de temperaturas físicamente posibles. En el gráfico de la figura 1, la temperatura para la cual $\e_{F}=0$ es del orden de $75000$K para un gas de electrones libres cuya densidad es la del cobre metálico. Por esta razón, en muchas aplicaciones la dependencia de la energía de Fermi con la temperatura puede despreciarse o aproximarse por una función lineal apropiada.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{evsttridimensional.png}
+\caption{Gráfico de la energía de Fermi en función de la temperatura para un gas en un contendor tridimensional.}
+\end{center}
+\end{figure}
+
+La distribución de Fermi,
+\[ f(\e)=\frac{1}{1+e^{\frac{\e-\e_{F}}{kT}}} \]
+se presenta en la figura 2 para varios valores de la temperatura. Dado que únicamente una partícula puede ocupar un estado cuántico dado, el valor de $f(\e)$ para una distribución de Fermi a una energía particular es igual a la probabilidad de que el estado cuántico correspondiente a esa energía esté ocupado. A cero absoluto, se puede ver fácilmente en la figura 2 que la distribución de Fermi se convierte en una función escalón.
+
+A medida que la temperatura aumenta, los bordes del escalón se empiezan a redondear, y la función de distribución varía rápidamente de ser casi unitaria a ser casi cero en un rango de algunos $kT$ alrededor de $\e_{F}$. Al mismo tiempo, el valor de $\e_{F}$ en sí cambia, siendo la variación ilustrada en la figura 2, aproximadamente la de un gas de electrones tridimensional con la función densidad de estados ya mencionada. A temperaturas muy altas, la función de distribución pierde su parecido con el escalón y varía mucho más lentamente con la energía. De la función de distribución de Fermi-Dirac es claro que para $\e=\e_{F}$,
+\[ f(\e_{F})=\frac{1}{2} \]
+con lo cual, un estado cuántico a la energía de Fermi tiene probabilidad $\frac{1}{2}$ de ser ocupado.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{nvse.png}
+\caption{Gráfico de la densidad de partículas $N(\e)$ en función de la energía de Fermi.}
+\end{center}
+\end{figure}
+
+La figura 3 muestra la distribución de la densidad de partículas, $N(\e)$, en función de la energía de Fermi para un gas de partículas independientes con la densidad de estados utilizada hasta ahora. Otra vez, a $T=0$ la curva tiene forma de escalón, la porción para la cuál $\e<\e_{F}$ siendo la densidad de estados una parábola y para $\e > \e_{F}$ es cero. A medida que la temperatura aumenta el aspecto de escalón se vuelve cada vez menos pronunciado como se ilustra en la figura 3. A bajas temperaturas, cuando al distribución de Fermi es parecida al escalón, la distribución se dice que es bastante \emph{degenerada}.
+
+Para bajas temperaturas, la distribución de Fermi-Dirac puede representarse como una esfera en el espacio de la cantidad de movimiento en el cual todos o la mayoría de los estados cuánticos de energía menor a $\e_{F}$ están ocupados y los demás, vacíos. De la siguiente ecuación
+\[ N=\textrm{const.}=\int \frac{g(\e)\,d\e}{1+e^{\frac{\e_{j}-\e_{F}}{kT}}}=\int g(\e)f(\e) \, d\e \]
+podemos obtener la ecuación para esta ''esfera de Fermi'' que es
+\[ p_{x}^{2}+p_{y}^{2}+p_{z}^{2}=2m\e_{F} \]
+el radio, por lo tanto, es $\sqrt{2m\e_{F}}$. A temperaturas muy altas, la superficie de la esfera de Fermi se vuelve débilmente definida, debido a la pérdida de similitud con el escalón, y el concepto pierde su utilidad.
+
+A pesar de que, como vimos anteriormente, no podemos obtener una solución analítica para encontrar la expresión de la energía de Fermi en un gas tridimensional, podemos utilizar la función escalón de $f(\e)$ (figura 2) para $T=0$ lo que nos permite hallar la solución
+\[ \frac{N}{V}=\frac{8 \sqrt{2} \pi m^{\frac{3}{2}}}{h^{3}} \int _{0}^{\e_{F}(0)} \sqrt{\e} \, d\e=\frac{16 \sqrt{2} \pi m^{\frac{3}{2}}\e_{F}(0)^{\frac{3}{2}}}{3h^{3}} \]
+Resolviendo esta ecuación para $\e_{F}(0)$ obtenemos
+\[ \e_{F}(0)=\frac{h^{2}}{8m} \bigg( \frac{3N}{\pi V} \bigg)^{\frac{2}{3}} \]
+De una manera similar, es posible obtener la energía total interna de un gas de Fermi a $T=0$, siendo el resultado
+\[ \frac{U_{0}}{V} = \frac{\pi h^{2}}{40m} \bigg( \frac{3N}{\pi V} \bigg)^{\frac{5}{3}}=\frac{3}{5} \frac{N}{V} \e_{F}(0) \]
+
+Para energías mucho mayores que $\e_{F}$, $e^{\frac{\e-\e_{F}}{kT}}$ es mucho más grande que la unidad y, para esas energías, la función de distribución de Fermi-Dirac puede ser escrita como
+\[ f(\e) \approx e^{\frac{\e_{F}}{kT}}e^{-\frac{\e}{kT}} \]
+Si todas las energías posibles del sistema satisfacen la condición $\e - \e_{F} \gg kT$, es decir, si $\e_{F}$ es varias veces $kT$ más chico que cualquier energía que pueda tener la partícula del sistema, entonces, se puede utilizar la aproximación de la última ecuación. La función de distribución aproximada es, simplemente, la función de distribución de Maxwell-Boltzmann pero con $\alpha=\e_{F}/kT$. Si la aproximación es válida, entonces la función de distribución de Fermi-Dirac y la función de distribución de Maxwell-Boltzmann son prácticamente iguales.
+
+Para un gas de Fermi bidimensional, donde la energía de Fermi viene dada por $\e_{F}(T)=kT \ln (e^{\frac{e_{F}(0)}{kT}}-1)$, si $T$ es lo suficientemente grande para que $kT \gg \e_{F}(0)$, el exponente $\e_{F}(0)/kT$ será muy pequeño, entonces la función exponencial puede ser aproximada como $1+\e_{F}(0)/kT$, dando
+\[ \e_{F}(T)=kT \ln \bigg( \frac{\e_{F}(0)}{kT} \bigg)= -\e_{F}(0) \bigg( \frac{kT}{\e_{F}(0)} \ln \bigg( \frac{kT}{\e_{F}(0)} \bigg) \bigg) \]
+De esto podemos ver que a medida que $T$ aumenta, $\e_{F}(T) \rightarrow - \infty$. Dado que la menor energía de cualquier partícula de un sistema es cero, es claro que la condición $\e - \e_{F} \gg kT$ será verdadera para temperaturas lo suficientemente altas, y la función de distribución será, por lo tanto, aproximadamente igual a la de Maxwell-Boltzmann. El mismo resultado aplica al caso tridimensional. Estos resultados son esperables en prácticas físicas dado que, a temperaturas altas, las partículas se distribuyen en un gran rango de estados de energía, el número de partículas en cada rango de energía posible es tan pequeño que siempre hay más estados cuánticos disponibles que partículas para ocuparlos. Bajo estas circunstancias, la probabilidad de que dos o más partículas ocupen un mismo estado cuántico es notoriamente pequeña y, por lo tanto, no hay mucha diferencia entre una función de distribución que obedece el principio de exclusión de Pauli (F-D) que una que no (M-B). Dado que la cantidad $\e_{F}(0)$, que se requiere que sea mucho menor que $kT$ para que las distribuciones coincidan, es proporcional a la densidad de partículas, $N/A$, la reducción de la distribución de Fermi a una distribución de Maxwell-Boltzmann tendrá lugar a temperaturas bajas para gases de baja densidad. Es por esto que la mayoría de las sustancias gaseosas obdecen la estadística de Maxwell-Boltzmann a temperaturas normales más que la de Fermi-Dirac (o Bose-Einstein). Para un gas denso de partículas livianas, como los electrones libres en un metal, sin embargo, la energía de Fermi al cero absoluto es bastante grande y la condición $\e - \e_{F} \gg kT$ se satisface sólo para temperaturas tan altas que no son realizables físicamente. En semiconductores, sin embargo, la forma peculiar de la densidad de estados es tal que la distribución de Maxwell-Boltzmann es virtualmente siempre una buena aproximación.
+
+Si se hubiese elegido otro valor para el multiplicador de Lagrange $\beta$ no hubiese existido la correspondencia entre ambas distribuciones para altas temperaturas. Pero, como hemos visto, esta es una aproximación físicamente razonable, debemos esperar que el multiplicador $\beta$ sea el que se eligió, justificado físicamente.
+
+\section{La distribución de Bose-Einstein.}
+
+En la sección anterior mostramos que la distribución estadística que caracteriza el comportamiento de un conjunto de partículas indistinguibles que obedecen el principio de exclusión de Pauli es la distribución de Fermi-Dirac. Dado que no todas las partículas elementales necesariamente obedecen el principio de Pauli (los fotones son el más claro ejemplo) es necesario considerar el comportamiento estadístico de partículas que, si bien son indistinguibles, no obedecen el principio de exclusión de Pauli. En este caso,
+\[ Q_{b}(N_{1},N_{2},\ldots,N_{n})=\prod _{i=1}^{n} \frac{(N_{i}+g_{i}-1)!}{N_{i}!(g_{i}-1)!} \]
+es el número de maneras estadísticamente indpendientes de distribuir $(N_{1}$, $N_{2}$, $\ldots$, $N_{n})$ partículas en los niveles de energía de un sistema que cumple con las condiciones descritas. (Para el desarrollo recurrir a la bibliografía mencionada en los dos casos anteriores).
+
+Ahora, procederemos a maximizar la función utilizando el logaritmo y los multiplicadores de Lagrange sobre la condición de cantidad de partículas y energía constantes, obteniendo
+\[ f(\e_{j})=\frac{N_{j}}{g_{j}}=\frac{1}{e^{-\alpha}e^{-\beta \e_{j}}-1} \]
+Esta fórmula se conoce como la función de distribución de Bose-Einstein. Una vez más, para garantizar la correspondencia con la distribución de M-B elegimos $\beta=-\frac{1}{kT}$ y $\alpha$ se puede determinar en términos de la cantidad de partículas del sistema. Para el caso continuo, obtenemos
+\[ f(\e)=\frac{1}{e^{\alpha}e^{\frac{\e}{kT}}-1} \]
+Para una densidad de estados de partículas independientes en el caso de un gas bidimensional de partículas libres, el parámetro $\alpha$ se puede calcular explícitamente de la misma forma que para $\e_{F}$ en la estadística de Fermi-Dirac. Se puede demostrar que a medida que $T$ aumenta, $\alpha \rightarrow -\infty$, en ese caso el factor exponencial del denominador se vuelve mucho mayor que la unidad y la distribución de Bose-Einstein se transforma en
+\[ f(\e) \approx e^{\alpha}e^{-\frac{\e}{kT}} \]
+que es la función de distribución del estilo de Maxwell-Boltzmann. El mismo comportamiento general se obtiene para un gas tridimensional, aunque no se puede obtener una expresión analítica para $\alpha$.
+
+En el caso de de un gas de Bose-Einstein de partículas independientes, a medida que la temperatura se acerca a cero, el valor de $\alpha$ tiende a cero, y el resultado es que todas las partículas del sistema tienden a condensarse en el nivel de energía más bajo del sistema. Este fenómeno se conoce como \emph{condensación de Bose} y es característico de los sistemas que obedecen la estadística de Bose-Einstein.
+
+En algunas aplicaciones, es de interés obtener la distribución de Bose-Einstein sin restringir la cantidad de partículas del sistema. Se puede ver que, entonces, $\alpha=0$, y la función de distribución queda como
+\[ f( \e)=\frac{1}{e^{\e/kT}-1} \]
+
+\end{document}

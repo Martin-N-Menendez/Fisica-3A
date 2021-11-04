@@ -1,0 +1,323 @@
+%Tipo de documento
+\documentclass[12pt,a4paper]{article}
+
+%PAQUETES
+
+%Parsear en .pdf
+\usepackage[pdftex]{color,graphicx}
+
+%Castellano
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+%Matematica
+\usepackage{amsmath, amssymb, amsfonts}
+
+\begin{document}
+
+\title{Teoría de bandas.}
+
+\author{$\Gamma$}
+
+\maketitle
+
+\section{Introducción.}
+
+La idea de este resumen es resolver la ecuación de Schrödinger para una red cristalina con el objetivo de poder determinar las propiedades eléctricas de los semiconductores y trazar la característica tensión-corriente. Como la corriente está determinada por el flujo de electrones, la idea es observar qué sucede cuando se le aplica una fuerza externa (una tensión) a un semiconductor que hace mover los electrones en el mismo.
+
+Utilizando los conceptos del átomo de un sólo electrón, donde se observa que la probabilidad de encontrar el electrón a una determinada distancia del núcleo no es posible para \emph{cualquier} distancia, podemos extrapolarlos y, con ayuda de la ecuación de Schrödinger, resolver el comportamiento del electrón en una red cristalina y entender el concepto de bandas permitidas y bandas prohibidas.
+
+En la figura 1a se tiene la probabilidad de encontrar al electrón a una determinada distancia del radio. En la figura 1b se tiene lo que sucede cuando se aproximan dos átomos. En la zona donde se intersectan hay una interacción entre los dos electrones, dividiendo ese nivel cuantizado de energía en otros dos niveles (figura 1c) debido al principio de exclusión de Pauli.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{probabilidades.png}
+\caption{(a) Probabilidad de encontrar al electrón. (b) Probabilidad de dos átomos cercanos. (c) División de un nivel cuantizado de energía.}
+\end{center}
+\end{figure}
+
+Entonces, si ahora agarramos y empezamos a juntar muchos átomos para formar la red cristalinas, los átomos se van a ir solapando, dividéndose en más y más estados de energía cuantizados. Cada vez más pegados unos a otros. Cuando se alcanza la distancia de equilibrio interatómico, habrá bandas de energía permitida, pero cada una de esas bandas estará dividida en muchos estados cuantizados, uno para cada electrón que forma la red. Por lo tanto, si la cantidad de átomos que forman la red es muy grande (y es esperable que lo sea), cada banda de energía permitida, estará subdividida en una cantidad muy grande de estados discretos de energía, formando un \emph{cuasi-continuo}.
+
+Si se juntan muchos átomos con más de un electrón, los átomos de cada nivel de energía se solaparán (todos los de $n=3$, si las distancias son correctas, todos los de $n=2$, etc.), dividiendo cada nivel en otros subniveles. Se crean así, a la distancia interatómica de equilibrio, bandas permitidas ($n=1$, $n=2$, etc.), separadas por bandas prohibidas (las distancias entre los distintos $n$).
+
+\section{El modelo de Kronig-Penney.}
+
+En la figura 2a se observa la función potencial para un sólo electrón, libre de interacciones. En la figura 2b se observan varios potenciales creados por distintos átomos. En la figura 2c se puede observar cómo se solapan estos potenciales creando el potencial de un cristal unidimensional. Éste último potencial es el que se utilizará para resolver la ecuación de Schrödinger.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{potenciales.png}
+\caption{(a) Funcion potencial de un solo electrón. (b) Función potencial de varios átomos. (c) Resultado del solape de varias funciones potenciales.}
+\end{center}
+\end{figure}
+
+En la figura 3 se presenta el potencial unidimensional para un cristal de acuerdo al modelo de Kronig-Penney al cuál se le aplicará la ecuación de Schrödinger. La idea va a ser resolver la ecuación de Schrödinger para cada región (I y II) y utilizar condiciones de periodicidad. Como se ha visto, los fenómenos más interesantes ocurren cuando $\epsilon<V_{0}$, donde tenemos a la partícula atrapada en el pozo de potencial pero que, sin embargo, puede ocurrir un efecto túnel para pasar al siguiente pozo de potencial.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{potencialkronigpenney.png}
+\caption{Función potencial de un cristal unidimensional de acuerdo al modelo de Kronig-Penney.}
+\end{center}
+\end{figure}
+
+Para resolver la ecuación de Schrödinger, utilizaremos el Teorema de Bloch que dice que, las soluciones en un potencial periódico, son de la forma
+\[ \psi (x) = u(x) e^{jkx} \]
+donde $k$ es un parámetro conocido como \emph{constante de movimiento}. La función $u(x)$ es una función periódica de período $T=a+b$. Sabemos que la ecuación completa para una onda es de la forma
+\[ \Psi (x,t)= \psi(x) \phi(t) = u(x) e^{jkx} \cdot e^{-j \frac{\epsilon}{\hbar} t} \]
+\[ \Psi (x,t)= u(x) e^{j(kx - \frac{\epsilon}{\hbar}t)} \]
+que, como se puede observar, es una onda viajera que representa el movimiento del electrón en un cristal. La amplitud es una función periódica ($u(x)$) y el número de onda es $k$.
+
+Ahora buscaremos una relación entre $\epsilon$, $V_{0}$ y $k$. Para la región I de la figura 3, ($V(x)=0$, $0<x<a$) la ecuación de Schrödinger queda de la forma
+\[ \underbrace{ \frac{d^{2}u_{1}(x)}{dx^{2}}+2jk \frac{du_{1}(x)}{dx} - (k^{2}-\alpha^{2})u_{1}(x)=0 }_{ \frac{\partial^{2} \psi(x)}{\partial x^{2}} + \frac{2m}{\hbar^{2}} (\epsilon - V(x)) \psi (x) = 0} \]
+donde $u_{1}(x)$ es la amplitud en la región I y
+\[ \alpha^{2}=\frac{2m\epsilon}{\hbar^{2}} \]
+
+Para la región II, tal que $V(x)=V_{0}$ y $-b<x<0$ la ecuación queda de la forma
+\[ \frac{d^{2}u_{2}(x)}{dx^{2}}+2jk \frac{du_{2}(x)}{dx} - \bigg( k^{2}-\alpha^{2}+ \frac{2mV_{0}}{\hbar^{2}} \bigg) u_{2}(x)=0 \]
+donde $u_{2}(x)$ es la amplitud en la región II. Se puede definir
+\[ \frac{2m}{\hbar^{2}}(\epsilon - V_{0})=\alpha^{2} - \frac{2mV_{0}}{\hbar^{2}}=\beta^{2} \]
+quedando la ecuación de la siguiente forma
+\[ \frac{d^{2}u_{2}(x)}{dx^{2}}+2jk \frac{du_{2}(x)}{dx} - (k^{2}-\beta^{2})u_{2}(x)=0 \]
+Notar que, si $\epsilon < V_{0}$, $\beta$ resulta ser imaginario y si $\epsilon > V_{0}$, $\beta$ es real.
+
+La solución para la ecuación de la región I es
+\[ u_{1}(x)= Ae^{j(\alpha-k)x} + Be^{-j(\alpha+k)x} \qquad \textrm{ para }0<x<a \]
+y para la región II tenemos
+\[ u_{2}(x)= Ce^{j(\beta -k)x} + De^{-j(\beta +k)x} \qquad \textrm{ para }-b<x<0 \]
+
+Como el potencial $V(x)$ es finito en todo el espacio, tanto la función $\psi(x)$ como su derivada, deben ser continuas y, consecuentemente, $u_{1}(x)$ y $u_{2}(x)$ también. Para $u_{1}(0)=u_{2}(0)$ nos queda $A+B-C-D=0$; para las derivadas, la condición queda $(\alpha -k)A-(\alpha+k)B-(\beta-k)C+(\beta+k)D=0$. También, si consideramos la periodicidad de la función, donde $u_{1}(x)$ para $x\rightarrow a$ tiene que ser igual a $u_{2}(x)$ para $x\rightarrow -b$, obteniendo la condición $u_{1}(a)=u_{2}(-b)$ que nos da por resultado la ecuación $Ae^{j(\alpha-k)a} + Be^{-j(\alpha+k)a}-Ce^{-j(\beta -k)b} - De^{j(\beta +k)b}=0$; y, para las derivadas, $(\alpha -k)Ae^{j(\alpha-k)a} - (\alpha +k) Be^{-j(\alpha+k)a}- (\beta -k)Ce^{-j(\beta -k)b} + (\beta +k) De^{j(\beta +k)b}=0$.
+
+De esta forma, obtenemos un sistema homogéneo de cuatro ecuaciones con cuatro incógnitas ($A,B,C,D$). La única forma de que esta situación sea la no trivial, tenemos que pedir que el determinante sea igual a cero. De esta forma, encontramos qué valores tienen los coeficientes para cumplir con la ecuación de Schrödinger y las condiciones de contorno impuestas por el problema, sin que, necesariamente, la solución sea la trivial. La condición de que el determinante sea igual a cero, queda ilustrada por la ecuación
+\[ \frac{-(\alpha^{2}+\beta^{2})}{2\alpha\beta} \sin(\alpha a) \sin(\beta b) + \cos(\alpha a) \cos(\beta b)= \cos(k(a+b)) \]
+que relaciona al parámetro $k$ con la energía $\epsilon$ (a través de $\alpha$) y con la función potencial $V_{0}$ (a través del parámetro  $\beta$).
+
+Si ahora consideramos las soluciones para $\epsilon <V_{0}$, donde el electrón está contenido en el cristal, tenemos que $\beta$ es imaginario, y podemos definir $\beta=j\gamma$ (donde $\gamma$ es una cantidad real) y, reemplazando en la ecuación, y utilizando las relaciones entre las funciones trigonométricas y las hiperbólicas, tenemos
+\[ \frac{\gamma^{2}-\alpha^{2}}{2 \alpha \gamma} \sin(\alpha a) \sinh(\gamma b) + \cos(\alpha a) \cosh(\gamma b) =  \cos(k(a+b)) \]
+La solución a esta ecuación no puede ser hallada analíticamente, por lo tanto hay que recurrir a métodos númericos o gráficos. Cada punto que sea solución a esta ecuación, representará las relaciones que deben cumplir $k$, $\epsilon$ y $V_{0}$ para encontrar una solución a la ecuación de Schrödinger que sea \emph{no} nula y cumpla con las condiciones de contorno requeridas. Si la solución para una sola caja de potencial, daba que existían niveles discretos de energía, la solución para un arreglo periódico de cajas de potencial, va a resultar en bandas de energía permitidas y prohibidas.
+
+(\textbf{Obs.} Llegado a este punto, el Neamen toma un camino distinto al McKelvey. En ambos casos, llegan a las mismas fórmulas, pero por razonamientos diferentes. En algunos casos, es más sencillo el razonamiento del McKelvey pero, como para deducir la cantidad de movimiento $p$ del cristal, utiliza el paquete de ondas que nunca lo entendí, voy a seguir con el Neamen, aunque no me gusta la aproximación que hace para deducir todas las fórmulas.)
+
+Para obtener una ecuación que sea más graficable vamos a hacer tender el ancho de la barrera de potencial a cero, $b\rightarrow 0$, y la altura de la barrera a infinito, $V_{0} \rightarrow \infty$, de tal forma que el producto $bV_{0}$ permanezca finito. De esta forma, la ecuación anterior, se reduce a
+\[ P' \frac{\sin(\alpha a)}{\alpha a} + \cos (\alpha a) = \cos(ka) \qquad \textrm{ donde } \qquad P'=\frac{mV_{0}ba}{\hbar^{2}} \]
+
+\emph{Esta última ecuación da otra relación entre $k$, la energía $\epsilon$ (a través de $\alpha$) y el potencial de la barrera $bV_{0}$. Es importante notar que esta ecuación NO es una solución de la ecuación de Schrödinger, sino que es una ecuación que debe cumplirse para que la ecuación de Schrödinger tenga solución.} Si asumimos que el cristal es infinitamente grande, $k$ puede tomar cualquier valor real (por Teorema de Bloch).
+
+Para empezar, consideremos el caso para el cual $V_{0}=0$ tal que $P'=0$ y es el caso de una partícula libre debido a que no hay barreras de potencial. De la ecuación anterior nos queda que $\cos(\alpha a)=\cos(k a)$ y, por lo tanto, $a=k$. Como la energía potencial es cero, toda la energía que pueda tener la partícula, es cinética, de esta forma despejamos
+\[ a= \sqrt{\frac{2m\epsilon}{\hbar^{2}}} = \sqrt{\frac{2m(\frac{1}{2}mv^{2})}{\hbar^{2}}} = \frac{p}{\hbar}=k \]
+donde $p$ es la cantidad de movimiento de la partícula libre. Como podemos observar, el parámetro $k$ está relacionado con la cantidad de movimiento del electrón libre y es también conocido por número de onda. También podemos relacionar la energía con la cantidad de movimiento (y, consecuentemente, con $k$) mediante la siguiente expresión
+\[ \epsilon = \frac{p^{2}}{2m} = \frac{k^{2} \hbar^{2}}{2m} \]
+
+Podemos graficar la energía $\epsilon$ en función de la cantidad de movimiento $p$ (que será un gráfico de igual forma -pero distinta escala- si se lo hace en función del parámetro $k$) para una partícula libre. Este gráfico se presenta en la figura 4.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{evskparticulalibre.png}
+\caption{Energía en función de $k$ o $p$ para un electrón libre.}
+\end{center}
+\end{figure}
+
+Ahora, analizaremos qué sucede para el electrón en el cristal. Cuando se aumenta el valor de $P'$, la partícula se vuelve cada vez más unida al cristal. Si consideramos el primer sumando de la parte izquierda de la ecuación $P' \frac{\sin(\alpha a)}{\alpha a} + \cos (\alpha a) = \cos(ka)$ y la graficamos en función de $\alpha a$ obtenemos el gráfico de la figura 5a. Luego graficamos el segundo sumando de la parte izquierda de la ecuación (figura 5b). y, finalmente, sumamos, para obtener la figura 5c.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{particulasujetaalcristal.png}
+\caption{(a) Gráfico de $P'\sin(\alpha a)/(\alpha a)$ en función de $\alpha a$. (b) Gráfico de $\cos (\alpha a)$ en función de $\alpha a$. (c) Suma de ambos gráficos.}
+\end{center}
+\end{figure}
+
+Debe observarse que, para que la ecuación tenga lógica física, los valores posibles son para aquellos que están entre $-1$ y $1$ puesto que son los valores que puede tomar el coseno de la derecha para valores reales de $k$. Esto crea ciertos valores de $k$ para los cuáles nos encontramos en una región permitida, y ciertos intervalos de bandas prohibidas. (Mostrados en la figura 5c).
+
+Como los gráficos de la figura 5 están en función de $\alpha a$ y, es posible, que queramos algo más tangible, podemos utilizar la relación entre $\alpha$ y $\epsilon$, $\alpha^{2}=2m\epsilon /\hbar^{2}$, y el gráfico de la figura 5c, para obtener la gráfica de $\epsilon$ en función del número de onda $k$. Este gráfico se ilustra en la figura 6.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{evskredcristalina.png}
+\caption{Energía en función de $k$ para un electrón en la red cristalina.}
+\end{center}
+\end{figure}
+
+Si consideramos que, en $ P' \frac{\sin(\alpha a)}{\alpha a} + \cos (\alpha a) = \cos(ka)$, $\cos(ka)$ es una función periódica tal que $\cos(ka)=\cos(ka+2n\pi)=\cos(ka-2n\pi)$ (donde $n \in \mathbb{N}$), podemos desplazar por $2\pi$ los segmentos de la figura 6 dado que, matemáticamente, no alteraría la ecuación anterior. De esta forma, podemos obtener un gráfico de $\epsilon$ en función de $k$ para $-\pi/a < k < \pi/a$. (Figura 7.).
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.78\textwidth]{evskredcristalinareducido.png}
+\caption{Energía en función de $k$ para un electrón en la red cristalina. Esquema reducido.}
+\end{center}
+\end{figure}
+
+Dado que la cantidad de movimiento de un electrón libre es $p=\hbar k$ y que la figura 6 se puede aproximar a la parábola de la figura 4, se define $p=\hbar k$ como la \emph{cantidad de movimiento del cristal}. Cabe aclarar que este valor \emph{no} es la cantidad de movimiento del electrón \emph{en} el cristal, sino que es una constante del movimiento que contempla la interacción con el cristal.
+
+Hasta ahora, utilizamos el modelo de Kronig-Penney, que ilustra la energía para los electrones en un potencial periódico unidimensional de una red cristalina, para introducir el concepto de bandas de energía permitidas y prohibidas. Sin embargo, existen teorías de bandas más complejas que sirven para describir qué sucede con los electrones en el caso tridimensional.
+
+\section{Conducción.}
+
+Dado que lo que nos interesa es determinar la característica tensión-corriente, consideraremos la conducción eléctrica aplicada a la teoría de bandas que desarrollamos recientemente.
+
+El silicio se une con otros átomos de silicio a través de uniones covalentes formando un cristal. Si consideramos UN sólo átomo de silicio, sabemos que diez de sus catorce electrones están perfectamente unidos al núcleo; y que los últimos cuatro, dos en los orbitales 3s (que pueden contener dos electrones), y dos en los orbitales 3p (que pueden contener seis electrones) son los encargados de participar en las reacciones químicas y en las uniones covalentes. Si juntamos muchos átomos de silicio de tal forma que la distancia de los orbitales 3s y 3p al núcleo se reduzca, estos orbitales estarán tan cerca que interactuarán entre sí, formando dos orbitales (capaces de contener cuatro electrones cada uno), uno de menor energía y uno de mayor energía. Casualmente, esto es lo que sucede a la distancia interatómica de equilibrio. A $T=0$K, los cuatro electrones de valencia del silicio se encontrarán en el orbital de menor energía (banda de valencia) y los cuatro estados cuánticos de la banda de mayor energía (banda de conducción) permanecerán vacíos. La distancia energética $\epsilon _{g}$, entre ambas bandas (u orbitales), es el ancho de banda de la banda prohibida. Todo lo explicado se ilustra en la figura 8.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{orbitalessi.png}
+\caption{División en orbitales del Si de acuerdo a la distancia de los electrones al núcleo.}
+\end{center}
+\end{figure}
+
+El gráfico de la figura 8 presenta la energía, $\epsilon$, en función de la distancia de los orbitales al núcleo, $r$. Se puede observar que, para $r \rightarrow \infty$ los orbitales se estabilizan en 3s y 3p como es esperable para un sólo átomo de Si. Para la distancia interatómica de equilibrio, $a_{0}$, existen dos posibles orbitales de energías distintas, separados por una distancia energética $\epsilon _{g}$.
+
+A temperatura $T=0$K todos los electrones de cada átomo de silicio están en el menor estado de energía posible y participan de los enlaces covalentes. Como vimos en la sección precedente, cuando estos átomos son traídos juntos, los niveles de energía se subdividen en otros niveles de energía debidos al principio de exclusión de Pauli. A $T=0$K los $4N$ estados de la banda inferior están completamente ocupados por los electrones de valencia. ($N$ es la cantidad de átomos). La banda de energía superior (banda de conducción) está completamente vacía a $T=0$K.
+
+Ahora bien, a medida que aumenta la temperatura, algunos electrones obtendrán suficiente energía térmica para romper la unión covalente y colocarse en la banda de conducción. Esto se ilustra en la figura 9.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{pasajedebanda.png}
+\caption{(a) Representación bidimensional atómica. (b) Representación de líneas.}
+\end{center}
+\end{figure}
+
+Dado que el semiconductor está, inicialmente, descargado, cuando el $e^{-}$ logra romper la unión covalente deja en su posición un lugar vacío \emph{cargado positivamente} (por ausencia de la carga negativa del electrón que debiera estar en ese lugar). A medida que la temperatura sigue aumentando, una mayor cantidad de electrones romperán sus uniones con el núcleo, saltando a la banda de conducción, y dejando a la banda de valencia con \emph{huecos} cargados positivamente.
+
+En la figura 10, se ilustra este suceso desde el punto de vista del gráfico de $\epsilon$ vs. $k$. Hasta ahora se consideró que no había fuerzas externas aplicadas sobre el semiconductor y, por esta razón, las distribuciones de electrones y huecos son simétricas con respecto a $k$.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{evskpasajedebanda.png}
+\caption{(a) $T=0$K. (b) $T>0$K.}
+\end{center}
+\end{figure}
+
+\subsection{Corriente de deriva.}
+
+La corriente se debe a un flujo neto de carga. Si tenemos una cantidad determinada de iones positivamente cargados, la corriente de deriva será
+\[ J=qNv_{d} \qquad ; \qquad [ J ] = \frac{\textrm{A}}{\textrm{cm}^{2}} \]
+donde $q$ es la carga, $N$ la densidad volumétrica de iones, y $V_{d}$ es la velocidad promedio de deriva. Si en lugar de considerar el promedio, consideramos cada ion por separado, tenemos que
+\[ J= q \sum _{i=1}^{N} v_{i} \]
+donde $v_{i}$ es la velocidad individual del $i$-ésimo ion. (\textbf{Obs.} La corriente es directamente proporcional a la velocidad de las cargas; consecuentemente, la corriente está íntimamente relacionada con qué tan bien puedan moverse las cargas en el medio.).
+
+Dado que los electrones son partículas cargadas, una deriva neta de los mismos en la banda de conducción dará lugar a una corriente eléctrica. Si no hay fuerzas aplicadas, la distribución de estos electrones es simétrica (par) respecto de $k$ (como se ilustra en la figura 10b). Es decir, habrá tantos electrones que tengan un valor $|k|$ como los que tengan $-|k|$, dando lugar a una corriente nula. (Recordar que el parámetro $k$ para un electrón libre está directamente relacionado con la cantidad de movimiento $p$). Este resultado es esperable dada la inexistencia de una fuerza externa.
+
+Si hay una fuerza aplicada, los electrones ganarán energía, $d\epsilon$, dada por la ecuación
+\[ d\epsilon = F dx = F v dt \]
+donde $F$ es la fuerza aplicada, $dx$ el diferencial de distancia que recorre la partícula, $v$ la velocidad de la misma y $dt$ un diferencial del tiempo durante el que se aplica la fuerza. Si esta fuerza afecta a los electrones presentes en la banda de conducción, estos electrones encontrarán estados cuánticos libres a los cuáles podrán moverse, ganando energía y una cantidad de movimiento neta. Este efecto se puede observar mediante una asimetría con respecto a $k$ del gráfico de $\epsilon$ vs. $k$ tal como se ilustra en la figura 11.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{evskconfuerza.png}
+\caption{Asimetría con respecto a $k$ al aplicársele una fuerza externa al semiconductor.}
+\end{center}
+\end{figure}
+
+\subsection{La masa efectiva del electrón.}
+
+El movimiento de un electrón en la red cristalina va a ser, claramente, distinto del movimiento de un electrón en el vacío. Además de una fuerza externa aplicada, existen fuerzas internas debidas a la atracción con los iones positivos y la repulsión con otros electrones, que influenciarán el movimiento del electrón. Si consideramos
+\[ F_{total} = F_{ext}+F_{int}=ma \]
+donde $F_{total}$, $F_{ext}$ y $F_{int}$ son las fuerzas totales, externa e interna, respectivamente; $m$ es la masa en reposo del electrón y $a$ es la aceleración. Dada la dificultad que presenta considerar todas las fuerzas internas del electrón, escribiremos la siguiente ecuación
+\[ F_{ext} = m^{\ast} a \]
+donde el parámetro $a$ ya está directamente relacionado con la fuerza externa. $m^{\ast}$ es la \emph{masa efectiva} del electrón y tiene en cuenta la masa propia y los efectos ocasionados por las fuerzas internas.
+
+Primero, consideramos un electrón libre (figura 4) sabiendo que existe una relación entre energía $\epsilon$ y cantidad de movimiento $p$ dada por $\epsilon=\hbar^{2}k^{2}/2m$. Si derivamos esta ecuación respecto de $k$ obtenemos (sería algo así como el ritmo de cambio de la energía $\epsilon$ a medida que varía el número de onda $k$ o la cantidad de movimiento $p$)
+\[ \frac{d\epsilon}{dk} = \frac{\hbar^{2}k}{m} = \frac{\hbar p}{m} \]
+Relacionando la cantidad de movimiento con la velocidad
+\[ \frac{1}{\hbar} \frac{d\epsilon}{dk}=\frac{p}{m}=v \]
+donde $v$ es la velocidad de la partícula. Como se puede observar, la variación de la energía cuando varía el número de onda (o cantidad de movimiento) está directamente relacionada con la velocidad. En otras palabras, la velocidad es un indicador de cuánto varía la energía al variar el número de onda o la cantidad de movimiento.
+
+Si ahora derivamos devuelta respecto de $k$ obtenemos
+\[ \frac{d^{2}\epsilon}{dk^{2}} = \frac{\hbar^{2}}{m} \qquad \Rightarrow \qquad \frac{1}{\hbar^{2}} \frac{d^{2}\epsilon}{dk^{2}} = \frac{1}{m} \]
+Se puede observar, entonces, que la derivada segunda es inversamente proporcional a la masa. Si consideramos la masa constante (despreciamos los efectos relativistas), entonces la segunda derivada es constante. Además, se puede ver, por la figura 4, que la segunda derivada es siempre positiva, con lo cual, la masa del electrón también lo será.
+
+Si aplicamos un campo eléctrico al electrón libre y usamos la ecuación clásica de Newton, tenemos
+\[ F=ma=-eE \]
+donde $a$ es la aceleración, $E$ es el campo eléctrico aplicado, $e$ es el valor de la carga del electrón. Despejando para $a$ tenemos
+\[ a= \frac{-eE}{m} \]
+El movimiento del electrón es opuesto a la fuerza aplicada debido a que su carga es negativa.
+
+Ahora intentaremos aplicar este resultado a los electrones que se encuentran en las bandas de energía permitida.
+
+Si aproximamos el fondo de la banda de conducción con una parábola (figura 12a), obtendremos un gráfico de $\epsilon$ vs. $k$ igual al de la partícula libre (figura 4).
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{evskaproximacion.png}
+\caption{(a) Aproximación parabólica de la banda de conducción. (b) Aproximación parabólica de la banda de valencia.}
+\end{center}
+\end{figure}
+
+De esta forma la energía podría ser del estilo de
+\[ \epsilon - \epsilon _{c} = C_{1}k^{2} \]
+y así poder utilizar las relaciones obtenidas anteriormente para la partícula libre. Es decir, el fondo de la banda de conducción y el techo de la banda de valencia se las considera como partículas libres, dejando que los efectos internos de la red cristalina sean tenidos en cuenta en la masa efectiva. La energía $\epsilon _{c}$ es la energía del fondo de la banda de conducción. Como $\epsilon>\epsilon _{c}$, $C_{1}$ es una cantidad positiva.
+
+Derivando dos veces respecto de $k$ obtenemos
+\[ \frac{d^{2} \epsilon}{dk^{2}} = 2C_{1} \]
+que puede ser llevado a la forma
+\[ \frac{1}{\hbar^{2}} \frac{d^{2} \epsilon}{dk^{2}} = \frac{2C_{1}}{\hbar^{2}} \]
+
+Igualando a la relación encontrada para la segunda derivada de una partícula libre, tendremos que (observar que, en general, sólo una porción limitada de la curva de la banda de conducción responderá acorde a la aproximación parabólica)
+\[ \frac{1}{\hbar^{2}} \frac{d^{2} \epsilon}{dk^{2}} = \frac{2C_{1}}{\hbar^{2}} = \frac{1}{m^{\ast}} \]
+donde $m^{\ast}$ es la masa efectiva. Como $C_{1}$ se demostró que era mayor a cero, la masa efectiva también lo es. (\textbf{Obs.} Se pone directamente la masa efectiva porque hay que observar -figura 10 u 11, por ejemplo- que los gráficos de $\epsilon$ vs. $k$ ilustran el efecto de la fuerza externa. Es decir, en esos gráficos, se observan los pasajes de banda debido a fuerzas externas, como en el caso de la figura 11. Entonces, al aplicarle la aproximación \emph{al gráfico} consideramos directamente la masa efectiva, puesto que el gráfico ilustra los efectos de la fuerza externa y, anteriormente, se definió a la fuerza externa usando la masa efectiva.)
+
+La masa efectiva es un parámetro que relaciona los resultados de la mecánica cuántica con las ecuaciones clásicas de la fuerza. Por lo tanto, en la mayoría de los casos, un electrón en el fondo de la banda de conducción, se puede considerar como una partícula cuyo movimiento puede ser modelado por la mecánica clásica y donde todos los efectos de la mecánica cuántica están contemplados en la masa efectiva. Si aplicamos una fuerza eléctrica a un electrón en el fondo de la banda de conducción, podemos obtener la aceleración como
+\[ a = \frac{-eE}{m_{n}^{\ast}} \]
+donde $m_{n}^{\ast}$ es la masa efectiva del electrón en el fondo de la banda de conducción. Este valor es constante.
+
+\subsection{Concepto de hueco.}
+
+Cuando un electrón de valencia salta a la banda de conducción crea un ''estado vacío'' cargado positivamente. El movimiento de estos electrones a la banda de conducción es equivalente al movimiento, a través del semiconductor, del estado vacío. De esta forma, el semiconductor presenta \emph{otro} portador de cargas que puede dar lugar a una corriente. Este portador se conoce como \emph{hueco} y también se puede modelar como una partícula bajo los supuestos de la mecánica clásica.
+
+La corriente de deriva de los electrones en la banda de valencia está dada por
+\[ J= -e \sum _{i (\textrm{llenos})} v_{i} \]
+donde la suma engloba todos los estados cuánticos que contengan a un electrón (figura 10b). Esta suma es bastante difícil puesto que consideramos que la banda de valencia tiene mucha cantidad de electrones. Sin embargo, se puede reescribir de la siguiente forma
+\[ J = -e \sum _{i (\textrm{total})} v_{i} + e \sum _{i (\textrm{vacíos})} v_{i} \]
+donde consideramos a la banda llena y le restamos la velocidad de deriva de los \emph{huecos}. (Que, si los electrones son muchos, los huecos son pocos, y la suma es más sencilla).
+
+Si consideramos una banda completamente llena, todos los estados cuánticos están ocupados por electrones. Como vimos anteriormente, cada uno de ellos se puede considerar moviéndose con una velocidad
+\[ v(\epsilon) = \frac{1}{\hbar} \frac{d\epsilon}{dk} \]
+La banda es simétrica en $k$ (si la banda de valencia está llena, indefectiblemente todos los estados cuánticos están ocupados y la distribución es simétrica) con lo cuál, para cada electrón que se mueva con velocidad $|v|$ existe otro que se mueva con velocidad $-|v|$. Dado que la banda está llena, la distribución respecto de $k$ no puede ser cambiada al aplicarle una fuerza externa (no hay lugar libre a dónde los electrones puedan moverse). Consecuentemente, la velocidad de deriva neta de una banda de valencia completamente llena es cero
+\[ -e \sum _{i (\textrm{total})} v_{i} \equiv 0 \qquad \Rightarrow \qquad J=+e \sum _{i (\textrm{vacíos}) } v_{i} \]
+donde podemos escribir a la corriente de una banda casi llena en función de la velocidad de deriva de los huecos, y donde $v_{i} = (1/\hbar) (d\epsilon/dk)$ es la velocidad asociada el hueco. Esta velocidad $v_{i}$ está relacionada con qué tan bien se mueven los huecos en el semiconductor.
+
+Ahora, consideremos un electrón en la parte superior de la banda de valencia (figura 12b). La parte superior puede ser aproximada mediante la parábola
+\[ \epsilon - \epsilon _{v}= -C_{2} k^{2} \]
+donde $\epsilon _{v}$ es la energía máxima de la banda. Como $\epsilon < \epsilon _{v}$, $C_{2}$ es una cantidad positiva. Derivamos dos veces respecto de $k$ y acomodamos
+\[ \frac{d^{2} \epsilon}{dk^{2}} = -2C_{2} \qquad \Rightarrow \qquad \frac{1}{\hbar^{2}} \frac{d^{2} \epsilon}{dk^{2}} = \frac{-2C_{2}}{\hbar^{2}} \]
+obteniendo que
+\[ \frac{1}{\hbar^{2}} \frac{d^{2} \epsilon}{dk^{2}} = \frac{-2C_{2}}{\hbar^{2}} = \frac{1}{m^{\ast}} \]
+donde $m^{\ast}$ es la masa efectiva. Como demostramos que $C_{2}$ es una cantidad positiva, la masa efectiva es una cantidad negativa. Con lo cual, un electrón moviéndose en la parte superior de una banda de energía, se mueve con masa efectiva negativa. (No olvidar que la masa efectiva relaciona la mecánica cuántica con la clásica, por lo tanto no podemos decir nada de que la masa efectiva sea negativa. Hay que recordar que la masa efectiva tiene en cuenta todas las fuerzas internas que actúan sobre el electrón y éstas son las que pueden causar una aceleración opuesta -debida a la masa efectiva- a la fuerza externa aplicada.).
+
+Ahora le aplicamos un campo eléctrico a un electrón en la parte superior de una banda de energía y, por Newton, tenemos
+\[ F= m^{\ast} a = -eE \]
+Sin embargo, $m^{\ast}$ es una cantidad negativa, con lo cual, podemos escribir
+\[ a=\frac{-eE}{-|m^{\ast}|}=\frac{+eE}{|m^{\ast}|} \]
+con lo cual, un electrón en la parte superior de la banda de valencia, se mueve en la \emph{misma dirección} que el campo eléctrico aplicado.
+
+Por lo tanto, podemos modelar dicha banda suponiendo partículas cargadas positivamente y con una masa efectiva también positiva (observar que ambas condiciones cumplen la aceleración en la dirección y sentido de $E$ prevista para electrones en la parte superior de la banda.). La densidad de estas partículas es igual a la densidad de estados vacíos. Esta nueva partícula es el \emph{hueco}. El hueco tiene una carga positiva de magnitud electrónica y una masa efectiva positiva $m_{p}^{\ast}$ de tal forma que se mueva en la dirección de $E$ cuando es aplicado.
+
+\subsection{Metales, aisladores y semiconductores.}
+
+Las bandas de energía de los aisladores están, o completamente llenas, o completamente vacías, porque, como se vio en la sección anterior, tanto una banda completamente llena o completamente vacía, no darán lugar a corrientes cuando se les aplique una fuerza externa (en el caso de la banda vacía, no hay electrones para mover, y en el caso de la banda llena, no hay lugares libres a donde los electrones puedan moverse.). En general, el ancho de banda de la banda prohibida suele ser de entre 3,5 hasta 6eV con lo cual, a temperatura ambiente, la cantidad de electrones en la banda de conducción es despreciable (hay muy pocos electrones o huecos generados térmicamente).
+
+En el caso del semiconductor a $T>0$K, en las bandas de energía hay pocas partículas cargadas (ya sean electrones o huecos), con lo cuál, al aplicarle un campo eléctrico externo, algunas de estas partículas pasaran a estados de energía más altos, moviéndose a través del cristal, generando un flujo neto de carga y, consecuentemente, una corriente. La distancia entre niveles de energía permitidos puede ser del orden de 1eV. La resistividad del semiconductor, puede ser controlada entre una gran variedad de valores.
+
+Para los metales, pueden darse dos casos. O bandas llenas hasta, más o menos, la mitad, donde hay muchos electrones y estados vacíos que pueden moverse libremente. O darse el caso (más habitual) de que, a la distancia interatómica de equilibrio, las bandas de conducción y valencia se superponen. Todo esto da lugar a una gran facilidad en el movimiento de los electrones y en la generación de corriente.
+
+\section{Anexo.}
+
+\subsection*{Algunas consideraciones para la resolución de la guía 7.}
+
+Las \emph{zonas de Brillouin} son aquellos valores del espacio $k$ para los cuáles se satisface la condición de Bragg para la $n-$ésima reflexión. Es decir, la región \emph{entre} la $n-$ésima reflexión de Bragg y la $(n+1)-$ésima reflexión es la $n-$ésima zona de Brillouin.
+
+Dado que el lector estará deseoso de salir corriendo y tirarse por la primera ventana que encuentre, haremos una traducción al criollo de lo recientemente expuesto. La \emph{primera} zona de Brillouin es aquella donde $k \in [-\pi/a;\pi/a]$, siendo $a$ es la distancia interatómica o constante de red. Es decir, se debe utilizar, del gráfico de $\epsilon(k)$, sólo la zona para la cual $k \in [-\pi/a;\pi/a]$, que es la primera zona de Brillouin. La figura 7 es un claro ejemplo de la estructura de bandas, $\epsilon(k)$, para la primera zona de Brillouin.
+
+Por otro lado, tenemos conocimiento de que, para una partícula libre,
+\[ \frac{1}{\hbar^{2}} \frac{d^{2} \epsilon}{dk^{2}} = \frac{1}{m} \]
+y que, si aproximamos el fondo de la banda de conducción y el techo de la banda de valencia a una partícula libre, tendremos la misma relación para $\epsilon(k)$ solo que ahora con $m^{\ast}$ en lugar de $m$. En el caso descrito en el texto precedente, suponíamos que la fórmula de $\epsilon(k)$ era desconocida y, por lo tanto, se aproximaba con una relación parabólica de constante desconocida. Sin embargo, en muchos casos, se tendrá una fórmula explícita de $\epsilon(k)$ y, aún así, la misma relación sigue valiendo para las zonas indicadas de la aproximación a la partícula libre, con la diferencia de que ahora conoceremos con precisión $\epsilon(k)$ y, consecuentemente, la masa efectiva quedará, también, en función de $k$.
+
+En otras palabras, mientras se busque la masa efectiva del hueco (banda de valencia) o del electrón (banda de conducción) en zonas donde la aproximación parabólica siga siendo válida, se puede aplicar la relación derivando dos veces la fórmula explícita de $\epsilon(k)$ y obtener la masa efectiva en función de $k$. Sin embargo, $m^{\ast}(k)$ no será válida para toda la zona de Brillouin, sino para aquellos $k$ donde la aproximación siga siendo válida.
+
+Las ecuaciones utilizadas son
+\begin{equation}
+\frac{1}{\hbar^{2}} \frac{d^{2} \epsilon}{dk^{2}}=\frac{1}{m^{\ast}}
+\end{equation}
+\paragraph{}
+\scriptsize{No incluye cristales tridimensionales.}
+
+\end{document}

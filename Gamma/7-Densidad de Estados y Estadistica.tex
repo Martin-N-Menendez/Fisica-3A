@@ -1,0 +1,66 @@
+%Tipo de documento
+\documentclass[12pt,a4paper]{article}
+
+%PAQUETES
+
+%Parsear en .pdf
+\usepackage[pdftex]{color,graphicx}
+
+%Castellano
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+%Matematica
+\usepackage{amsmath, amssymb, amsfonts}
+
+\begin{document}
+
+\title{Nota complementaria sobre densidad de estados y mecánica estadística.}
+
+\author{$\Gamma$}
+
+\maketitle
+
+\section{Introducción.}
+
+El objetivo es poder trazar la característica tensión-corriente para un semiconductor. Sabemos que la corriente se debe a un flujo neto de cargas, con lo cuál, es importante determinar la cantidad de electrones y huecos que habrá disponibles en un semiconductor. El número de portadores es una función de los estados cuánticos disponibles dado que, por principio de Pauli, un sólo electrón puede ocupar cada estado. Cuando se discutió acerca de la formación de bandas de energía permitidas y prohibidas se explicó que una banda de energía permitida estaba conformada por niveles discretos de energía. Debemos, entonces, determinar la densidad de esos estados permitidos en función de la energía para poder calcular la concentración de electrones y huecos.
+
+Asimismo, cuando trabajamos con un gran número de partículas, es preferible conocer el comportamiento estadístico del conjunto más que cada interacción individual. En un cristal, las propiedades eléctricas serán determinadas por el comportamiento estadístico de un gran número de electrones.
+
+\textbf{Obs.} El desarrollo matemático que deriva en cada fórmula no se desarollará en la presente nota. Se mostrarán los resultados con el objetivo de tenerlos presente para desarrollos posteriores y agregar algún comentario de análisis de estos resultados. Luego de haberlo leído de tres libros, sin lugar a dudas, el que mejor lo explica es el Neamen. Recurrir allí si hay dudas sobre su desarollo.
+
+\section{Densidad de estados.}
+
+La cantidad \emph{total} de estados cuánticos en un intervalo de energía $[\epsilon ; \epsilon+d\epsilon]$, considerando el volumen total del cristal, $a^{3}$, es
+\[ g_{T}(\epsilon) d\epsilon = \frac{4 \pi a^{3}}{h^{3}} \cdot (2m)^{\frac{3}{2}} \cdot \sqrt{\epsilon}d\epsilon \]
+
+La cantidad de estados cuánticos por unidad de volumen es (dividiendo por el volumen total)
+\[ g(\epsilon) = \frac{4 \pi (2m)^{\frac{3}{2}}}{h^{3}} \sqrt{\epsilon} \]
+
+La densidad de estados cuánticos es una función de la energía, $\epsilon$, a medida que la energía del electrón libre\footnote{Las expresiones anteriores se derivaron de resolver la ecuación de Schrödinger para un electrón libre en un pozo infinito (cúbico)} disminuye, disminuye la cantidad de estados cuánticos disponibles. La última densidad de estados mostrada es, en realidad, una densidad doble, dado que da la cantidad de estados cuánticos por unidad de energía y por unidad de volumen.
+
+La cantidad de estados cuánticos por unidad de volumen y energía en la parte inferior de la banda de conducción viene dada por
+\[ g(\epsilon) = \frac{4 \pi (2m_{n}^{\ast})^{\frac{3}{2}}}{h^{3}} \sqrt{\epsilon - \epsilon _{c}} \]
+y es válida para $\epsilon \geq \epsilon _{c}$.
+
+La cantidad de estados cuánticos por unidad de volumen y energía en la parte superior de la banda de valencia viene dada por
+\[ g(\epsilon) = \frac{4 \pi (2m_{p}^{\ast})^{\frac{3}{2}}}{h^{3}} \sqrt{\epsilon _{v} - \epsilon} \]
+y es válida para $\epsilon \leq \epsilon _{v}$.
+
+No existen estados cuánticos en la región prohibida, con lo cual $g(\epsilon)=0$ si $\epsilon _{v} < \epsilon < \epsilon _{c}$.
+
+\section{Mecánica estadística.}
+
+\subsection{Estadística de Fermi-Dirac}
+
+La función de distribución de la partición más probable es
+\[ \frac{N(\epsilon)}{g(\epsilon)}=f_{F}(\epsilon)=\frac{1}{1+e^{\frac{\epsilon-\epsilon _{F}}{kT}}} \]
+donde $\epsilon _{F}$ es la \emph{energía de Fermi}, $N(\epsilon)$ es la cantidad de \emph{partículas} por unidad de volumen y energía, y $g(\epsilon)$ es la cantidad de \emph{estados cuánticos} por unidad de volumen y energía. La función $f_{F}(\epsilon)$ se llama \emph{distribución de Fermi-Dirac} y es la probabilidad de que, a una determinada $\epsilon$, un estado cuántico se encuentre ocupado por un electrón. Otra interpretación es que, esta distribución, indica la relación de estados llenos a estados totales para una determinada $\epsilon$.
+
+\textbf{Nota mental.} La energía de Fermi indica la energía máxima del sistema para $T=0$K. Es decir, como para $T=0$K todas las partículas ocupan los menores niveles de energía posible, la $\epsilon _{F}$ indica cuál es la energía máxima (suma de todos los niveles de energía ocupados, es decir, los menores posibles) que tiene un elemento cuando se encuentra a $T=0$K. La $\epsilon _{F}$ tendrá algún valor que se encuentre entre el último nivel de energía ocupado y el primer nivel de energía desocupado.
+
+Si $\epsilon - \epsilon _{F} \gg kT$ entonces el uno del denominador se desprecia (por estar sumado a algo mucho mayor) y nos queda que
+\[ f_{F}(\epsilon)=e^{-\frac{\epsilon- \epsilon _{F}}{kT}} \]
+y esta aproximación se conoce como \emph{aproximación de Boltzmann} para la distribución de Fermi-Dirac.
+
+\end{document}

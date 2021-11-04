@@ -1,0 +1,191 @@
+\select@language {spanish}
+\contentsline {part}{I\hspace {1em}F\IeC {\'\i }sica Cu\IeC {\'a}ntica}{5}{part.1}
+\contentsline {chapter}{\numberline {1}Ondas}{6}{chapter.1}
+\contentsline {section}{\numberline {1.1}Ecuaci\IeC {\'o}n de onda}{6}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Soluciones generales}{6}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Ejemplo de la cuerda vibrante}{6}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Superposici\IeC {\'o}n}{6}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Interferencia}{6}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Batidos}{7}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}Paquetes de onda}{7}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Velocidad de fase}{7}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Velocidad de grupo}{7}{subsection.1.3.2}
+\contentsline {chapter}{\numberline {2}Fen\IeC {\'o}menos experimentales}{8}{chapter.2}
+\contentsline {section}{\numberline {2.1}Efecto fotoel\IeC {\'e}ctrico}{8}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Ecuaci\IeC {\'o}n de Einstein}{9}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Funci\IeC {\'o}n trabajo, frecuencia y longitud de onda umbral}{9}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Concepto de Fot\IeC {\'o}n}{9}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Aplicaciones t\IeC {\'e}cnicas}{9}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Rayos X}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Espectro continuo}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Longitud de onda de corte}{9}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Difracci\IeC {\'o}n}{9}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Condici\IeC {\'o}n de Bragg}{9}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Relatividad espacial}{9}{section.2.3}
+\contentsline {section}{\numberline {2.4}Efecto Compton}{10}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Propiedades corpusculares de la radiaci\IeC {\'o}n}{11}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Longitud de onda de Compton}{11}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Modelo de Bohr del \IeC {\'a}tomo de Hidr\IeC {\'o}geno}{11}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Postulados}{11}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Niveles energ\IeC {\'e}ticos}{12}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Espectro del Hidr\IeC {\'o}geno}{12}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Constante de Rydberg}{13}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Fallas en la teor\IeC {\'\i }a de Bohr}{13}{subsection.2.5.5}
+\contentsline {section}{\numberline {2.6}Difracci\IeC {\'o}n e interferencia de ondas electromagn\IeC {\'e}ticas}{13}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Interpretaci\IeC {\'o}n probabil\IeC {\'\i }stica}{13}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Dualidad onda-corp\IeC {\'u}sculo (fot\IeC {\'o}n)}{13}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}Difracci\IeC {\'o}n e interferencia de part\IeC {\'\i }culas materiales}{13}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Propiedades ondulatorias}{13}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Funciones de amplitud de onda y densidad de probabilidad}{13}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Experimento de Davidson-Germer de difracci\IeC {\'o}n de electrones}{13}{subsection.2.7.3}
+\contentsline {section}{\numberline {2.8}Longitud de onda de De Broglie}{13}{section.2.8}
+\contentsline {subsection}{\numberline {2.8.1}Dualidad Onda-Part\IeC {\'\i }cula}{13}{subsection.2.8.1}
+\contentsline {section}{\numberline {2.9}Principio de incerteza de Heisemberg}{14}{section.2.9}
+\contentsline {chapter}{\numberline {3}Mec\IeC {\'a}nica cu\IeC {\'a}ntica}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Ecuaci\IeC {\'o}n de Schr\IeC {\"o}dinger (completa)}{15}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Argumentos para postular una funci\IeC {\'o}n de onda para describir el movimiento de part\IeC {\'\i }culas}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Significado f\IeC {\'\i }sico de la funci\IeC {\'o}n de onda}{15}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Ecuaci\IeC {\'o}n de Sch\IeC {\"o}dinger independiente del tiempo}{16}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Condiciones de frontera}{16}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Aplicaciones en una dimensi\IeC {\'o}n}{16}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Part\IeC {\'\i }cula libre}{16}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Escal\IeC {\'o}n de potencial}{17}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Pozo de potencial infinito}{19}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Pozo de potencial finito}{20}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Barrera de potencial}{22}{subsection.3.3.5}
+\contentsline {subsubsection}{Efecto t\IeC {\'u}nel}{23}{section*.9}
+\contentsline {subsection}{\numberline {3.3.6}Oscilador arm\IeC {\'o}nico}{23}{subsection.3.3.6}
+\contentsline {subsubsection}{Forma general}{23}{section*.10}
+\contentsline {subsubsection}{Niveles de energ\IeC {\'\i }a}{23}{section*.11}
+\contentsline {subsubsection}{Interpretaci\IeC {\'o}n}{23}{section*.12}
+\contentsline {section}{\numberline {3.4}Aplicaciones en tres dimensiones}{23}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Pozo de potencial}{23}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Separaci\IeC {\'o}n de variables}{23}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}An\IeC {\'a}lisis de potenciales seccionalmente constantes}{23}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Estados ligados}{23}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Estados no ligados}{23}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Principios de la teor\IeC {\'\i }a formal de la Mec\IeC {\'a}nica Cu\IeC {\'a}ntica}{23}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Operadores-Autofunciones-Autovalores}{23}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Postulados}{23}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Valores medios de una magnitud f\IeC {\'\i }sica}{24}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.4}Superposici\IeC {\'o}n lineal de funciones de onda de estados estacionarios}{24}{subsection.3.6.4}
+\contentsline {chapter}{\numberline {4}\IeC {\'A}tomo}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}\IeC {\'A}tomo de Hidr\IeC {\'o}geno}{25}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Ecuaci\IeC {\'o}n de Schr\IeC {\"o}dinger en coordenadas esf\IeC {\'e}ricas}{26}{subsection.4.1.1}
+\contentsline {subsubsection}{Cuantizaci\IeC {\'o}n del momento angular}{26}{section*.14}
+\contentsline {subsubsection}{Funciones de onda radiales y angulares}{26}{section*.15}
+\contentsline {subsubsection}{Densidad de probabilidad radial}{26}{section*.16}
+\contentsline {subsection}{\numberline {4.1.2}Spin del electr\IeC {\'o}n}{27}{subsection.4.1.2}
+\contentsline {subsubsection}{Experimento de Stern-Gerlach}{27}{section*.17}
+\contentsline {subsubsection}{Densidad de probabilidad del electr\IeC {\'o}n en el \IeC {\'a}tomo de Hidr\IeC {\'o}geno}{28}{section*.18}
+\contentsline {subsubsection}{Similitudes con Bohr}{28}{section*.19}
+\contentsline {section}{\numberline {4.2}\IeC {\'A}tomos multielectr\IeC {\'o}nicos}{28}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Principio de exclusi\IeC {\'o}n de Pauli}{28}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Estructuras de las capas electr\IeC {\'o}nicas de los \IeC {\'a}tomos}{28}{subsection.4.2.2}
+\contentsline {chapter}{\numberline {5}F\IeC {\'\i }sica estad\IeC {\'\i }stica}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conceptos generales}{29}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Macro estados y Micro estados}{30}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Equilibrio t\IeC {\'e}rmico o estad\IeC {\'\i }stico}{30}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Part\IeC {\'\i }culas distinguibles e indistinguibles}{30}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Estad\IeC {\'\i }stica Cl\IeC {\'a}sica}{30}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Ley de distribuci\IeC {\'o}n de Maxwell-Boltzmann}{30}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Funci\IeC {\'o}n de partici\IeC {\'o}n del sistema}{30}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Energ\IeC {\'\i }a promedio del sistema}{31}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Distribuci\IeC {\'o}n de energ\IeC {\'\i }as,momentos y velocidades}{31}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Velocidad media cuadr\IeC {\'a}tica y mas probable}{31}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Energ\IeC {\'\i }a total de las mol\IeC {\'e}culas de un gas}{31}{subsection.5.2.6}
+\contentsline {section}{\numberline {5.3}Conceptos de Estad\IeC {\'\i }sticas Cu\IeC {\'a}nticas}{31}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Indistinguibilidad de part\IeC {\'\i }culas id\IeC {\'e}nticas}{32}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Funciones de onda sim\IeC {\'e}trica y antisim\IeC {\'e}trica}{32}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Bosones y Fermiones}{32}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Estad\IeC {\'\i }stica de Fermi-Dirac}{32}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Densidad de estados g(E)}{32}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Ley de distribuci\IeC {\'o}n de Fermi-Dirac}{33}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Nivel de Fermi}{33}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Gas de electrones}{33}{subsection.5.4.4}
+\contentsline {section}{\numberline {5.5}Estad\IeC {\'\i }stica de Bose-Einstein}{34}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Ley de distribuci\IeC {\'o}n de Bose-Einstein}{34}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Aplicaci\IeC {\'o}n a gas de fotones:Radiaci\IeC {\'o}n de cuerpo negro}{34}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}Gas de fonones}{35}{subsection.5.5.3}
+\contentsline {part}{II\hspace {1em}F\IeC {\'\i }sica Electr\IeC {\'o}nica}{36}{part.2}
+\contentsline {chapter}{\numberline {6}Estado s\IeC {\'o}lido}{37}{chapter.6}
+\contentsline {section}{\numberline {6.1}S\IeC {\'o}lidos cristalinos}{37}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Cristales I\IeC {\'o}nicos}{37}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Cristales Covalentes}{37}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Cristales Met\IeC {\'a}licos}{37}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Cristales Moleculares}{37}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Periodicidad y Simetr\IeC {\'\i }a}{37}{section.6.2}
+\contentsline {section}{\numberline {6.3}Red espacial}{38}{section.6.3}
+\contentsline {section}{\numberline {6.4}Celdas}{38}{section.6.4}
+\contentsline {chapter}{\numberline {7}Electrones en metales}{39}{chapter.7}
+\contentsline {section}{\numberline {7.1}Teor\IeC {\'\i }a cl\IeC {\'a}sica de Drude-Lorentz de los electrones libres}{39}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Velocidad t\IeC {\'e}rmica y de desplazamiento debido a campo el\IeC {\'e}ctrico}{39}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Tiempo de relajaci\IeC {\'o}n}{40}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Camino libre medio}{40}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}Movilidad}{40}{subsection.7.1.4}
+\contentsline {subsection}{\numberline {7.1.5}Conductividad}{40}{subsection.7.1.5}
+\contentsline {subsection}{\numberline {7.1.6}Capacidad calor\IeC {\'\i }fica}{40}{subsection.7.1.6}
+\contentsline {section}{\numberline {7.2}Fallas de la teor\IeC {\'\i }a cl\IeC {\'a}sica}{40}{section.7.2}
+\contentsline {section}{\numberline {7.3}Teor\IeC {\'\i }a cu\IeC {\'a}ntica de Sommerfeld}{41}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Aplicaciones de la estad\IeC {\'\i }stica de Fermi-Dirac}{41}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Nivel de Fermi en un metal}{41}{subsection.7.3.2}
+\contentsline {subsubsection}{C\IeC {\'a}lculo y variaci\IeC {\'o}n t\IeC {\'e}rmica}{41}{section*.22}
+\contentsline {subsection}{\numberline {7.3.3}Transporte de carga}{42}{subsection.7.3.3}
+\contentsline {section}{\numberline {7.4}Calor espec\IeC {\'\i }fico de un gas de electrones}{42}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Aporte al calor espec\IeC {\'\i }fico de un s\IeC {\'o}lido}{44}{subsection.7.4.1}
+\contentsline {chapter}{\numberline {8}Teor\IeC {\'\i }a de bandas}{45}{chapter.8}
+\contentsline {section}{\numberline {8.1}Teor\IeC {\'\i }a cu\IeC {\'a}ntica de electrones en redes peri\IeC {\'o}dicas}{45}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Teorema de Bloch}{45}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Condiciones de contorno peri\IeC {\'o}dicas}{45}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}Modelo de Kronig-Penney en cristal unidimensional infinito}{46}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Bandas de energ\IeC {\'\i }a prohibidas}{47}{subsection.8.1.4}
+\contentsline {subsection}{\numberline {8.1.5}Energ\IeC {\'\i }a en funci\IeC {\'o}n del n\IeC {\'u}mero de onda del Modelo de Kronig-Penney}{47}{subsection.8.1.5}
+\contentsline {subsection}{\numberline {8.1.6}Representaci\IeC {\'o}n en zona reducida}{48}{subsection.8.1.6}
+\contentsline {subsection}{\numberline {8.1.7}N\IeC {\'u}mero de estados en una banda}{48}{subsection.8.1.7}
+\contentsline {section}{\numberline {8.2}Din\IeC {\'a}mica de electrones en redes cristalinas unidimensionales}{49}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Velocidad de grupo}{49}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Masa efectiva}{49}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}Momento cristalino}{50}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}Concepto de hueco}{50}{subsection.8.2.4}
+\contentsline {section}{\numberline {8.3}Estructura de bandas}{51}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Aisladores}{51}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Semiconductores}{51}{subsection.8.3.2}
+\contentsline {subsection}{\numberline {8.3.3}Metales}{51}{subsection.8.3.3}
+\contentsline {chapter}{\numberline {9}Semiconductores I}{52}{chapter.9}
+\contentsline {section}{\numberline {9.1}Semiconductores uniformes en equilibrio}{52}{section.9.1}
+\contentsline {section}{\numberline {9.2}Semiconductores intr\IeC {\'\i }nsecos}{52}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Estad\IeC {\'\i }stica de portadores}{52}{subsection.9.2.1}
+\contentsline {section}{\numberline {9.3}Semiconductores extr\IeC {\'\i }nsecos}{53}{section.9.3}
+\contentsline {section}{\numberline {9.4}Ley de acci\IeC {\'o}n de masas}{54}{section.9.4}
+\contentsline {section}{\numberline {9.5}Contaminaci\IeC {\'o}n con impurezas}{54}{section.9.5}
+\contentsline {chapter}{\numberline {10}Semiconductores II}{56}{chapter.10}
+\contentsline {section}{\numberline {10.1}Ecuaci\IeC {\'o}n de continuidad}{56}{section.10.1}
+\contentsline {section}{\numberline {10.2}Ecuaci\IeC {\'o}n de Einstein}{57}{section.10.2}
+\contentsline {section}{\numberline {10.3}Impurificaci\IeC {\'o}n homog\IeC {\'e}nea}{57}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Casos particulares de la ecuaci\IeC {\'o}n de continuidad}{58}{subsection.10.3.1}
+\contentsline {subsubsection}{Campo aplicado nulo, sin generaci\IeC {\'o}n de portadores, dopado espacial uniforme}{58}{section*.28}
+\contentsline {subsubsection}{Estado estacionario, unidimensional, sin campo aplicado y sin generaci\IeC {\'o}n de portadores}{59}{section*.29}
+\contentsline {subsubsection}{Estado estacionario,unidimensional, sin generaci\IeC {\'o}n de portadores, campo constante aplicado}{59}{section*.30}
+\contentsline {chapter}{\numberline {11}Junturas}{60}{chapter.11}
+\contentsline {section}{\numberline {11.1}Juntura PN}{60}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Equilibrio}{61}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}Potencial de contacto}{61}{subsection.11.1.2}
+\contentsline {subsection}{\numberline {11.1.3}Fuera del equilibrio}{62}{subsection.11.1.3}
+\contentsline {subsection}{\numberline {11.1.4}Ecuaci\IeC {\'o}n y distribuci\IeC {\'o}n de corrientes}{63}{subsection.11.1.4}
+\contentsline {subsection}{\numberline {11.1.5}Experiencia de Haynes-Schockley}{67}{subsection.11.1.5}
+\contentsline {section}{\numberline {11.2}Sistema Metal-Semiconductor}{69}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Caracter\IeC {\'\i }sticas cualitativas.}{69}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}Propiedades de la juntura ideal.}{71}{subsection.11.2.2}
+\contentsline {paragraph}{}{72}{section*.47}
+\contentsline {subsection}{\numberline {11.2.3}Relaci\IeC {\'o}n tensi\IeC {\'o}n-corriente.}{72}{subsection.11.2.3}
+\contentsline {paragraph}{}{73}{section*.48}
+\contentsline {subsection}{\numberline {11.2.4}Contactos \IeC {\'o}hmicos en junturas metal-semiconductor.}{73}{subsection.11.2.4}
+\contentsline {subsection}{\numberline {11.2.5}Barreras ideales no-rectificantes.}{73}{subsection.11.2.5}
+\contentsline {subsection}{\numberline {11.2.6}Contacto t\IeC {\'u}nel}{74}{subsection.11.2.6}
+\contentsline {subsection}{\numberline {11.2.7}Resistencia espec\IeC {\'\i }fica de contacto}{74}{subsection.11.2.7}
+\contentsline {section}{\numberline {11.3}Sistema Metal-\IeC {\'O}xido-Semiconductor (MOS)}{74}{section.11.3}
+\contentsline {subsection}{\numberline {11.3.1}MOSFET}{77}{subsection.11.3.1}
+\contentsline {subsubsection}{Curvas caracter\IeC {\'\i }sticas del transistor MOS(N o P) }{77}{section*.54}
+\contentsline {section}{\numberline {11.4}Transistor Bipolar de Juntura (TBJ)}{80}{section.11.4}
+\contentsline {subsection}{\numberline {11.4.1}Modos de operaci\IeC {\'o}n}{81}{subsection.11.4.1}
+\contentsline {subsection}{\numberline {11.4.2}Caracter\IeC {\'\i }sticas}{82}{subsection.11.4.2}

@@ -1,0 +1,251 @@
+%Tipo de documento
+\documentclass[12pt,a4paper]{article}
+
+%PAQUETES
+
+%Parsear en .pdf
+\usepackage[pdftex]{color,graphicx}
+
+%Castellano
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+%Matematica
+\usepackage{amsmath, amssymb, amsfonts}
+
+\begin{document}
+
+\title{Transporte ambipolar.}
+
+\author{$\Gamma$}
+
+\maketitle
+
+\section{Introducción.}
+
+Hasta ahora consideramos que el semiconductor se encontraba en equilibrio o que, si había alguna tensión o campo eléctrico aplicado, los efectos no eran considerables como para alterar sustancialmente el equilibrio térmico. Un exceso de electrones en la banda de conducción y un exceso de huecos en la banda de valencia, respecto de las concentraciones de equilibrio, puede generarse si se aplica una excitación externa al semiconductor. En este resumen se discutirá el comportamiento de las concentraciones de huecos y electrones, en función del espacio y el tiempo, para una situación de no equilibrio.
+
+Los excesos de electrones y huecos no se mueven independientemente entre sí. Se arrastran, difunden y recombinan con los mismos coeficientes de difusión, movilidad y tiempo de vida. Este fenómeno se conoce como \emph{transporte ambipolar}. Desarrollaremos la ecuación de transporte ambipolar que describe el comportamiento de los electrones y huecos en exceso. Este comportamiento es fundamental para el uso de dispositivos semiconductores.
+
+\section{Generación y recombinación de portadores.}
+
+\emph{Generación} es el proceso mediante el cual electrones y huecos son creados. \emph{Recombinación} es cuando los electrones y los huecos son destruidos. Cualquier desviación del equilibrio térmico tenderá a cambiar las concentraciones de los portadores en el semiconductor. Un impulso de temperatura, por ejemplo, cambiará el ritmo al que electrones y huecos son generados, de tal forma que sus concentraciones variarán con el tiempo hasta que se alcance un nuevo equilibrio. Una excitación externa, como una fuente de luz (flujo de fotones) puede crear, también, electrones y huecos alterando el estado de equilibrio.
+
+\subsection{El semiconductor en equilibrio.}
+
+Hasta ahora, determinamos las concentraciones de electrones en la banda de conducción y huecos en la banda de valencia en equilibrio. Estas concentraciones son independientes del tiempo. Sin embargo, los electrones son continuamente promovidos a y aceptados de la banda de conducción debido a la naturaleza aleatoria del proceso térmico. Dado que las concentraciones netas de equilibrio son independientes del tiempo, las tasas de generación y recombinación deben ser iguales.
+
+Sean $G_{n_{0}}$ y $G_{p_{0}}$ las tasas de generación térmica de electrones y huecos, respectivamente, dadas en unidades de $\#/(\textrm{cm}^{3}\textrm{s})$. Para generación banda a banda\footnote{La generación banda a banda es aquella que se produce cuando un electrón gana suficiente energía para saltar de la banda de valencia a la banda de conducción.}, directa, las tasas de generación deben ser iguales, puesto que los electrones y los huecos son creados de a pares
+\[ G_{n_{0}}=G_{p_{0}} \]
+
+Sean $R_{n_{0}}$ y $R_{p_{0}}$ las tasas de recombinación de electrones y huecos, respectivamente, para un semiconductor en equilibrio térmico. En recombinación banda a banda, directa, las tasas de recombinación deben ser iguales,
+\[ R_{n_{0}}=R_{p_{0}} \]
+
+Como se dijo antes, en equilibrio térmico, las concentraciones son independientes del tiempo, por lo tanto, las tasas de generación y recombinación deben ser iguales, entonces
+\[ G_{n_{0}}=G_{p_{0}}=R_{n_{0}}=R_{p_{0}} \]
+
+\subsection{Generación y recombinación de los portadores de carga en exceso.}
+
+Electrones en la banda de valencia podrán ser excitados a la banda de conducción cuando, por ejemplo, fotones de altas energías inciden en el semiconductor. Cuando esto sucede, no sólo se crea un electrón en la banda de conducción, sino que se crea un hueco en la banda de valencia, por lo tanto, un par electrón-hueco es generado. Los electrones y huecos adicionales creados se llaman \emph{electrones en exceso} y \emph{huecos en exceso}.
+
+Los electrones y huecos en exceso son generados por una fuerza externa a una determinada tasa. Sea $g'_{n}$ la tasa de generación de electrones en exceso y $g'_{p}$ la tasa de generación de huecos en exceso. Para generación banda a banda, directa, las cargas son creadas de a pares electrón-hueco, con lo cual
+\[ g'_{n}=g'_{p} \]
+
+Cuando se generan electrones y huecos en exceso, la concentración de electrones en la banda de conducción y de huecos en la banda de valencia crece por sobre su concentración de equilibrio térmico.
+\[ n=n_{0} + \delta n \]
+\[ p=p_{0} + \delta p \]
+donde $n_{0}$ y $p_{0}$ son las concentraciones en equilibrio térmico y $\delta n$ y $\delta p$ son las concentraciones de los electrones y huecos en exceso, respectivamente. Dado que la fuerza externa perturbó el equilibrio térmico, debemos notar que $np\neq n_{0}p_{0} = n_{i}^{2}$.
+
+La generación de electrones en exceso, en estado necesario, no necesariamente significa una generación constante. Como en el caso del equilibrio térmico, algún electrón en la banda de conducción puede caerse en la banda de valencia, dando lugar al proceso de recombinación. La tasa de recombinación para electrones en exceso es $R'_{n}$ y para huecos en exceso $R'_{p}$. Como la recombianción es de a pares, tenemos que
+\[ R'_{n}=R'_{p} \]
+
+En recombinación banda a banda, directa, el proceso sucede espontáneamente, por lo tanto, la probabilidad de que un electrón y un hueco se recombinen es constante en el tiempo. La tasa a la que los electrones se recombinan debe ser proporcional a las concentraciones (es esperable que, cuánto mayor sea la concentración, más electrones y huecos se recombinen). Si no hay electrones ni huecos, no puede haber recombinación.
+
+El cambio neto en la concentración del electrón se puede escribir como
+\[ \frac{dn(t)}{dt} = \alpha _{r} (n_{i}^{2}-n(t)p(t)) \]
+donde
+\[ n(t)=n_{0}+\delta n(t) \qquad \wedge \qquad p(t)=p_{0} + \delta p(t) \]
+
+El primer término, $\alpha _{r} n_{i}^{2}$ es la tasa de generación en equilibrio térmico. Dado que los electrones y los huecos se recombinan de a pares, tenemos que $\delta n(t)=\delta p(t)$ (las concentraciones de electrones y huecos en exceso son iguales, por lo tanto, podemos usar el término \emph{portadores en exceso} para referirnos a cualquiera de ellas). Dado que los términos de equilibrio térmico, $n_{0}$ y $p_{0}$ son independientes del tiempo, tenemos
+\[ \frac{d(\delta n(t))}{dt} = \alpha _{r} (n_{i}^{2}-(n_{0}+\delta n(t))(p_{0} + \delta p(t))) = -\alpha _{r} \delta n(t)((n_{0}+p_{0})+ \delta n(t)) \]
+
+Esta ecuación se puede resolver fácilmente si consideramos la condición de \emph{inyección de bajo nivel}. Esta condición impone un límite máximo en la magintud de las concentraciones de los portadores en exceso, en comparación con las concentraciones en equilibrio térmico. Es decir, la concentración de los portadores en exceso es mucho menor a la concentración de los portadores mayoritarios en equilibrio térmico.
+
+Si consideramos un material de tipo p ($p_{0} \gg n_{0}$) y la condición de inyección de bajo nivel ($\delta n(t) \ll p_{0}$), entonces, la última ecuación, se transforma en
+\[ \frac{d (\delta n(t))}{dt} = - \alpha _{r} \delta n(t) p_{0} \]
+La solución a esta ecuación es un decaimiento exponencial de la concentración de los portadores en exceso, respecto de la concentración inicial
+\[ \delta n(t)=\delta n(0) e^{-\frac{t}{\tau _{n_{0}}}} \]
+donde $\tau _{n_{0}}=(\alpha _{r}p_{0})^{-1}$ es una constante para la inyección a bajo nivel. Esta ecuación describe el descenso en la concentración de los portadores minoritarios en exceso y, por lo tanto, muchas veces, $\tau _{n_{0}}$ recibe el nombre de \emph{tiempo de vida de los portadores minoritarios en exceso}.
+
+La tasa de recombinación de los portadores minoritarios en exceso se puede escribir como
+\[ R'_{n}=-\frac{d(\delta n(t))}{dt} = \alpha _{r} p_{0} \delta _{n}(t) = \frac{\delta n(t)}{\tau _{n_{0}}} \]
+
+Para recombinación banda a banda, directa, los portadores mayoritarios en exceso (huecos) se recombinan a la misma tasa, con lo cual, para un material tipo p
+\[ R'_{n}=R'_{p}=\frac{\delta n(t)}{\tau _{n_{0}}} \]
+
+En el caso de un material de tipo n ($n_{0} \gg p_{0}$) con la condición de inyección de bajo nivel ($\delta n(t) \ll n_{0}$), el decaimiento de los portadores minoritarios ocurre con una constante de tiempo $\tau _{p_{0}}$ que también se refiere al tiempo de vida del portador minoritario en exceso. La tasa de recombinación del portador mayoritario en exceso (electrones) será igual, por lo tanto
+\[ R'_{n}=R'_{p}=\frac{\delta n(t)}{\tau _{p_{0}}} \]
+
+Sin embargo, las tasas de generación y recombinación no son función de las concentraciones de huecos o electrones, sino del tiempo y el espacio.
+
+\section{Características de los portadores en exceso.}
+
+La idea es entender cómo se comportan los portadores en exceso, en el tiempo y el espacio, ante la presencia de un campo eléctrico o un gradiente de densidades. Como se mencionó con anterioridad, los electrones y los huecos no se mueven independientemente sino que lo hacen con el mismo coeficiente de difusión efectiva y la misma movilidad efectiva. Este efecto se denomina \emph{transporte ambipolar}.
+
+\subsection{Ecuaciones de continuidad.}
+
+Supongamos un diferencial de volumen, cúbico, tal que un flujo unidimensional de huecos entra por el elemento en $x$ y sale en $x+dx$. El parámetro $F_{px}^{+}$ es el flujo de huecos por unidad de superficie y tiempo.
+\[ F_{px}^{+}(x+dx)=F_{px}^{+}(x)+\frac{\partial F_{px}^{+}}{\partial x} dx \]
+Esta ecuación es el desarollo de Taylor de $F_{px}^{+}(x+dx)$, donde la longitud diferencial, $dx$, es pequeña, con lo cuál, sólo los dos primeros términos del desarollo son significativos. El incremento neto en la cantidad de huecos por unidad de tiempo, dentro del elemento diferencial de volumen, debido a una componente en $x$ del flujo, es
+\[ \frac{\partial p}{\partial t} dxdydz=(F_{px}^{+}(x)-F_{px}^{+}(x+dx))dydz=-\frac{\partial F_{px}^{+}}{\partial x} dx dy dz \]
+donde se puede observar que la variación de la concentración de huecos está dada por la cantidad inicial de huecos ($F_{px}^{+}(x)$) menos la cantidad final de huecos ($F_{px}^{+}(x+dx)$).
+
+Si $F_{px}^{+}(x)>F_{px}^{+}(x+dx)$, por ejemplo, habrá un incremento neto en la cantidad de huecos en el elemento diferencial de volumen en el tiempo (entran más huecos de lo que salen, con lo cuál, para ese elemento diferencial de volumen, hay un incremento en la cantidad de huecos).
+
+Las tasas de generación y recombinación de huecos también afectarán la concentración de huecos en el elemento diferencial de volumen. Por lo tanto, el incremento neto, estará dado por
+\[ \frac{\partial p}{\partial t} dxdydz = \underbrace{ - \frac{\partial F_{p}^{+}}{\partial x} dxdydz }_{\textrm{Flujo}}+\underbrace { g_{p}dxdydz }_{\textrm{Generación}}-\underbrace{ \frac{p}{\tau _{pt}}dxdydz }_{ \textrm{Recombinación}} \]
+donde $\tau _{pt}$ incluye el tiempo de vida de los huecos en equilibrio térmico y el tiempo de vida de los huecos en exceso.
+
+Si dividimos la ecuación anterior por el diferencial de volumen, obentenemos el incremento neto de huecos por unidad de tiempo
+\[ \frac{\partial p}{\partial t}=-\frac{\partial F_{p}^{+}}{\partial x}+g_{p}-\frac{p}{\tau _{pt}} \]
+Esta ecuación es la \emph{ecuación de continuidad} para los huecos.
+
+Análogamente, la ecuación de continuidad unidimensional para los electrones es
+\[ \frac{\partial n}{\partial t}=-\frac{\partial F_{n}^{-}}{\partial x}+g_{n}-\frac{n}{\tau _{nt}} \]
+donde $F_{n}^{-}$ es el flujo de electrones.
+
+\subsection{Ecuaciones de difusión dependientes del tiempo.}
+
+Las densidades de corriente para los electrones y los huecos son
+\[ J_{p}=e\mu _{p}pE-eD_{p}\frac{\partial p}{\partial x} \]
+\[ J_{n}=e\mu _{n}nE+eD_{n}\frac{\partial n}{\partial x} \]
+
+Si dividimos la densidad de corriente de huecos por $e$ y la de electrones por $-e$ obtendremos el flujo de partículas (la corriente es el flujo de cargas, si lo divido por la carga, me queda el flujo de partículas). Por lo tanto
+\[ \frac{J_{p}}{e}=F_{p}^{+}=\mu _{p}pE-D_{p}\frac{\partial p}{\partial x} \]
+\[ \frac{J_{n}}{-e}=F_{N}^{-}=-\mu _{n}nE-D_{n}\frac{\partial n}{\partial x} \]
+
+Obteniendo la divergencia (derivada respecto de $x$ para el caso unidimensional) del flujo y reemplazando en la ecuación de continuidad, obtenemos
+\[ \frac{\partial p}{\partial t}=-\mu _{p} \frac{\partial (pE)}{\partial x} + D_{p} \frac{\partial^{2}p}{\partial x^{2}}+g_{p}-\frac{p}{\tau _{pt}} \]
+\[ \frac{\partial n}{\partial t}=\mu _{n} \frac{\partial (nE)}{\partial x} + D_{n} \frac{\partial^{2}n}{\partial x^{2}}+g_{n}-\frac{n}{\tau _{nt}} \]
+que se puede escribir como
+\[ D_{p} \frac{\partial^{2}p}{\partial x^{2}}- \mu _{p} \bigg( E \frac{\partial p}{\partial x} + p \frac{\partial E}{\partial x} \bigg) + g_{p} - \frac{p}{\tau _{pt}} = \frac{\partial p}{\partial t} \]
+\[ D_{n} \frac{\partial^{2}n}{\partial x^{2}}+ \mu _{n} \bigg( E \frac{\partial n}{\partial x} + n \frac{\partial E}{\partial x} \bigg) + g_{n} - \frac{n}{\tau _{nt}} = \frac{\partial n}{\partial t} \]
+
+Estas ecuaciones son las ecuaciones de difusión dependientes del tiempo para huecos y electrones, respectivamente. Dado que la concentración de huecos, $p$, y la concentración de electrones, $n$, contienen concentraciones en exceso, estas ecuaciones ilustran el comportamiento en el tiempo y el espacio de los portadores en exceso.
+
+Recordando que $n=n_{0} + \delta n$ y $p=p_{0} + \delta p$, donde $n_{0}$ y $p_{0}$ no dependen del tiempo si, además, consideramos que el semiconductor es homogéneo (no dependen de $x$), las ecuaciones anteriores se transforman en
+\[ D_{p} \frac{\partial^{2}(\delta p)}{\partial x^{2}}- \mu _{p} \bigg( E \frac{\partial (\delta p)}{\partial x} + p \frac{\partial E}{\partial x} \bigg) + g_{p} - \frac{p}{\tau _{pt}} = \frac{\partial (\delta p)}{\partial t} \]
+\[ D_{n} \frac{\partial^{2}(\delta n)}{\partial x^{2}}+ \mu _{n} \bigg( E \frac{\partial (\delta n)}{\partial x} + n \frac{\partial E}{\partial x} \bigg) + g_{n} - \frac{n}{\tau _{nt}} = \frac{\partial (\delta n)}{\partial t} \]
+Notar que esta ecuación depende tanto de las concentraciones totales, $p$ y $n$, como de las concentraciones en exceso $\delta p$ y $\delta n$
+
+\section{Transporte ambipolar.}
+
+Originalmente, se supuso que el campo eléctrico en las ecuaciones de $J_{p}$ y $J_{n}$ era un campo eléctrico externo. Este campo eléctrico aparece en las ecuaciones de difusión dependientes del tiempo, recientemente deducidas. Si un pulso de electrones en exceso y un pulso de huecos en exceso son creados en algún punto del semiconductor, debido a un campo eléctrico externo, los electrones y huecos en exceso tenderán a arrastrase en distintas direcciones. Sin embargo, esta separación inducirá un campo eléctrico interno que creará una fuerza atractiva entre huecos y electrones. Esto se ilustra en la figura 1.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{camposyexcesos.png}
+\caption{Efecto de un campo eléctrico externo. ($E_{app}=E_{ext}$)}
+\end{center}
+\end{figure}
+
+Consecuentemente, el campo eléctrico $E$ de las ecuaciones de difusión dependientes del tiempo está, en realidad, compuesto de la siguiente forma
+\[ E=E_{ext}+E_{int} \]
+donde $E_{ext}$ es el campo eléctrico externo y $E_{int}$ es el campo eléctrico interno inducido.
+
+Dado que este campo eléctrico $E$ crea una fuerza atractiva entre electrones y huecos, los pulsos de electrones en exceso y huecos en exceso se mantendrán unidos, moviéndose (por difusión o arrastre) de la misma forma con un mismo coeficiente de difusión efectivo y una misma movilidad efectiva. Este fenómeno se llama \emph{transporte ambipolar} (a veces, también, \emph{difusión ambipolar}).
+
+\subsection{Obtención de la ecuación de transporte ambipolar.}
+
+Las ecuaciones de difusión dependientes del tiempo describen el comportamiento de los portadores en exceso. Sin embargo, hace falta una ecuación para relacionar las concentraciones de electrones y huecos en exceso, con el campo interno inducido. Esta realción es la ecuación de Poisson
+\[ \nabla \cdot E_{int} = \frac{e(\delta p - \delta n)}{\varepsilon _{s}} = \frac{\partial E_{int}}{\partial x} \]
+donde $\varepsilon _{s}$ es la permitividad del material semiconductor.
+
+Para encontrar una solución a las tres ecuaciones (la última obtenida y las de difusión dependientes del tiempo), debemos realizar algunas aproximaciones. Se puede demostrar que con un pequeño campo interno es suficiente para mantener unidos a los huecos y electrones, con lo cual $|E_{int}| \ll |E_{ext}|$, sin embargo, la divergencia de $E_{int}$ puede no ser despreciable.
+
+Impondremos, también, la condición de neutralidad de carga: $\delta p(t)=\delta n(t)$ para todo punto del espacio y el tiempo, por lo tanto, expresaremos ambos excesos como $\delta n$. Por otro lado, definiremos,
+\[ g_{p}=g_{n}\equiv g\]
+\[ R_{n}=\frac{n}{\tau _{nt}}=R_{p}=\frac{p}{\tau _{pt}} \equiv R \]
+
+Hasta ahora, tenemos
+\[ D_{p} \frac{\partial^{2}(\delta n)}{\partial x^{2}}- \mu _{p} \bigg( E \frac{\partial (\delta n)}{\partial x} + p \frac{\partial E}{\partial x} \bigg) + g - R = \frac{\partial (\delta n)}{\partial t} \]
+\[ D_{n} \frac{\partial^{2}(\delta n)}{\partial x^{2}}+ \mu _{n} \bigg( E \frac{\partial (\delta n)}{\partial x} + n \frac{\partial E}{\partial x} \bigg) + g - R = \frac{\partial (\delta n)}{\partial t} \]
+Si multiplicamos la primera ecuación por $\mu _{p}p$, la segunda por $\mu _{n}n$ y sumamos, eliminamos el término de $\frac{\partial E}{\partial x}$, y luego dividimos por el término $(\mu _{n}n+\mu_{p}p)$, obtenemos
+\[ D'\frac{\partial^{2} (\delta n)}{\partial x^{2}} + \mu' E \frac{\partial (\delta n)}{\partial x}+g-R=\frac{\partial (\delta n)}{\partial t} \]
+que es la \emph{ecuación de transporte ambipolar} donde
+\[ D'=\frac{D_{n}D_{P}(n+p)}{D_{n}n+D_{p}p} \]
+es el \emph{coeficiente de difusión ambipolar} (se despejaron los términos de $\mu$ utilizando la relación de Einstein) y
+\[ \mu'=\frac{\mu _{n} \mu _{p}(p-n)}{\mu _{n}n+\mu _{p}p} \]
+es la \emph{movilidad ambipolar}.
+
+Como se puede observar, estos coeficientes dependen de las concentraciones $p$ y $n$ y, como a su vez, estas concentraciones dependen de las concentraciones de los portadores en exceso, los parámetros $D'$ y $\mu '$ no son constantes. Por lo tanto, la ecuación de transporte ambipolar es una ecuación diferencial no lineal.
+
+\subsection{Límites en semiconductores extrínsecos e inyecciones de bajo nivel.}
+
+La ecuación de transporte ambipolar puede ser simplificada y linealizada si consideramos semiconductores fuertemente extrínsecos e inyecciones de bajo nivel. El coeficiente de difusión ambipolar se puede escribir de la siguiente forma
+\[ D'=\frac{D_{n}D_{P}((n_{0}+\delta n)+(p_{0}+\delta n))}{D_{n}(n_{0}+\delta n)+D_{p}(p_{0}+\delta n)} \]
+donde $n_{0}$ y $p_{0}$ son las concentraciones de electrones y huecos, respectivamente, en equilibrio térmico, y $\delta n$ es la concentración de portadores en exceso. Si consideramos un semiconductor de tipo p, podemos asumir que $p_{0} \gg n_{0}$. La condición de inyección de bajo nivel, nos permite suponer que la concentración de portadores en exceso es mucho menor que la concentración de portadores mayoritarios en equilibrio térmico, con lo cuál, para un semiconductor de tipo p, $\delta n \ll p_{0}$. Utilizando estas suposiciones y que $D_{n}$ y $D_{p}$ tienen, aproximadamente, el mismo orden de magnitud, podemos reducir el coeficiente de difusión ambipolar a
+\[ D'=D_{n} \]
+
+Aplicando las mismas condiciones a la movilidad ambipolar, obtenemos que, para un semiconductor de tipo p,
+\[ \mu ' = \mu _{n} \]
+
+Es importante notar que, para un semiconductor de tipo p, fuertemente extrínseco y bajo la condición de inyección de bajo nivel, el coeficiente de difusión ambipolar y la movilidad ambipolar se reducen a los parámetros de los electrones en exceso (portadores \emph{minoritarios}), que son constantes. La ecuación de transporte ambipolar se reduce a una ecuación lineal de coeficientes constantes.
+
+Análogamente, para un semiconductor de tipo n, fuertemente extrínseco y bajo la condición de inyección de bajo nivel, tal que $n_{0} \gg p_{0}$ y $\delta n \ll n_{0}$ los coeficientes se tornan en
+\[ D' = D_{p} \qquad \wedge \qquad \mu ' = - \mu _{p} \]
+Una vez más, los parámetros se reducen a aquellos de los portadores minoritarios, que son parámetros constantes.
+
+Los últimos parámetros que debemos considerar son las tasas de generación y recombinación. Las tasas de recombinación venían dadas por $R_{n}=\frac{n}{\tau _{nt}}=R_{p}=\frac{p}{\tau _{pt}} \equiv R$, donde $\tau _{nt}$ y $\tau _{pt}$ son los tiempos de vida medios de los electrones y los huecos. Las inversas, son la probabilidad, por unidad de tiempo, de que un electrón encuentre un hueco, o un hueco encuentre un electrón, respectivamente, y se recombinen. Si consideramos un semiconductor de tipo p, fuertemente extrínseco, bajo la condición de inyección de bajo nivel, la concentración de los portadores de carga mayoritarios será esencialmente constante ($p_{0}\gg \delta n$). Por lo tanto, la probabilidad por unidad de tiempo de que un portador minoritario (electrón) encuentre un portador mayoritario (hueco) y se recombinen, es esencialmente constante (se ve determinada por el tiempo de vida medio de los portadores mayoritarios, que son muchos y se consideran constantes). Por lo tanto, $\tau _{nt} \equiv \tau _{n}$, la vida media de los portadores minoritarios (electrones) permanecerá constante. ($\tau _{nt}$ considera el tiempo de vida de los electrones en equilibrio térmico y en exceso, con lo cuál, depende del tiempo, porque $\delta n(t)$ depende del tiempo. En este párrafo precedente se demostró que $\tau _{nt} \equiv \tau _{n}$ donde $\tau _{n}$ no depende del tiempo, es constante).
+
+Análogamente, para un semiconductor de tipo n, bajo la condición de inyección de bajo nivel, el tiempo de vida de los portadores minoritarios (huecos) es constante, $\tau _{pt} \equiv \tau _{p}$. Incluso, bajo la condición de inyección de bajo nivel, los portadores minoritarios en exceso pueden aumentar en varios órdenes de magnitud.
+
+Los términos de generación y recombinación de la ecuación de transporte ambipolar, en el caso de los electrones, es
+\[ g-R = g_{n}-R_{n}=(G_{n_{0}} + g_{n}') - (R_{n_{0}}+R_{n}') \]
+donde $G_{n_{0}}$ y $g'_{n}$ son las tasas, en equilibrio térmico, de generación de electrones y electrones en exceso, respectivamente. Los términos $R_{n_{0}}$ y $R'_{n}$ son las tasas de recombinación de electrones y electrones en exceso, en equilibrio térmico. Con lo cual, tenemos
+\[ g-R=g'_{n} - R'_{n}=g'_{n}-\frac{\delta n}{\tau _{n}} \]
+puesto que, en equilibrio térmico, $G_{n_{0}}=R_{n_{0}}$ (si se generaran o se recombinaran más electrones que la tasa de equilibrio, ya no estaríamos más en equilibrio). Las tasas de generación y recombinación de electrones en exceso, bien puede no ser igual, porque son excesos generados por un desplazamiento del equilibrio.
+
+Análogamente para el caso de huecos,
+\[ g-R=g'_{p} - R'_{p}=g'_{p}-\frac{\delta p}{\tau _{p}} \]
+
+La tasa de generación de huecos debe ser igual a la tasa de generación de electrones (por condición impuesta de neutralidad de carga), con lo cual, podemos definir $g'$ tal que $g_{p}'=g_{n}'\equiv g'$. También determinamos que, el tiempo de vida de los portadores minoritarios en exceso es esencialmente constante bajo la condición de inyección de bajo nivel. Los términos $g-R$ de la ecuación de transporte ambipolar, puede ser escrita en términos de los parámetros de los portadores minoritarios.
+
+La ecuación de transporte ambipolar para un semiconductor de \textbf{tipo p}, fuertemente extrínseco y bajo la condición de inyección de bajo nivel, es
+\[ D_{n} \frac{\partial^{2} (\delta n)}{\partial x^{2}} + \mu _{n}E \frac{\partial (\delta n)}{\partial x} + g' - \frac{\delta n}{\tau _{n_{0}}} = \frac{\partial (\delta n)}{\partial t} \]
+
+La ecuación de transporte ambipolar para un semiconductor de \textbf{tipo n}, fuertemente extrínseco y bajo la condición de inyección de bajo nivel, es
+\[ D_{p} \frac{\partial^{2} (\delta p)}{\partial x^{2}} - \mu _{p}E \frac{\partial (\delta p)}{\partial x} + g' - \frac{\delta p}{\tau _{p_{0}}} = \frac{\partial (\delta p)}{\partial t} \]
+
+Como se puede observar, ambas ecuaciones quedan definidas en términos de los parámetros, concentraciones y valores de los portadores minoritarios en exceso. Estas ecuaciones describen el arrastre, la difusión y la recombinación de los portadores minoritarios en exceso, como función del espacio y el tiempo. Dado que, por la condición impuesta de neutralidad de carga, el exceso de portadores minoritarios es igual al exceso de portadores mayoritarios, los portadores mayoritarios en exceso se arrastrarán, difundirán y recombinarán de la misma forma que los portadores minoritarios en exceso. Por lo tanto, el comportamiento de los portadores mayoritarios en exceso queda determinado por los parámetros de los portadores minoritarios. Este fenómeno ambipolar es extremadamente importante en la física de los semiconductores y es la base para describir las características y el comportamiento de los dispositivos semiconductores.
+
+La siguiente tabla presenta algunas simplificaciones que pueden aparecer en los problemas. Es posible que, en algún momento, se deba usar la definición de $L_{n}^{2}=D_{n}\tau _{n_{0}}$, que es un parámetro con unidades de longitud y se llama \emph{longitud de difusión de los portadores minoritarios}.
+
+\begin{center}
+\begin{tabular}{|l|c|} \hline
+Especificación & Efecto \\ \hline
+ & \\
+Estado estacionario & $\dfrac{\partial (\delta n)}{\partial t}=\dfrac{\partial (\delta p)}{\partial t}=0$ \\
+ & \\
+Distribución uniforme de & $\dfrac{\partial^{2} (\delta n)}{\partial^{2} x}=\dfrac{\partial^{2} (\delta p)}{\partial^{2} x}=\dfrac{\partial (\delta n)}{\partial x}=\dfrac{\partial (\delta p)}{\partial x}=0$ \\
+portadores en exceso & \\
+ & \\
+No hay campo eléctrico & $E=0$ \\
+aplicado & \\
+ & \\
+No hay generación de & $g'=0$ \\
+portadores en exceso & \\
+ & \\
+No hay recombinación de & $\dfrac{\delta n}{\tau _{n_{0}}}=\dfrac{\delta p}{\tau _{p_{0}}}=0$ \\
+portadores en exceso & \\
+ & \\ \hline
+\end{tabular}
+\end{center}
+
+\scriptsize{No incluye ejemplos, tiempo de relajación del dieléctrico, cuasi energía de Fermi ni efectos de superficie.}
+
+\section{Anexo.}
+
+\subsection*{Algunas consideraciones para la resolución de la guía 10.}
+
+\end{document}

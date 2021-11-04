@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[pdftex]{color,graphicx}
+
+\begin{document}
+
+Resulta que, para diferencias de potencial negativas entre el \emph{fotocátodo} y el segundo electrodo aún existe corriente, lo que quiere decir que los fotoelectrones salen disparados con cierta velocidad del fotocátodo suficiente para llegar al segundo electrodo que intenta repelerlos. Ésta energía cinética máxima está bien definida ($E_{max}=eV_{max}$) y es máxima porque es el límite para el cual los electrones \emph{todavía} llegan al segundo electrodo. Si esta energía fuera menor, los fotoelectrones nunca llegarían puesto que serían repelidos por la diferencia de potencial entre los electrodos.
+
+Se sugirió que los fotoelectrones de mayor energía eran aquellos de la superficie puesto que los internos pierden cierta energía cinética al intentar atravesar el electrodo. Esto implica que se puede considerar $E_{max}$ como la energía recibida por cada electrón del fotocátodo.
+
+Se hicieron experimentos sobre la dependencia de la corriente con la intensidad de la radiación y se descubrió que, para diferencias de potencial positivas entre los electrodos, la corriente es proporcional a la intensidad de la radiación (puesto que todos los electrones llegan de todas formas, atraídos por el positivo). Sin embargo, el potencial de energía máxima $V_{max}$ (y por lo tanto la energía máxima en sí) era independiente de la intensidad de la radiación.
+
+\textbf{Explicación Clásica:}
+Tenemos que considerar la interacción entre el campo electromagnético y los electrones del metal.
+Sabemos que, al recibir la radiación electromagnética, los electrones comenzarán a oscilar con amplitud proporcional a la amplitud de la radiación.
+Sabemos que su energía cinética media será, entonces, proporcional al cuadrado de la amplitud. También sabemos que la amplitud de un campo electromagnético oscilante es proporcional a la raíz cuadrada de la intensidad de la luz.
+Juntando todo, tenemos que la energía cinética de los electrones debería ser proporcional a la intensidad de la luz, pero se demostró experimentalmente que esto no sucede.
+Otro problema es que, según la teoría clásica de ondas, tiene que transcurrir un largo período de tiempo para que un electrón absorba suficiente cantidad de energía como para salir disparado.
+
+\textbf{Explicación Cuántica:}
+Einstein dijo que los electrones reciben cuantos de energía (fotones) tal que $E = h \nu$. Un electrón tiene que recibir energía mayor a la necesaria para moverse hasta la superficie, $\Delta E$, y la que necesita para escapar del metal, $\Phi_{0}$. Con lo cual, la energía cinética del electrón al escapar del metal será $E = h \nu - (\Delta E + \Phi_{0})$. Si consideramos los electrones de la superficie que son los que determinan la $E_{max}$, tenemos: $E_{max} = h \nu - \Phi_{0}$.
+
+Conceptualmente, la emisión de fotoelectrones va a ser proporcional al flujo de los cuantos de energía que, a su vez, son proporcionales a la intensidad de la radiación. Esto concuerda con la observación de que la corriente depende de la intensidad de la luz. También se observa que la $E_{max}$ para el cuál comienza la emisión, no depende de la intensidad de la radiación. También se observa que el problema clásico del tiempo (de suponer que la energía se distribuía uniformemente) se elimina al sostener que la energía se esparce en fotones, con lo cual, cuando un fotón llega al metal, un electrón absorbe el fotón entero.
+
+(\ldots)
+
+\textbf{Efecto Compton:}
+
+Hacemos pasar una radiación de una longitud de onda determinada por una lámina de metal y observamos que, según con qué ángulo se mire respecto del centro de la radiación, tenemos distintas longitudes de onda. Cuanto más nos alejamos del centro, la longitud de onda aumenta (la frecuencia disminuye).
+
+La teoría de Einstein de los cuantos de energía hizo suponer a Compton que la dependencia del ángulo con la frecuencia era similar al que sucedería con la energía de una partícula que se dispersa al ser chocada por otra. Con lo cual, deberíamos encontrar la energía cinética $E$ y el momentum $p$ del fotón suponiéndolo una partícula.
+
+Se puede considerar al fotón como una partícula con $m_{0}=0$ y con una energía $E=h \nu$ totalmente cinética. Si consideramos la relación entre $E$ y $p$ que se encuentra en \texttt{Resumen relatividad.pdf}, tenemos que
+\[ E^{2}=c^{2}p^{2}+(m_{0}c^{2})^{2} \Longrightarrow E^{2}=c^{2}p^{2} \Longrightarrow p=E/c \Longrightarrow p=h/ \lambda \]
+(A $p=E/c$ también llega la teoría clásica de Maxwell de las ondas electromagnéticas)
+
+Como la frecuencia resultante no dependía del material, se supuso que la interacción de los fotones no era con los átomos en sí, sino sólo con los electrones. También se supuso que estos electrones estaban libres e inicialmente quietos debido a que la energía del fotón incidente es de mucha magnitud y, por lo tanto, la energía térmica y de movimiento del electrón, se vuelven despreciables.
+
+Consideremos la colisión entre un fotón y un electrón. Inicialmente, el fotón tiene energía $E_{0}$ y momentum $p_{0}$. El electrón tiene energía intrínseca $m_{0}c^{2}$. Luego del choque, el fotón saldrá con un ángulo $\theta$ respecto del centro, con energía $E_{1}$ y momentum $p_{1}$, mientras que el electrón saldrá con un ángulo $\phi$ respecto del centro, con energía cinética $E_{c}$ y momentum $p$. Aplicando la conservación de la energía y del momentum relativistas, se tiene:
+\[ p_{0}=p_{1} \cos(\theta) + p \cos(\phi)\]
+\[ p \sin(\phi)=p_{1} \sin(\theta) \]
+Resolviendo:
+\[ p_{0}^{2}+p_{1}^{2}-2p_{0}p_{1} \cos(\theta)=p^{2} \]
+Para la energía relativista:
+\[ E_{0}+m_{0}c^{2}=E_{1}+E_{c}+m_{0}c^{2} \]
+De acuerdo a lo deducido anteriormente sobre el momentum y la energía del fotón, tenemos que la conservación de la energía se plantea como:
+\[ c(p_{0}-p_{1})=E_{c} \]
+Teniendo en cuenta que, por lo escrito en \texttt{Resumen relatividad.pdf}, tenemos:
+\[ mc^{2}=E_{c}+m_{0}c^{2} y E^{2}=c^{2}p^{2}+(m_{0}c^{2})^{2} \]
+Juntándolas y resolviendo:
+\[ E_{c}^{2}/c^{2} + 2 E_{c}m_{0} = p^{2} \]
+Usando esto en la resolución de la conservación del momentum y la energía, llegamos a que:
+\[ ( 1/p_{1} - 1/p_{0} ) = 1/(m_{0}c) (1 - \cos(\theta)) \]
+Finalmente, usando las características del fotón, llegamos a la ecuación de Compton:
+\[ \lambda_{1} - \lambda_{0} = \lambda_{c} (1 - \cos(\theta)) \textrm{con } \lambda_{c}=2,12 \cdot 10^{-12} \textrm{m} \]
+Esto especifica que la diferencia de longitudes de onda por difusión con la lámina de metal depende únicamente del ángulo con que se mire y de la constante universal $\lambda_{c}$.
+
+(\ldots)
+
+La joda del efecto fotoeléctrico y, más aún, del efecto Compton, es demostrar la existencia de los fotones, o cuantos de energía. (!!!)
+
+El quilombo fue que había ciertas situaciones que sólo se podían explicar suponiendo que la radiación electromagnética actuaba en formas de ondas, como la difracción o la interferencia, y otras situaciones donde intervenían los fotones que podían ser considerados esencialmente como partículas, como el efecto fotoeléctrico o el efecto Compton.
+
+Esto llevó a que se aceptara la dualidad onda-partícula como un hecho irrefutable de la física, ayudado por la mecánica cuántica.
+
+\end{document}
